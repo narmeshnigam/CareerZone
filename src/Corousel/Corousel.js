@@ -31,9 +31,9 @@ const Carousel = ({ images }) => {
 
 const App = () => {
   const images = [
-    'https://via.placeholder.com/400x200?text=Image+1',
-    'https://via.placeholder.com/400x200?text=Image+2',
-    'https://via.placeholder.com/400x200?text=Image+3',
+    'https://jbgvs.org.in/asset/img/gallery/career.jpg',
+    'https://t4.ftcdn.net/jpg/00/82/44/25/360_F_82442519_3dyKdM0EXzhBO027kDLkeJHuPLeplLlf.jpg',
+    'https://media.foundit.in/career-advice/wp-content/uploads/2022/03/best-career-option-for-girls.jpg',
   ];
 
   return (
