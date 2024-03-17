@@ -1,0 +1,6 @@
+.Header_top{
+    height:40px;
+    background-color:rgb(249, 251, 252);
+    display:flex;
+    justify-content: space-between;
+}
