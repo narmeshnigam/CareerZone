@@ -6,11 +6,7 @@ import App from '../Corousel/Corousel'
 function Header() {
   return (
     <>
-      <div class="Header_top">
-    <span>Apply Now</span>
-    <span>Online Counselling</span>
-    <span>Bihar student Credit Card</span>
-  </div>
+   
   <App/>
     </>
     

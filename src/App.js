@@ -4,7 +4,7 @@ import Header from './Navbar/Header';
 import Grid from '@mui/material/Grid';
 function App() {
   return (
-    <div className="App">
+    <div className="hompage">
       <Header/>
           
     </div>
