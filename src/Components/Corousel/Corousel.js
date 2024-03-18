@@ -30,12 +30,15 @@ const Carousel = ({ images }) => {
     setA(true);
     console.log(a)
   }
+  const aremoved = () => {
+    setA(false);
+  }
 
   return (
     <>
     <div className="carousel">
        <div className="links">
-            <span onMouseOver={()=>acalled()}>Home</span>
+            <span onMouseOver={()=>acalled()} onMouseOut = {() => aremoved()}>Home</span>
             <span>Courses</span>
             <span>Education</span>
             <span>d</span>
