@@ -1,31 +1,35 @@
 import './App.css';
 import './App.css'
-import AbroadColleges from './Components/Body/AbroadColleges/AbroadColleges';
-import Achievemets from './Components/Body/Achievements/Achievemets';
-import BhiarCreditCard from './Components/Body/BhiarCreditCard/BhiarCreditCard';
-import Courses from './Components/Body/Courses/Courses';
-import HomeCrousel from './Components/Body/HomeCrousel/HomeCrousel';
-import NotificationPage from './Components/Body/NotificatonPage/NotificationPage';
-import TopEngColleges from './Components/Body/TopColleges/TopEngColleges';
-import TopMedicalColleges from './Components/Body/TopMedicalColleges/TopMedicalColleges';
+import Home from './Components/Home/Home';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
+import { createBrowserRouter, Outlet } from "react-router-dom";
+import AboutUs from './Components/AboutUs/AboutUs';
 
-function App() {
+const AppLayout = () => {
   return (
-    <>
-    <Navbar/>
-    <HomeCrousel/>
-    <NotificationPage/>
-    <Courses/>
-    <BhiarCreditCard/>
-    <TopMedicalColleges/>
-    <TopEngColleges/>
-    <AbroadColleges/>
-    <Achievemets/>
+    <> 
+    <Navbar />
+    <Outlet/>
     <Footer/>
-    </>
+    </> 
   );
-}
+};
+const App = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />, 
+      },
+      {
+        path: "aboutUs",
+        element: <AboutUs />, 
+      },
+    ],
+  },
+]);
 
 export default App;
