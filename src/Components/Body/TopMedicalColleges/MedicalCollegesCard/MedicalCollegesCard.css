@@ -1,0 +1,45 @@
+.medicalCollegeCard__container{
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Poppins';
+    width: 17rem;
+    box-shadow: 6px 6px 6px #00000016;
+}
+.medicalCollegeCard__container:hover{
+    box-shadow: inset 6px 6px 6px #00000016, 6px 6px 6px #00000016;
+}
+.medicalCollegeCard__heading{
+    text-align: center;
+    overflow: hidden;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4587EF;
+}
+.medicalCollegeCard__loctime{
+    display: flex;
+    align-items: center;
+}
+.medicalCollegeCard__button button{
+    border: none;
+    border-radius: 20px;
+    width: 6.5rem;
+    color: white;
+    font-size: 1.01rem;
+    background-color: #df200be2;
+    box-shadow: 6px 6px 6px #0000002e;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+.medicalCollegeCard__button button:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+@media screen and (max-width: 600px){
+    .medicalCollegeCard__container{
+        margin: 2rem auto;
+        width: 17rem;
+    }
+}

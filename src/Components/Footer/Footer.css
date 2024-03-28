@@ -3,24 +3,20 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 10rem;
+    font-family: 'Poppins';
 }
-
 .iframe__map {
     width: 100%;
-    /* margin: auto; */
-    margin-top: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000000ab;
+    background-color: #165ac7a5;
     padding: 3rem;
-    gap: 5rem;
 }
 .iframe__map > span {
     overflow: hidden;
-    border-radius: 1rem;
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.16);
+    border-radius: 1.1rem;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.147);
 }
 
 .contact__details{
@@ -30,21 +26,25 @@
     font-size: 1rem;
 }
 .contact__details__heading{
-    font-size: 1.15rem;
+    font-size: 1.4rem;
     margin-bottom: 10px;
     font-weight: 600;
 }
-
 .contact__details__address{
     display: flex;
     flex-direction: column; 
     gap: 0.8rem;
 }
 
+.contact__details__address > a:hover{
+    font-size: 1.02rem;
+}
+
 .contact__details__links{
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
+    margin: 0rem 4rem ;
 }
 
 .contact__details__links > a:hover{
@@ -55,25 +55,53 @@
     padding: 1rem;
     text-align: center;
     color: white;
-    background-color: black;
+    background-color: #0f4eb4;
 }
-
-.button__inactive {
-    background-color: gray;
-    margin-top: 30px;
-    height: 50px;
-    width: 225px;
-    gap: 40px;
-    border-radius: 30px;
-    color: white;
-    font-family: 'Gemunu Libre', sans-serif;
-    font-size: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 1s;
-    transition: ease-out 1s;
-    overflow: hidden;
+@media screen and (max-width: 600px) {
+    .contact__container {
+        flex-direction: column;
+        margin-top: 2rem;
+        gap: 3rem;
+    }
+    .iframe__map {
+        width: 100%;
+        padding: 2rem 0rem;
+        flex-direction: column;
+    }
+    .contact__details{
+        font-size: 0.8rem;
+        margin-top: 2rem;
+        width: 80%;
+        flex-direction: column;
+    }
+    .contact__details__heading{
+        font-size: 1rem;
+    }
+    .contact__details__address{ 
+        gap: 0.5rem;
+    }
+    
+    .contact__details__address > a:hover{
+        font-size: 1.02rem;
+    }
+    .contact__details__links{
+        gap: 0.7rem;
+        margin: 0rem;
+    }
+    
+    .contact__details__links > a:hover{
+        font-size: 1rem;
+    }
+    .iframe__map > span {
+        border-radius: 0.5rem;
+        margin-left: 0rem;
+    }
+    .iframe__map > span > iframe{
+        width: 300px;
+        height: auto;
+    }
+    .copyright__div {
+        font-size: 0.7rem;
+        padding: 0.5rem 0rem;
+    }
 }

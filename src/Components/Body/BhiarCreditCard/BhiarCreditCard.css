@@ -1,0 +1,68 @@
+.creditcard__container{
+    font-family: 'Poppins';
+    padding: 3rem 6rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.creditcard__left__container{
+    width: 50%;
+    text-align: center;
+}
+.creditcard__left__container__heading{
+    color: #4587EF;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.creditcard__left__container__subheading{
+    font-size:1.5rem; 
+    color:#df200be2; 
+    font-weight:500;
+}
+.creditcard__right__container{
+    width: 40%;
+}
+.creditcard__right__container img{
+    width: 100%;
+}
+.creditcard__left__container div button{
+    font-family: "Tiro Devanagari Hindi", serif;
+    box-shadow: 6px 6px 6px #0000001e;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: white;
+    background-color: #4586efb0;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    border: none;
+    cursor: pointer;
+}
+@media screen and (max-width: 600px){
+    .creditcard__container{
+        padding: 1rem 2rem 2rem;
+        display: block;
+    }
+    .creditcard__left__container{
+        width: 100%;
+    }
+    .creditcard__left__container__heading{
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    .creditcard__left__container__subheading{
+        font-size:1rem; 
+    }
+    .creditcard__right__container{
+        width: 100%;
+    }
+    .creditcard__left__container div button{
+        padding: 0.5rem;
+        border-radius: 15px;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    .bhiar__apply__now__btn{
+        margin-bottom: 1rem;
+    }
+}

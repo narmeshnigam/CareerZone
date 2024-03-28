@@ -1,0 +1,18 @@
+.Swipper{
+    padding: 90px 0px 0px 0px;
+}
+.Swipper img{
+    width: 100vw;
+    height: 85vh; 
+    object-fit: cover;
+}
+@media screen and (max-width: 600px) {
+    .Swipper{
+        padding: 70px 0px 0px 0px;
+    }
+    .Swipper img{
+        width: 100svw;
+        height: 50svh; 
+    }
+}
+  

@@ -1,0 +1,36 @@
+.coursesCard__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(234, 237, 241);
+    height: 15rem;
+    width: 20rem;
+    border-radius: 1rem;
+    font-family: 'Poppins';
+}
+.coursesCard__container:hover{
+    box-shadow: inset 6px 6px 6px #00000021, 6px 6px 6px #00000021;
+}
+.coursesCard__container img{
+    width: 7rem;
+    padding: 2rem;
+}
+.coursesCard__desc{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000000;
+}
+@media screen and (max-width: 600px){
+    .coursesCard__container{
+        height: 5rem;
+        border-radius: 0.5rem;
+        width: 10rem;
+    }
+    .coursesCard__container img{
+        width: 3rem;
+        padding: 0.5rem;
+    }
+    .coursesCard__desc{
+        font-size: 0.6rem;
+    }
+}

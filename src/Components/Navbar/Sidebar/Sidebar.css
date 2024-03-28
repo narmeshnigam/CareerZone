@@ -1,0 +1,82 @@
+.sid__container{
+    background-color: #194d9d;
+    width: 67svw;
+    height: 100svh;
+    font-family: "Poppins";
+    font-size: 14px;
+    color: #ffff;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -8px 0 12px rgb(0, 0, 0, 0.16);
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: 100;
+}
+.sid_options{
+    height: 50%;
+    width: 90%;
+    margin: 20px 0px 0px 20px;
+}
+.sid__back__option{
+    display: flex;
+    align-items: center;
+    :hover{
+        cursor: pointer;
+    }
+}
+.sid__back__option > img{
+    width: 10.31;
+    height: 16px;
+}
+.sid__back__option > span{
+    font-size: 16px;
+    margin-left: 15px;
+    font-weight: 600;
+}
+.line_break{
+    border: 1px solid #ffff;;
+    border-top: 1px;
+    margin: 18px 0px 18px 10px;
+    width: 92%;
+    opacity: 40%;
+}
+.options{
+    color: #ffff;
+    font-size: 14px;
+    margin-left: 26px;
+}
+.options:hover{
+    cursor: pointer;
+}
+.sid_margin{
+    height: 27%;
+    width: 90%;
+}
+.sid_bottom{
+    height: 20%;
+    width: 90%;
+}
+.sid_bottom_heading{
+    text-align: center;
+    opacity: 70%;
+    margin-bottom: -5px;
+}
+.sid_bottom_socials{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.sid_bottom_socials > img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    margin-left: 10px;
+}
+.sid_bottom_socials > img:hover{
+    cursor: pointer;
+}
