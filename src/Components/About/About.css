@@ -1,0 +1,40 @@
+.about {
+    margin-top: 50px;
+    display: flex;
+    align-items: center; 
+  }
+  .head {
+    
+    height: 40vh;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(227, 193, 152);
+    margin-top: 10px; 
+    padding-top: 100px;
+  }
+  .value{
+    margin-top: 20px;
+  }
+
+  
+  .image {
+    flex: 1;
+    padding: 0 20px; 
+  }
+  
+  .content {
+    flex: 2; 
+  }
+  
+  .image img {
+    margin-left: 10px;
+    max-width: 45vw;
+    height: 80vh; 
+  }
+  h2{
+    font-weight: 1000;
+    color: rgb(125, 163, 48);
+  }
+  

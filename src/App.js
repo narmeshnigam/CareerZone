@@ -10,6 +10,7 @@ import TopEngColleges from './Components/Body/TopColleges/TopEngColleges';
 import TopMedicalColleges from './Components/Body/TopMedicalColleges/TopMedicalColleges';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
+import About from './Components/About/About';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
     <AbroadColleges/>
     <Achievemets/>
     <Footer/>
+    <About/>
     </>
   );
 }
