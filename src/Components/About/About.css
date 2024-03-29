@@ -1,74 +1,112 @@
 .about {
-    margin-top: 50px;
     display: flex;
     align-items: center;
-    margin-left: 3vw; 
+    gap: 3rem;
+    padding: 6rem;
   }
-  .head {   
-    height: 40vh;
-    width: 100%;
+  .head {  
+    display: flex; 
+    height: 30vh;
+    font-size: 3rem;
+    font-weight: 600;
     text-align: center;
     justify-content: center;
     align-items: center;
-    background-color: rgb(227, 193, 152);
-    margin-top: 10px; 
-    padding-top: 100px;
-  }
-  .value{
-    margin-top: 20px;
+    background-image: linear-gradient(#4586ef, #4586ef00);
+    color: rgba(0, 0, 0, 0.77);
   }
   .awards {
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
-
-  
-  .image {
-    flex: 1;
-    padding: 0 20px; 
+  .image{
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
   }
-  
-  .content {
-    flex: 2; 
+  .image img{
+    height: 55vh;
+    border-radius: 20px;
+    margin-left: 7px;
   }
-  
-  .image img {
-    margin-left: 10px;
-    max-width: 45vw;
-    height: 80vh; 
+  .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content__heading{
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #df200be2;
+  }
+  .content__subheading{
+    font-size: 2.5rem;
+    font-weight: 700;
   }
   h2{
-    font-weight: 1000;
-    color: rgb(125, 163, 48);
+    color: #df200be2;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 400;
   }
   .sec2{
-    width: 45vw;
-    height: 60vh;
-    margin-left: 4.9vw;
-    margin-top: 5vw;
-  }
-  .di {
-    width: 45vw;
-    height: 26vh;
-    border: 1px solid black;
-    background-color: rgb(236, 232, 226);
-  }
-  
-  .sec2 {
-    max-width: 800px;
-    margin: 4.5vw;
     display: flex;
-    justify-content: space-between;
+    padding: 6rem;
+    gap: 3rem;
+    background-image: linear-gradient(#4586ef00, #4586ef90, #4586ef00);
   }
-  
-  .image3 img {
-    margin-left: 10px;
-    max-width: 45vw;
-    height: 62vh; 
+  .vision__img img {
+    height: 55vh;
+    border-radius: 20px;
+    margin-left: 7px;
   }
-  .image3 {
-    flex: 1;
-    padding: 0 30px; 
+  .vision__img {
+    height: 56vh;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
   }
+  .team {
+    padding: 6rem;
+    background-image: linear-gradient(#4586ef00, #4586ef90);
+  }
+  .ourteam {
+    text-align: center;
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .card {
+    height: 45vh;
+    width: 20vw;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 15px;
+  }
+.team img {
+  margin: 0.3rem;
+  border-radius: 15px;
+  height: 45vh;
+  width: 20vw;
+  object-fit: cover;
+}
+.cardsbottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.cardbottom {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.cardbottom__name{
+  font-size: 1.5rem;
+}
   
   
