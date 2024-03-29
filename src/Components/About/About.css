@@ -71,5 +71,74 @@
     flex: 1;
     padding: 0 30px; 
   }
+  .team {
+    height: 120vh;
+    width: 100%;
+    background-color: rgb(205, 236, 236);
+  }
+  .ourteam {
+    padding-bottom: 4vw;
+    text-align: center;
+    justify-content: center;
+    padding-top: 10vh;
+    font-weight: 500;
+    font-size: xxx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .cards {
+    display: flex;
+    width: 100%;
+    margin-left: 4.6vw;
+  }
+  .card {
+    height: 49.7vh;
+    width: 20vw;
+    border: 2px solid black;
+    justify-content: space-between;
+    margin: 1vw;
+    border-radius: 10px;
+  
+    
+  }
+.team img {
+  border-radius: 10px;
+}
+/* .cardsbottom {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.cardbottom1 {
+  margin-top: 1vh;
+  margin-left: 11.5vw;
+}
+.cardbottom2 {
+  margin-top: 1vh;
+  margin-left: -21vw;
+}
+.cardbottom3 {
+  margin-top: 1vh;
+  margin-left: -22vw;
+}
+.cardbottom4 {
+  margin-top: 1vh;
+  margin-left: -20vw;
+} */
+.cardsbottom {
+  display: flex;
+  width: 100%;
+  margin-left: 4.6vw;
+}
+.cardbottom {
+  height: 20vh;
+  width: 20vw;
+  
+  justify-content: space-between;
+  margin: 1vw;
+  border-radius: 10px;
+  text-align: center;
+
+  
+}
   
   

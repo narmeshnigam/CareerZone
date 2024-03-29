@@ -54,6 +54,49 @@ const About = () => {
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDrvhb1mwTSR7c00aeAvPLQwzHSVJuuFgpwAevjmy6GA&s" alt='' />
     </div>
   </div>
+  <div className='team'>
+    <div className='ourteam'>Our Team</div>
+    <div className='cards'>
+      <div className='card'>
+        <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt='' height="300vh" width="245vw"  />
+      
+      </div>
+      
+      <div className='card'>
+        <img src="https://images.pexels.com/photos/46253/mt-fuji-sea-of-clouds-sunrise-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt='' height="300vh" width="245vw" />
+
+      </div>
+      <div className='card'>
+        <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt='' height="300vh" width="245vw" />
+
+      </div>
+      <div className='card'>
+        <img src="https://images.pexels.com/photos/1887624/pexels-photo-1887624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt='' height="300vh" width="245vw" />
+
+      </div>
+    </div>
+    <div className='cardsbottom'>
+      <div className='cardbottom'>
+        <div>Nishu Kumari</div>
+        <div>Developer</div>
+      </div>
+      <div className='cardbottom'>
+        <div>Nishu Kumari</div>
+        <div>Developer</div>
+      </div>
+      <div className='cardbottom'>
+        <div>Nishu Kumari</div>
+        <div>Developer</div>
+      </div>
+      <div className='cardbottom'>
+        <div>Nishu Kumari</div>
+        <div>Developer</div>
+      </div>
+      
+    </div>
+
+  </div>
+  
 </div>
 
         </div>
