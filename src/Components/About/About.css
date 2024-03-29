@@ -1,7 +1,8 @@
 .about {
     margin-top: 50px;
     display: flex;
-    align-items: center; 
+    align-items: center;
+    margin-left: 3vw; 
   }
   .head {
     
@@ -16,6 +17,10 @@
   }
   .value{
     margin-top: 20px;
+  }
+  .awards {
+    display: flex;
+    justify-content: space-between;
   }
 
   
@@ -37,4 +42,34 @@
     font-weight: 1000;
     color: rgb(125, 163, 48);
   }
+  .sec2{
+    width: 45vw;
+    height: 60vh;
+    margin-left: 4.9vw;
+    margin-top: 5vw;
+  }
+  .di {
+    width: 45vw;
+    height: 26vh;
+    border: 1px solid black;
+    background-color: rgb(236, 232, 226);
+  }
+  
+  .sec2 {
+    max-width: 800px;
+    margin: 4.5vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .image3 img {
+    margin-left: 10px;
+    max-width: 45vw;
+    height: 62vh; 
+  }
+  .image3 {
+    flex: 1;
+    padding: 0 30px; 
+  }
+  
   
