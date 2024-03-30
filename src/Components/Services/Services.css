@@ -1,0 +1,45 @@
+.services__container{
+    padding-top: 90px;
+    font-family: 'Poppins';
+}
+.services__top__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 60vh;
+    background-image:  linear-gradient(to bottom ,#eaedf100, #eaedf138, #eaedf1),url(https://template63467.motopreview.com/mt-demo/63400/63467/mt-content/uploads/2017/06/mt-1027-content-bg03.jpg);
+}
+.services__top__img div{
+    width: 70%;
+    font-size: 3rem;
+    font-weight: 600;
+}
+.services__holder{
+    padding: 6rem;
+    display: flex;
+}
+.education__service__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 2rem;
+}
+.edu__ser__heading{
+    font-size: 2.2rem;
+    color: #df200be2;
+    font-weight: 500;
+}
+.edu__ser__des{
+    margin: 1rem 0rem;
+}
+.education__ser__content button{
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.7rem 1.1rem ;
+    border-radius: 20px;
+    box-shadow: inset 6px 6px 6px #0000001b ,6px 6px 6px #0000001b;
+    cursor: pointer;
+}
+

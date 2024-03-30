@@ -1,0 +1,49 @@
+.edu__ser__conatiner{
+    padding-top: 90px;
+    font-family: 'Poppins';
+}
+.edu__service__content{
+    padding: 6rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.edu__service__des{
+    width: 60%;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+.edu__service__img{
+    background-color: black;
+    border-radius: 20px;
+    width: 35%;
+}
+.edu__service__content  img {
+    width: 100%;
+    border-radius: 20px;
+    margin-left:5px;
+}
+.edu__service__purpose{
+    background-image: linear-gradient(#4586ef00, #4586ef90, #4586ef00);
+    padding: 6rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.edu__service__purpose div img{
+    width: 90%;
+    border-radius: 50px;
+}
+.edu__service__purpose__heading{
+    font-size: 2.2rem;
+    color: #df200be2;
+    font-weight: 600;
+}
+.edu__services__work{
+    padding: 6rem;
+    display: flex;
+    align-items: center;
+}
+.edu__services__work div img{
+    width: 100%;
+}

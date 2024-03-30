@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Sidebar from "./Sidebar/Sidebar";
 import "./Navbar.css";
+import { Link, To } from "react-router-dom";
 
 const Navbar = () => {
   const [isSidebar, setIsSidebar] = useState(false);
@@ -18,15 +19,15 @@ const Navbar = () => {
     <div className="nav__conatiner">
       <div className="top__nav">
         <div className="nav__logo">
-          <img src="https://thecareerzone.co.in/img/logo-wide.png"></img>
+          <Link to="/"><img src="https://thecareerzone.co.in/img/logo-wide.png"></img></Link>
         </div>
         <div className="nav__links">
-          <span>Home</span>
-          <span>About</span>
-          <span>Service</span>
-          <span>Courses</span>
-          <span>Gallery</span>
-          <span>Contact</span>
+          <Link style={{textDecoration: "none"}} to="/"><span>Home</span></Link>
+          <Link style={{textDecoration: "none"}} to="/aboutUs"><span>About</span></Link>
+          <Link style={{textDecoration: "none"}} to="/services"><span>Services</span></Link>
+          <Link style={{textDecoration: "none"}} to="/courses"><span>Courses</span></Link>
+          <Link style={{textDecoration: "none"}} to="/gallery"><span>Gallery</span></Link>
+          <Link style={{textDecoration: "none"}} to="/contact"><span>Contact</span></Link>
         </div>
         <div className="nav__socials">
           <img src="./facebook.png"></img>
