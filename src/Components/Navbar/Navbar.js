@@ -15,6 +15,10 @@ const Navbar = () => {
     setIsSidebar(false);
   };
 
+  const scrollTop = () => {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <div className="nav__conatiner">
       <div className="top__nav">
@@ -22,12 +26,12 @@ const Navbar = () => {
           <Link to="/"><img src="https://thecareerzone.co.in/img/logo-wide.png"></img></Link>
         </div>
         <div className="nav__links">
-          <Link style={{textDecoration: "none"}} to="/"><span>Home</span></Link>
-          <Link style={{textDecoration: "none"}} to="/aboutUs"><span>About</span></Link>
-          <Link style={{textDecoration: "none"}} to="/services"><span>Services</span></Link>
-          <Link style={{textDecoration: "none"}} to="/courses"><span>Courses</span></Link>
-          <Link style={{textDecoration: "none"}} to="/gallery"><span>Gallery</span></Link>
-          <Link style={{textDecoration: "none"}} to="/contact"><span>Contact</span></Link>
+          <Link style={{textDecoration: "none"}} to="/"><span  onClick={() => scrollTop()}>Home</span></Link>
+          <Link style={{textDecoration: "none"}} to="/aboutUs"><span onClick={() => scrollTop()}>About</span></Link>
+          <Link style={{textDecoration: "none"}} to="/services"><span onClick={() => scrollTop()}>Services</span></Link>
+          <Link style={{textDecoration: "none"}} to="/courses"><span onClick={() => scrollTop()}>Courses</span></Link>
+          <Link style={{textDecoration: "none"}} to="/gallery"><span onClick={() => scrollTop()}>Gallery</span></Link>
+          <Link style={{textDecoration: "none"}} to="/contact"><span onClick={() => scrollTop()}>Contact</span></Link>
         </div>
         <div className="nav__socials">
           <img src="./facebook.png"></img>

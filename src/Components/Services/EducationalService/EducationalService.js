@@ -5,11 +5,11 @@ import AboutSvg from '../../About/aboutSvg'
 const EducationalService = () => {
   return (
     <div className='edu__ser__conatiner'>
-      <div className='services__top__img'>
-        <div>Educational Service</div>
+      <div className='edu__top__img'>
       </div>
       <div className='edu__service__content'>
         <div className='edu__service__des'>
+        <div className='edu__ser__heading' style={{marginBottom:'1rem'}}>Educational Service</div>
         The Career Zone was established in 2001 with the aim of providing quality guidance to students who intend to study. Today, we are the leaders in educational consultancy and represent leading colleges and universities in India [Uttar Pradesh, Maharashtra, Bangalore, Orissa, Madhya Pradesh, Rajasthan, Tamil Nadu and many more] and in overseas also.
         <br></br><br></br><br></br>
         THE Career Zone has more than decades of experience in counselling students and has helped over 7,200+ students gain admission into colleges and universities in India and overseas.

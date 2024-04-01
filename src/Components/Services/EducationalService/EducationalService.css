@@ -2,6 +2,19 @@
     padding-top: 90px;
     font-family: 'Poppins';
 }
+.edu__top__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    background-position: 0% 24%;
+    background-image:  linear-gradient(to bottom ,#eaedf100, #eaedf138, #eaedf1),url(https://i0.wp.com/www.edtechdigest.com/wp-content/uploads/2023/02/DUY-HOANG-THAI-lrng.jpg?resize=1536%2C1024&ssl=1);
+}
+.edu__top__img div{
+    width: 70%;
+    font-size: 3rem;
+    font-weight: 600;
+}
 .edu__service__content{
     padding: 6rem;
     display: flex;

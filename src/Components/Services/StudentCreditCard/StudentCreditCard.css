@@ -1,4 +1,253 @@
-.stdcred__service__container{
+.services__container{
     padding-top: 90px;
     font-family: 'Poppins';
 }
+.services_top_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom ,#eaedf100, #eaedf138, #eaedf1),url(https://template63467.motopreview.com/mt-demo/63400/63467/mt-content/uploads/2017/06/mt-1027-content-bg03.jpg);
+}
+
+.services_top_img div{
+    width: 50%;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-right: 10vw;
+}
+
+.education_objective_container {
+    padding: 6rem;
+    
+}
+.education_objective_container img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.objective__{
+    padding: 6rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.objective__image {
+    width: 50%;
+    border-radius: 20px;
+    background-color: black;
+}
+.objective__image img{
+    margin-left: 6px;
+    border-radius: 20px;
+}
+.objective__content {
+    width: 50%;
+}
+.objective__content > div > div > ul > li{
+    font-size: 1.1rem;
+}
+
+.student_eligibility_ {
+    margin: 3rem 6rem;
+    border: 1px solid black;
+    background-image: linear-gradient(#4586ef00, #4586ef90, #4586ef00);
+    border-radius: 20px;
+}
+.student_eligibility_heading {
+    margin: 3rem 0rem;
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #df200be2;
+}
+.student_eligibility_content {
+    margin: auto;
+    width: 70%;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+.student_eligibility_content ul li{
+    margin-bottom: 1rem;
+}
+
+.courses_eligible{
+    padding: 6rem;
+}
+.courses__1 {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #df200be2;
+    font-size: 2.3rem;
+}
+
+.stud__cred__list__btn{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.stud__cred__list__btn button{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    transition: box-shadow 0.8s, color 0.5s;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #4587EF,inset 6px 6px 6px #00000023, 6px 6px 6px #00000023;
+    overflow: hidden;
+    background-color: #ffff;
+}
+.stud__cred__list__btn button:hover{
+    color: #ffff;
+    box-shadow: inset 18rem 0 0 0 #4587EF, inset 6px 6px 6px #00000023, 6px 6px 6px #00000027;
+}
+
+.applicationStatus__1 {
+    padding: 6rem;
+}
+
+.status_heading {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #df200be2;
+    font-size: 2.3rem;
+    
+}
+.status__container{
+    text-align: justify;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.status_container_1 {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #df200be2;
+    font-size: 2.3rem;
+    
+}
+.status_container_2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.bssc_from_ways {
+    width: 70%;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+.two_ways_content {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+    box-shadow: inset 6px 6px 6px #00000014, 6px 6px 6px #00000014;
+}
+
+.first_ways_content, .second_ways_content {
+    width: 50%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: brown;
+}
+.process_registration_id{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.process_registration_id div{
+    color: rgb(21, 6, 34);
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: justify;
+}
+.process_registration_id ul li{
+    text-align: left;
+    color: #386e02;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.credit_card_scheme {
+    background-image: linear-gradient(#4586ef00, #4586ef90, #4586ef00);
+    padding: 6rem;
+}
+.credit_cardscheme_heading {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #df200be2;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.credit_3_ {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.credit_cardscheme_pa {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.loan__{
+    text-align: center;
+    margin: 6rem 0rem;
+}
+.loan__heading {
+    font-size: 2.3rem;
+    color: #df200be2;
+    font-weight: 600;
+    margin: 1rem 0rem;
+}
+
+.loan_content_1 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: justify;
+}
+.loan_content_1 ul li{
+    margin-bottom: 1rem;
+}
+
+.interest_rate_ {
+    box-shadow: 6px 6px 6px #00000011;
+    border-radius: 20px;
+    background-color: white;
+    margin-top: 6rem;
+}
+.interest_rate_heading {
+    font-size: 2.3rem;
+    padding-top: 4vh;
+    color: #df200be2;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+.interest_rate_content {
+    text-align: justify;
+    margin: 0rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.purpose__1 {
+    margin: 1rem 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgba(0, 0, 255, 0.655);
+}
+ .note__1{
+    padding: 2rem;
+ }
