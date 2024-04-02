@@ -9,6 +9,7 @@ import {createBrowserRouter, Outlet} from 'react-router-dom';
 import Services from './Components/Services/Services';
 import EducationalService from './Components/Services/EducationalService/EducationalService';
 import StudentCreditCard from './Components/Services/StudentCreditCard/StudentCreditCard';
+import Gallery from './Components/Gallery/Gallery';
 
 const AppLayout = () => {
   return (
@@ -48,6 +49,10 @@ const App = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />, 
+      },
+      {
+        path: "/gallery",
+        element: <Gallery />, 
       },
     ],
   },

@@ -1,0 +1,43 @@
+.gal__container{
+    padding-top: 90px;
+    font-family: 'Poppins';
+}
+.gal__banner img{
+    width:100%
+}
+.gal__photo__container{
+    padding: 6rem;
+}
+.gal__photos__heading{
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #4587EF;
+    filter: drop-shadow(3px 3px 0px #00000090);
+    margin-bottom: 1rem;
+}
+.gal__photos__heading img{
+    margin: 0rem 1rem;
+    border-radius: 100%;
+    background-color: #4587EF;
+    width: 1.8rem;
+}
+.gal__photos__con__img{
+    display: flex;
+    justify-content: space-between;
+}
+.gal__photos__con__img  img{
+    border-radius: 20px;
+    height: 18rem;
+    transition: transform .2s;
+}
+.gal__photos__con__img  iframe{
+    width: 26rem;
+    height: 18rem;
+    border-radius: 20px;
+}
+.gal__photos__con__img img:hover{
+    transform: scale(1.4);
+}
+.gal__video__container{
+    padding: 0rem 6rem 6rem;
+}
