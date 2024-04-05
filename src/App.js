@@ -10,6 +10,7 @@ import Services from './Components/Services/Services';
 import EducationalService from './Components/Services/EducationalService/EducationalService';
 import StudentCreditCard from './Components/Services/StudentCreditCard/StudentCreditCard';
 import Gallery from './Components/Gallery/Gallery';
+import Courses from './Components/Courses/Courses';
 
 const AppLayout = () => {
   return (
@@ -53,6 +54,10 @@ const App = createBrowserRouter([
       {
         path: "/gallery",
         element: <Gallery />, 
+      },
+      {
+        path: "/courses",
+        element: <Courses />, 
       },
     ],
   },
