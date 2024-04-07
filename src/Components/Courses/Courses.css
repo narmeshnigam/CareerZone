@@ -19,9 +19,11 @@
 }
 .coursespg__container__having__tables{
     padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 .coursespg__medical__courses__table__container__heading{
-    border-radius: 10px 10px 0 0;
     cursor: pointer;
     font-weight: 500;
     display: flex;
@@ -35,19 +37,29 @@
 .coursespg__medical__courses__table__container__heading img{
     height: 2.5rem;
 }
+.coursespg__medical__courses__table__withImg{
+}
 .coursespg__medical__courses__table{
+    border-radius:0 0 10px 10px;
     background-color: #4586ef;
     padding: 1rem;
 }
 .coursespg__medical__courses__card__container__withHeading{
     color: white;
+
 }
 .coursespg__medical__courses__card__container__heading{
+    margin-top: 2rem;
     font-size: 1.5rem;
     font-weight: 500;
 }
 .courses__card__container__main{
     display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-between; */
+    overflow-y: auto;
+    scrollbar-width: none;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.Engineering{
+    background-color: rgb(251, 113, 113);
 }

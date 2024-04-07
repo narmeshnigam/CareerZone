@@ -11,6 +11,7 @@ import EducationalService from './Components/Services/EducationalService/Educati
 import StudentCreditCard from './Components/Services/StudentCreditCard/StudentCreditCard';
 import Gallery from './Components/Gallery/Gallery';
 import Courses from './Components/Courses/Courses';
+import CoursesAboutPage from './Components/Courses/CoursesAboutPage/CoursesAboutPage';
 
 const AppLayout = () => {
   return (
@@ -58,6 +59,10 @@ const App = createBrowserRouter([
       {
         path: "/courses",
         element: <Courses />, 
+      },
+      {
+        path: "/courses/dparma",
+        element: <CoursesAboutPage />, 
       },
     ],
   },
