@@ -1,0 +1,14 @@
+.courses__pages__container {
+    width: 100%;
+    padding-top: 10vh;
+}
+.courses__pages__heading {
+    width: 100%;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    text-align: center;
+    justify-content: center;
+    font-size: xxx-large;
+    font-weight: 600;
+    background-color: rgb(221, 221, 228);
+}
