@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import "./Modal.css";
 
@@ -11,6 +12,7 @@ export default function Modal() {
     message: ""
   });
   const [submitted, setSubmitted] = useState(false); // State to track submission status
+  const [showSuccessNotification, setShowSuccessNotification] = useState(false);
 
   const toggleModal = () => {
     setModal(!modal);
@@ -29,6 +31,10 @@ export default function Modal() {
     console.log(formData);
     setSubmitted(true); // Set submission status to true
     toggleModal();
+    setShowSuccessNotification(true); // Show success notification
+    setTimeout(() => {
+      setShowSuccessNotification(false); // Hide success notification after 3 seconds
+    }, 3000);
   };
 
   return (
@@ -99,7 +105,7 @@ export default function Modal() {
                   onChange={handleChange}
                 ></textarea>
               </div>
-              <button className="button2" type="submit" onClick={handleSubmit}>Submit</button>
+              <button className="button2" type="submit">Submit</button>
             </form>
           )}
           <button className="close-modal" onClick={toggleModal}>
@@ -107,6 +113,12 @@ export default function Modal() {
           </button>
         </div>
       </div>
+      {showSuccessNotification && (
+        <div className="success-notification">
+          Form submitted successfully!
+        </div>
+      )}
     </>
   );
 }
+

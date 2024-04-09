@@ -1,8 +1,8 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Sidebar from "./Sidebar/Sidebar";
 import "./Navbar.css";
-import { Link, To } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const Navbar = () => {
   const [isSidebar, setIsSidebar] = useState(false);
@@ -23,7 +23,7 @@ const Navbar = () => {
     <div className="nav__conatiner">
       <div className="top__nav">
         <div className="nav__logo">
-          <Link to="/"><img src="https://thecareerzone.co.in/img/logo-wide.png"></img></Link>
+          <Link to="/"><img src="https://thecareerzone.co.in/img/logo-wide.png" alt="" /></Link>
         </div>
         <div className="nav__links">
           <Link style={{textDecoration: "none"}} to="/"><span  onClick={() => scrollTop()}>Home</span></Link>

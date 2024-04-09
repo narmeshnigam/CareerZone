@@ -12,7 +12,7 @@ import StudentCreditCard from './Components/Services/StudentCreditCard/StudentCr
 import Gallery from './Components/Gallery/Gallery';
 import Modal from './Components/Modal/Modal';
 import Courses from './Components/Courses/Courses';
-import CoursesPages from './Components/CoursesPages/CoursesPages';
+import CareerBlogs from './Components/CareerBlogs/CareerBlogs';
 
 const AppLayout = () => {
   
@@ -66,8 +66,8 @@ const App = createBrowserRouter([
         element: <Courses />,
       },
       {
-        path: '/CoursesPages',
-        element: <CoursesPages />,
+        path: '/CareerBlogs',
+        element: <CareerBlogs />,
       },
     ],
   },
