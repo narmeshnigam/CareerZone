@@ -10,9 +10,14 @@ import Services from './Components/Services/Services';
 import EducationalService from './Components/Services/EducationalService/EducationalService';
 import StudentCreditCard from './Components/Services/StudentCreditCard/StudentCreditCard';
 import Gallery from './Components/Gallery/Gallery';
+
 import Modal from './Components/Modal/Modal';
 import Courses from './Components/Courses/Courses';
 import CareerBlogs from './Components/CareerBlogs/CareerBlogs';
+
+
+import CoursesAboutPage from './Components/Courses/CoursesAboutPage/CoursesAboutPage';
+
 
 const AppLayout = () => {
   
@@ -68,6 +73,14 @@ const App = createBrowserRouter([
       {
         path: '/CareerBlogs',
         element: <CareerBlogs />,
+      },
+      {
+        path: "/courses",
+        element: <Courses />, 
+      },
+      {
+        path: "/courses/dparma",
+        element: <CoursesAboutPage />, 
       },
     ],
   },

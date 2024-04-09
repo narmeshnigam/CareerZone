@@ -1,0 +1,23 @@
+.courses_about_container{
+    padding-top: 90px;
+    font-family: 'Poppins';
+}
+.courses_about_banner_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    background-image:  url(https://img.freepik.com/free-photo/pharmacist-checking-medicines-drugstore_259150-57964.jpg?w=996&t=st=1712473557~exp=1712474157~hmac=f93eb6ee6f7e99646205718507bfb5d6eb9bed66a4b5525b06156bc6efd43f2b) ;
+}
+.courses_about_banner_img div{
+    width: 70%;
+    font-size: 3rem;
+    filter: none;
+    font-weight: 600;
+}
+.courses_about_course_container{
+    margin: 6rem;
+}

@@ -34,10 +34,10 @@ const Navbar = () => {
           <Link style={{textDecoration: "none"}} to="/contact"><span onClick={() => scrollTop()}>Contact</span></Link>
         </div>
         <div className="nav__socials">
-          <img src="./facebook.png"></img>
-          <img src="./whatsapp.png"></img>
-          <img src="./youtube.png"></img>
-          <img src="./instagram.png"></img>
+          <img src="./facebook.png" alt=""></img>
+          <img src="./whatsapp.png" alt=""></img>
+          <img src="./youtube.png" alt=""></img>
+          <img src="./instagram.png" alt=""></img>
         </div>
         <div className="nav__top__menu__bar">
           <svg

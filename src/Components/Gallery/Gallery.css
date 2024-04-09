@@ -2,6 +2,10 @@
     padding-top: 90px;
     font-family: 'Poppins';
 }
+.gal__banner{
+    background-image: url(../../../public/GalleyBanner.png);
+    height: 30vh;
+}
 .gal__banner img{
     width:100%
 }
