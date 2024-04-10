@@ -113,6 +113,7 @@ export default function Modal() {
           </button>
         </div>
       </div>
+  
       {showSuccessNotification && (
         <div className="success-notification">
           Form submitted successfully!

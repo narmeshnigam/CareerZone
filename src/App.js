@@ -12,7 +12,7 @@ import StudentCreditCard from './Components/Services/StudentCreditCard/StudentCr
 import Gallery from './Components/Gallery/Gallery';
 
 import Modal from './Components/Modal/Modal';
-import Courses from './Components/Courses/Courses';
+//import Courses from './Components/Courses/Courses';
 import CareerBlogs from './Components/CareerBlogs/CareerBlogs';
 
 
@@ -66,18 +66,15 @@ const App = createBrowserRouter([
         path: '/gallery',
         element: <Gallery />,
       },
-      {
-        path: '/courses',
-        element: <Courses />,
-      },
+      // {
+      //   path: '/courses',
+      //   element: <Courses />,
+      // },
       {
         path: '/CareerBlogs',
         element: <CareerBlogs />,
       },
-      {
-        path: "/courses",
-        element: <Courses />, 
-      },
+     
       {
         path: "/courses/dparma",
         element: <CoursesAboutPage />, 

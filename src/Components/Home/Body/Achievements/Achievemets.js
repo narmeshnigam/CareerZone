@@ -2,6 +2,7 @@ import React from "react";
 import "./Achievements.css";
 import AchievementsPoints from "./AchievementsPoints/AchievementsPoints";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useHistory, useNavigate  } from 'react-router-dom';
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -10,6 +11,21 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Achievemets = () => {
+  const navigate=useNavigate()
+  // const history = useHistory();
+
+  // const handleCallNowClick = () => {
+  //   // Redirect to the call now page
+  //   history.push('/call-now');
+  // };
+
+  // const handleApplyNowClick = () => {
+  //   // Redirect to the apply now page
+  //   history.push('/apply-now');
+  // };
+
+ 
+
   return (
     <div className="achiv__container">
       <div className="achiv__left__container">
@@ -49,10 +65,10 @@ const Achievemets = () => {
           />
         </div>
         <div className="achiv__left__container__buttons">
-          <button style={{ backgroundColor: "#107F1E", color: "#ffff" }}>
+          <button style={{ backgroundColor: "#107F1E", color: "#ffff" }} onClick={()=>navigate('/callNow')}>
             Call Now
           </button>
-          <button style={{ backgroundColor: "#df200be2", color: "#ffff" }}>
+          <button style={{ backgroundColor: "#df200be2", color: "#ffff" }} onClick={()=>navigate('/applyNow')}>
             Apply Now
           </button>
         </div>
