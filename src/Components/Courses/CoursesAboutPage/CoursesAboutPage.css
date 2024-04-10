@@ -1,18 +1,16 @@
 .courses_about_container{
     padding-top: 90px;
     font-family: 'Poppins';
-      
 }
 .courses_about_banner_img{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgba(4, 4, 4, 0.7);
-    text-shadow: 3px 3px  #ffff;
+    color: white;
     background-size: cover;
     background-position: center;
-    height: 60vh;
-    background-image:  linear-gradient(to bottom ,#eaedf100, #eaedf1ba),url(https://img.freepik.com/free-photo/pharmacist-checking-medicines-drugstore_259150-57964.jpg?w=996&t=st=1712473557~exp=1712474157~hmac=f93eb6ee6f7e99646205718507bfb5d6eb9bed66a4b5525b06156bc6efd43f2b) ;
+    height: 40vh;
+    background-image:  url(https://img.freepik.com/free-photo/pharmacist-checking-medicines-drugstore_259150-57964.jpg?w=996&t=st=1712473557~exp=1712474157~hmac=f93eb6ee6f7e99646205718507bfb5d6eb9bed66a4b5525b06156bc6efd43f2b) ;
 }
 .courses_about_banner_img div{
     width: 70%;
@@ -21,74 +19,5 @@
     font-weight: 600;
 }
 .courses_about_course_container{
-    padding: 6rem;
-    display: flex;
-    text-align: justify;
-    align-items: center;
-    gap: 2rem;
-    --s: 50px;
-    --c1: #94bbfb1e;
-    --c2: #5d83c01e;
-    --c3: #4586ef1e;
-    
-    --_g: 0 120deg,#0000 0;
-    background:
-        conic-gradient(from    0deg at calc(500%/6) calc(100%/3),var(--c3) var(--_g)),
-        conic-gradient(from -120deg at calc(100%/6) calc(100%/3),var(--c2) var(--_g)),
-        conic-gradient(from  120deg at calc(100%/3) calc(500%/6),var(--c1) var(--_g)),
-        conic-gradient(from  120deg at calc(200%/3) calc(500%/6),var(--c1) var(--_g)),
-        conic-gradient(from -180deg at calc(100%/3) 50%,var(--c2)  60deg,var(--c1) var(--_g)),
-        conic-gradient(from   60deg at calc(200%/3) 50%,var(--c1)  60deg,var(--c3) var(--_g)),
-        conic-gradient(from  -60deg at 50% calc(100%/3),var(--c1) 120deg,var(--c2) 0 240deg,var(--c3) 0);
-    background-size: calc(var(--s)*1.732) var(--s);
-}
-.courses_about_course_container div:nth-child(1){
-    font-size: 1.3rem;
-    width: 70%;
-}
-.courses_about_course_container div:nth-child(n) div{
-    font-size: 2.3rem;
-    margin-bottom: 2rem;
-    color: #A51425;
-    font-weight: 600;
-    text-align: center;
-    width: 100%;
-}
-.courses_about_course_container div img{
-    border-radius: 30px;
-    width: 100%;
-    box-shadow: 6px 6px 0px #000000;
-}
-.courses_about_eli_points ul li{
-    font-size: 1.3rem;
-    margin: 1rem;
-    font-weight: 400;
-    text-align: justify;
-    color: #000000;
-}
-.courses_about_course_container div table{
-    font-size: 1.15rem;
-}
-.courses__about__suggested__btn{
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-.courses__about__suggested__btn button{
-    cursor: pointer;
-    padding: 0.5rem 1.5rem;
-    font-size: 1.5rem;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    color: rgb(191, 36, 36);
-    background-color: #bdd196;
-    box-shadow: 0px 0px 10px 3px #0000001e;
-    transition: background-color 500ms ease;
-}
-
-.courses__about__suggested__btn button:hover{
-    background-color: #ffff;
-    box-shadow: 6px 6px 6px #0000001e;
-    color: black;
+    margin: 6rem;
 }
