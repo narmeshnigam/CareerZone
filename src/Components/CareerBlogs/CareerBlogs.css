@@ -1,4 +1,4 @@
-/* .careerblogs__container {
+.careerblogs__container {
     width: 100%;
     padding-top: 20vh;
     
@@ -8,7 +8,11 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+    
+/* .hrr {
+    display: flex;
+    
+} */
 
 .careerblogs__heading{
     
@@ -65,4 +69,4 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-bottom: 3vh;
 
-} */
+}
