@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Sidebar from "./Sidebar/Sidebar";
 import "./Navbar.css";
-import { Link, To } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const Navbar = () => {
   const [isSidebar, setIsSidebar] = useState(false);
@@ -23,7 +23,7 @@ const Navbar = () => {
     <div className="nav__conatiner">
       <div className="top__nav">
         <div className="nav__logo">
-          <Link to="/"><img src="https://thecareerzone.co.in/img/logo-wide.png"></img></Link>
+          <Link to="/"><img src="https://thecareerzone.co.in/img/logo-wide.png" alt="" /></Link>
         </div>
         <div className="nav__links">
           <Link style={{textDecoration: "none"}} to="/"><span  onClick={() => scrollTop()}>Home</span></Link>
@@ -34,10 +34,10 @@ const Navbar = () => {
           <Link style={{textDecoration: "none"}} to="/contact"><span onClick={() => scrollTop()}>Contact</span></Link>
         </div>
         <div className="nav__socials">
-          <img src="./facebook.png"></img>
-          <img src="./whatsapp.png"></img>
-          <img src="./youtube.png"></img>
-          <img src="./instagram.png"></img>
+          <img src="./facebook.png" alt=""></img>
+          <img src="./whatsapp.png" alt=""></img>
+          <img src="./youtube.png" alt=""></img>
+          <img src="./instagram.png" alt=""></img>
         </div>
         <div className="nav__top__menu__bar">
           <svg
