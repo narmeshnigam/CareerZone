@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Sidebar from "./Sidebar/Sidebar";
 import "./Navbar.css";
 import { Link, To } from "react-router-dom";

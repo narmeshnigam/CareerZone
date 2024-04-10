@@ -12,6 +12,11 @@ import StudentCreditCard from './Components/Services/StudentCreditCard/StudentCr
 import Gallery from './Components/Gallery/Gallery';
 import Courses from './Components/Courses/Courses';
 import CoursesAboutPage from './Components/Courses/CoursesAboutPage/CoursesAboutPage';
+import Blogs from './Components/Blogs/Blogs';
+import Admin from './Components/FirebaseServer/Admin';
+import AdminLogin from './Components/FirebaseServer/AdminLogin/AdminLogin';
+import AdminNav from './Components/FirebaseServer/AdminNav/AdminNav';
+import HomeCrousel from './Components/FirebaseServer/HomeCrousel/HomeCrousel';
 
 const AppLayout = () => {
   return (
@@ -19,10 +24,17 @@ const AppLayout = () => {
     <Navbar />
     <Outlet/>
     <Footer/>
-    
     </>
   );
 };
+const AdminPannelRoutes = () => {
+  return(
+    <>
+    <AdminNav/>
+    <Outlet/>
+    </>
+  )
+}
 const App = createBrowserRouter([
   {
     path: "/",
@@ -64,8 +76,30 @@ const App = createBrowserRouter([
         path: "/courses/dparma",
         element: <CoursesAboutPage />, 
       },
+      {
+        path: "/blogs",
+        element: <Blogs/>, 
+      },
     ],
   },
+  {
+    path: "/login",
+    element: <AdminLogin/>, 
+  },
+  {
+    path: '/admin',
+    element: <AdminPannelRoutes/>,
+    children:[
+      {
+        path: '/admin',
+        element: <Admin/>
+      },
+      {
+        path: '/admin/homecrousel',
+        element: <HomeCrousel/>
+      }
+    ]
+  }
 ]);
 
 export default App;

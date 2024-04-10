@@ -1,0 +1,8 @@
+.MuiAutocomplete-inputRoot{
+    background-color: white;
+    box-shadow: 6px 6px 6px #00000028;
+    
+}
+.MuiAutocomplete-hasPopupIcon.css-84nhb1-MuiAutocomplete-root .MuiOutlinedInput-root{
+    border-radius: 30px;
+}
