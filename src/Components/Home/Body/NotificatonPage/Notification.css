@@ -34,11 +34,13 @@
 }
 .noti__right__container{
     width: 30%;
+    height: 24rem;
     border-radius: 1rem;
     box-shadow: inset 6px 6px 6px #00000012, 6px 6px 6px #00000012;
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
     align-items: center;
 }
 .noti__right__heading{
@@ -48,6 +50,30 @@
     text-decoration: underline;
     margin-bottom: 1rem;
 }
+.noti__right__ul__container{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.noti__right__ul__container li{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.newsvgicon{
+    animation: blink 700ms steps(1, end) infinite;
+}
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      filter: invert(100%);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 @media screen and (max-width: 600px) {
     .noti__container{
         display: block;

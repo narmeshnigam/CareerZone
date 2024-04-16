@@ -63,3 +63,9 @@
 .Engineering{
     background-color: rgb(251, 113, 113);
 }
+.open{
+    display: block;
+}
+.closed{
+    display: none;
+}

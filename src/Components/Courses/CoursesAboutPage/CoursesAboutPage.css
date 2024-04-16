@@ -12,7 +12,7 @@
     background-size: cover;
     background-position: center;
     height: 60vh;
-    background-image:  linear-gradient(to bottom ,#eaedf100, #eaedf1ba),url(https://img.freepik.com/free-photo/pharmacist-checking-medicines-drugstore_259150-57964.jpg?w=996&t=st=1712473557~exp=1712474157~hmac=f93eb6ee6f7e99646205718507bfb5d6eb9bed66a4b5525b06156bc6efd43f2b) ;
+    /* background-image:  linear-gradient(to bottom ,#eaedf100, #eaedf1ba),url(https://img.freepik.com/free-photo/pharmacist-checking-medicines-drugstore_259150-57964.jpg?w=996&t=st=1712473557~exp=1712474157~hmac=f93eb6ee6f7e99646205718507bfb5d6eb9bed66a4b5525b06156bc6efd43f2b) ; */
 }
 .courses_about_banner_img div{
     width: 70%;
@@ -56,7 +56,7 @@
 }
 .courses_about_course_container div img{
     border-radius: 30px;
-    width: 100%;
+    width: 30vw;
     box-shadow: 6px 6px 0px #000000;
 }
 .courses_about_eli_points ul li{

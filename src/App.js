@@ -17,6 +17,8 @@ import Admin from './Components/FirebaseServer/Admin';
 import AdminLogin from './Components/FirebaseServer/AdminLogin/AdminLogin';
 import AdminNav from './Components/FirebaseServer/AdminNav/AdminNav';
 import HomeCrousel from './Components/FirebaseServer/HomeCrousel/HomeCrousel';
+import AdminNotification from './Components/FirebaseServer/AdminNotification/AdminNotification';
+import AdminCourses from './Components/FirebaseServer/AdminCourses/AdminCourses';
 
 const AppLayout = () => {
   return (
@@ -73,7 +75,7 @@ const App = createBrowserRouter([
         element: <Courses />, 
       },
       {
-        path: "/courses/dparma",
+        path: "/courses/:name",
         element: <CoursesAboutPage />, 
       },
       {
@@ -97,6 +99,14 @@ const App = createBrowserRouter([
       {
         path: '/admin/homecrousel',
         element: <HomeCrousel/>
+      },
+      {
+        path: '/admin/notification',
+        element: <AdminNotification/>
+      },
+      {
+        path: '/admin/courses',
+        element: <AdminCourses/>
       }
     ]
   }

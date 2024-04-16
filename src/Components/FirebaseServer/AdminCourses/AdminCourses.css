@@ -1,0 +1,47 @@
+.admin-courses__container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #fab7b7;
+    border-radius: 5px;
+  }
+  
+  .admin-courses__container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .admin-courses__container form label {
+    display: block;
+    margin-bottom: 10px;
+    padding-right: 15px;
+  }
+  
+  .admin-courses__container form input[type="text"],
+  .admin-courses__container form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-right: 10px;
+  }
+  
+  .admin-courses__container form label input[type="checkbox"] {
+    margin-right: 5px;
+
+  }
+  
+  .admin-courses__container form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .admin-courses__container form button:hover {
+    background-color: #0056b3;
+  }
