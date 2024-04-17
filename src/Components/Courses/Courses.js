@@ -10,6 +10,7 @@ const Courses = () => {
   const [openSections, setOpenSections] = useState({});
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchCourses = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "courses"));

@@ -7,9 +7,12 @@
     width: 20rem;
     border-radius: 1rem;
     font-family: 'Poppins';
+    transition: scale 100ms ease-in;
 }
 .coursesCard__container:hover{
-    box-shadow: inset 6px 6px 6px #00000021, 6px 6px 6px #00000021;
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #4e5d76;
 }
 .coursesCard__container img{
     width: 7rem;

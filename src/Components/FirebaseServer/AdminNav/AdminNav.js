@@ -16,7 +16,7 @@ const AdminNav = () => {
         });
     }
   return (
-    <div className="nav__conatiner" style={{position:'static'}}>
+    <div className="nav__conatiner" style={{width:'100%', position:'static'}}>
         <div className="top__nav">
         <div className="nav__logo">
             <Link to="/"><img src="https://thecareerzone.co.in/img/logo-wide.png"></img></Link>
@@ -25,9 +25,9 @@ const AdminNav = () => {
             <Link style={{textDecoration: "none"}} to="/admin/homecrousel"><span  onClick={() => scrollTop()}>HomeCrousel</span></Link>
             <Link style={{textDecoration: "none"}} to="/admin/notification"><span onClick={() => scrollTop()}>Notification</span></Link>
             <Link style={{textDecoration: "none"}} to="/admin/courses"><span onClick={() => scrollTop()}>Courses</span></Link>
+            <Link style={{textDecoration: "none"}} to="/admin/collegedetails"><span onClick={() => scrollTop()}>College Details</span></Link>
             <span onClick={() => logOut()}>Log Out</span>
-            {/*<Link style={{textDecoration: "none"}} to="/gallery"><span onClick={() => scrollTop()}>Gallery</span></Link>
-            <Link style={{textDecoration: "none"}} to="/contact"><span onClick={() => scrollTop()}>Contact</span></Link> */}
+            {/*<Link style={{textDecoration: "none"}} to="/contact"><span onClick={() => scrollTop()}>Contact</span></Link> */}
         </div>
         <div className="nav__top__menu__bar">
             <svg

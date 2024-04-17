@@ -1,9 +1,18 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './CoursesCard.css'
 
 const CoursesCard = ({img, desc}) => {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/courses')
+  }
+
+
   return (
-    <div className='coursesCard__container'>
+    <div className='coursesCard__container' onClick={handleClick}>
         <img src={img}></img>
         <spna className="coursesCard__desc">{desc}</spna>
     </div>
