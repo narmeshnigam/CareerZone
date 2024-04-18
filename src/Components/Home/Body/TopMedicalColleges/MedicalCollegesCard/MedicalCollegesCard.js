@@ -1,9 +1,10 @@
 import React from "react";
 import "./MedicalCollegesCard.css";
+import { Link } from "react-router-dom";
 
 const MedicalCollegesCard = ({img, name, location, time}) => {
   return (
-    <div className="medicalCollegeCard__container">
+    <Link to={'/college'} style={{textDecoration:'none', color:'black'}}><div className="medicalCollegeCard__container">
       <div>
         <img style={{width: '17rem',borderRadius:'20px 20px 0px 0px'}} src={img}></img>
       </div>
@@ -28,6 +29,7 @@ const MedicalCollegesCard = ({img, name, location, time}) => {
         <button>Know more</button>
       </div>
     </div>
+    </Link>
   );
 };
 

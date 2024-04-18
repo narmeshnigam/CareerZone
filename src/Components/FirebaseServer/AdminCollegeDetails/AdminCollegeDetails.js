@@ -14,12 +14,14 @@ const AdminCollegeDetails = () => {
     const [collegeData, setCollegeData] = useState({
         name: '',
         address: '',
+        backgroundImg: '',
         email: '',
         phoneNo: '',
         about: '',
         certifications: [],
         availableCourse: [],
-        otherInfo: []
+        otherInfo: [],
+        category: ''
     });
 
     const handleInputChange = (e) => {
@@ -89,12 +91,14 @@ const AdminCollegeDetails = () => {
           setCollegeData({
             name: '',
             address: '',
+            backgroundImg: '',
             email: '',
             phoneNo: '',
             about: '',
             certifications: [],
             availableCourse: [],
-            otherInfo: []
+            otherInfo: [],
+            category: ''
           });
         } catch (error) {
           console.error('Error adding course: ', error);
@@ -107,6 +111,8 @@ const AdminCollegeDetails = () => {
             <div className={styles.formcontainer}>
                 <div>Name</div>
                 <input type='text' name='name' value={collegeData.name} onChange={handleChange} placeholder='Enter the Name of College' />
+                <div>Background Image Url</div>
+                <input type='text' name='backgroundImg' value={collegeData.backgroundImg} onChange={handleChange} placeholder='Enter the Image url' />
                 <div>Contact Details</div>
                 <input type='text' name='address' value={collegeData.address} onChange={handleChange} placeholder='Enter the Full Address of college' />
                 <input type='number' name='phoneNo' value={collegeData.phoneNo} onChange={handleChange} placeholder='Enter contact Number' />
@@ -133,6 +139,8 @@ const AdminCollegeDetails = () => {
                     </div>
                 ))}
                 <button onClick={handleOtherInfoAdd}>Add Info</button>
+                <div>Category of College</div>
+                <input type='text' name='category' placeholder='Category of college' value={collegeData.category} onChange={handleChange} />
                 <button onClick={handleSubmit}>Submit</button>
             </div>
         </div>

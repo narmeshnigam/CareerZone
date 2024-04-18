@@ -1,5 +1,6 @@
 .medicalCollegeCard__container{
     display: flex;
+    height: 25rem;
     border-radius: 20px;
     flex-direction: column;
     align-items: center;
@@ -7,9 +8,11 @@
     font-family: 'Poppins';
     width: 17rem;
     box-shadow: 6px 6px 6px #00000016;
+    transition: 200ms ease;
 }
 .medicalCollegeCard__container:hover{
-    box-shadow: inset 6px 6px 6px #00000016, 6px 6px 6px #00000016;
+    scale: 1.1;
+    background-color: #ffe32bba;
 }
 .medicalCollegeCard__heading{
     text-align: center;

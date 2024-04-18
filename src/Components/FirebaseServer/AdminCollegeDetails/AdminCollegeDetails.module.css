@@ -1,8 +1,8 @@
 .container{
-    max-width: 40%;
+    max-width: 35%;
     margin:2rem auto;
     padding:1rem 2rem;
-    border-radius: 50px;
+    border-radius: 10px;
     background-color: #5E6E7B;
     color: #ffff;
 }
@@ -27,10 +27,13 @@
     font-size: 1.1rem;
     color: #ffff;
     background-color: #3380C7;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     box-shadow: 6px 6px 6px #00000015;
 }
 .formcontainer input{
+    width: 70%;
+    margin: 10px auto;
+    border-radius: 10px;
     box-shadow: 6px 6px 6px #0000001d;
 }

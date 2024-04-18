@@ -80,7 +80,7 @@ const Courses = () => {
                   </div>
                   <div className="courses__card__container__main">
                     {courses.map((course, index) => (
-                      course.after10th ? <Link to={`/courses/${course.name}`}><CoursesCard
+                      course.after10th ? <Link style={{textDecoration:'none'}} to={`/courses/${course.name}`}><CoursesCard
                        key={index}
                        name={course.name}
                        img={course.backgroundImage} /></Link> : null

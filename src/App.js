@@ -86,9 +86,13 @@ const App = createBrowserRouter([
         element: <Blogs/>, 
       },
       {
-        path: '/colleges',
+        path: '/college',
         element: <College/>
-      }
+      },
+      {
+        path: "/college/:name",
+        element: <CollegeDetails />, 
+      },
     ],
   },
   {

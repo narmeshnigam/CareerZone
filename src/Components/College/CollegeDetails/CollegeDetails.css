@@ -3,68 +3,25 @@
     font-family: 'Poppins';
 }
 .college_details_section1 {
-    background-image: url("https://img.freepik.com/free-vector/blue-curve-background_53876-113112.jpg"); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-repeat: no-repeat;
     background-size: cover;
-   padding: 0rem 0rem 2rem 0rem;
-
+    height: 85vh;
 }
 .college_details_heading {
-    padding-top: 14vh;
-    padding-left: 5vw;
+    padding: 2rem;
     font-size: 3rem;
     font-weight: 700;
 }
-.college_details_contactUs {
-    width: 40%;
-    height: 50vh;
-    border-radius: 50px;
-    background-image: url("https://img.freepik.com/free-photo/top-view-chat-bubbles-with-telephone-receiver-copy-space_23-2148796078.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1713139200&semt=ais");
-    margin-left: 7vw;
-    background-position: center;
-    margin-top: 10vh;
-}
-.college_details_Info {
-    width: 100%;
-    display: flex;
-}
-.college_details_collegeAddress {
-    width: 40%;
-    border-radius: 50px;
-    height: 50vh;
-    background-color: #9bd0d6e8;
-    margin-left: 6vw;
-    margin-top: 10vh;
-}
-.contactUs__heading12 {
-    margin-left: 2vw;
-    padding-top: 10vh;
-    font-size: 2.3rem;
-    font-weight: 600;
-}
 .contactUs__content12 {
-    margin-left: 2vw;
-    margin-top: 8vh;
+    padding-left: 2rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
     font-size: larger;
     font-weight: 400;
-
-}
-.call__details {
-    padding-bottom: 2vh;
-}
-.college_address_de1 {
-    margin-top: 10vh;
-    margin-left: 2vw;
-    font-size: 2.3rem;
-    font-weight: 600;
-
-}
-.college_address_de {
-    margin-top: 5vh;
-    margin-left: 2vw;
-    margin-right: 4vw;
-    font-size: large;
-
 }
 .college_detailssection2_content {
     padding: 6rem;

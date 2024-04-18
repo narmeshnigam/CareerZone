@@ -1,52 +1,58 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import db from '../../../firebase';
+import { useParams } from 'react-router-dom';
 import './CollegeDetails.css';
 
 const CollegeDetails = () => {
+    const {name} =  useParams();
+    const [college, setCollege] = useState({});
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+  
+  useEffect(() => {
+    const fetchImages = async () => {
+      db.collection("collegeData").where("name", "==", name)
+        .get()
+        .then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            setCollege(doc.data())
+          });
+        })
+        .catch((error) => {
+          console.log("Error getting documents: ", error);
+        });
+    };
+    
+    fetchImages();
+  }, [name]);
+
     return (
         <div className='College__Details'>
-            <div className='college_details_section1'>
+            <div className='college_details_section1' style={{backgroundImage:` linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url(${college.backgroundImg})`}}>
                 <div className='college_details_heading'>
-                    Sant Longowal Institute of Engineering and Technology
+                    {college.name}
                 </div>
-                <div className='college_details_Info'>
-                    <div className='college_details_contactUs'>
-                        <div className='contactUs__heading12'>Contact Us</div>
-                        <div className='contactUs__content12'>
-
-                            <div className='call__details'>
-                                Phone No. - +91 7764029102
-                            </div>
-                            <div>
-                                Email :- nishukum1211@gmail.com
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div className='college_details_collegeAddress'>
-                        <div className='college_address_de1'>College Address</div>
-                        <div className='college_address_de'>
-                            <p><i style={{padding:'0rem 1rem 0rem 0rem'}} className="fas fa-map-marker-alt icon"></i><strong>Address: </strong>&nbsp;&nbsp;511, 5 Floor, Ashiana tower, Brajkishore Path, Near HDFC BANK LTD, Ali Nagar Colony, Salimpur Ahra, Patna, Bihar 800001</p></div>
-
-
-
-                    </div>
+                <div className='contactUs__content12'>
+                        <div>Phone No. - +91 {college.phoneNo}</div>
+                        <div>Email :- {college.email}</div>
+                        <div><i style={{padding:'0rem 1rem 0rem 0rem'}} className="fas fa-map-marker-alt icon"></i><strong>Address: </strong>&nbsp;&nbsp;{college.address}</div>
                 </div>
             </div>
             <div className='college_details_section2'>
                 <div className='college_detailssection2_content'>
                     <div className='college_detailssection2_heading'>About</div>
-                    <div className='college_detailssection2_content1'>The institute is an autonomous body, fully funded by Govt. Of India and controlled by SLIET society, registered under Societies Registration Act, 1860. The institute awards its own Certificates, Diplomas, Undergraduate and Postgraduate approved and recognized by AICTE, New Delhi.</div><br />
-                    <div className='college_detailssection2_content1'>The institute is an autonomous body, fully funded by Govt. Of India and controlled by SLIET society, registered under Societies Registration Act, 1860. The institute awards its own Certificates, Diplomas, Undergraduate and Postgraduate approved and recognized by AICTE, New Delhi.</div>
+                    <div className='college_detailssection2_content1'>{college.about}</div>
                 </div>
             </div>
             <div className='college_details_section3'>
                 <div className='college_details_certifications'>Accrediations  and Certifications</div>
                 <div className='college_detailscertifications_images'>
                     <ul>
-                        <li>A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, a further education institution, or a secondary school.</li>
-                        <li>A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, a further education institution, or a secondary school.</li>
-                        <li>A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, a further education institution, or a secondary school.</li>
+                        {college.certifications?.map((data, index) => (
+                            <li key={index}>{data}</li>
+                        ))}
                     </ul>
                 </div>
             </div>
@@ -56,6 +62,7 @@ const CollegeDetails = () => {
                     <table>
                         <thead>
                             <tr>
+                                <th>S.no</th>
                                 <th>Name</th>
                                 <th>Duration</th>
                                 <th>Domain</th>
@@ -63,18 +70,15 @@ const CollegeDetails = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>B. Tech</td>
-                                <td>4 years</td>
-                                <td>Engineering</td>
-                                <td>UG</td>
-                            </tr>
-                            <tr>
-                                <td>D. Pharma</td>
-                                <td>3 years</td>
-                                <td>Medical</td>
-                                <td>Diploma</td>
-                            </tr>
+                            {college.availableCourse?.map((data, i) => (
+                                <tr key={i}>
+                                <td>{i+1}</td>
+                                <td>{data.name}</td>
+                                <td>{data.duration}</td>
+                                <td>{data.domain}</td>
+                                <td>{data.type}</td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
                 </div>
@@ -83,9 +87,9 @@ const CollegeDetails = () => {
                 <div className='college_detailssection4_heading'>Other Information</div>
                 <div className='college__information'>
                     <ul>
-                        <li>A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, a further education institution, or a secondary school.</li>
-                        <li>A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, a further education institution, or a secondary school.</li>
-                        <li>A college may be a degree-awarding tertiary educational institution, a part of a collegiate or federal university, an institution offering vocational education, a further education institution, or a secondary school.</li>
+                        {college.otherInfo?.map((data, index) => (
+                            <li key={index}>{data}</li>
+                        ))}
                     </ul>
                 </div>
             </div>

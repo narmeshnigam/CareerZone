@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './CoursesCard.css'
 
 const CoursesCard = ({img, desc}) => {
@@ -16,6 +16,7 @@ const CoursesCard = ({img, desc}) => {
         <img src={img}></img>
         <spna className="coursesCard__desc">{desc}</spna>
     </div>
+    
   )
 }
 
