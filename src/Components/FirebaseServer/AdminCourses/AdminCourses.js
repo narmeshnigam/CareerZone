@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './AdminCourses.module.css';
 import db from "../../../firebase";
+import Loading from '../Loading/Loading';
 
 const AdminCourses = () => {
+
+  const [course, setCourse] = useState([]);
+  const [loading, setLoading] = useState(false)
+
   const [college, setCollege] = useState({
     name:'',
     district:'',
@@ -21,6 +26,19 @@ const AdminCourses = () => {
     after10th: false,
     after12th: false
   });
+
+  useEffect(() => {
+    const fetchImages = async () => {
+        db.collection('courses').onSnapshot(snapshot => {
+            setCourse(snapshot.docs.map((doc) => ({
+              id: doc.id,
+              name: doc.data().name
+            })));
+        });
+    };
+    
+    fetchImages();
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -65,9 +83,9 @@ const AdminCourses = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true)
     try {
       await db.collection('courses').add(courseData);
-      alert('Course added successfully!');
       setCourseData({
         name: '',
         backgroundImage: '',
@@ -83,10 +101,17 @@ const AdminCourses = () => {
     } catch (error) {
       console.error('Error adding course: ', error);
     }
+    setLoading(false)
   };
+
+  const handleDelete = async (id) => {
+    await db.collection("courses").doc(id).delete();
+  };
+
 
   return (
     <>
+    <div style={{ position: 'absolute', backgroundColor: '#00000021' , height: '100vh'}}>{loading === true ? <Loading /> : ''}</div>
     <div className={styles['admin-courses__container']}>
       <h2>Add New Course</h2>
       <form onSubmit={handleSubmit}>
@@ -124,13 +149,15 @@ const AdminCourses = () => {
             Add Scope
           </button>
         </label>
-        <label>Enter College details:</label>
+        <label >Enter College details:
               <input type='text' placeholder='Name of college' name={'name'} value={college.name} onChange={(e) => handleInputChange(e)} />
               <input type='text' placeholder='District' name={'district'} value={college.district} onChange={(e) => handleInputChange(e)} />
               <input type='text' placeholder='State' name={'state'} value={college.state} onChange={(e) => handleInputChange(e)} />
-              <input type="checkbox" name={'nac'} checked={college.nac} onChange={(e) => handleInputChange(e)} />
-              <label>NAC Accredited</label>
+              <label style={{display: 'flex', alignItems:'center', justifyContent:'space-between'}}>NAC Accredited
+                <input type="checkbox" name={'nac'} checked={college.nac} onChange={(e) => handleInputChange(e)} />
+              </label>
           <button type="button" onClick={handleClick}>Add College</button>
+        </label>
         <label>
           Suggested Course:
           <ul>
@@ -147,19 +174,36 @@ const AdminCourses = () => {
           <input type="text" name="courseCategory" value={courseData.courseCategory} onChange={(e) => handleChange(e)} />
         </label>
         <label>
-          <input type="checkbox" name="after10th" checked={courseData.after10th} onChange={(e) => handleChange(e)} />
-          Courses After class 10th
+          <div>
+            Courses After class 10th
+            <input type="checkbox" name="after10th" checked={courseData.after10th} onChange={(e) => handleChange(e)} />
+          </div>
         </label>
         <label>
-          <input type="checkbox" name="after12th" checked={courseData.after12th} onChange={(e) => handleChange(e)} />
-          Courses After class 12th
+          <div>
+            Courses After class 12th
+            <input type="checkbox" name="after12th" checked={courseData.after12th} onChange={(e) => handleChange(e)} />
+          </div>
         </label>
         <button type="submit">Add Course</button>
       </form>
     </div>
-    <table>
-      <th></th>
-    </table>
+    <div className={styles.table}>
+      <table>
+          <tr>
+              <th>S.No</th>
+              <th>Course Name</th>
+              <th>Delete Course</th>
+          </tr>
+          {course.map((data, i) => (
+              <tr key={i}>
+                  <td>{i+1}</td>
+                  <td>{data.name}</td>
+                  <td><button onClick={() => handleDelete(data.id)}>delete</button></td>
+              </tr>
+          ))}
+      </table>
+    </div>
     </>
   );
 };

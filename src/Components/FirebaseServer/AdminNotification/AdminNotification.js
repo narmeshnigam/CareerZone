@@ -6,7 +6,7 @@ import Loading from '../Loading/Loading';
 const AdminNotification = () => {
 
   const [noti, setNoti] = useState('');
-  const[loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false)
   const [displayNoti, setDisplayNoti] = useState([]);
 
   useEffect(() => {
@@ -74,7 +74,7 @@ const AdminNotification = () => {
 
   return (
     <>
-      <div style={{ position: 'absolute', backgroundColor: '#00000021' }}>{loading === true ? <Loading /> : ''}</div>
+      <div style={{ position: 'absolute', backgroundColor: '#00000021' , height: '100vh'}}>{loading === true ? <Loading /> : ''}</div>
       <div className={styles.container}>
         <div className={styles.innerContainer}>
           <div className={styles.heading}>Enter the Notification to be displayed</div>

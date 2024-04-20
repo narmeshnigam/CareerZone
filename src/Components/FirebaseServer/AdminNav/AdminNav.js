@@ -1,9 +1,12 @@
 import React from 'react'
-import { Link, To } from "react-router-dom";
+import { Link, To, useNavigate } from "react-router-dom";
 import { getAuth, signOut } from 'firebase/auth';
 const auth = getAuth();
 
 const AdminNav = () => {
+
+    const navigate = useNavigate();
+
     const scrollTop = () => {
         window.scrollTo(0, 0);
       }
@@ -11,6 +14,7 @@ const AdminNav = () => {
     const logOut = () => {
     signOut(auth).then(() => {
         alert('Log out successfully')
+        navigate('/login')
         }).catch((error) => {
         alert(error);
         });

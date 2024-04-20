@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './AdminCollegeDetails.module.css';
 import db from '../../../firebase';
+import Loading from '../Loading/Loading';
 
 const AdminCollegeDetails = () => {
+    const [college, setCollege] = useState([]);
+    const [loading, setLoading] = useState(false)
 
     const [course, setCourse] = useState({
-        name:'',
-        duration:'',
-        domain:'',
-        type:''
-      })
-
+        name: '',
+        duration: '',
+        domain: '',
+        type: ''
+    })
+    
     const [collegeData, setCollegeData] = useState({
         name: '',
         address: '',
@@ -24,6 +27,19 @@ const AdminCollegeDetails = () => {
         category: ''
     });
 
+    useEffect(() => {
+        const fetchImages = async () => {
+            db.collection('collegeData').onSnapshot(snapshot => {
+                setCollege(snapshot.docs.map((doc) => ({
+                  id: doc.id,
+                  name: doc.data().name
+                })));
+            });
+        };
+        
+        fetchImages();
+      }, []);
+
     const handleInputChange = (e) => {
         const { name, value, type, checked } = e.target;
         const newValue = type === "checkbox" ? checked : value;
@@ -32,16 +48,16 @@ const AdminCollegeDetails = () => {
 
     const handleClick = () => {
         setCollegeData({
-          ...collegeData,
-          availableCourse: [...collegeData.availableCourse, course]
+            ...collegeData,
+            availableCourse: [...collegeData.availableCourse, course]
         });
         setCourse({
-            name:'',
-            duration:'',
-            domain:'',
-            type:''
+            name: '',
+            duration: '',
+            domain: '',
+            type: ''
         });
-      };
+    };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -85,65 +101,89 @@ const AdminCollegeDetails = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true)
         try {
-          await db.collection('collegeData').add(collegeData);
-          alert('College Details added successfully!');
-          setCollegeData({
-            name: '',
-            address: '',
-            backgroundImg: '',
-            email: '',
-            phoneNo: '',
-            about: '',
-            certifications: [],
-            availableCourse: [],
-            otherInfo: [],
-            category: ''
-          });
+            await db.collection('collegeData').add(collegeData);
+            setCollegeData({
+                name: '',
+                address: '',
+                backgroundImg: '',
+                email: '',
+                phoneNo: '',
+                about: '',
+                certifications: [],
+                availableCourse: [],
+                otherInfo: [],
+                category: ''
+            });
         } catch (error) {
-          console.error('Error adding course: ', error);
+            console.error('Error adding course: ', error);
         }
-      };
+        setLoading(false)
+    };
+
+    const handleDelete = async (id) => {
+        await db.collection("collegeData").doc(id).delete();
+    };
 
     return (
-        <div className={styles.container}>
-            <div className={styles.topheading}>Add New College</div>
-            <div className={styles.formcontainer}>
-                <div>Name</div>
-                <input type='text' name='name' value={collegeData.name} onChange={handleChange} placeholder='Enter the Name of College' />
-                <div>Background Image Url</div>
-                <input type='text' name='backgroundImg' value={collegeData.backgroundImg} onChange={handleChange} placeholder='Enter the Image url' />
-                <div>Contact Details</div>
-                <input type='text' name='address' value={collegeData.address} onChange={handleChange} placeholder='Enter the Full Address of college' />
-                <input type='number' name='phoneNo' value={collegeData.phoneNo} onChange={handleChange} placeholder='Enter contact Number' />
-                <input type='email' name='email' value={collegeData.email} onChange={handleChange} placeholder='Enter Email for contact' />
-                <div>About College</div>
-                <input type='text' name='about' placeholder='About college' value={collegeData.about} onChange={handleChange} />
-                <div>Accrediations and Certifications</div>
-                {collegeData.certifications.map((cert, index) => (
-                    <div key={index}>
-                        <input type='text' value={cert} placeholder='Enter the Accrediations and Certifications' onChange={(e) => handleCertificationChange(index, e.target.value)} />
-                    </div>
-                ))}
-                <button onClick={handleCertificationAdd}>Add Accrediations and Certifications</button>
-                 <div>Available Courses</div>
-                <input type='text' placeholder='Enter the Name of Course' name={'name'} value={course.name} onChange={(e) => handleInputChange(e)}/>
-                <input type='number' placeholder='Enter the Duration of Course' name={'duration'} value={course.duration} onChange={(e) => handleInputChange(e)}/>
-                <input type='text' placeholder='Enter the Domain of Course' name={'domain'} value={course.domain} onChange={(e) => handleInputChange(e)}/>
-                <input type='text' placeholder='Enter the Type of Course' name={'type'} value={course.type} onChange={(e) => handleInputChange(e)}/>
-                <button onClick={handleClick}>Add Course</button>
-                <div>Other Information</div>
-                {collegeData.otherInfo.map((info, index) => (
-                    <div key={index}>
-                        <input type='text' value={info} placeholder='Enter the Other Information' onChange={(e) => handleOtherInfoChange(index, e.target.value)} />
-                    </div>
-                ))}
-                <button onClick={handleOtherInfoAdd}>Add Info</button>
-                <div>Category of College</div>
-                <input type='text' name='category' placeholder='Category of college' value={collegeData.category} onChange={handleChange} />
-                <button onClick={handleSubmit}>Submit</button>
+        <>
+         <div style={{ position: 'absolute', backgroundColor: '#00000021' , height: '100vh'}}>{loading === true ? <Loading /> : ''}</div>
+            <div className={styles.container}>
+                <div className={styles.topheading}>Add New College</div>
+                <div className={styles.formcontainer}>
+                    <div>Name</div>
+                    <input type='text' name='name' value={collegeData.name} onChange={handleChange} placeholder='Enter the Name of College' />
+                    <div>Background Image Url</div>
+                    <input type='text' name='backgroundImg' value={collegeData.backgroundImg} onChange={handleChange} placeholder='Enter the Image url' />
+                    <div>Contact Details</div>
+                    <input type='text' name='address' value={collegeData.address} onChange={handleChange} placeholder='Enter the Full Address of college' />
+                    <input type='number' name='phoneNo' value={collegeData.phoneNo} onChange={handleChange} placeholder='Enter contact Number' />
+                    <input type='email' name='email' value={collegeData.email} onChange={handleChange} placeholder='Enter Email for contact' />
+                    <div>About College</div>
+                    <input type='text' name='about' placeholder='About college' value={collegeData.about} onChange={handleChange} />
+                    <div style={{ marginBottom: '0.4rem' }}>Accrediations and Certifications</div>
+                    {collegeData.certifications.map((cert, index) => (
+                        <div key={index}>
+                            <input type='text' value={cert} placeholder='Enter the Accrediations and Certifications' onChange={(e) => handleCertificationChange(index, e.target.value)} />
+                        </div>
+                    ))}
+                    <button onClick={handleCertificationAdd}>Add Accrediations and Certifications</button>
+                    <div>Available Courses</div>
+                    <input type='text' placeholder='Enter the Name of Course' name={'name'} value={course.name} onChange={(e) => handleInputChange(e)} />
+                    <input type='number' placeholder='Enter the Duration of Course' name={'duration'} value={course.duration} onChange={(e) => handleInputChange(e)} />
+                    <input type='text' placeholder='Enter the Domain of Course' name={'domain'} value={course.domain} onChange={(e) => handleInputChange(e)} />
+                    <input type='text' placeholder='Enter the Type of Course' name={'type'} value={course.type} onChange={(e) => handleInputChange(e)} />
+                    <button onClick={handleClick}>Add Course</button>
+                    <div style={{ marginBottom: '0.4rem' }}>Other Information</div>
+                    {collegeData.otherInfo.map((info, index) => (
+                        <div key={index}>
+                            <input type='text' value={info} placeholder='Enter the Other Information' onChange={(e) => handleOtherInfoChange(index, e.target.value)} />
+                        </div>
+                    ))}
+                    <button onClick={handleOtherInfoAdd}>Add Info</button>
+                    <div>Category of College</div>
+                    <input type='text' name='category' placeholder='Category of college' value={collegeData.category} onChange={handleChange} />
+                    <button onClick={handleSubmit}>Submit</button>
+                </div>
             </div>
-        </div>
+            <div className={styles.table}>
+                <table>
+                    <tr>
+                        <th>S.No</th>
+                        <th>College Name</th>
+                        <th>Delete College</th>
+                    </tr>
+                    {college.map((data, i) => (
+                        <tr key={i}>
+                            <td>{i+1}</td>
+                            <td>{data.name}</td>
+                            <td><button onClick={() => handleDelete(data.id)}>delete</button></td>
+                        </tr>
+                    ))}
+                </table>
+            </div>
+        </>
     );
 };
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './AdminLogin.css'
 import { useNavigate } from 'react-router-dom'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { CirclesWithBar } from 'react-loader-spinner';
 import Loading from '../Loading/Loading';
 //admin@career123
 
@@ -27,7 +28,6 @@ const AdminLogin = () => {
 
   return (
     <div className='login__page__container'>
-      <div style={{position:'absolute', backgroundColor:'#00000021'}}>{loading === true ? <Loading/>: ''}</div>
       <div className='login__form'>
         <div className='login__form__logo'><img src='https://thecareerzone.co.in/img/logo-wide.png'></img></div>
         <div>
@@ -39,7 +39,7 @@ const AdminLogin = () => {
                 <div>Password:</div>
                 <input type='password' placeholder='Enter your password' onChange={(e) => setPassword(e.target.value)} value={password}></input>
             </div>
-            <div className='login__form__logo'><button onClick={() => signIn()}>Sign in</button></div>
+            <div className='login__form__logo'><button onClick={() => signIn()}>{loading? <CirclesWithBar color="#F4F4FF" height="30" width="30" /> : 'Login'}</button></div>
         </div>
         <div className='login__form__bottom'>Welcome to Career Zone</div>
       </div>

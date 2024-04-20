@@ -1,0 +1,27 @@
+.container{
+    padding-top: 90px;
+    font-family: 'Poppins';
+}
+.backImg{
+    background-image: url(https://uploads-ssl.webflow.com/5ec37983b31fa1d20d9b4e04/5f56051638262b79b5d580fd_VF-Blog-Cover-What-is-lead-management.jpg);
+    width: 100%;
+    z-index: -1;
+    height: 50vh;
+    background-position: 70% 20%;
+    filter: blur(15px);
+    opacity: 70%;
+    position: absolute;
+}
+.heading-with-homebtn{
+    padding: 0 6rem;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+.heading{
+    color: rgb(69, 129, 135);
+    width: 90%;
+    font-size: 6rem;
+    font-weight: 600;
+    text-align: center;
+}
