@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import styles from './HomeCrousel.module.css'
 import db, { storage } from "../../../firebase";
+import Loading from '../Loading/Loading';
 
 const HomeCarousel = () => {
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState(null);
   const [photoUrl, setPhotoUrl] = useState("");
   const [imgUrls, setImgUrls] = useState([]);
+  const fileInputRef = useRef(null);
+  const[loading, setLoading] = useState(false)
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -30,6 +34,7 @@ const HomeCarousel = () => {
 
   const handleUpload = async (e) => {
     e.preventDefault();
+    setLoading(true)
     if (!file) return;
     const path = `/topCarousel/${file.name}`;
     const ref = storage.ref(path);
@@ -38,17 +43,24 @@ const HomeCarousel = () => {
     setPhotoUrl(photoUrl); // Update photoUrl state
     setFileName(file.name); // Update fileName state
     setFile(null);
+
+    // Reset file input value
+    if (fileInputRef.current) {
+      setLoading(false)
+      fileInputRef.current.value = ""; // Reset file input value to empty
+    }
   };
 
   const handleDelete = async (id, fileName) => {
-    // Delete from storage
+    setLoading(true)
     await storage.ref(`/topCarousel/${fileName}`).delete();
-    // Delete from database
     await db.collection("topCarousel_db").doc(id).delete();
+    setLoading(false)
   };
 
   const submitResult = async (e) => {
     e.preventDefault();
+    setLoading(true)
     if (!photoUrl || !fileName) {
       alert("Kindly upload an image first");
       return;
@@ -59,11 +71,8 @@ const HomeCarousel = () => {
       pathName: fileName
     });
     setPhotoUrl("");
+    setLoading(false)
   };
-
-
-
-  
 
   function randomString() {
     var result = "";
@@ -76,21 +85,23 @@ const HomeCarousel = () => {
   }
 
   return (
-    <div>
-      <hr />
-      <br />
-      <div>
+    <>
+    <div style={{position:'absolute', backgroundColor:'#00000021'}}>{loading === true ? <Loading/>: ''}</div>
+    <div className={styles.container}>
+      <div className={styles.upload_input}>
         <form onSubmit={handleUpload}>
-          <input  type="file" onChange={handleChange} />
+          <input
+            type="file"
+            onChange={handleChange}
+            ref={fileInputRef} // Assign ref to file input element
+          />
           <button disabled={!file}>Upload to Cloud</button>
-        </form><br />
+        </form>
         <img src={photoUrl} alt="" style={{ width: "10%" }} />
-      </div><br />
-      <button className="hom__sub" disabled={!photoUrl || !fileName} onClick={submitResult}>
+      </div>
+      <button className={styles.hom__sub} disabled={!photoUrl || !fileName} onClick={submitResult}>
         Submit
       </button>
-      <br /><br /> 
-      <br/>
       <table>
         <thead>
           <tr>
@@ -114,6 +125,7 @@ const HomeCarousel = () => {
         </tbody>
       </table>
     </div>
+    </>
   );
 };
 

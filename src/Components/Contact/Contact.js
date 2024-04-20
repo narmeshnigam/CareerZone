@@ -1,10 +1,39 @@
-import React from 'react'
+import React, {useState} from 'react'
+import db from '../../firebase.js'
 import "./Contact.css"
 
 const Contact = () => {
-  const clickOnContactform = () => {
-    alert('Your Message is delivered.')
+
+  const [data, setData] = useState({
+    name: '', 
+    email: '',
+    phone: '',
+    enquire: '',
+    message: '',
+  })
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData({ ...data, [name]: value });
   }
+
+  const clickOnContactform = async (e) => {
+    e.preventDefault();
+    try {
+      await db.collection('quickApply').add(data);
+      alert('Your Message is delivered.');
+      setData({
+        name: '', 
+        email: '',
+        phone: '',
+        enquire: '',
+        message: '',
+      });
+    } catch (error) {
+      console.error('Error adding course: ', error);
+    }
+  };
+
   return (
     <div className='career__contact__container'>
       <div className='carrer_contact__top__img'>
@@ -18,19 +47,19 @@ const Contact = () => {
             <form>
               <div>
                 <label for="name" className="custom-label">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter Your Name" required/>
+                <input type="text" value={data.name} id="name" name="name" onChange={handleChange} placeholder="Enter Your Name" required/>
               </div>
               <div>
                 <label for="email" className="custom-label">Email:</label>
-                <input type="email" id="email" name="email" placeholder="email@example.com" required/>
+                <input type="email" value={data.email} id="email" onChange={handleChange} name="email" placeholder="email@example.com" required/>
               </div>
               <div>
                 <label for="phone" className="custom-label">Phone:</label>
-                <input type="number" id="phone" name="phone" placeholder="01234 56789" required/>
+                <input type="number" value={data.phone} id="phone" onChange={handleChange} name="phone" placeholder="01234 56789" required/>
               </div>
               <div>
-                <label for="courses" className="custom-label">Enquire:</label>
-                <select name="courses" id="courses">
+                <label for="enquire" className="custom-label">Enquire:</label>
+                <select name="enquire" value={data.enquire} onChange={handleChange} id="enquire">
                   <option style={{display:'none'}} value="">Select</option>
                   <option value="ENGINEERING">ENGINEERING</option>
                   <option value="MEDICAL">MEDICAL</option>
@@ -45,15 +74,16 @@ const Contact = () => {
               </div>
               <div>
                 <label for="message" className="custom-label">Message:</label>
-                <textarea id="message" name="message" rows="4" placeholder="Enter Your Query Here"></textarea>
+                <textarea id="message" value={data.message} onChange={handleChange} name="message" rows="4" placeholder="Enter Your Query Here"></textarea>
               </div>
 
               <div>
-                <button onClick={()=> clickOnContactform()}>Submit</button>
+                <button onClick={clickOnContactform}>Submit</button>
               </div>
             </form>
         </div>
         <div className="carrer__container__form__column">
+          <div className="carrer__container__backImg"></div>
             <div className="contact-info">
                 <h2>Contact Information</h2>
                 <div><i  className="fas fa-map-marker-alt icon"></i>

@@ -1,0 +1,10 @@
+.container{
+    padding: 6rem 2rem;
+}
+.container div{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #4587EF;
+    margin-bottom:2rem;
+}

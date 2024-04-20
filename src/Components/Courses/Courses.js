@@ -76,7 +76,7 @@ const Courses = () => {
               <div className="coursespg__medical__courses__table">
                 <div className="coursespg__medical__courses__card__container__withHeading">
                   <div className="coursespg__medical__courses__card__container__heading">
-                    Medical Courses After Class 10:
+                  {category} Courses After Class 10:
                   </div>
                   <div className="courses__card__container__main">
                     {courses.map((course, index) => (
@@ -87,7 +87,7 @@ const Courses = () => {
                     ))}
                   </div>
                   <div className="coursespg__medical__courses__card__container__heading">
-                    Medical Courses After Class 12:
+                  {category} Courses After Class 12:
                   </div>
                   <div className="courses__card__container__main">
                     {courses.map((course, index) => (

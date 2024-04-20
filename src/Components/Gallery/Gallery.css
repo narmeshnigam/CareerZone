@@ -28,19 +28,24 @@
 .gal__photos__con__img{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
 }
 .gal__photos__con__img  img{
+    object-fit: cover;
     border-radius: 20px;
+    width: 405px;
     height: 18rem;
     transition: transform .2s;
 }
-.gal__photos__con__img  iframe{
+.gal__photos__con__img  video{
     width: 26rem;
+    object-fit: cover;
     height: 18rem;
     border-radius: 20px;
 }
 .gal__photos__con__img img:hover{
-    transform: scale(1.4);
+    transform: scale(1.1);
 }
 .gal__video__container{
     padding: 0rem 6rem 6rem;

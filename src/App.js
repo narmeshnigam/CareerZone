@@ -22,6 +22,8 @@ import AdminCourses from './Components/FirebaseServer/AdminCourses/AdminCourses'
 import CollegeDetails from './Components/College/CollegeDetails/CollegeDetails';
 import AdminCollegeDetails from './Components/FirebaseServer/AdminCollegeDetails/AdminCollegeDetails';
 import College from './Components/College/College';
+import AdminGallery from './Components/FirebaseServer/AdminGallery/AdminGallery';
+import AdminContact from './Components/FirebaseServer/AdminContact/AdminContact';
 
 const AppLayout = () => {
   return (
@@ -122,6 +124,14 @@ const App = createBrowserRouter([
       {
         path: '/admin/collegedetails',
         element: <AdminCollegeDetails/>
+      },
+      {
+        path: '/admin/gallery',
+        element: <AdminGallery/>
+      },
+      {
+        path: '/admin/contact',
+        element: <AdminContact/>
       }
     ]
   }

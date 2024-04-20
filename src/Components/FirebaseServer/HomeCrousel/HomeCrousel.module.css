@@ -1,0 +1,42 @@
+.container{
+    padding: 6rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.upload_input, .upload_input form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.upload_input form input{
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(193, 14, 14);
+    color: white;
+}
+.upload_input form button{
+    outline: none;
+    box-shadow: 6px 6px 6px #00000018;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    color: #000000;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+}
+.hom__sub{
+    background-color: #4587EF;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}

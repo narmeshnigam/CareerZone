@@ -35,9 +35,18 @@ const CollegeDetails = () => {
                     {college.name}
                 </div>
                 <div className='contactUs__content12'>
-                        <div>Phone No. - +91 {college.phoneNo}</div>
-                        <div>Email :- {college.email}</div>
-                        <div><i style={{padding:'0rem 1rem 0rem 0rem'}} className="fas fa-map-marker-alt icon"></i><strong>Address: </strong>&nbsp;&nbsp;{college.address}</div>
+                <div>
+                    <i style={{padding:'0rem 1rem 0rem 0rem'}} class="fas fa-phone"></i>
+                    <strong>Phone No. :-</strong> +91 {college.phoneNo}
+                </div>
+
+                    
+                        <div>
+                            <i style={{padding:'0rem 1rem 0rem 0rem'}} class="fas fa-envelope"></i>
+                            <strong>Email :-</strong> {college.email}
+                        </div>
+
+                        <div><i style={{padding:'0rem 1rem 0rem 0rem'}} className="fas fa-map-marker-alt icon"></i><strong>Address:- </strong>&nbsp;&nbsp;{college.address}</div>
                 </div>
             </div>
             <div className='college_details_section2'>

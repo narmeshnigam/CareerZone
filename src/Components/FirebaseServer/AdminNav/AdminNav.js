@@ -26,8 +26,9 @@ const AdminNav = () => {
             <Link style={{textDecoration: "none"}} to="/admin/notification"><span onClick={() => scrollTop()}>Notification</span></Link>
             <Link style={{textDecoration: "none"}} to="/admin/courses"><span onClick={() => scrollTop()}>Courses</span></Link>
             <Link style={{textDecoration: "none"}} to="/admin/collegedetails"><span onClick={() => scrollTop()}>College Details</span></Link>
+            <Link style={{textDecoration: "none"}} to="/admin/gallery"><span onClick={() => scrollTop()}>Gallery</span></Link>
+            <Link style={{textDecoration: "none"}} to="/admin/contact"><span onClick={() => scrollTop()}>Contact</span></Link>
             <span onClick={() => logOut()}>Log Out</span>
-            {/*<Link style={{textDecoration: "none"}} to="/contact"><span onClick={() => scrollTop()}>Contact</span></Link> */}
         </div>
         <div className="nav__top__menu__bar">
             <svg

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './AdminCourses.css';
+import styles from './AdminCourses.module.css';
 import db from "../../../firebase";
 
 const AdminCourses = () => {
@@ -87,7 +87,7 @@ const AdminCourses = () => {
 
   return (
     <>
-    <div className="admin-courses__container">
+    <div className={styles['admin-courses__container']}>
       <h2>Add New Course</h2>
       <form onSubmit={handleSubmit}>
         <label>
