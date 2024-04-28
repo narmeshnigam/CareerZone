@@ -1,0 +1,33 @@
+.container{
+    font-family: 'Poppins';
+    padding-top: 90px;
+}
+.followHistoryContainer{
+    padding: 0rem 0rem 2rem 0;
+}
+.followHisHeading{
+    background-color: #0000002c;
+    padding: 1rem 0;
+    font-size: 2rem;
+    text-align: center;
+}
+.followCardContainer{
+    margin: 2rem 3rem;
+    border-radius: 10px;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3.8rem 0rem;
+    border: 2px solid #718ae6;
+}
+.followCardbtn{
+    margin: auto;
+    padding: 0.3rem 1rem;
+    font-size: 1.3rem;
+    box-shadow: 6px 6px 6px #0000002e;
+    border: none;
+    color: #ffff;
+    border-radius: 15px;
+    background-color: #718ae6;
+}

@@ -1,0 +1,121 @@
+.lead_page_container {
+  padding-top: 90px;
+  background-color: rgb(225, 237, 237);
+  
+  
+}
+
+.lead_page_heading {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/023/669/545/small/abstract-gradient-pink-blue-liquid-wave-background-free-vector.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 7vw;
+  justify-content: space-between;
+
+}
+
+.lead_pagehomeic_ {
+  margin-right: 20px;
+}
+
+.lead_pagehomeheading_ {
+  font-size: 50px;
+  font-weight: 500;
+  padding-right: 550px;
+  
+  
+}
+
+.lead_pagepersonal_Info {
+  text-align: center;
+  justify-content: center;
+  padding-top: 30px;
+  font-size: 40px;
+  font-weight: 500;
+  padding-right: 900px;
+
+}
+
+.input__container {
+  margin-bottom: 10px; /* Example margin between input containers */
+  
+
+}
+
+.input__container label {
+  display: block; /* Display labels as block elements */
+  margin-bottom: 5px; /* Example margin between label and input */
+  margin-left: 200px;
+  margin-top: 40px;
+}
+
+.input__field {
+  width: 50%; /* Example full width */
+  margin-left: 50px; /* Example padding */
+  border: 1px solid #ccc; /* Example border */
+  border-radius: 4px; /* Example border radius */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.address__info {
+  text-align: center;
+  justify-content: center;
+  padding-top: 30px;
+  font-size: 40px;
+  font-weight: 500;
+  padding-right: 900px;
+  padding-bottom: 30px;
+  color: rgb(58, 86, 86);
+
+}
+.input__field {
+  margin-top: 25px;
+  padding-bottom: 20px;
+  
+}
+.address__line {
+  display: flex;
+  padding-right: 90px;
+  padding-left: 90px;
+  margin-bottom: 35px;
+}
+.address_line_1 {
+  border: 2px solid rgb(190, 146, 146);
+  margin-left: 40px;
+  margin-top: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  background-color: rgb(179, 208, 208);
+}
+.additional_info_heading {
+text-align: center;
+justify-content: center;
+padding-top: 30px;
+font-size: 40px;
+font-weight: 500;
+padding-right: 850px;
+padding-bottom: 30px;
+color: rgb(58, 86, 86);
+
+}
+
+.btn {
+margin-bottom: 10vh;
+margin-left: 690px;
+margin-top: 5vh;
+height: 8vh;
+width: 30vh;
+background-color: rgb(134, 165, 181);
+font-size: larger;
+font-weight: 600;
+
+}
+.address_line_12 {
+  display: flex;
+  padding-right: 185px;
+  padding-left: 90px;
+  margin-bottom: 35px;
+}

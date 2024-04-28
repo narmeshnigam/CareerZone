@@ -25,6 +25,13 @@ import College from './Components/College/College';
 import AdminGallery from './Components/FirebaseServer/AdminGallery/AdminGallery';
 import AdminContact from './Components/FirebaseServer/AdminContact/AdminContact';
 import LeadHistory from './Components/CRM/Lead History Page/LeadHistory';
+import FollowUpPage from './Components/CRM/FollowUpPage/FollowUpPage';
+import CreateNewLead from './Components/CRM/CreateNewLead/CreateNewLead';
+import CreateNewUser from './Components/CRM/CreateNewUser/CreateNewUser';
+import FollowUpHistory from './Components/CRM/FollowUpHistory/FollowUpHistory';
+import UserListsPage from './Components/CRM/UserListPage/UserListsPage';
+import PopUpForm from './Components/CRM/Lead History Page/PopUpForm/PopUpForm';
+import Dashboard from './Components/CRM/Dashboard/Dashboard';
 
 const AppLayout = () => {
   return (
@@ -99,6 +106,30 @@ const App = createBrowserRouter([
       {
         path: "/leadHistory",
         element: <LeadHistory/>, 
+      },
+      {
+        path: "/createLead",
+        element: <CreateNewLead/>, 
+      },
+      {
+        path: "/followUp/:id",
+        element: <FollowUpPage/>, 
+      },
+      {
+        path: "/newUser",
+        element: <CreateNewUser/>, 
+      },
+      {
+        path: "/followUpHistory",
+        element: <FollowUpHistory/>, 
+      },
+      {
+        path: "/userlist",
+        element: <UserListsPage/>, 
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard/>, 
       },
     ],
   },

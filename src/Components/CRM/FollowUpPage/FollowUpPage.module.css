@@ -1,0 +1,81 @@
+.container{
+    padding-top: 90px;
+    font-family: 'Poppins';
+}
+.headingContainer{
+    background-color: #000000d3;
+    color: #ffff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 600;
+}
+.leadInfoContainer{
+    background-color: #4687ef4d;
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    margin: 2rem auto;
+    width: 40%;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leadInfoContainer div div{
+    margin-bottom: 0.5rem;
+}
+.leadHead div{
+    display: flex;
+}
+.leadHead div div{
+    max-width: 280px;
+    min-width: 280px;
+    text-align: left;
+}
+.followHistoryContainer{
+    padding: 2rem 0rem;
+}
+.followHisHeading{
+    background-color: #0000002c;
+    font-size: 2rem;
+    text-align: center;
+}
+.followCardContainer{
+    margin: 2rem 3rem;
+    border-radius: 10px;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3.8rem 0rem;
+    border: 2px solid #718ae6;
+}
+.followCardContainer input, textarea{
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    box-shadow: 6px 6px 6px #00000011;
+    padding: 1rem;
+    border: none;
+    outline: none;
+}
+.followCardContainer input{
+    width: 45%;
+}
+.followCardContainer textarea{
+    border-radius: 10px;
+    width: 100%;
+}
+.followCardContainer textarea{
+    font-family: 'Poppins';
+}
+.followCardbtn{
+    margin: auto;
+    padding: 0.3rem 1rem;
+    font-size: 1.3rem;
+    box-shadow: 6px 6px 6px #0000002e;
+    border: none;
+    color: #ffff;
+    border-radius: 15px;
+    background-color: #718ae6;
+}
