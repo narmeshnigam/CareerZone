@@ -1,58 +1,59 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Rectangle } from 'recharts';
+import db from "../../../../../firebase";
 
-const data = [
-  {
-    name: 'Page A',
-    // uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'Page B',
-    // uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'Page C',
-    // uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'Page D',
-    // uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'Page E',
-    // uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'Page F',
-    // uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'Page G',
-    // uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
 
 const Barchart = () => {
+
+  const [chartData, setChartData] = useState([]);
+
+  useEffect(() => {
+    const fetchFollowUp = async () => {
+      const today = new Date();
+      const priorDate = new Date(today.getTime() - 30 * 24 * 60 * 60 * 1000); 
+      const priorDateNew = priorDate.toLocaleDateString();
+
+      try {
+        const snapshot = await db.collection('followUp')
+          .where('createdDate', '>=', priorDateNew)
+          .get();
+
+        const followUpData = [];
+        snapshot.forEach(doc => {
+          followUpData.push({ id: doc.id, ...doc.data() });
+        });
+
+
+        const followUpByDate = {};
+        followUpData.forEach(lead => {
+          const dateKey = lead.createdDate.substring(0, 4); 
+          if (!followUpByDate[dateKey]) {
+            followUpByDate[dateKey] = 0;
+          }
+          followUpByDate[dateKey]++;
+        });
+
+        const chartData = Object.keys(followUpByDate).map(date => ({
+          date,
+          count: followUpByDate[date]
+        }));
+
+        setChartData(chartData);
+      } catch (error) {
+        console.error('Error fetching leads: ', error);
+      }
+    };
+
+    fetchFollowUp();
+
+  }, []);
+
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart
         width={500}
         height={300}
-        data={data}
+        data={chartData}
         margin={{
           top: 5,
           right: 30,
@@ -65,8 +66,7 @@ const Barchart = () => {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="pv" fill="#8884d8" shape={<Rectangle fill="gold" stroke="purple" />} />
-        {/* <Bar dataKey="uv" fill="#82ca9d" shape={<Rectangle fill="gold" stroke="purple" />} /> */}
+        <Bar dataKey="count" fill="#8884d8" shape={<Rectangle fill="gold" stroke="purple" />} />
       </BarChart>
     </ResponsiveContainer>
   );

@@ -71,6 +71,9 @@
     background-color: rgba(0, 72, 255, 0.818);
     color: white;
 }
+.leadButtons:hover{
+    cursor: pointer;
+}
 .barcahrtLeft{
     height: 50%;
     width: 50%;

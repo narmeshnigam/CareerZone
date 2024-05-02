@@ -1,9 +1,15 @@
-import { React, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import styles from './CreateNewLead.module.css';
 import { Link } from 'react-router-dom';
 import db from "../../../firebase";
 
 const CreateNewLead = () => {
+  useEffect(()=>{
+    const scrollTop = () => {
+      window.scrollTo(0, 0);
+    }
+    scrollTop();
+  }, [])
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -60,6 +66,30 @@ const CreateNewLead = () => {
       .catch((error) => {
         console.error('Error adding lead: ', error);
       });
+    setFormData({
+      name: '',
+      email: '',
+      leadNumber: '',
+      mobileNumber: '',
+      alternateMobile: '',
+      state : '',
+      city: '',
+      pin: '',
+      locality: '',
+      college: '',
+      courseInterest: '',
+      bscc : '',
+      relation : '',
+      source: '',
+      budget: '',
+      leadNumber: '', 
+      createdDate: '', 
+      assignmentDate: '', 
+      createdBy: '',
+      assignedTo: '', 
+      assignedBy: '', 
+      remarks: '',
+    })
   };
   const generateLeadNumber = () => {
   

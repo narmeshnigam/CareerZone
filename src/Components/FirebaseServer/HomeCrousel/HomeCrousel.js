@@ -99,9 +99,11 @@ const HomeCarousel = () => {
         </form>
         <img src={photoUrl} alt="" style={{ width: "10%" }} />
       </div>
-      <button className={styles.hom__sub} disabled={!photoUrl || !fileName} onClick={submitResult}>
-        Submit
-      </button>
+      <div className={styles.submitBtn}>
+        <button className={styles.hom__sub} disabled={!photoUrl || !fileName} onClick={submitResult}>
+          Submit
+        </button>
+      </div>
       <table>
         <thead>
           <tr>

@@ -33,6 +33,8 @@ const NotificationPage = () => {
     }, []);
     
   return (
+    <>
+    {/* <div><iframe src="https://blog123lk75340.blogspot.com/2024/05/fsdfsadfsf.html" width="100%" height="400px" frameborder="0"></iframe></div> */}
     <div className='noti__container'>
         <div className='noti__left__container'>
             <div className='noti__heading'>YOU WILL GET ADMISSION IN <span style={{color:'#4587EF'}}>TOP COLLEGES.</span></div>
@@ -70,6 +72,7 @@ const NotificationPage = () => {
         </div>
       
     </div>
+    </>
   )
 }
 

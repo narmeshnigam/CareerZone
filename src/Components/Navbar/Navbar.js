@@ -20,7 +20,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="nav__conatiner">
+    <div  className="nav__conatiner">
       <div className="top__nav">
         <div className="nav__logo">
           <Link to="/"><img src="https://thecareerzone.co.in/img/logo-wide.png"></img></Link>

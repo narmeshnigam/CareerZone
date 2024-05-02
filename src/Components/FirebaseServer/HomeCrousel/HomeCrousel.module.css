@@ -2,7 +2,7 @@
     padding: 6rem 4rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     gap: 2rem;
 }
@@ -29,6 +29,11 @@
     color: #000000;
     background-color: #fff;
     padding: 0.5rem 1rem;
+}
+.submitBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .hom__sub{
     background-color: #4587EF;
