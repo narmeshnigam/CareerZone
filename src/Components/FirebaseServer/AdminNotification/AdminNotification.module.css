@@ -1,5 +1,6 @@
 .container{
     padding: 6rem 4rem;
+    background-color: #ced6e2;
 }
 .innerContainer{
     display: flex;
@@ -32,6 +33,6 @@
     padding: 0.5rem 1rem;
     box-shadow: 6px 6px 6px #0000001d ;
     border-radius: 20px;
-    color: #ffff;
+    color: #eeecec;
     background-color: #4587EF;
 }

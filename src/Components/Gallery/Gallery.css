@@ -1,6 +1,7 @@
 .gal__container{
     padding-top: 90px;
     font-family: 'Poppins';
+    
 }
 .gal__banner{
     background-image: url(../../../public/GalleyBanner.png);
@@ -11,7 +12,9 @@
 }
 .gal__photo__container{
     padding: 6rem;
+    
 }
+
 .gal__photos__heading{
     font-size: 2.3rem;
     font-weight: 600;

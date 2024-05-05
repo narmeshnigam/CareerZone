@@ -17,6 +17,7 @@ const firebaseConfig = {
   databaseUrl: 'https://careerzoneadminpannel-default-rtdb.firebaseio.com/'
 };
 
+
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 const auth = firebase.auth();

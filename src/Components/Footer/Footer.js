@@ -28,7 +28,7 @@ const Footer = () => {
             <div className="contact__details__links">
               <div className="contact__details__heading">QUICK LINKS</div>
               <a
-                href="/"
+                href="/services"
                 style={{
                   textDecoration: "none",
                   color: "#ffff",
@@ -38,7 +38,7 @@ const Footer = () => {
                 Our Services
               </a>
               <a
-                href="/admission"
+                href="/services/edu_service"
                 style={{
                   textDecoration: "none",
                   color: "#ffff",
@@ -48,7 +48,7 @@ const Footer = () => {
                 Education Services
               </a>
               <a
-                href="#contact"
+                href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
                   color: "#ffff",
@@ -68,7 +68,7 @@ const Footer = () => {
                 Quick Support
               </a>
               <a
-                href="#courses"
+                href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
                   color: "#ffff",
@@ -101,7 +101,7 @@ const Footer = () => {
                 Medical Courses
               </a>
               <a
-                href="/admission"
+                href="/services/edu_service"
                 style={{
                   textDecoration: "none",
                   color: "#ffff",
@@ -111,7 +111,7 @@ const Footer = () => {
                 Education Services
               </a>
               <a
-                href="#contact"
+                href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
                   color: "#ffff",
@@ -121,7 +121,7 @@ const Footer = () => {
                 Student Credit Crad
               </a>
               <a
-                href="/login"
+                href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
                   color: "#ffff",
@@ -131,7 +131,7 @@ const Footer = () => {
                 Quick Support
               </a>
               <a
-                href="#courses"
+                href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
                   color: "#ffff",
@@ -154,7 +154,7 @@ const Footer = () => {
                 Our Services
               </a>
               <a
-                href="/admission"
+                href="/services/edu_service"
                 style={{
                   textDecoration: "none",
                   color: "#ffff",
@@ -164,7 +164,7 @@ const Footer = () => {
                 Education Services
               </a>
               <a
-                href="#contact"
+                href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
                   color: "#ffff",
@@ -184,7 +184,7 @@ const Footer = () => {
                 Quick Support
               </a>
               <a
-                href="#courses"
+                href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
                   color: "#ffff",
@@ -194,7 +194,7 @@ const Footer = () => {
                 Education Loan
               </a>
               <a
-                href="#courses"
+                href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
                   color: "#ffff",
