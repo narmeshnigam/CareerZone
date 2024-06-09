@@ -53,6 +53,17 @@ start the project with :
 ```bash
 npm start
 ```
+## contribute
+```bash
+git add .
+```
+```bash
+git commit -m "Commit message"
+```
+Push Changes to New Branch: Finally, push your changes to the new branch on GitHub using
+```bash
+git push -u origin ui
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
