@@ -1,15 +1,18 @@
-.container{
-    padding-top: 90px;
+*{
     font-family: 'Poppins';
 }
+.container{
+    padding-top: 90px;
+    
+}
 .heading-with-homebtn{
-    background-color: #000000d3;
+    background: linear-gradient(to bottom, dodgerblue, #FFFFFF);
     padding: 1rem 6rem;
     display: flex;
     align-items: center;
 }
 .heading{
-    color: #ffff;
+    
     width: 90%;
     font-size: 3rem;
     font-weight: 600;

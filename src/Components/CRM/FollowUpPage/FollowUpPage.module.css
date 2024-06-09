@@ -1,10 +1,15 @@
-.container{
-    padding-top: 90px;
+*{
     font-family: 'Poppins';
 }
+
+.container{
+    padding-top: 90px;
+    background-color: white;
+    
+}
 .headingContainer{
-    background-color: #000000d3;
-    color: #ffff;
+    background: linear-gradient(to bottom, dodgerblue, #FFFFFF);
+ 
     text-align: center;
     padding: 1rem 0;
     font-size: 2.2rem;
@@ -12,7 +17,7 @@
     font-weight: 600;
 }
 .leadInfoContainer{
-    background-color: #4687ef4d;
+    background-color: rgba(30, 143, 255, 0.422);
     padding: 2rem 1rem;
     border-radius: 20px;
     margin: 2rem auto;
@@ -37,7 +42,10 @@
     padding: 2rem 0rem;
 }
 .followHisHeading{
-    background-color: #0000002c;
+    background: linear-gradient(to bottom, rgba(30, 143, 255, 0.815),rgba(30, 143, 255, 0.518));
+    border-radius: 25px; 
+    margin-left: 10%;
+    width: 80%;
     font-size: 2rem;
     text-align: center;
 }
@@ -49,7 +57,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 3.8rem 0rem;
-    border: 2px solid #718ae6;
+    
 }
 .followCardContainer input, textarea, select{
     font-size: 1.1rem;
@@ -82,5 +90,5 @@
     border: none;
     color: #ffff;
     border-radius: 15px;
-    background-color: #718ae6;
+    background-color: dodgerblue;
 }

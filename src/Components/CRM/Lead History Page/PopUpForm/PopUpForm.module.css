@@ -1,5 +1,5 @@
 .container{
-    background-color: #000000cd;
+    background: linear-gradient(to bottom, dodgerblue, #FFFFFF);
     margin: -8rem auto;
     width: 100%;
     z-index: 1000;

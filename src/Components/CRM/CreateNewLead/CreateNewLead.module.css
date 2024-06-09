@@ -1,6 +1,10 @@
+*{
+  font-family: 'Poppins';
+}
+
 .lead_page_container {
   padding-top: 90px;
-  background-color: rgb(225, 237, 237);
+  background-color: #ffffff;
   
   
 }
@@ -10,10 +14,12 @@
   display: flex;
   align-items: center;
   /*background-image: url("https://static.vecteezy.com/system/resources/thumbnails/023/669/545/small/abstract-gradient-pink-blue-liquid-wave-background-free-vector.jpg");*/
+  background: linear-gradient(to bottom, dodgerblue, #FFFFFF);
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 7vw;
   justify-content: space-between;
+  
 
 }
 
@@ -25,6 +31,7 @@
   font-size: 50px;
   font-weight: 500;
   padding-right: 550px;
+ 
   
   
 }
@@ -36,6 +43,7 @@
   font-size: 40px;
   font-weight: 500;
   padding-right: 900px;
+ 
 
 }
 
@@ -55,9 +63,11 @@
 .input__field {
   width: 50%; /* Example full width */
   margin-left: 50px; /* Example padding */
-  border: 1px solid #ccc; /* Example border */
+  border: 1px solid #000000; /* Example border */
   border-radius: 4px; /* Example border radius */
   box-sizing: border-box; /* Ensure padding and border are included in width */
+  border-radius: 20px;
+  
 }
 
 .address__info {
@@ -68,7 +78,7 @@
   font-weight: 500;
   padding-right: 900px;
   padding-bottom: 30px;
-  color: rgb(58, 86, 86);
+  color: #333;
 
 }
 .input__field {
@@ -98,20 +108,32 @@ font-size: 40px;
 font-weight: 500;
 padding-right: 850px;
 padding-bottom: 30px;
-color: rgb(58, 86, 86);
+color: #333;
 
 }
 
 .btn {
-margin-bottom: 10vh;
-margin-left: 690px;
-margin-top: 5vh;
-height: 8vh;
-width: 30vh;
-background-color: rgb(134, 165, 181);
-font-size: larger;
-font-weight: 600;
+  margin-bottom: 10vh;
+  margin-left: 690px;
+  margin-top: 5vh;
+  height: 8vh;
+  width: 30vh;
+  background-color: #11d31e; /* Peach color */
+  font-size: larger;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+  transition: border 0.3s ease
+  
+}
 
+.btn:hover {
+   /* White color */
+  color: #000000; /* Changing text color to black for better contrast on white background */
+  border: 3px solid #000000; 
 }
 .address_line_12 {
   display: flex;
