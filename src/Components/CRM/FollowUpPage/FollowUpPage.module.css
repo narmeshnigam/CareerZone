@@ -51,7 +51,7 @@
     gap: 3.8rem 0rem;
     border: 2px solid #718ae6;
 }
-.followCardContainer input, textarea{
+.followCardContainer input, textarea, select{
     font-size: 1.1rem;
     margin: 0.5rem 0;
     box-shadow: 6px 6px 6px #00000011;
@@ -65,6 +65,11 @@
 .followCardContainer textarea{
     border-radius: 10px;
     width: 100%;
+}
+.followCardContainer select {
+    
+    width: 48%;
+    
 }
 .followCardContainer textarea{
     font-family: 'Poppins';

@@ -120,7 +120,10 @@ const LeadHistory = () => {
   }
 
   const handleDelete = async(id) => {
-    await db.collection("leads").doc(id).delete();
+    const confirmDelete = window.confirm("Are you sure you want to delete this lead?");
+    if (confirmDelete) {
+      await db.collection("leads").doc(id).delete();
+    }
   };
 
   const handleUpdate = (id) => {

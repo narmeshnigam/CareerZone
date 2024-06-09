@@ -10,6 +10,11 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Achievemets = () => {
+
+  const RedirectContact = ()=>{
+    window.location.href = '/contact'
+
+  }
   return (
     <div className="achiv__container">
       <div className="achiv__left__container">
@@ -49,10 +54,10 @@ const Achievemets = () => {
           />
         </div>
         <div className="achiv__left__container__buttons">
-          <button style={{ backgroundColor: "#107F1E", color: "#ffff" }}>
+          <button style={{ backgroundColor: "#107F1E", color: "#ffff" }} onClick={RedirectContact}>
             Call Now
           </button>
-          <button style={{ backgroundColor: "#df200be2", color: "#ffff" }}>
+          <button style={{ backgroundColor: "#df200be2", color: "#ffff" }} onClick={RedirectContact}>
             Apply Now
           </button>
         </div>

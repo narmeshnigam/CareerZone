@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 const Courses = () => {
   const [courseCat, setCourseCat] = useState({});
-  const [openSections, setOpenSections] = useState({});
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -27,9 +26,6 @@ const Courses = () => {
         });
 
         setCourseCat(categories);
-        // Initialize open state for each category to false
-        const initialOpenState = Object.fromEntries(Object.keys(categories).map(cat => [cat, false]));
-        setOpenSections(initialOpenState);
       } catch (error) {
         console.error("Error fetching courses: ", error);
       }
@@ -37,14 +33,6 @@ const Courses = () => {
 
     fetchCourses();
   }, []);
-
-  const toggleMedicalSection = (category) => {
-    setOpenSections(prevState => ({
-      ...prevState,
-      [category]: !prevState[category]
-    }));
-  };
-
 
   return (
     <div className="coursespg__container">
@@ -58,21 +46,10 @@ const Courses = () => {
             className="coursespg__medical__courses__table__container"
             key={category}
           >
-            <div
-              className="coursespg__medical__courses__table__container__heading"
-              onClick={() => toggleMedicalSection(category)}
-              style={{ borderRadius: openSections[category] ? "10px 10px 0 0" : "10px" }}
-            >
+            <div className="coursespg__medical__courses__table__container__heading">
               {category}
-              <img
-                src="./dropdownarrow.png"
-                alt="dropdown arrow"
-                style={{ transform: openSections[category] ? "rotate(180deg)" : "" }}
-              />
             </div>
-            <div
-              className={`coursespg__medical__courses__table__withImg ${openSections[category] ? "open" : "closed"}`}
-            >
+            <div className="coursespg__medical__courses__table__withImg">
               <div className="coursespg__medical__courses__table">
                 <div className="coursespg__medical__courses__card__container__withHeading">
                   <div className="coursespg__medical__courses__card__container__heading">

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import db from "../../../firebase";
 import styles from './AdminNotification.module.css'
 import Loading from '../Loading/Loading';
+import { colors } from '@mui/material';
 
 const AdminNotification = () => {
 
@@ -95,7 +96,7 @@ const AdminNotification = () => {
                 <td>{i + 1}</td>
                 <td>{data.notification}</td>
                 <td>
-                  <button onClick={() => handleDelete(data.id)}>Delete</button>
+                  <button  onClick={() => handleDelete(data.id)}>Delete</button>
                 </td>
               </tr>
             ))}

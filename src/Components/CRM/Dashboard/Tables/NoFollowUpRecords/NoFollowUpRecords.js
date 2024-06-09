@@ -90,7 +90,7 @@ const NoFollowUpRecords = () => {
                 autoHeight
                 disableColumnMenu
                 disableSelectionOnClick
-                onRowClick={row => navigate(`/leadDetails/${row.id}`)}
+                onRowClick={row => navigate(`/followUp/${row.id}`)}
             />
         </div>
     );

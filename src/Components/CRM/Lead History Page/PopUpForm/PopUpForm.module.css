@@ -7,6 +7,7 @@
     font-family: 'Poppins';
 }
 .innerForm{
+    padding-top: 4vh;
     background-color: #EAEDF1;
     display: flex;
     flex-direction: column;

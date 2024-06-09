@@ -48,7 +48,7 @@ const StudentCreditCard = () => {
       </div>
 
       <div className="courses_eligible">
-        <div className="courses__1">Courses Applicable for Bhiar Student Credit Card:</div>
+        <div className="courses__1">Courses Applicable for Bihar Student Credit Card:</div>
         <CoursesTable />
       </div>
       <div className="stud__cred__list__btn"><a target="blank" href="https://www.7nishchay-yuvaupmission.bihar.gov.in/listofcollegedetail"><button>List of College Details</button></a></div>

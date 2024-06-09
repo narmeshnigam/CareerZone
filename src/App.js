@@ -32,6 +32,7 @@ import FollowUpHistory from './Components/CRM/FollowUpHistory/FollowUpHistory';
 import UserListsPage from './Components/CRM/UserListPage/UserListsPage';
 import PopUpForm from './Components/CRM/Lead History Page/PopUpForm/PopUpForm';
 import Dashboard from './Components/CRM/Dashboard/Dashboard';
+import BlogStore from './Components/Blogs/BlogStore/BlogStore';
 
 const AppLayout = () => {
   return (
@@ -62,6 +63,10 @@ const App = createBrowserRouter([
       {
         path: "aboutUs",
         element: <About />, 
+      },
+      {
+        path: "/Popup",
+        element: <PopUpForm />, 
       },
       {
         path: "/services",
@@ -130,6 +135,10 @@ const App = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard/>, 
+      },
+      {
+        path: "/BlogList",
+        element: <BlogStore/>, 
       },
     ],
   },

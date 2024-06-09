@@ -1,0 +1,14 @@
+.blog_form {
+    padding-top: 20vh;
+    margin-left: 10vw;
+    margin-bottom: 30vh;
+}
+.blog-form, input {
+    width: 700px;
+    margin-bottom: 5px;
+    
+}
+.button {
+    margin-left: 500px;
+    
+}
