@@ -33,6 +33,7 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Our Services
@@ -43,6 +44,7 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Education Services
@@ -53,6 +55,7 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Student Credit Crad
@@ -63,6 +66,7 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Quick Support
@@ -73,6 +77,7 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Education Loan
@@ -83,6 +88,7 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 <span>Admission Advice</span>
@@ -96,6 +102,7 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Medical Courses
@@ -106,6 +113,7 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Education Services
@@ -116,6 +124,7 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Student Credit Crad
@@ -126,6 +135,7 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Quick Support
@@ -136,6 +146,7 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Education Loan
@@ -149,6 +160,7 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Our Services
@@ -159,6 +171,7 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Education Services
@@ -169,6 +182,8 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+
+                  fontSize: "18px",
                 }}
               >
                 Student Credit Crad
@@ -179,6 +194,8 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+
+                  fontSize: "18px",
                 }}
               >
                 Quick Support
@@ -189,6 +206,8 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+
+                  fontSize: "18px",
                 }}
               >
                 Education Loan
@@ -199,9 +218,21 @@ const Footer = () => {
                   textDecoration: "none",
                   color: "#ffff",
                   cursor: "pointer",
+
+                  fontSize: "18px",
                 }}
               >
-                <span>Admission Advice</span>
+                <span
+                  style={{
+                    textDecoration: "none",
+                    color: "#ffff",
+                    cursor: "pointer",
+
+                    fontSize: "18px",
+                  }}
+                >
+                  Admission Advice
+                </span>
               </a>
             </div>
           </div>

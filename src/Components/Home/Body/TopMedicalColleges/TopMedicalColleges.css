@@ -11,7 +11,7 @@
 }
 .topMed__card{
     display: flex;
-    gap: 5rem;
+    gap: 2rem;
 }
 @media screen and (max-width: 600px){
     .topMed__container{

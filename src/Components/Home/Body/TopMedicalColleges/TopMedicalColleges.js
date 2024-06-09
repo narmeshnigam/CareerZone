@@ -5,7 +5,9 @@ import MedicalCollegesCard from "./MedicalCollegesCard/MedicalCollegesCard";
 const TopMedicalColleges = () => {
   return (
     <div className="topMed__container">
-      <div className="topMed__heading">---TOP <span style={{color:'#4587EF'}}>MEDICAL</span> COLLEGES---</div>
+      <div className="topMed__heading">
+        TOP <span style={{ color: "#4587EF" }}>MEDICAL</span> COLLEGES
+      </div>
       <div className="topMed__card">
         <MedicalCollegesCard
           img={
@@ -13,31 +15,27 @@ const TopMedicalColleges = () => {
           }
           name={"CHRISTIAN MEDICAL COLLEGE"}
           location={"VELLORE, TAMIL NADU"}
-          time={'ESTD 1918'}
+          time={"ESTD 1918"}
         />
-        <MedicalCollegesCard 
-        img={
+        <MedicalCollegesCard
+          img={
             "https://thecareerzone.co.in/img/gallery/ARMED-FORCES-MEDICAL-COLLEGE.jpg"
           }
           name={"ARMED FORCES MEDICAL COLLEGE"}
           location={"PUNE, MAHARASHTRA"}
-          time={'ESTD 1984'}
+          time={"ESTD 1984"}
         />
-        <MedicalCollegesCard 
-        img={
-            "https://thecareerzone.co.in/img/gallery/kmc-campus.jpg"
-          }
+        <MedicalCollegesCard
+          img={"https://thecareerzone.co.in/img/gallery/kmc-campus.jpg"}
           name={"KASTURBA MEDICAL COLLEGE"}
           location={"MANGALORE, KARNATAKA"}
-          time={'ESTD 1955'}
+          time={"ESTD 1955"}
         />
-        <MedicalCollegesCard 
-        img={
-            "https://thecareerzone.co.in/img/gallery/maulana-index.jpg"
-          }
+        <MedicalCollegesCard
+          img={"https://thecareerzone.co.in/img/gallery/maulana-index.jpg"}
           name={"KATIHAR MEDICAL COLLEGE"}
           location={"NEW DELHI, DELHI NCR"}
-          time={'ESTD 1959'}
+          time={"ESTD 1959"}
         />
       </div>
     </div>

@@ -6,14 +6,14 @@ import CountAni from "./CountAni/CountAni";
 const About = () => {
   return (
     <div style={{ fontFamily: "Poppins", paddingTop: "80px" }}>
-      <div className="head">
-        <div className="value">About</div>
+      <div className="about__top__img">
+        <div>About Us</div>
       </div>
 
       <div className="about">
         <div className="image">
           <img
-            src="https://tpet.co.uk/wp-content/uploads/edd/2019/07/tp-f-0859-look-at-our-achievements-banner-1180x660.jpg"
+            src="https://i.pinimg.com/originals/2f/0a/f1/2f0af1c5bcc25af712cfc1c74df20293.jpg"
             alt="About Us"
           />
         </div>
@@ -21,7 +21,7 @@ const About = () => {
           className="content"
           style={{ display: "flex", alignItems: "center" }}
         >
-          <div className="content__heading">ABOUT US</div>
+          {/* <div className="content__heading">ABOUT US</div>*/}
           <div className="content__subheading">OUR ACHIEVEMENTS </div>
           <p style={{ textAlign: "justify" }}>
             Since our humble beginning in 2001,The Career Zone, one of India’s
@@ -40,25 +40,39 @@ const About = () => {
           <div className="awards">
             <div>
               <h2>No. of Students</h2>
-              <div style={{display:'flex'}}>
-                <CountAni targetValue={800}/>
-                <span className="content__subheading" style={{ textAlign: "center" }}>+</span>
+              <div style={{ display: "flex" }}>
+                <CountAni targetValue={800} />
+                <span
+                  className="content__subheading"
+                  style={{ textAlign: "center" }}
+                >
+                  +
+                </span>
               </div>
             </div>
             <div>
               <h2>No. of Colleges</h2>
-              <div style={{display:'flex'}}>
-                <CountAni targetValue={1200}/>
-                <span className="content__subheading" style={{ textAlign: "center" }}>+</span>
+              <div style={{ display: "flex" }}>
+                <CountAni targetValue={1200} />
+                <span
+                  className="content__subheading"
+                  style={{ textAlign: "center" }}
+                >
+                  +
+                </span>
               </div>
             </div>
             <div>
               <h2>No. of Universities</h2>
-              <div style={{display:'flex'}}>
-                <CountAni targetValue={12}/>
-                <span className="content__subheading" style={{ textAlign: "center" }}>+</span>
+              <div style={{ display: "flex" }}>
+                <CountAni targetValue={12} />
+                <span
+                  className="content__subheading"
+                  style={{ textAlign: "center" }}
+                >
+                  +
+                </span>
               </div>
-              
             </div>
           </div>
         </div>
@@ -93,11 +107,9 @@ const About = () => {
           className="content"
           style={{ display: "flex", alignItems: "center" }}
         >
-          <div className="content__subheading" style={{ color: "#df200be2" }}>
-            Our Vision
-          </div>
+          <div className="content__subheading">Our Vision</div>
           <p style={{ textAlign: "justify" }}>
-            <AboutSvg/>
+            <AboutSvg />
             With a committed and competent team, our vision is to be recognized
             as a world-class career counselling & study abroad firm. We are
             working towards creating an ecosystem where students can receive the
@@ -106,7 +118,7 @@ const About = () => {
             their profile building.
           </p>
           <p style={{ textAlign: "justify" }}>
-            <AboutSvg/>
+            <AboutSvg />
             Not only the students, but we also view ourselves as a preferred
             place to associate with, other individuals who are influencing the
             career selection of students such as other counsellors, colleges,
@@ -115,7 +127,7 @@ const About = () => {
         </div>
         <div className="vision__img">
           <img
-            src="https://spiritualkonnect.org/wp-content/uploads/2017/07/VISION-icon.jpg"
+            src="https://mcgovern.mit.edu/wp-content/uploads/2022/08/dreams_900x600.jpg"
             alt=""
           />
         </div>
@@ -123,7 +135,7 @@ const About = () => {
       <div className="sec2" style={{ display: "flex", alignItems: "center" }}>
         <div className="vision__img">
           <img
-            src="https://thumbs.dreamstime.com/b/conceptual-hand-writing-showing-our-mission-business-photo-text-goal-motivation-target-growth-planning-innovation-vision-written-114100411.jpg"
+            src="https://www.brandhonchos.co.in/images/mission-1.jpg"
             alt=""
           />
         </div>
@@ -131,39 +143,37 @@ const About = () => {
           className="content"
           style={{ display: "flex", alignItems: "center" }}
         >
-          <div className="content__subheading" style={{ color: "#df200be2" }}>
-            Our Mission
-          </div>
+          <div className="content__subheading">Our Mission</div>
           <div>
             <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
-              <AboutSvg/>
+              <AboutSvg />
               <div style={{ paddingLeft: "7px" }}>
                 Commitment to grow our business with emphasis on Excellence,
                 Honesty, Integrity & Updated knowledge.
               </div>
             </p>
             <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
-              <AboutSvg/>
+              <AboutSvg />
               <div>
                 To build strong and credible relationships with partner
                 Institutions.
               </div>
             </p>
             <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
-              <AboutSvg/>
+              <AboutSvg />
               <div>
                 To provide customized solutions to students aspiring to study.
               </div>
             </p>
             <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
-              <AboutSvg/>
+              <AboutSvg />
               <div>
                 We always keeping in mind the best interest of our stakeholders,
                 partners and clients.
               </div>
             </p>
             <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
-              <AboutSvg/>
+              <AboutSvg />
               <div style={{ paddingLeft: "10px" }}>
                 Backed by our expert team of professional consultants, we hope
                 to offer students an opportunity to identify the right
@@ -171,14 +181,14 @@ const About = () => {
               </div>
             </p>
             <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
-              <AboutSvg/>
+              <AboutSvg />
               <div style={{ paddingLeft: "7px" }}>
                 We ensure that each of our students goes through a hassle-free
                 admission process to the college and university of their choice.
               </div>
             </p>
             <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
-              <AboutSvg/>
+              <AboutSvg />
               <div style={{ paddingLeft: "7px" }}>
                 {" "}
                 We aim at informing students and organisations about the best
@@ -186,7 +196,7 @@ const About = () => {
               </div>
             </p>
             <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
-              <AboutSvg/>
+              <AboutSvg />
               <div style={{ paddingLeft: "7px" }}>
                 Quality education promotes competency of employees and also
                 results in overall growth and advancement of the society.
@@ -202,52 +212,48 @@ const About = () => {
             <img
               src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt=""
-              height="300vh"
-              width="245vw"
+              className="card__image"
             />
+            <div className="card__details">
+              <div className="card__name">Nishu Kumari</div>
+              <div className="card__role">Developer</div>
+            </div>
           </div>
 
           <div className="card">
             <img
               src="https://images.pexels.com/photos/46253/mt-fuji-sea-of-clouds-sunrise-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt=""
-              height="300vh"
-              width="245vw"
+              className="card__image"
             />
+            <div className="card__details">
+              <div className="card__name">John Doe</div>
+              <div className="card__role">Designer</div>
+            </div>
           </div>
+
           <div className="card">
             <img
               src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt=""
-              height="300vh"
-              width="245vw"
+              className="card__image"
             />
+            <div className="card__details">
+              <div className="card__name">Alice Smith</div>
+              <div className="card__role">Engineer</div>
+            </div>
           </div>
+
           <div className="card">
             <img
               src="https://images.pexels.com/photos/1887624/pexels-photo-1887624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt=""
-              height="300vh"
-              width="245vw"
+              className="card__image"
             />
-          </div>
-        </div>
-        <div className="cardsbottom">
-          <div className="cardbottom">
-            <div className="cardbottom__name">Nishu Kumari</div>
-            <div>Developer</div>
-          </div>
-          <div className="cardbottom">
-            <div className="cardbottom__name">Nishu Kumari</div>
-            <div>Developer</div>
-          </div>
-          <div className="cardbottom">
-            <div className="cardbottom__name">Nishu Kumari</div>
-            <div>Developer</div>
-          </div>
-          <div className="cardbottom">
-            <div className="cardbottom__name">Nishu Kumari</div>
-            <div>Developer</div>
+            <div className="card__details">
+              <div className="card__name">Bob Johnson</div>
+              <div className="card__role">Manager</div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,8 +1,7 @@
 .achiv__container{
     padding: 6rem;
     font-family: 'Poppins';
-    background-image: linear-gradient(#4586ef00, #4586ef90, #4586ef00);
-    display: flex;
+     display: flex;
     justify-content: space-between;
 }
 .achiv__left__container{
@@ -38,10 +37,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .achiv__right__container img{
     height: 60vh;
+    
 }
+.achiv__right__container .swiper-slide img {
+    border-radius: 15px; /* Adjust the value as needed */
+  }
+  
 @media screen and (max-width:600px) {
     .achiv__container{
         padding: 2rem;

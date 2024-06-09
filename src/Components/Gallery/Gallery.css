@@ -4,8 +4,10 @@
     
 }
 .gal__banner{
-    background-image: url(../../../public/GalleyBanner.png);
-    height: 30vh;
+    background-image: linear-gradient(to bottom ,#eaedf100, #eaedf131),url(../../../public/galleryNew.jpeg);
+    height: 33vh;
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-repeat: no-repeat; /* Prevent background repetition */
 }
 .gal__banner img{
     width:100%

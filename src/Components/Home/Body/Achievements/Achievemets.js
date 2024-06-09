@@ -10,11 +10,9 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Achievemets = () => {
-
-  const RedirectContact = ()=>{
-    window.location.href = '/contact'
-
-  }
+  const RedirectContact = () => {
+    window.location.href = "/contact";
+  };
   return (
     <div className="achiv__container">
       <div className="achiv__left__container">
@@ -54,10 +52,16 @@ const Achievemets = () => {
           />
         </div>
         <div className="achiv__left__container__buttons">
-          <button style={{ backgroundColor: "#107F1E", color: "#ffff" }} onClick={RedirectContact}>
+          <button
+            style={{ backgroundColor: "#107F1E", color: "#ffff" }}
+            onClick={RedirectContact}
+          >
             Call Now
           </button>
-          <button style={{ backgroundColor: "#df200be2", color: "#ffff" }} onClick={RedirectContact}>
+          <button
+            style={{ backgroundColor: "#df200be2", color: "#ffff" }}
+            onClick={RedirectContact}
+          >
             Apply Now
           </button>
         </div>
@@ -77,9 +81,15 @@ const Achievemets = () => {
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
-          <SwiperSlide><img src="https://thecareerzone.co.in/images/gallery/2.jpg"></img></SwiperSlide>
-          <SwiperSlide><img src="https://thecareerzone.co.in/images/gallery/3.jpg"></img></SwiperSlide>
-          <SwiperSlide><img src="https://thecareerzone.co.in/images/gallery/4.jpg"></img></SwiperSlide>
+          <SwiperSlide>
+            <img src="https://thecareerzone.co.in/images/gallery/2.jpg"></img>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://thecareerzone.co.in/images/gallery/3.jpg"></img>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://thecareerzone.co.in/images/gallery/4.jpg"></img>
+          </SwiperSlide>
         </Swiper>
       </div>
     </div>

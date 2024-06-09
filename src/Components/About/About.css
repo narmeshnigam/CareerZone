@@ -4,6 +4,7 @@
     gap: 3rem;
     padding: 6rem;
   }
+  
   .head {  
     display: flex; 
     height: 30vh;
@@ -12,21 +13,38 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(#4586ef, #4586ef00);
+    background-image: linear-gradient(#4586ef68, #4586ef00);
     color: rgba(0, 0, 0, 0.77);
   }
+  .about__top__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 60vh;
+    background-image: linear-gradient(to bottom, #eaedf100, #eaedf138, #eaedf1), url('https://static.vecteezy.com/system/resources/previews/027/183/857/large_2x/college-student-walking-to-university-campus-education-banner-concept-free-photo.jpg');
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-repeat: no-repeat; /* Prevent background repetition */
+    
+}
+
+.about__top__img div{
+    width: 70%;
+    font-size: 3rem;
+    font-weight: 600;
+}
   .awards {
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
   .image{
-    background-color: rgb(0, 0, 0);
-    border-radius: 20px;
+    
+    border-radius: 10px;
   }
   .image img{
-    height: 55vh;
-    border-radius: 20px;
+    height: 75vh;
+    border-radius: 5px;
     margin-left: 7px;
   }
   .content{
@@ -53,21 +71,21 @@
     display: flex;
     padding: 6rem;
     gap: 3rem;
-    background-image: linear-gradient(#4586ef00, #4586ef90, #4586ef00);
+    
   }
   .vision__img img {
-    height: 55vh;
-    border-radius: 20px;
+    height: 50vh;
+    border-radius: 5px;
     margin-left: 7px;
   }
   .vision__img {
-    height: 56vh;
-    background-color: rgb(0, 0, 0);
-    border-radius: 20px;
+    height: 50vh;
+    
+    border-radius: 5px;
   }
   .team {
     padding: 6rem;
-    background-image: linear-gradient(#4586ef00, #4586ef90);
+    
   }
   .ourteam {
     text-align: center;
@@ -83,10 +101,36 @@
   .card {
     height: 45vh;
     width: 20vw;
-    background-color: black;
-    border: 1px solid black;
+    
     border-radius: 15px;
   }
+  .card {
+    position: relative; /* Ensure positioning context for absolute positioning */
+    display: inline-block; /* Ensure cards are displayed in a row */
+  }
+  
+  .card__image {
+    width: 245px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+  }
+  
+  .card__details {
+    position: absolute;
+    bottom: 10px; /* Adjust vertical position as needed */
+    left: 25px; /* Adjust horizontal position as needed */
+    color: white; /* Text color */
+  }
+  
+  .card__name {
+    font-weight: bold;
+    font-size: 1.2rem; /* Adjust font size as needed */
+    margin-bottom: 5px; /* Add space between name and role */
+  }
+  
+  .card__role {
+    font-size: 1rem; /* Adjust font size as needed */
+  }
+  
 .team img {
   margin: 0.3rem;
   border-radius: 15px;

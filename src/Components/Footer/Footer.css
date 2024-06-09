@@ -10,8 +10,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #165ac7a5;
+    background: linear-gradient(to bottom, #eaedf1, #0f4eb4);
     padding: 3rem;
+    
 }
 .iframe__map > span {
     overflow: hidden;
@@ -20,7 +21,7 @@
 }
 
 .contact__details{
-    color: #ffff;
+    color: black;
     display: flex;
     gap: 4rem;
     font-size: 1rem;
@@ -55,6 +56,7 @@
     padding: 1rem;
     text-align: center;
     color: white;
+    font-size: 20px;
     background-color: #0f4eb4;
 }
 @media screen and (max-width: 600px) {

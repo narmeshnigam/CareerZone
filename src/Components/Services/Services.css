@@ -7,8 +7,10 @@
     justify-content: center;
     align-items: center;
     color: white;
-    height: 60vh;
+    height: 45vh;
     background-image:  linear-gradient(to bottom ,#eaedf100, #eaedf138, #eaedf1),url(https://template63467.motopreview.com/mt-demo/63400/63467/mt-content/uploads/2017/06/mt-1027-content-bg03.jpg);
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-repeat: no-repeat; /* Prevent background repetition */
 }
 .services__top__img div{
     width: 70%;
