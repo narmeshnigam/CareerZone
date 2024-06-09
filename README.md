@@ -1,14 +1,69 @@
-# Getting Started with Create React App
+# Getting Started with Career Zone 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Clone the project
 
-## Available Scripts
+ **Download the project.**
 
-In the project directory, you can run:
-### `npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome`
+   ```bash
+   git clone https://github.com/WebWise-Media/Crypto-Wallet.git
+   ```
+
+ **Navigate into the folder.**
+
+   ```bash
+   cd CareerZone
+   ```
+
+#### Branching
+
+1. **Create a new branch called `ui`.**
+
+   ```bash
+   git branch ui
+   ```
+
+2. **Switch to `ui` branch.**
+
+   ```bash
+   git checkout ui
+   ```
+
+3. **Sync the local `ui` branch to the repository `ui` branch.**
+
+   ```bash
+   git pull origin ui
+   ```
 
 
-### `npm start`
+4. **Install the dependencies:**
+
+  ```bash
+npm i
+```
+```bash
+npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+```
+
+```bash
+npm install @fortawesome/free-regular-svg-icons
+```
+
+
+start the project with :
+```bash
+npm start
+```
+## contribute
+```bash
+git add .
+```
+```bash
+git commit -m "Commit message"
+```
+Push Changes to New Branch: Finally, push your changes to the new branch on GitHub using
+```bash
+git push -u origin ui
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
