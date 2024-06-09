@@ -4,10 +4,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
-### `npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome`
+In the project directory , install these :
+##`npm i`
+## `npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome`
 
+##`npm install @fortawesome/free-regular-svg-icons`
 
+start the project with :
 ### `npm start`
 
 Runs the app in the development mode.\
