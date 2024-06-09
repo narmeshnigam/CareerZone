@@ -2,13 +2,46 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+#### Clone the project
 
-## In the project directory , install these :
+ **Download the project.**
 
-`npm i`
-`npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome`
-`npm install @fortawesome/free-regular-svg-icons`
+   ```bash
+   git clone https://github.com/WebWise-Media/Crypto-Wallet.git
+   ```
+
+ **Navigate into the folder.**
+
+   ```bash
+   cd CareerZone
+   ```
+
+#### Branching
+
+1. **Create a new branch called `ui`.**
+
+   ```bash
+   git branch ui
+   ```
+
+2. **Switch to `ui` branch.**
+
+   ```bash
+   git checkout ui
+   ```
+
+3. **Sync the local `ui` branch to the repository `ui` branch.**
+
+   ```bash
+   git pull origin ui
+   ```
+
+
+4. **Install the dependencies:**
+
+  ```bash
+npm i ```
+
 
 start the project with :
 ### `npm start`
