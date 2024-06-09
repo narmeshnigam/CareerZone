@@ -40,7 +40,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 4. **Install the dependencies:**
 
   ```bash
-npm i ```
+npm i
+```
+```bash
+npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+```
+
+```bash
+npm install @fortawesome/free-regular-svg-icons
+```
 
 
 start the project with :
