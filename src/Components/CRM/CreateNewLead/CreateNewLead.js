@@ -1,3 +1,4 @@
+
 import { React, useEffect, useState } from 'react';
 import styles from './CreateNewLead.module.css';
 import { Link } from 'react-router-dom';
@@ -9,7 +10,8 @@ const CreateNewLead = () => {
       window.scrollTo(0, 0);
     }
     scrollTop();
-  }, [])
+  }, []);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,7 +28,6 @@ const CreateNewLead = () => {
     relation : '',
     source: '',
     budget: '',
-    leadNumber: '', 
     createdDate: '', 
     assignmentDate: '', 
     createdBy: '',
@@ -41,12 +42,12 @@ const CreateNewLead = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission behavior
 
     const currentDate = new Date().toLocaleDateString();
     const currentUser = 'nishu'; 
-    const leadNumber = generateLeadNumber();
+    const leadNumber = await generateLeadNumber();
 
     const leadData = {
       ...formData,
@@ -55,7 +56,6 @@ const CreateNewLead = () => {
       createdBy: currentUser,
       assignmentDate: currentDate,
       assignedBy: currentUser,
-      
     };
 
     // Save data to Firebase
@@ -66,6 +66,7 @@ const CreateNewLead = () => {
       .catch((error) => {
         console.error('Error adding lead: ', error);
       });
+
     setFormData({
       name: '',
       email: '',
@@ -82,19 +83,39 @@ const CreateNewLead = () => {
       relation : '',
       source: '',
       budget: '',
-      leadNumber: '', 
       createdDate: '', 
       assignmentDate: '', 
       createdBy: '',
       assignedTo: '', 
       assignedBy: '', 
       remarks: '',
-    })
+    });
   };
-  const generateLeadNumber = () => {
+
+  const generateLeadNumber = async () => {
+    const counterDoc = db.collection('counters').doc('leadCounter');
+    
+    try {
+      const leadNumber = await db.runTransaction(async (transaction) => {
+        const counterSnapshot = await transaction.get(counterDoc);
+        if (!counterSnapshot.exists) {
+          transaction.set(counterDoc, { currentLeadNumber: 1 });
+          return '000001';
+        } else {
+          const currentLeadNumber = counterSnapshot.data().currentLeadNumber;
+          const newLeadNumber = currentLeadNumber + 1;
+          transaction.update(counterDoc, { currentLeadNumber: newLeadNumber });
+          return newLeadNumber.toString().padStart(6, '0');
+        }
+      });
   
-    return Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+      return leadNumber;
+    } catch (error) {
+      console.error('Transaction failed: ', error);
+      throw new Error('Could not generate lead number');
+    }
   };
+  
 
   const assignedToOptions = [
     { value: 'nishi', label: 'nishi' }
@@ -232,7 +253,7 @@ const CreateNewLead = () => {
               id="courseInterest"
               name="courseInterest"
               placeholder="Course Interest"
-              value={formData.course}
+              value={formData.courseInterest}
               onChange={handleInputChange}
               className={styles.input__field}
             />
@@ -297,16 +318,16 @@ const CreateNewLead = () => {
            <option value="">Assigned To</option>
            {assignedToOptions.map((option) => (
             <option key={option.value} value={option.value}>
-            {option.label}
+              {option.label}
             </option>
-           ))}
-           </select>
+            ))}
+            </select>
           </div>
+          <button type="submit" className={styles.btn}>Submit</button>
         </div>
-        <button className={styles.btn} type="submit">Submit</button>
       </form>
     </div>
   );
-};
+}
 
 export default CreateNewLead;

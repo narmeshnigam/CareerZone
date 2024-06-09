@@ -61,6 +61,8 @@ const FollowUpPage = () => {
   };
 
   const handleSubmit = async (e) => {
+    e.preventDefault();
+
     const currentDate = new Date().toLocaleDateString();
     const currentUser = 'nishu'; 
     const followUpNumber = generateFollowUpNo();
@@ -166,7 +168,7 @@ const FollowUpPage = () => {
             <input name='status' onChange={handleChange} value={followUp.status} type='text' placeholder='Status'/>
             <input name='remarks' onChange={handleChange} value={followUp.remarks} type='text' placeholder='Remarks'/>
             <input name='transferto' onChange={handleChange} value={followUp.transferto} type='text' placeholder='Transfer to'/>
-            <div style={{width: '100%', display: 'flex', marginTop: '3rem'}}><button onClick={handleSubmit} className={styles.followCardbtn}>Submit</button></div>
+            <div style={{width: '100%', display: 'flex', marginTop: '3rem'}}><button type='submit' onClick={handleSubmit} className={styles.followCardbtn}>Submit</button></div>
         </div>
       </div>
     </div>
