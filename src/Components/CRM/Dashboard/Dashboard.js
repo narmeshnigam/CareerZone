@@ -91,87 +91,57 @@ const Dashboard = () => {
         </div>
         <div className={styles.rightContainer}>
           <div className={styles.rightContainerUpper}>
-            <div className={styles.leadStats}>
-              <div
-                style={{
-                  fontSize: "1.7rem",
-                  paddingTop: "10px",
-                  paddingRight: "15px",
-                  fontWeight: "500",
-                }}
-              >
-                Today Leads
+            <div className={styles.leadStatsContainer}>
+              <div className={styles.leadStats}>
+                <div
+                  style={{
+                    fontSize: "1.4rem",
+                    fontWeight: "500",
+                    textAlign: "justify",
+                  }}
+                >
+                  Today Leads: {leads.todayLeads} <br /> This Month:{" "}
+                  {leads.thisMonthLeads}
+                </div>
               </div>
-              <div>{leads.todayLeads}</div>
             </div>
-            <div className={styles.leadStats}>
+            <div className={styles.buttonContainer}>
               <div
-                style={{
-                  fontSize: "1.7rem",
-                  paddingTop: "10px",
-                  paddingRight: "15px",
-                  fontWeight: "500",
-                }}
+                onClick={() => navigate("/createLead")}
+                className={styles.leadButtons}
               >
-                This Month
+                Create New Lead
               </div>
-              <div>{leads.thisMonthLeads}</div>
-            </div>
-          </div>
-          <div className={styles.rightContainerLower}>
-            <div
-              onClick={() => navigate("/createLead")}
-              className={styles.leadButtons}
-            >
-              Create New Lead
-            </div>
-            <div
-              onClick={() => navigate("/leadHistory")}
-              className={styles.leadButtons}
-            >
-              Lead History
+              <div
+                onClick={() => navigate("/leadHistory")}
+                className={styles.leadButtons}
+              >
+                Lead History
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       <div className={styles.upperContainer}>
         <div className={`${styles.rightContainerUpper} ${styles.barcahrtLeft}`}>
           <div className={styles["rightContainerUpper"]}>
-            <div
-              style={{ background: "dodgerblue" }}
-              className={styles.leadStats}
-            >
+            <div className={styles.leadStats}>
               <div
                 style={{
-                  fontSize: "1.7rem",
-                  paddingTop: "10px",
-                  paddingRight: "15px",
+                  fontSize: "1.4rem",
+                  textAlign: "justify",
                   fontWeight: "500",
                 }}
               >
-                Today FollowUp
+                Today FollowUp : {followUp.todayFollowUp}
+                <br />
+                This Month : {followUp.thisMonthFollowUp}
               </div>
-              <div>{followUp.todayFollowUp}</div>
-            </div>
-            <div
-              style={{ background: "dodgerblue" }}
-              className={styles.leadStats}
-            >
-              <div
-                style={{
-                  fontSize: "1.7rem",
-                  paddingTop: "10px",
-                  paddingRight: "15px",
-                  fontWeight: "500",
-                }}
-              >
-                This Month
-              </div>
-              <div>{followUp.thisMonthFollowUp}</div>
             </div>
           </div>
         </div>
-        <div style={{ backgroundColor: "#ffff" }} className={styles.lineChart}>
+        <div style={{ backgroundColor: "#fff" }} className={styles.lineChart}>
           <Barchart />
         </div>
       </div>

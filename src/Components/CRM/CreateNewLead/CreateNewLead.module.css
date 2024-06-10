@@ -67,6 +67,7 @@
   border-radius: 4px; /* Example border radius */
   box-sizing: border-box; /* Ensure padding and border are included in width */
   border-radius: 20px;
+  background-color: #00000006;
   
 }
 

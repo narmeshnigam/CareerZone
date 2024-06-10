@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 65vh;
+    height: 45vh;
     background-position: 0% 24%;
     background-image:  linear-gradient(to bottom ,#eaedf100, #eaedf138, #eaedf1),url(https://i0.wp.com/www.edtechdigest.com/wp-content/uploads/2023/02/DUY-HOANG-THAI-lrng.jpg?resize=1536%2C1024&ssl=1);
 }
@@ -27,9 +27,10 @@
     text-align: justify;
 }
 .edu__service__img{
-    background-color: black;
-    border-radius: 20px;
-    width: 35%;
+    
+    border-radius: 10px;
+    width: 55%;
+    
 }
 .edu__service__content  img {
     width: 100%;
@@ -37,7 +38,7 @@
     margin-left:5px;
 }
 .edu__service__purpose{
-    background-image: linear-gradient(#4586ef00, #4586ef90, #4586ef00);
+    
     padding: 6rem;
     display: flex;
     align-items: center;
@@ -45,11 +46,11 @@
 }
 .edu__service__purpose div img{
     width: 90%;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 .edu__service__purpose__heading{
     font-size: 2.2rem;
-    color: #df200be2;
+    color: #000000;
     font-weight: 600;
 }
 .edu__services__work{

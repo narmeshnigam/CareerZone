@@ -26,7 +26,7 @@ const EducationalService = () => {
         </div>
         <div className="edu__service__img">
           <img
-            src="https://franchiseindia.s3.ap-south-1.amazonaws.com/uploads/content/edu/art/5c98b24f61169.jpeg"
+            src="https://images.squarespace-cdn.com/content/v1/5faaa56365c7f367dd0c51d5/1622377163392-Y9C0QBC0PRJ10570P6VY/two%2Bhs%2Bstudents.jpg?format=2500w"
             alt=""
           />
         </div>
@@ -34,11 +34,11 @@ const EducationalService = () => {
       <div className="edu__service__purpose">
         <div>
           <img
-            src="https://media.licdn.com/dms/image/C4D12AQHM1k_4F0hcfQ/article-cover_image-shrink_600_2000/0/1611074854633?e=2147483647&v=beta&t=wVBjOd_rdzRKEur7EOOBNHD1Zfcs_NUq7POxCCyKWEY"
+            src="https://images.squarespace-cdn.com/content/v1/5faaa56365c7f367dd0c51d5/1605112895070-7H1VPBFB29YRPK77FU95/edtech-gradeschool.jpg?format=1500w"
             alt=""
           />
         </div>
-        <div style={{ width: "50%" }}>
+        <div style={{ width: "60%", marginLeft: "-50px" }}>
           <div className="edu__service__purpose__heading">Purpose</div>
           <div style={{ margin: "1rem 0rem", textAlign: "justify" }}>
             We aim to provide the best guidance to Indian students.
@@ -77,11 +77,18 @@ const EducationalService = () => {
         </div>
       </div>
       <div className="edu__services__work">
-        <div style={{ width: "60%" }}>
+        <div style={{ width: "50%" }}>
           <div className="edu__service__purpose__heading">
-            The Career Zone and its Area of Work
+            The Career Zone and its <br />
+            Area of Work
           </div>
-          <div style={{ textAlign: "justify", margin: "1rem 0rem" }}>
+          <div
+            style={{
+              textAlign: "justify",
+              margin: "2rem 0rem",
+              marginRight: "30px",
+            }}
+          >
             Currently, we have collaborated with many educational institutes,
             universities, and centres and more are in the process. We are
             fortunate that our reputation has helped us to tie-up with reputed
@@ -90,7 +97,7 @@ const EducationalService = () => {
             helped us to throw light on the best university admission portals,
             top college courses in India, and best UG and PG courses in India.
           </div>
-          <div style={{ textAlign: "justify" }}>
+          <div style={{ textAlign: "justify", marginRight: "30px" }}>
             We have an excellent team of management experts and field workers,
             who manage the entire business to the best of their abilities. The
             main boiling point of our organization is to disseminate the right
@@ -100,8 +107,11 @@ const EducationalService = () => {
             bringing that rich experience to the table today.
           </div>
         </div>
-        <div style={{ width: "40%" }}>
-          <img src="https://miro.medium.com/v2/resize:fit:800/1*Dmc1K9bhapkbf0NXBvhZHw.png"></img>
+        <div style={{ width: "50%" }}>
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/5faaa56365c7f367dd0c51d5/1605114572078-91467RDBM7ZCNBA62IWM/working-team.jpg?format=1500w"
+            style={{ borderRadius: "10px" }}
+          ></img>
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
-    color: rgb(4, 7, 101);
+    color: rgba(0, 0, 0, 0.553);
     background-position: 50% 30%;
     height: 40vh;
     background-image:linear-gradient(to bottom ,#eaedf100, #eaedf138, #eaedf1), url(https://t4.ftcdn.net/jpg/04/42/89/59/360_F_442895934_hF6sltz7ALNXOLtINTHiKidtcWN7illo.jpg);
@@ -29,8 +29,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #fff;
-    background-color: #4586ef;
+    color: #000000;
+    
     padding: 0.5rem 1rem;
     font-size: 2.2rem;
 }
@@ -41,11 +41,11 @@
 }
 .coursespg__medical__courses__table{
     border-radius:0 0 10px 10px;
-    background-color: #4586ef;
+    
     padding: 1rem;
 }
 .coursespg__medical__courses__card__container__withHeading{
-    color: white;
+    color: rgb(0, 0, 0);
 
 }
 .coursespg__medical__courses__card__container__heading{

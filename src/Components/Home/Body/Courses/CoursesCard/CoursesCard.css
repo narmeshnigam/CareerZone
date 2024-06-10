@@ -5,7 +5,8 @@
     background-color: rgb(234, 237, 241);
     height: 15rem;
     width: 20rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
+    border: 0.1px solid rgba(0, 0, 0, 0.47);
     font-family: 'Poppins';
     transition: scale 300ms ease-in, background-color 300ms ease-in;
 }

@@ -38,6 +38,7 @@
     box-shadow: 6px 6px 6px #0000002e;
     height: 2rem;
     margin-bottom: 1rem;
+    transition: 200ms ease;
 }
 .medicalCollegeCard__button button:hover{
     cursor: pointer;
