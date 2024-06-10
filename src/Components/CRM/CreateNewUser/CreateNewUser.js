@@ -66,7 +66,7 @@ const UserListsPage = () => {
   return (
     <div className={styles.createUserLists__container}>
       <div className={styles.lead_Listspage_heading}>
-        <Link to="/">
+        <Link to="/dashboard">
           <div className={styles.lead_Listspagehome_ic}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

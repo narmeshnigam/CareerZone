@@ -55,13 +55,13 @@ function Linechart() {
 
   return (
     <LineChart
-      width={800}
-      height={400}
+      width={500}
+      height={300}
       data={chartData}
       margin={{
-        top: 1,
-        right: 3,
-        left: 2,
+        top: 5,
+        right: 30,
+        left: 20,
         bottom: 5,
       }}
     >
