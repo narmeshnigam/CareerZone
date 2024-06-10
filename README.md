@@ -47,6 +47,9 @@ npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons 
 ```bash
 npm install @fortawesome/free-regular-svg-icons
 ```
+```bash
+npm install sweetalert2
+```
 
 
 start the project with :

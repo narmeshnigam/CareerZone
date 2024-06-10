@@ -1,13 +1,13 @@
 .createUserLists__container {
   padding-top: 12vh;
-  background-color: rgb(233, 233, 239);
+  background-color: rgb(255, 255, 255);
 }
 
 .lead_Listspage_heading {
   height: 200px;
   display: flex;
   align-items: center;
-  background-color: rgb(125, 183, 210);
+  background: linear-gradient(to bottom, dodgerblue, #FFFFFF);
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 7vw;

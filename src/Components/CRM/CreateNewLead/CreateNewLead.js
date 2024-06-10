@@ -2,6 +2,7 @@ import { React, useEffect, useState } from "react";
 import styles from "./CreateNewLead.module.css";
 import { Link } from "react-router-dom";
 import db from "../../../firebase";
+import Swal from "sweetalert2";
 
 const CreateNewLead = () => {
   useEffect(() => {
@@ -62,6 +63,13 @@ const CreateNewLead = () => {
       .add(leadData)
       .then(() => {
         console.log("Lead added successfully!");
+        Swal.fire({
+          icon: "success",
+          title: "Success!",
+          text: "New lead has been created.",
+          showConfirmButton: true,
+          timer: 5000, // Disappear after 5 seconds
+        });
       })
       .catch((error) => {
         console.error("Error adding lead: ", error);

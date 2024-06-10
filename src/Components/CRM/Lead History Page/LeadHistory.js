@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { faPenSquare } from "@fortawesome/free-solid-svg-icons";
-
+import Swal from "sweetalert2";
 const LeadHistory = () => {
   const [leads, setLeads] = useState([]);
   const navigate = useNavigate();
@@ -147,14 +147,25 @@ const LeadHistory = () => {
   };
 
   const handleDelete = async (id) => {
-    const confirmDelete = window.confirm(
-      "Are you sure you want to delete this lead?"
-    );
-    if (confirmDelete) {
+    const confirmDelete = await Swal.fire({
+      icon: "warning",
+      title: "Are you sure?",
+      text: "You are about to delete this lead.",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Yes, delete it!",
+    });
+
+    if (confirmDelete.isConfirmed) {
+      // Perform lead deletion logic here
       await db.collection("leads").doc(id).delete();
+      Swal.fire("Deleted!", "", "success");
+    } else {
+      // Display a message indicating cancellation
+      Swal.fire("Cancelled", "", "info");
     }
   };
-
   const handleUpdate = (id) => {
     setUpdate(true);
     leads.forEach((data) => {
