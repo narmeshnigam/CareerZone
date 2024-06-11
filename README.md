@@ -52,7 +52,7 @@ npm install sweetalert2
 ```
 color using for background:
 ```bash
-   fbfeff
+fbfeff
 ```
 
 Google Font Using:
