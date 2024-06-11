@@ -50,6 +50,15 @@ npm install @fortawesome/free-regular-svg-icons
 ```bash
 npm install sweetalert2
 ```
+color using for background:
+```bash
+   fbfeff
+```
+
+Google Font Using:
+```bash
+Urbanist
+```
 
 
 start the project with :
