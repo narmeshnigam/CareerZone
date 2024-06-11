@@ -1,4 +1,4 @@
-# Getting Started with Career Zone 
+# Career Zone 
 
 #### Clone the project
 
