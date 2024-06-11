@@ -134,7 +134,7 @@ const CreateNewLead = () => {
             <div className={styles.lead_pagehome_ic}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                height="70"
+                height="6 0"
                 fill="black"
                 class="bi bi-house"
                 viewBox="0 0 16 16"
@@ -234,9 +234,7 @@ const CreateNewLead = () => {
           </div>
         </div>
         <div className={styles.input__container}>
-          <div className={styles.additional_info_heading}>
-            Additional Information :
-          </div>
+          <div className={styles.address__info}>Additional Information :</div>
           <div className={styles.address__line}>
             <input
               type="text"

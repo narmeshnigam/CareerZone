@@ -1,20 +1,23 @@
 *{
-    font-family: 'Poppins';
+    font-family: 'Urbanist';
 }
 .container{
     padding-top: 90px;
+    background-color:#fbfeff;
     
 }
 .heading-with-homebtn{
-    background: linear-gradient(to bottom, dodgerblue, #FFFFFF);
+    
     padding: 1rem 6rem;
     display: flex;
     align-items: center;
+    background-color:#fbfeff;
 }
 .heading{
     
     width: 90%;
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: 400;
     text-align: center;
+
 }

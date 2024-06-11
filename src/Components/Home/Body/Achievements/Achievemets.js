@@ -18,7 +18,7 @@ const Achievemets = () => {
       <div className="achiv__left__container">
         <div className="achiv__left__container__heading">OUR ACHIEVEMENTS</div>
         <div className="achiv__left__container__desc">
-          Since our humble beginning in 2001, THE About The Career Zone has been
+          Since our humble beginning in 2001, The Career Zone has been
           constantly providing quality and professional guidance to students.
           With our dedicated approach, we have been able to win the confidence
           of students who have approached us to fulfil their educational goals.

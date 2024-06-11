@@ -49,7 +49,7 @@ const LeadHistory = () => {
           variant="contained"
           onClick={() => handleView(params.row.id)}
           sx={{
-            backgroundColor: "green", // Set your desired background color
+            backgroundColor: "#03C03C", // Set your desired background color
             color: "#FFFFFF", // Set your desired text color
             paddingTop: "10px", // Add padding on top
             paddingBottom: "10px", // Add padding on bottom
@@ -69,7 +69,7 @@ const LeadHistory = () => {
           variant="contained"
           onClick={() => handleDelete(params.row.id)}
           sx={{
-            backgroundColor: "red", // Set your desired background color
+            backgroundColor: "#FF0800", // Set your desired background color
             color: "#FFFFFF", // Set your desired text color
             paddingTop: "10px", // Add padding on top
             paddingBottom: "10px", // Add padding on bottom
@@ -201,7 +201,7 @@ const LeadHistory = () => {
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              height="70"
+              height="60"
               fill="black"
               class="bi bi-house"
               viewBox="0 0 16 16"
@@ -222,7 +222,9 @@ const LeadHistory = () => {
         }}
         pageSizeOptions={[5, 10]}
         sx={{
-          backgroundColor: "#EDEFF5",
+          backgroundColor: "#fbfeff",
+          width: "98%",
+          marginLeft: "1%",
         }}
       />
     </div>

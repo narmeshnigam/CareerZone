@@ -55,14 +55,12 @@ function Linechart() {
 
   return (
     <LineChart
-      width={500}
-      height={300}
+      width={800}
+      height={370}
       data={chartData}
       margin={{
-        top: 5,
+        top: 10,
         right: 30,
-        left: 20,
-        bottom: 5,
       }}
     >
       <CartesianGrid strokeDasharray="3 3" />

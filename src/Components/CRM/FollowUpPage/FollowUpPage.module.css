@@ -1,6 +1,4 @@
-*{
-    font-family: 'Poppins';
-}
+
 
 .container{
     padding-top: 90px;
@@ -8,16 +6,20 @@
     
 }
 .headingContainer{
-    background: linear-gradient(to bottom, dodgerblue, #FFFFFF);
+    background-color:#fbfeff;
+ 
+  
  
     text-align: center;
     padding: 1rem 0;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
 }
 .leadInfoContainer{
-    background-color: rgba(30, 143, 255, 0.422);
+    background-color:#fbfeff;
+ 
+  
     padding: 2rem 1rem;
     border-radius: 20px;
     margin: 2rem auto;
@@ -26,6 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border:1px solid #333;
 }
 .leadInfoContainer div div{
     margin-bottom: 0.5rem;
@@ -42,16 +45,17 @@
     padding: 2rem 0rem;
 }
 .followHisHeading{
-    background: linear-gradient(to bottom, rgba(30, 143, 255, 0.815),rgba(30, 143, 255, 0.518));
+    
     border-radius: 25px; 
     margin-left: 10%;
     width: 80%;
     font-size: 2rem;
-    text-align: center;
+    text-align: left;
+    
 }
 .followCardContainer{
     margin: 2rem 3rem;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 2rem 3rem;
     display: flex;
     justify-content: space-between;
@@ -61,11 +65,9 @@
 }
 .followCardContainer input, textarea, select{
     font-size: 1.1rem;
-    margin: 0.5rem 0;
-    box-shadow: 6px 6px 6px #00000011;
-    padding: 1rem;
-    border: none;
+    border-radius: 5px;
     outline: none;
+    margin-top: -10px;
 }
 .followCardContainer input{
     width: 45%;
@@ -79,16 +81,42 @@
     width: 48%;
     
 }
-.followCardContainer textarea{
-    font-family: 'Poppins';
-}
+
 .followCardbtn{
-    margin: auto;
-    padding: 0.3rem 1rem;
-    font-size: 1.3rem;
-    box-shadow: 6px 6px 6px #0000002e;
+    margin-bottom: 10vh;
+    margin-left: 690px;
+    margin-top: 5vh;
+    height: 6vh;
+    width: 30vh;
+    background-color: dodgerblue; /* Peach color */
+    font-size: larger;
+    font-weight: 500;
+    border-radius: 5px;
     border: none;
-    color: #ffff;
-    border-radius: 15px;
-    background-color: dodgerblue;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+    transition: border 0.3s ease
 }
+.submit{
+    margin-bottom: 10vh;
+    margin-left: 690px;
+    margin-top: 5vh;
+    height: 7vh;
+    width: 30vh;
+    background-color: #11d31e; /* Peach color */
+    font-size: larger;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+    transition: border 0.3s ease
+    
+}
+.submit:hover {
+    /* White color */
+   color: #000000; /* Changing text color to black for better contrast on white background */
+   border: 3px solid #000000; 
+ }

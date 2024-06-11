@@ -1,9 +1,8 @@
-.container{
-    font-family: 'Poppins';
-}
+*{
+    font-family: 'Urbanist';
+  }
 .heading-with-homebtn{
-    background: linear-gradient(to bottom, rgba(30, 143, 255, 0.815),rgba(30, 143, 255, 0.518));
-    border-radius: 25px;
+   
     margin-left: 10%;
     width: 80%;
     padding: 0.5rem;
@@ -12,9 +11,14 @@
     margin-bottom: 5px;
 }
 .heading{
-    color: #ffff;
+    color: black;
     width: 100%;
     font-size: 2.5rem;
     font-weight: 500;
-    text-align: center;
+    text-align: left;
+}
+.container{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 10px;
 }

@@ -93,15 +93,41 @@ const Dashboard = () => {
           <div className={styles.rightContainerUpper}>
             <div className={styles.leadStatsContainer}>
               <div className={styles.leadStats}>
-                <div
-                  style={{
-                    fontSize: "1.4rem",
-                    fontWeight: "500",
-                    textAlign: "justify",
-                  }}
-                >
-                  Today Leads: {leads.todayLeads} <br /> This Month:{" "}
-                  {leads.thisMonthLeads}
+                <div style={{ display: "flex" }}>
+                  <div
+                    id="todayLeads"
+                    style={{
+                      width: "100px",
+                      height: "70px",
+                      backgroundColor: "peachpuff",
+                      borderLeft: "5px solid orange",
+                      padding: "10px",
+                      marginBottom: "10px",
+                      fontSize: "1.4rem",
+                      fontWeight: "500",
+                      textAlign: "justify",
+                      marginRight: "20px", // Add spacing between the divs
+                    }}
+                  >
+                    Today Leads: {leads.todayLeads}
+                  </div>
+                  <div
+                    id="thisMonthLeads"
+                    style={{
+                      width: "100px",
+                      height: "70px",
+                      backgroundColor: "rgba(30, 144, 255, 0.5)",
+                      borderLeft: "5px solid dodgerblue",
+                      padding: "10px",
+                      marginBottom: "10px",
+                      fontSize: "1.4rem",
+                      fontWeight: "500",
+                      textAlign: "justify",
+                      marginRight: "20px", // Add spacing between the divs
+                    }}
+                  >
+                    This Month: {leads.thisMonthLeads}
+                  </div>
                 </div>
               </div>
             </div>
@@ -127,21 +153,45 @@ const Dashboard = () => {
         <div className={`${styles.rightContainerUpper} ${styles.barcahrtLeft}`}>
           <div className={styles["rightContainerUpper"]}>
             <div className={styles.leadStats}>
-              <div
-                style={{
-                  fontSize: "1.4rem",
-                  textAlign: "justify",
-                  fontWeight: "500",
-                }}
-              >
-                Today FollowUp : {followUp.todayFollowUp}
-                <br />
-                This Month : {followUp.thisMonthFollowUp}
+              <div>
+                <div
+                  style={{
+                    width: "150px",
+                    height: "50px",
+                    backgroundColor: "peachpuff",
+                    borderLeft: "5px solid orange",
+                    padding: "10px",
+                    marginBottom: "10px",
+                    fontSize: "1.4rem",
+                    fontWeight: "500",
+                    textAlign: "justify",
+                    marginRight: "20px", // Add spacing between the divs
+                  }}
+                >
+                  Today FollowUp : {followUp.todayFollowUp}
+                </div>
+                <div
+                  style={{
+                    width: "150px",
+                    height: "50px",
+                    backgroundColor: "rgba(30, 144, 255, 0.5)",
+                    borderLeft: "5px solid dodgerblue",
+                    padding: "10px",
+                    marginBottom: "10px",
+                    fontSize: "1.4rem",
+                    fontWeight: "500",
+                    textAlign: "justify",
+                    marginRight: "20px", // Add spacing between the divs
+                  }}
+                >
+                  This Month : {followUp.thisMonthFollowUp}
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div style={{ backgroundColor: "#fff" }} className={styles.lineChart}>
+
+        <div className={styles.lineChart}>
           <Barchart />
         </div>
       </div>

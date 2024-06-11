@@ -70,7 +70,7 @@ const UserListsPage = () => {
           <div className={styles.lead_Listspagehome_ic}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              height="70"
+              height="60"
               fill="black"
               class="bi bi-house"
               viewBox="0 0 16 16"
@@ -79,7 +79,7 @@ const UserListsPage = () => {
             </svg>
           </div>
         </Link>
-        <div className={styles.lead_Listspagehomeheading_}>User History</div>
+        <div className={styles.lead_Listspagehomeheading_}></div>
       </div>
       <div className={styles.userLists_tab_heading}>User Lists</div>
       <div className={styles.userLists__tab}>

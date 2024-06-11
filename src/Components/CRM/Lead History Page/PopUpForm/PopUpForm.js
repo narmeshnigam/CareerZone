@@ -103,13 +103,10 @@ const PopUpForm = ({
         stroke-linejoin="round"
         class="icon icon-tabler icons-tabler-outline icon-tabler-xbox-x"
       >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M12 21a9 9 0 0 0 9 -9a9 9 0 0 0 -9 -9a9 9 0 0 0 -9 9a9 9 0 0 0 9 9z" />
-        <path d="M9 8l6 8" />
-        <path d="M15 8l-6 8" />
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
       </svg>
       <div className={styles.innerForm}>
-        <div className={styles.heading}>Update #lead</div>
+        <div className={styles.heading}>Update Lead</div>
         <div className={styles.formContainer}>
           <div className={styles.inputContainer}>
             <input

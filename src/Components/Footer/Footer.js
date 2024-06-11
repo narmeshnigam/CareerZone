@@ -31,7 +31,8 @@ const Footer = () => {
                 href="/services"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
                   fontSize: "18px",
                 }}
@@ -42,7 +43,8 @@ const Footer = () => {
                 href="/services/edu_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
                   fontSize: "18px",
                 }}
@@ -53,7 +55,8 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
                   fontSize: "18px",
                 }}
@@ -64,7 +67,8 @@ const Footer = () => {
                 href="/login"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
                   fontSize: "18px",
                 }}
@@ -75,7 +79,8 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
                   fontSize: "18px",
                 }}
@@ -86,7 +91,8 @@ const Footer = () => {
                 href="#courses"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
                   fontSize: "18px",
                 }}
@@ -100,7 +106,8 @@ const Footer = () => {
                 href="/"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
                   fontSize: "18px",
                 }}
@@ -111,7 +118,8 @@ const Footer = () => {
                 href="/services/edu_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
                   fontSize: "18px",
                 }}
@@ -122,7 +130,8 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
                   fontSize: "18px",
                 }}
@@ -133,7 +142,8 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
                   fontSize: "18px",
                 }}
@@ -144,7 +154,8 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
                   fontSize: "18px",
                 }}
@@ -158,7 +169,8 @@ const Footer = () => {
                 href="/"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
                   fontSize: "18px",
                 }}
@@ -169,7 +181,8 @@ const Footer = () => {
                 href="/services/edu_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
                   fontSize: "18px",
                 }}
@@ -180,7 +193,8 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
 
                   fontSize: "18px",
@@ -192,7 +206,8 @@ const Footer = () => {
                 href="/login"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
 
                   fontSize: "18px",
@@ -204,7 +219,8 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
 
                   fontSize: "18px",
@@ -216,7 +232,8 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
 
                   fontSize: "18px",
@@ -225,7 +242,8 @@ const Footer = () => {
                 <span
                   style={{
                     textDecoration: "none",
-                    color: "#ffff",
+                    color: "black",
+                    fontWeight: "500",
                     cursor: "pointer",
 
                     fontSize: "18px",

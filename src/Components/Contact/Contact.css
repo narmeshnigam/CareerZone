@@ -1,3 +1,6 @@
+*{
+    font-family: Poppins;
+}
 .career__contact__container{
     padding-top: 90px;
 }
@@ -20,10 +23,11 @@
 .carrer__container__form {
     max-width: 70%;
     margin: 0 auto;
-    border-radius: 20px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.131);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(14, 13, 13, 0.131);
     display: flex;
     margin: 5% auto;
+    border: 1px solid black;
 }
 
 .carrer__container__form__column {
@@ -34,7 +38,7 @@
     align-items: center;
     justify-content: center;
     text-align: left;
-    background: linear-gradient(0.15turn, #3f87a6b9, #ebf8e1, #f69c3cad);
+    
     border-radius: 20px 0 0 20px;
 }
 
@@ -94,18 +98,27 @@ select, input, textarea::placeholder {
 
 
 .carrer__container__form__column form button {
-    background-color: #007BFF;
-    color: #fff;
-    font-size: 1rem;
-    padding: 0.5rem 1.5rem;
-    margin: auto;
+    margin-bottom: 10vh;
+    margin-left: 80%;
+    margin-top: 5vh;
+    height: 8vh;
+    width: 30vh;
+    background-color: #11d31e; /* Peach color */
+    font-size: larger;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 15px;
     border: none;
-    border-radius: 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+    transition: border 0.3s ease
+    
 }
 
 .carrer__container__form__column form button:hover {
-    background-color: #0056b3;
+      /* White color */
+  color: #000000; /* Changing text color to black for better contrast on white background */
+  border: 3px solid #000000; 
 }
 
 .icon {

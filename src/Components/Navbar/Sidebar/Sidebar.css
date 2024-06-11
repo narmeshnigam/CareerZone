@@ -1,10 +1,14 @@
+*{
+    font-family: 'Urbanist';
+}
+
 .sid__container{
-    background-color: #194d9d;
+    background-color: #ffffff;
     width: 67svw;
     height: 100svh;
-    font-family: "Poppins";
+    
     font-size: 14px;
-    color: #ffff;
+    
     float: right;
     display: flex;
     flex-direction: column;

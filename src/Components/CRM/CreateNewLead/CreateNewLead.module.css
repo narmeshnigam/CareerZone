@@ -4,7 +4,8 @@
 
 .lead_page_container {
   padding-top: 90px;
-  background-color: #ffffff;
+  background-color:#fbfeff;
+ 
   
   
 }
@@ -14,7 +15,7 @@
   display: flex;
   align-items: center;
   /*background-image: url("https://static.vecteezy.com/system/resources/thumbnails/023/669/545/small/abstract-gradient-pink-blue-liquid-wave-background-free-vector.jpg");*/
-  background: linear-gradient(to bottom, dodgerblue, #FFFFFF);
+  
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 7vw;
@@ -29,8 +30,9 @@
 
 .lead_pagehomeheading_ {
   font-size: 50px;
-  font-weight: 500;
+  font-weight: 400;
   padding-right: 550px;
+  
  
   
   
@@ -62,36 +64,40 @@
 
 .input__field {
   width: 50%; /* Example full width */
-  margin-left: 50px; /* Example padding */
-  border: 1px solid #000000; /* Example border */
-  border-radius: 4px; /* Example border radius */
+  margin-left: 100px; /* Example padding */
+  border: 0.5px solid #333; /* Example border */
   box-sizing: border-box; /* Ensure padding and border are included in width */
-  border-radius: 20px;
-  background-color: #00000006;
+  border-radius: 5px;
+  margin-top: 5px;
   
+  background-color: #ffffff;
+  transition: transform 0.3s ease; 
+  
+  
+  
+}
+.input__field:hover{
+  transform: scale(1.01);
 }
 
 .address__info {
   text-align: center;
   justify-content: center;
   padding-top: 30px;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 500;
   padding-right: 900px;
-  padding-bottom: 30px;
+  
   color: #333;
 
 }
 .input__field {
-  margin-top: 25px;
-  padding-bottom: 20px;
-  
+ 
 }
 .address__line {
   display: flex;
   padding-right: 90px;
-  padding-left: 90px;
-  margin-bottom: 35px;
+  
 }
 .address_line_1 {
   border: 2px solid rgb(190, 146, 146);
@@ -105,7 +111,7 @@
 text-align: center;
 justify-content: center;
 padding-top: 30px;
-font-size: 40px;
+font-size: 30px;
 font-weight: 500;
 padding-right: 850px;
 padding-bottom: 30px;
