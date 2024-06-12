@@ -22,20 +22,9 @@
    git branch ui
    ```
 
-2. **Switch to `ui` branch.**
-
-   ```bash
-   git checkout ui
-   ```
-
-3. **Sync the local `ui` branch to the repository `ui` branch.**
-
-   ```bash
-   git pull origin ui
-   ```
 
 
-4. **Install the dependencies:**
+5. **Install the dependencies:**
 
   ```bash
 npm i
