@@ -1,0 +1,7 @@
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+  transform: translateX(-5px);
+}

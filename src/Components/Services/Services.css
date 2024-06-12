@@ -4,18 +4,18 @@
 }
 .services__top__img {
     display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
-    height: 45vh;
-    background-image:  linear-gradient(to bottom ,#eaedf100, #eaedf138, #eaedf1),url(https://template63467.motopreview.com/mt-demo/63400/63467/mt-content/uploads/2017/06/mt-1027-content-bg03.jpg);
+    height: 20vh;
+    background-image:  url('https://wallpaperaccess.com/full/7352357.jpg');
     background-size: cover; /* Ensure the image covers the entire area */
     background-repeat: no-repeat; /* Prevent background repetition */
 }
 .services__top__img div{
     width: 70%;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 600;
+    margin: 30px;
+    
 }
 .services__holder{
     padding: 6rem;

@@ -61,7 +61,7 @@
 }
 @media screen and (max-width: 600px) {
     .abroad__container{
-        padding: 1rem 2rem;
+        padding: 0.5rem 2rem;
         flex-direction: column;
     }
     .abroad__left__container{
@@ -75,7 +75,7 @@
         font-size: 1.4rem;
     }
     .abroad__right__container__desc{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     .abroad__right__container__countries{
         margin: 1rem 0rem;

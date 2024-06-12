@@ -3,6 +3,7 @@ import db from "../../../firebase";
 import styles from "./FollowUpPage.module.css";
 import FollowCard from "./Card/FollowCard";
 import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const FollowUpPage = () => {
   const { id } = useParams();
@@ -85,6 +86,12 @@ const FollowUpPage = () => {
         transferto: "",
         nextdate: "",
         remarks: "",
+      });
+      // Show SweetAlert success message
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        text: "Follow-up added successfully.",
       });
     } catch (error) {
       console.error("Error adding course: ", error);
@@ -184,11 +191,19 @@ const FollowUpPage = () => {
               Select a Follow-up Statement
             </option>
 
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-            <option value="option4">Option 4</option>
-            <option value="option5">Option 5</option>
+            <option value="Response Received & Finalised">
+              Response Received & Finalised
+            </option>
+            <option value="Response Received & Postponed">
+              Response Received & Postponed
+            </option>
+            <option value="Response Received & Need more Meetings">
+              Response Received & Need more Meetings
+            </option>
+            <option value="Response Received & not interested anymore">
+              Response Received & Not Interested Anymore
+            </option>
+            <option value="No Response">No Response</option>
           </select>
 
           <input

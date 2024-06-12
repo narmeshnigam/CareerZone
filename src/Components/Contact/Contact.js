@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import db from "../../firebase.js";
 import "./Contact.css";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const [data, setData] = useState({
@@ -20,7 +21,11 @@ const Contact = () => {
     e.preventDefault();
     try {
       await db.collection("quickApply").add(data);
-      alert("Your Message is delivered.");
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        text: "Your Message is delivered.",
+      });
       setData({
         name: "",
         email: "",
@@ -30,6 +35,11 @@ const Contact = () => {
       });
     } catch (error) {
       console.error("Error adding course: ", error);
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "There was an error delivering your message.",
+      });
     }
   };
 
@@ -41,7 +51,6 @@ const Contact = () => {
       <div className="carrer__Contact__main__container">
         <div className="carrer__container__form">
           <div className="carrer__container__form__column">
-            <h2>Contact Us</h2>
             <form>
               <div>
                 <label for="name" className="custom-label">

@@ -1,6 +1,7 @@
 import React from "react";
 import "./StudentCreditCard.css";
 import CoursesTable from "./CoursesTable/CoursesTable";
+import ApplicationForm from "./CoursesTable/applicationFormStatements"; // Assuming ApplicationForm component is in a file named 'ApplicationForm.js'
 
 const StudentCreditCard = () => {
   return (
@@ -73,7 +74,7 @@ const StudentCreditCard = () => {
       </div>
 
       <div className="student_eligibility_">
-        <div className="student_eligibility_heading">Student Eligibility :</div>
+        <div className="student_eligibility_heading">Student Eligibility </div>
         <div className="student_eligibility_content">
           <ul>
             <li>Should be an Indian national.</li>
@@ -142,7 +143,7 @@ const StudentCreditCard = () => {
           target="blank"
           href="https://www.7nishchay-yuvaupmission.bihar.gov.in/listofcollegedetail"
         >
-          <button>List of College Details</button>
+          <p style={{ fontSize: "22px" }}>View list of college details </p>
         </a>
       </div>
       <div className="applicationStatus__1">
@@ -152,9 +153,13 @@ const StudentCreditCard = () => {
         <div className="status__container">
           After submitting the form, you can check the status of your
           registration form. The Application Status will help you to track down
-          your registration form. The process to check the status is available
-          online only. Thus, the steps to check the application status of BSCC
-          is available below.
+          your registration form.
+          <br /> The process to check the status is available online only. Thus,
+          the steps to check the application status of BSCC is available below.
+          <img
+            src="https://pngimg.com/uploads/credit_card/credit_card_PNG102.png"
+            className="right_image"
+          />
         </div>
         <div className="status_container_1">
           How to Check Bihar Student Credit Card Form Status?
@@ -164,53 +169,7 @@ const StudentCreditCard = () => {
             You can check the application form status of the BSCC Form in two
             ways –
           </div>
-          <div className="bssc_from_ways">
-            <ul>
-              <li>Registration ID</li>
-              <li>Aadhaar Card Number</li>
-            </ul>
-          </div>
-          <div className="two_ways_content">
-            <div className="first_ways_content">
-              <div>Through Registration ID</div>
-              <div className="process_registration_id">
-                <div>
-                  {" "}
-                  Visit the Official Website of MNSSBY Bihar. Click on the
-                  “Application Form Status” Link Select the “Registration ID”
-                  option Enter the following details:
-                </div>
-                <ul>
-                  <li>Registration ID</li>
-                  <li>Date of Birth</li>
-                  <li>Captcha Code</li>
-                </ul>
-                <div>
-                  After entering all the details, click on the submit. The
-                  status of the registration form will be displayed on the
-                  screen
-                </div>
-                <ul>
-                  <li>Visit the Official Website of MNSSBY Bihar.</li>
-                  <li> Click on the “Application Form Status” Link</li>
-                  <li> Select the “Registration ID” option</li>
-                  <li>Enter the following details –</li>
-                </ul>
-              </div>
-            </div>
-            <div className="second_ways_content">
-              <div>Through Aadhaar Card Number</div>
-              <div className="process_registration_id">
-                <ul>
-                  <li>Visit the Official Website of MNSSBY Bihar.</li>
-                  <li>Click on the “Application Form Status” Link</li>
-                  <li>Enter “Aadhaar Card Number”</li>
-                  <li>Date Of Birth and Captcha code and submit.</li>
-                  <li> Check the details and print if required.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <ApplicationForm />
         </div>
       </div>
 

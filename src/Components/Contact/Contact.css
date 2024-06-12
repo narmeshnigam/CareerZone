@@ -1,33 +1,36 @@
-*{
-    font-family: Poppins;
-}
+
 .career__contact__container{
     padding-top: 90px;
-}
-.carrer_contact__top__img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: #fff;
-    background-size: cover;
-    height: 40vh;
-    background-image:  linear-gradient(to bottom ,#eaedf100, #eaedf138, #eaedf1),url(https://t4.ftcdn.net/jpg/05/08/80/19/360_F_508801991_UTsCAOorx25USitqonfRADueJlzyjhDq.jpg);
-}
-.carrer_contact__top__img div{
-    width: 70%;
-    font-size: 3rem;
-    font-weight: 600;
+    background-color: #fbfeff;
+    margin-bottom: -83px;
+    
+    
 }
 
+.carrer_contact__top__img div{
+    width: 70%;
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 30px;
+    
+}
+.carrer_contact__top__img{
+    display: flex;
+    color: white;
+    height: 20vh;
+    background-image:  linear-gradient(to bottom ,#eaedf100, #eaedf138, #eaedf18e),url('https://cdn5.vectorstock.com/i/1000x1000/62/99/contact-us-banner-vector-21116299.jpg');
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-repeat: no-repeat; /* Prevent background repetition */
+}
 .carrer__container__form {
-    max-width: 70%;
+    max-width: 80%;
     margin: 0 auto;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 10px 10px 10px rgba(14, 13, 13, 0.131);
     display: flex;
     margin: 5% auto;
     border: 1px solid black;
+
 }
 
 .carrer__container__form__column {
@@ -48,16 +51,7 @@
     background-color: #000000a3;
     border-radius: 0px 20px 20px 0px;
 }
-.carrer__container__backImg{
-    border-radius: 0px 20px 20px 0px;
-    background-size: cover;
-    background-image: url(../../../public/contact_details_back_img.png);
-    z-index: -1;
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    
-}
+
 
 .carrer__container__form__column h2 {
     font-size: 2rem;
@@ -89,7 +83,7 @@ select, input, textarea {
     border: none;
     padding: 0.7rem;
     border: 1px solid #ccc;
-    border-radius: 20px;
+    border-radius: 10px;
     outline: none;
 }
 select, input, textarea::placeholder {
@@ -103,18 +97,20 @@ select, input, textarea::placeholder {
     margin-top: 5vh;
     height: 8vh;
     width: 30vh;
-    background-color: #11d31e; /* Peach color */
-    font-size: larger;
+    background-color: dodgerblue;
     font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    border-radius: 15px;
+    font-size: 30px;
+    color: white;    
+    border-radius: 5px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
     transition: border 0.3s ease
     
 }
-
+.carrer__container__form__column:nth-child(2){
+    background-image: url("https://images.unsplash.com/photo-1618022325802-7e5e732d97a1?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
 .carrer__container__form__column form button:hover {
       /* White color */
   color: #000000; /* Changing text color to black for better contrast on white background */
@@ -130,6 +126,12 @@ select, input, textarea::placeholder {
     color: #fff;
     font-size: 1.2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+.contact-info h2{
+    color: red;
+    font-size: 40px;
+    font-weight: 600;
 
 }
 .contact-info div{

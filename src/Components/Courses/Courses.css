@@ -1,21 +1,21 @@
 .coursespg__container{
     padding-top: 90px;
+    background-color: #fbfeff;
 }
-.coursespg__container__heading__container{
+.coursespg__container__heading__container {
     display: flex;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.553);
-    background-position: 50% 30%;
-    height: 40vh;
-    background-image:linear-gradient(to bottom ,#eaedf100, #eaedf138, #eaedf1), url(https://t4.ftcdn.net/jpg/04/42/89/59/360_F_442895934_hF6sltz7ALNXOLtINTHiKidtcWN7illo.jpg);
+    color: white;
+    height: 20vh;
+    background-image: url('https://wallpaperaccess.com/full/756630.jpg');
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-repeat: no-repeat; /* Prevent background repetition */
 }
 .coursespg__container__heading{
     width: 50%;
     font-size: 4rem;
     font-weight: 700;
+    margin: 30px;
+    
 }
 .coursespg__container__having__tables{ 
     padding: 6rem;
@@ -25,17 +25,18 @@
 }
 .coursespg__medical__courses__table__container__heading{
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #000000;
-    
+    margin-top: -70px;    
     padding: 0.5rem 1rem;
     font-size: 2.2rem;
+    letter-spacing: 2px;
 }
 .coursespg__medical__courses__table__container__heading img{
-    height: 2.5rem;
+    height: 4.5rem;
 }
 .coursespg__medical__courses__table__withImg{
 }
@@ -49,16 +50,16 @@
 
 }
 .coursespg__medical__courses__card__container__heading{
-    margin-top: 2rem;
-    font-size: 1.5rem;
+    
+    font-size: 1.7rem;
     font-weight: 500;
 }
 .courses__card__container__main{
-    display: flex;
-    overflow-y: auto;
-    scrollbar-width: none;
-    gap: 1rem;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(4, auto); /* 4 rows */
+    gap: 20px; /* Adjust gap as needed */
+    
 }
 .Engineering{
     background-color: rgb(251, 113, 113);

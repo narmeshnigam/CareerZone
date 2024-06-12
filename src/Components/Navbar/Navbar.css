@@ -34,8 +34,8 @@
 }
 
 .nav__links span:hover{
-    color: #df200be2;
-    font-size: 18px;
+    color: dodgerblue;
+    font-weight: 700;
     transition: ease-in 200ms;
 }
 .nav__socials{

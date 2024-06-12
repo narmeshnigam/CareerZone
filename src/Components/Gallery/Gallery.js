@@ -38,8 +38,8 @@ const Gallery = () => {
     <div className="gal__container">
       <div className="gal__banner">
         {/* <img src="./GalleyBanner.png" alt=''></img> */}
+        <h1>Gallery</h1>
       </div>
-
       <div className="gal__photo__container">
         <div className="gal__photos__heading">
           Photos
@@ -51,7 +51,6 @@ const Gallery = () => {
           ))}
         </div>
       </div>
-
       <div className="gal__video__container">
         <div className="gal__photos__heading">
           Videos

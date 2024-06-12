@@ -5,7 +5,7 @@
  **Download the project.**
 
    ```bash
-   git clone https://github.com/WebWise-Media/Crypto-Wallet.git
+   git clone https://github.com/DevwithVipin/CareerZone.git
    ```
 
  **Navigate into the folder.**
@@ -47,6 +47,13 @@ npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons 
 ```bash
 npm install @fortawesome/free-regular-svg-icons
 ```
+```bash
+npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/fontawesome-svg-core
+```
+```bash
+npm install --save @fortawesome/free-solid-svg-icons
+```
+
 ```bash
 npm install sweetalert2
 ```

@@ -23,11 +23,10 @@
   }
   .about__top__img {
     display: flex;
-    justify-content: center;
-    align-items: center;
+   
     color: white;
-    height: 60vh;
-    background-image: linear-gradient(to bottom, #eaedf100,#eaedf100,#fbfeff), url('https://static.vecteezy.com/system/resources/previews/027/183/857/large_2x/college-student-walking-to-university-campus-education-banner-concept-free-photo.jpg');
+    height: 20vh;
+    background-image:  url('https://images.ctfassets.net/hrltx12pl8hq/1fR5Y7KaK9puRmCDaIof7j/09e2b2b9eaf42d450aba695056793607/vector1.jpg');
     background-size: cover; /* Ensure the image covers the entire area */
     background-repeat: no-repeat; /* Prevent background repetition */
     
@@ -35,8 +34,9 @@
 
 .about__top__img div{
     width: 70%;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 600;
+    margin: 30px;
     
 }
   .awards {

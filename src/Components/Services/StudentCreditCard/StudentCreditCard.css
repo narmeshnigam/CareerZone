@@ -45,15 +45,15 @@
 }
 .objective__content {
     width: 50%;
-    font-family: 20px;
+    
 }
 .objective__content > div > div > ul > li{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .student_eligibility_ {
     margin: 3rem 6rem;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.265);
     
     border-radius: 20px;
 }
@@ -62,13 +62,14 @@
     text-align: center;
     font-size: 2.3rem;
     font-weight: 700;
-    color: #df200be2;
+    color: #000000e2;
 }
 .student_eligibility_content {
     margin: auto;
     width: 70%;
     font-size: 1.1rem;
     text-align: justify;
+    font-size: 20px;
 }
 .student_eligibility_content ul li{
     margin-bottom: 1rem;
@@ -81,7 +82,7 @@
     font-weight: 700;
     text-align: center;
     margin-bottom: 2rem;
-    color: #df200be2;
+    color: #000000e2;
     font-size: 2.3rem;
 }
 
@@ -106,14 +107,19 @@
     color: #ffff;
     box-shadow: inset 18rem 0 0 0 #4587EF, inset 6px 6px 6px #00000023, 6px 6px 6px #00000027;
 }
-
+.right_image {
+    float: right;
+    margin-right: -100px; /* Adjust this value as needed to provide proper spacing */
+    height: 65vh;
+    margin-top: -130px;
+}
 .applicationStatus__1 {
     padding: 6rem;
 }
 
 .status_heading {
     font-weight: 700;
-    text-align: center;
+    
     margin-bottom: 1rem;
     color: #df200be2;
     font-size: 2.3rem;
@@ -128,21 +134,21 @@
 
 .status_container_1 {
     font-weight: 700;
-    text-align: center;
+    
     margin-bottom: 1rem;
     color: #df200be2;
     font-size: 2.3rem;
     
 }
 .status_container_2 {
-    text-align: center;
+   
     font-size: 1.5rem;
     font-weight: 700;
 }
 .bssc_from_ways {
-    width: 70%;
-    margin: auto;
+    
     font-size: 1.2rem;
+    text-align: left;
 }
 
 .two_ways_content {
@@ -177,14 +183,24 @@
     font-size: 1.1rem;
     font-weight: 600;
 }
+.loanContentContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  .loanContent {
+    flex: 1;
+  }
+  
 
 .credit_card_scheme {
-    background-image: linear-gradient(#4586ef00, #4586ef90, #4586ef00);
+    
     padding: 6rem;
+    
 }
 .credit_cardscheme_heading {
-    text-align: center;
+    
     font-size: 2.3rem;
+    text-align: center;
     color: #df200be2;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -198,6 +214,7 @@
     display: flex;
     justify-content: center;
     font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .loan__{

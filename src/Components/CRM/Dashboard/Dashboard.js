@@ -104,7 +104,7 @@ const Dashboard = () => {
                       padding: "10px",
                       marginBottom: "10px",
                       fontSize: "1.4rem",
-                      fontWeight: "500",
+                      fontWeight: "600",
                       textAlign: "justify",
                       marginRight: "20px", // Add spacing between the divs
                     }}
@@ -121,7 +121,7 @@ const Dashboard = () => {
                       padding: "10px",
                       marginBottom: "10px",
                       fontSize: "1.4rem",
-                      fontWeight: "500",
+                      fontWeight: "600",
                       textAlign: "justify",
                       marginRight: "20px", // Add spacing between the divs
                     }}
