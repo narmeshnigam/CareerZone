@@ -1,6 +1,6 @@
 .services__container{
     padding-top: 90px;
-    font-family: 'Poppins';
+    background-color: #fbfeff;
 }
 .services__top__img {
     display: flex;
@@ -35,6 +35,28 @@
 }
 .edu__ser__des{
     margin: 1rem 0rem;
+    font-size: 18px;
+}
+.edu__btn{
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid white;
+    width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    color: white;
+    font-weight: 600;
+    transition: transform 0.4s ease;
+
+}
+.edu__btn:hover{
+    transform: scale(1.1);
+}
+a{
+    text-decoration: none;
+    
+
 }
 .education__ser__content button{
     border: none;

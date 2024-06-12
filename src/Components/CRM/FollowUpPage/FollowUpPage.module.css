@@ -101,7 +101,7 @@
 .submit{
     margin-bottom: 10vh;
     margin-left: 690px;
-    margin-top: 5vh;
+    margin-top: 15vh;
     height: 7vh;
     width: 30vh;
     background-color: #11d31e; /* Peach color */
@@ -112,11 +112,12 @@
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
-    transition: border 0.3s ease
+    transition: border 0.3s ease , font-weight 0.3s ease
     
 }
 .submit:hover {
     /* White color */
    color: #000000; /* Changing text color to black for better contrast on white background */
+   font-weight: 600;
    border: 3px solid #000000; 
  }

@@ -1,6 +1,6 @@
 .edu__ser__conatiner{
     padding-top: 90px;
-    font-family: 'Poppins';
+    background-color: #fbfeff;
 }
 .edu__top__img{
     display: flex;
@@ -8,7 +8,7 @@
     align-items: center;
     height: 45vh;
     background-position: 0% 24%;
-    background-image:  linear-gradient(to bottom ,#eaedf100, #eaedf138, #eaedf1),url(https://i0.wp.com/www.edtechdigest.com/wp-content/uploads/2023/02/DUY-HOANG-THAI-lrng.jpg?resize=1536%2C1024&ssl=1);
+    background-image:  linear-gradient(to bottom ,#eaedf100, #eaedf100),url(https://i0.wp.com/www.edtechdigest.com/wp-content/uploads/2023/02/DUY-HOANG-THAI-lrng.jpg?resize=1536%2C1024&ssl=1);
 }
 .edu__top__img div{
     width: 70%;

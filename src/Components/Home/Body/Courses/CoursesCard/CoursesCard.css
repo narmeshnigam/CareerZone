@@ -2,19 +2,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(234, 237, 241);
+    
     height: 15rem;
     width: 20rem;
     border-radius: 0.5rem;
     border: 0.1px solid rgba(0, 0, 0, 0.47);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     font-family: 'Poppins';
-    transition: scale 300ms ease-in, background-color 300ms ease-in;
+    transition: scale 300ms ease-in, box-shadow 300ms ease-in;
 }
 
 .coursesCard__container:hover{
     cursor: pointer;
     scale: 1.1;
-    background-color: rgba(30, 143, 255, 0.473);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    
 }
 .coursesCard__container img{
     width: 7rem;

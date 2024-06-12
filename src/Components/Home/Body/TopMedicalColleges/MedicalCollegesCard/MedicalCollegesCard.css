@@ -15,7 +15,7 @@
 }
 .medicalCollegeCard__container:hover{
     scale: 1.1;
-    background-color: rgba(30, 143, 255, 0.164);
+    
 }
 .medicalCollegeCard__heading{
     text-align: center;

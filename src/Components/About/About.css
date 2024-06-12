@@ -1,8 +1,13 @@
+*{
+  
+}
 .about {
     display: flex;
     align-items: center;
     gap: 3rem;
     padding: 6rem;
+    background-color:#fbfeff;
+    
   }
   
   .head {  
@@ -22,7 +27,7 @@
     align-items: center;
     color: white;
     height: 60vh;
-    background-image: linear-gradient(to bottom, #eaedf100, #eaedf138, #eaedf1), url('https://static.vecteezy.com/system/resources/previews/027/183/857/large_2x/college-student-walking-to-university-campus-education-banner-concept-free-photo.jpg');
+    background-image: linear-gradient(to bottom, #eaedf100,#eaedf100,#fbfeff), url('https://static.vecteezy.com/system/resources/previews/027/183/857/large_2x/college-student-walking-to-university-campus-education-banner-concept-free-photo.jpg');
     background-size: cover; /* Ensure the image covers the entire area */
     background-repeat: no-repeat; /* Prevent background repetition */
     
@@ -32,6 +37,7 @@
     width: 70%;
     font-size: 3rem;
     font-weight: 600;
+    
 }
   .awards {
     display: flex;
@@ -71,6 +77,7 @@
     display: flex;
     padding: 6rem;
     gap: 3rem;
+    background-color:#fbfeff;
     
   }
   .vision__img img {
@@ -85,6 +92,7 @@
   }
   .team {
     padding: 6rem;
+    background-color:#fbfeff;
     
   }
   .ourteam {
@@ -119,6 +127,9 @@
     bottom: 10px; /* Adjust vertical position as needed */
     left: 25px; /* Adjust horizontal position as needed */
     color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.433);
+    border-radius: 5px;
+    padding: 10px;
   }
   
   .card__name {

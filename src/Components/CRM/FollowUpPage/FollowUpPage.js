@@ -175,12 +175,22 @@ const FollowUpPage = () => {
             rows={4}
             placeholder="Write Follow-up Summary"
           />
-          <input
+          <select
             name="statement"
             onChange={handleChange}
             value={followUp.statement}
-            placeholder="Enter the Follow-up Statement"
-          />
+          >
+            <option value="" disabled selected>
+              Select a Follow-up Statement
+            </option>
+
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <option value="option4">Option 4</option>
+            <option value="option5">Option 5</option>
+          </select>
+
           <input
             name="nextdate"
             onChange={handleChange}

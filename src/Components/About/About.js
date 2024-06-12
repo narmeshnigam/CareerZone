@@ -23,7 +23,7 @@ const About = () => {
         >
           {/* <div className="content__heading">ABOUT US</div>*/}
           <div className="content__subheading">OUR ACHIEVEMENTS </div>
-          <p style={{ textAlign: "justify" }}>
+          <p style={{ textAlign: "justify", fontSize: "18px" }}>
             Since our humble beginning in 2001,The Career Zone, one of India’s
             largest Career Counselling Consultants, is here to mentor the
             students towards their educational goals and drive them to create a
@@ -77,38 +77,14 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div
-        lassName="about"
-        style={{
-          padding: "0rem 6rem",
-          display: "flex",
-          alignItems: "center",
-          flexDirection: "column",
-        }}
-      >
-        <div className="content__subheading" style={{}}>
-          Our Speciality in the Career Counselling world
-        </div>
-        <p style={{ textAlign: "justify" }}>
-          Being in the educational field, we realized the importance of
-          potential students and their dream education that can carve the niche
-          of society. Hence, free career counselling is the specialty of our
-          organization. The Career Zone provides the most impartial and free
-          career-related advice to the students but in the most appropriate way.
-          With a wide range of universities, institutes, and educational centres
-          in India, The Career Zone filters, curates, and, most importantly,
-          plans for an individual requirement. Admission time is the most
-          crucial period for both the aspirant and parents, who become bananas
-          to get the best of the educational system.
-        </p>
-      </div>
+
       <div className="sec2">
         <div
           className="content"
           style={{ display: "flex", alignItems: "center" }}
         >
           <div className="content__subheading">Our Vision</div>
-          <p style={{ textAlign: "justify" }}>
+          <p style={{ textAlign: "justify", fontSize: "18px" }}>
             <AboutSvg />
             With a committed and competent team, our vision is to be recognized
             as a world-class career counselling & study abroad firm. We are
@@ -117,7 +93,7 @@ const About = () => {
             information and also a complete understanding of working towards
             their profile building.
           </p>
-          <p style={{ textAlign: "justify" }}>
+          <p style={{ textAlign: "justify", fontSize: "18px" }}>
             <AboutSvg />
             Not only the students, but we also view ourselves as a preferred
             place to associate with, other individuals who are influencing the
@@ -147,32 +123,60 @@ const About = () => {
           <div>
             <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
               <AboutSvg />
-              <div style={{ paddingLeft: "7px" }}>
+              <div style={{ paddingLeft: "7px", fontSize: "18px" }}>
                 Commitment to grow our business with emphasis on Excellence,
                 Honesty, Integrity & Updated knowledge.
               </div>
             </p>
-            <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
+            <p
+              style={{
+                textAlign: "justify",
+                display: "flex",
+                gap: "5px",
+                fontSize: "18px",
+              }}
+            >
               <AboutSvg />
               <div>
                 To build strong and credible relationships with partner
                 Institutions.
               </div>
             </p>
-            <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
+            <p
+              style={{
+                textAlign: "justify",
+                display: "flex",
+                gap: "5px",
+                fontSize: "18px",
+              }}
+            >
               <AboutSvg />
               <div>
                 To provide customized solutions to students aspiring to study.
               </div>
             </p>
-            <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
+            <p
+              style={{
+                textAlign: "justify",
+                display: "flex",
+                gap: "5px",
+                fontSize: "18px",
+              }}
+            >
               <AboutSvg />
               <div>
                 We always keeping in mind the best interest of our stakeholders,
                 partners and clients.
               </div>
             </p>
-            <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
+            <p
+              style={{
+                textAlign: "justify",
+                display: "flex",
+                gap: "5px",
+                fontSize: "18px",
+              }}
+            >
               <AboutSvg />
               <div style={{ paddingLeft: "10px" }}>
                 Backed by our expert team of professional consultants, we hope
@@ -180,14 +184,28 @@ const About = () => {
                 universities thereby facilitating lifelong learning.
               </div>
             </p>
-            <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
+            <p
+              style={{
+                textAlign: "justify",
+                display: "flex",
+                gap: "5px",
+                fontSize: "18px",
+              }}
+            >
               <AboutSvg />
               <div style={{ paddingLeft: "7px" }}>
                 We ensure that each of our students goes through a hassle-free
                 admission process to the college and university of their choice.
               </div>
             </p>
-            <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
+            <p
+              style={{
+                textAlign: "justify",
+                display: "flex",
+                gap: "5px",
+                fontSize: "18px",
+              }}
+            >
               <AboutSvg />
               <div style={{ paddingLeft: "7px" }}>
                 {" "}
@@ -195,7 +213,14 @@ const About = () => {
                 educational institutions thus improving the level of learning.
               </div>
             </p>
-            <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
+            <p
+              style={{
+                textAlign: "justify",
+                display: "flex",
+                gap: "5px",
+                fontSize: "18px",
+              }}
+            >
               <AboutSvg />
               <div style={{ paddingLeft: "7px" }}>
                 Quality education promotes competency of employees and also
@@ -205,6 +230,32 @@ const About = () => {
           </div>
         </div>
       </div>
+      <div class="about" style={{ padding: "0rem 6rem", display: "flex" }}>
+        <div style={{ flex: 1 }}>
+          <div className="content__subheading">
+            Our Speciality in the Career Counselling world
+          </div>
+          <p style={{ textAlign: "justify", fontSize: "18px" }}>
+            Being in the educational field, we realized the importance of
+            potential students and their dream education that can carve the
+            niche of society. Hence, free career counselling is the specialty of
+            our organization. The Career Zone provides the most impartial and
+            free career-related advice to the students but in the most
+            appropriate way. With a wide range of universities, institutes, and
+            educational centres in India, The Career Zone filters, curates, and,
+            most importantly, plans for an individual requirement. Admission
+            time is the most crucial period for both the aspirant and parents,
+            who become bananas to get the best of the educational system.
+          </p>
+        </div>
+        <div className="vision__img">
+          <img
+            src="https://cdn.memiah.co.uk/uploads/counselling-directory.org.uk/image_gallery/counselling-1642757247-hero.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+
       <div className="team">
         <div className="ourteam">Our Team</div>
         <div className="cards">

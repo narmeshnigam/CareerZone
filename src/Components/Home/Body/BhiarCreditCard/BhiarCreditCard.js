@@ -16,11 +16,9 @@ const BhiarCreditCard = () => {
           Education Loan Scheme For Pursuing Higher Education For Students Of
           Bihar
         </div>
-        <div>
-          <button>
-            बिहार स्‍टूडेंट क्रेडिट कार्ड योजना की संशोधित मार्गदर्शिका लागू
-            करने के संबंध में |
-          </button>
+        <div style={{ fontSize: "1.3rem" }}>
+          बिहार स्‍टूडेंट क्रेडिट कार्ड योजना की संशोधित मार्गदर्शिका लागू करने
+          के संबंध में |
         </div>
         <div style={{ display: "inline-block", marginRight: "5rem" }}>
           <button>बिहार स्टूडेंट क्रेडिट कार्ड योजना</button>
@@ -28,7 +26,7 @@ const BhiarCreditCard = () => {
         <div style={{ display: "inline-block" }}>
           <button
             className="bhiar__apply__now__btn"
-            style={{ backgroundColor: "#df200be2", fontFamily: "Poppins" }}
+            style={{ backgroundColor: "#df200be2", fontFamily: "Urbanist" }}
             onClick={handleApplyNow}
           >
             Apply Now

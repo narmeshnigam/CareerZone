@@ -42,10 +42,10 @@ const NotificationPage = () => {
           </div>
           <div className="noti__about">About us</div>
           <div className="noti__subheading">
-            About The Career Zone is a Leading Education consulatncy that can
-            provide Top Course in India / Abraod Colleges for your career path.
+            The Career Zone is a Leading Education consulatncy that can provide
+            Top Course in India / Abraod Colleges for your career path.
           </div>
-          <div>
+          <div className="noti__subheading1">
             The Career Zone, one of India’s largest Career Counselling
             Consultants, is here to mentor the students towards their
             educational goals and drive them to create a better world. Not

@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="top__nav">
         <div className="nav__logo">
           <Link to="/">
-            <img src="https://thecareerzone.co.in/img/logo-wide.png"></img>
+            <img src="./logo.png"></img>
           </Link>
         </div>
         <div className="nav__links">
@@ -50,7 +50,7 @@ const Navbar = () => {
         <div className="nav__socials">
           <img src="./facebook.png" style={{ height: "30px" }} />
           <img src="./whatsapp.png" style={{ height: "30px" }} />
-          <img src="./youtube.png" style={{ height: "30px" }} />
+          <img src="./twitter.png" style={{ height: "30px" }} />
           <img src="./instagram.png" style={{ height: "30px" }} />
         </div>
 

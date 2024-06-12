@@ -18,11 +18,16 @@ const Services = () => {
           <div className="education__ser__content">
             <div className="edu__ser__heading">EDUCATIONAL SERVICES</div>
             <div className="edu__ser__des">
-              The Career Zone was established in 2001 with the aim of providing
-              quality guidance to students who intend to study.{" "}
+              The Career Zone started in 2001 to help students find the right
+              schools. Today, they are number one in educational consulting and
+              work with many colleges and universities in India (including Uttar
+              Pradesh, Maharashtra, Bangalore, Orissa, Madhya Pradesh,
+              Rajasthan, Tamil Nadu) and even overseas.
             </div>
             <Link to={"/services/edu_service"}>
-              <button onClick={() => scrollTop()}>Read More</button>
+              <div className="edu__btn" onClick={() => scrollTop()}>
+                Read More
+              </div>
             </Link>
           </div>
         </div>
@@ -31,11 +36,16 @@ const Services = () => {
           <div className="education__ser__content">
             <div className="edu__ser__heading">STUDENT CREDIT CARD</div>
             <div className="edu__ser__des">
-              Bihar Student Credit Card Yojana 2021: Candidates can check their
-              BSSC application status now.
+              The Bihar Student Credit Card Yojana, also called "MNSSBY Bihar
+              Student Credit Card Scheme", is a program that started in October
+              2016. This program helps students by giving them loans to pay for
+              their higher education. If you applied for this program in 2021,
+              you can now check the status of your application.
             </div>
             <Link to={"/services/stdCred_service"}>
-              <button onClick={() => scrollTop()}>Read More</button>
+              <div className="edu__btn" onClick={() => scrollTop()}>
+                Read More
+              </div>
             </Link>
           </div>
         </div>

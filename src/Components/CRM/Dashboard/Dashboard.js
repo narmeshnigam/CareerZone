@@ -156,32 +156,35 @@ const Dashboard = () => {
               <div>
                 <div
                   style={{
-                    width: "150px",
-                    height: "50px",
+                    width: "350px",
+                    height: "100px",
                     backgroundColor: "peachpuff",
                     borderLeft: "5px solid orange",
                     padding: "10px",
                     marginBottom: "10px",
-                    fontSize: "1.4rem",
+                    fontSize: "2.3rem",
                     fontWeight: "500",
                     textAlign: "justify",
                     marginRight: "20px", // Add spacing between the divs
+                    marginTop: "-100px",
+                    paddingTop: "50px",
                   }}
                 >
                   Today FollowUp : {followUp.todayFollowUp}
                 </div>
                 <div
                   style={{
-                    width: "150px",
-                    height: "50px",
+                    width: "350px",
+                    height: "100px",
                     backgroundColor: "rgba(30, 144, 255, 0.5)",
                     borderLeft: "5px solid dodgerblue",
                     padding: "10px",
                     marginBottom: "10px",
-                    fontSize: "1.4rem",
+                    fontSize: "2.3rem",
                     fontWeight: "500",
                     textAlign: "justify",
                     marginRight: "20px", // Add spacing between the divs
+                    paddingTop: "50px",
                   }}
                 >
                   This Month : {followUp.thisMonthFollowUp}
