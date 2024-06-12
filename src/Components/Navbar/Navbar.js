@@ -17,28 +17,43 @@ const Navbar = () => {
 
   const scrollTop = () => {
     window.scrollTo(0, 0);
-  }
+  };
 
   return (
-    <div  className="nav__conatiner">
+    <div className="nav__conatiner">
       <div className="top__nav">
         <div className="nav__logo">
-          <Link to="/"><img src="https://thecareerzone.co.in/img/logo-wide.png"></img></Link>
+          <Link to="/">
+            <img src="./logo.png"></img>
+          </Link>
         </div>
         <div className="nav__links">
-          <Link style={{textDecoration: "none"}} to="/"><span  onClick={() => scrollTop()}>Home</span></Link>
-          <Link style={{textDecoration: "none"}} to="/aboutUs"><span onClick={() => scrollTop()}>About</span></Link>
-          <Link style={{textDecoration: "none"}} to="/services"><span onClick={() => scrollTop()}>Services</span></Link>
-          <Link style={{textDecoration: "none"}} to="/courses"><span onClick={() => scrollTop()}>Courses</span></Link>
-          <Link style={{textDecoration: "none"}} to="/gallery"><span onClick={() => scrollTop()}>Gallery</span></Link>
-          <Link style={{textDecoration: "none"}} to="/contact"><span onClick={() => scrollTop()}>Contact</span></Link>
+          <Link style={{ textDecoration: "none" }} to="/">
+            <span onClick={() => scrollTop()}>Home</span>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to="/aboutUs">
+            <span onClick={() => scrollTop()}>About</span>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to="/services">
+            <span onClick={() => scrollTop()}>Services</span>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to="/courses">
+            <span onClick={() => scrollTop()}>Courses</span>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to="/gallery">
+            <span onClick={() => scrollTop()}>Gallery</span>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to="/contact">
+            <span onClick={() => scrollTop()}>Contact</span>
+          </Link>
         </div>
         <div className="nav__socials">
-          <img src="./facebook.png"></img>
-          <img src="./whatsapp.png"></img>
-          <img src="./youtube.png"></img>
-          <img src="./instagram.png"></img>
+          <img src="./facebook.png" style={{ height: "30px" }} />
+          <img src="./whatsapp.png" style={{ height: "30px" }} />
+          <img src="./twitter.png" style={{ height: "30px" }} />
+          <img src="./instagram.png" style={{ height: "30px" }} />
         </div>
+
         <div className="nav__top__menu__bar">
           <svg
             onClick={() => menubar()}

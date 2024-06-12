@@ -1,41 +1,42 @@
-import React, {useState, useEffect} from 'react'
-import db from '../../../firebase';
-import styles from './FollowUpPage.module.css'
-import FollowCard from './Card/FollowCard'
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import db from "../../../firebase";
+import styles from "./FollowUpPage.module.css";
+import FollowCard from "./Card/FollowCard";
+import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const FollowUpPage = () => {
-  const {id} =  useParams();
+  const { id } = useParams();
   const [leads, setLeads] = useState({});
-  const[followUpArr, setFollowUpArr] = useState([])
+  const [followUpArr, setFollowUpArr] = useState([]);
   const [followUp, setFollowUp] = useState({
-    summary: '',
-    statement: '',
-    status: '',
-    transferto: '',
-    nextdate: '',
-    remarks: ''
-  })
+    summary: "",
+    statement: "",
+    status: "",
+    transferto: "",
+    nextdate: "",
+    remarks: "",
+  });
 
   useEffect(() => {
     const fetchImages = async () => {
       db.collection("leads")
         .get()
         .then((querySnapshot) => {
-          const arr = querySnapshot.docs
+          const arr = querySnapshot.docs;
           arr.forEach((doc) => {
-            if(doc.id === id)
-            setLeads(doc.data())
+            if (doc.id === id) setLeads(doc.data());
+          });
+        })
+        .catch((error) => {
+          console.log("Error getting documents: ", error);
         });
-      })
-      .catch((error) => {
-        console.log("Error getting documents: ", error);
-      });
     };
 
     const fetchFollowUp = async () => {
-      db.collection('followUp').onSnapshot(snapshot => {
-        setFollowUpArr(snapshot.docs.map((doc) => ({
+      db.collection("followUp").onSnapshot((snapshot) => {
+        setFollowUpArr(
+          snapshot.docs.map((doc) => ({
             id: doc.id,
             followUpNo: doc.data().followUpNo,
             leadNo: doc.data().leadNo,
@@ -46,13 +47,14 @@ const FollowUpPage = () => {
             statement: doc.data().statement,
             status: doc.data().status,
             summary: doc.data().summary,
-            transferto: doc.data().transferto
-          })));
+            transferto: doc.data().transferto,
+          }))
+        );
       });
-  };
- 
-  fetchImages();
-  fetchFollowUp();
+    };
+
+    fetchImages();
+    fetchFollowUp();
   }, [id]);
 
   const handleChange = (e) => {
@@ -64,7 +66,7 @@ const FollowUpPage = () => {
     e.preventDefault();
 
     const currentDate = new Date().toLocaleDateString();
-    const currentUser = 'nishu'; 
+    const currentUser = "nishu";
     const followUpNumber = generateFollowUpNo();
 
     const followUpData = {
@@ -76,28 +78,37 @@ const FollowUpPage = () => {
     };
 
     try {
-        await db.collection('followUp').add(followUpData);
-        setFollowUp({
-          summary: '',
-          statement: '',
-          status: '',
-          transferto: '',
-          nextdate: '',
-          remarks: ''
-        });
-      } catch (error) {
-          console.error('Error adding course: ', error);
-      }
+      await db.collection("followUp").add(followUpData);
+      setFollowUp({
+        summary: "",
+        statement: "",
+        status: "",
+        transferto: "",
+        nextdate: "",
+        remarks: "",
+      });
+      // Show SweetAlert success message
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        text: "Follow-up added successfully.",
+      });
+    } catch (error) {
+      console.error("Error adding course: ", error);
+    }
   };
 
   const generateFollowUpNo = () => {
-    return Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+    return Math.floor(Math.random() * 1000000)
+      .toString()
+      .padStart(6, "0");
   };
 
-  
   return (
     <div className={styles.container}>
-      <div className={styles.headingContainer}>Lead Info #{leads.leadNumber}</div>
+      <div className={styles.headingContainer}>
+        Lead Info #{leads.leadNumber}
+      </div>
       <div className={styles.leadInfoContainer}>
         <div className={styles.leadHead}>
           <div>
@@ -132,47 +143,117 @@ const FollowUpPage = () => {
             <div>Budget: </div>
             <div>{leads.budget}</div>
           </div>
-          <div>
-            
-          </div>
+          <div></div>
           <div>
             <div>Address: </div>
-            <div>{leads.city}, {leads.state}, {leads.locality}, {leads.pin}</div>
+            <div>
+              {leads.city}, {leads.state}, {leads.locality}, {leads.pin}
+            </div>
           </div>
         </div>
       </div>
       <div className={styles.followHistoryContainer}>
         <div className={styles.followHisHeading}>Follow Up History</div>
         <div className={styles.followCardContainer}>
-            {followUpArr.map((data, i) => (
-              <FollowCard 
-                currDate={data.createdDate}
-                createdBy={data.followUpBy}
-                summary={data.summary}
-                statement={data.statement}
-                status={data.status}
-                transferto={data.transferto}
-                nextdate={data.nextdate}
-                followUpStatus={data.status}
-              />
-            ))}
+          {followUpArr.map((data, i) => (
+            <FollowCard
+              currDate={data.createdDate}
+              createdBy={data.followUpBy}
+              summary={data.summary}
+              statement={data.statement}
+              status={data.status}
+              transferto={data.transferto}
+              nextdate={data.nextdate}
+              followUpStatus={data.status}
+            />
+          ))}
         </div>
-        <div style={{width: '100%', display: 'flex'}}><button className={styles.followCardbtn}>Load More</button></div>
+        <div style={{ width: "100%", display: "flex" }}>
+          <button className={styles.followCardbtn}>Load More</button>
+        </div>
       </div>
       <div className={styles.followHistoryContainer}>
         <div className={styles.followHisHeading}>Create New Follow-up</div>
-        <div style={{gap:'2rem'}} className={styles.followCardContainer}>
-            <textarea name='summary' onChange={handleChange} value={followUp.summary} rows={4} placeholder='Write Follow-up Summary'/>
-            <input name='statement' onChange={handleChange} value={followUp.statement} placeholder='Enter the Follow-up Statement'/>
-            <input name='nextdate' onChange={handleChange} value={followUp.nextdate} type='date' placeholder='Enter date'/>
-            <input name='status' onChange={handleChange} value={followUp.status} type='text' placeholder='Status'/>
-            <input name='remarks' onChange={handleChange} value={followUp.remarks} type='text' placeholder='Remarks'/>
-            <input name='transferto' onChange={handleChange} value={followUp.transferto} type='text' placeholder='Transfer to'/>
-            <div style={{width: '100%', display: 'flex', marginTop: '3rem'}}><button type='submit' onClick={handleSubmit} className={styles.followCardbtn}>Submit</button></div>
+        <div style={{ gap: "2rem" }} className={styles.followCardContainer}>
+          <textarea
+            name="summary"
+            onChange={handleChange}
+            value={followUp.summary}
+            rows={4}
+            placeholder="Write Follow-up Summary"
+          />
+          <select
+            name="statement"
+            onChange={handleChange}
+            value={followUp.statement}
+          >
+            <option value="" disabled selected>
+              Select a Follow-up Statement
+            </option>
+
+            <option value="Response Received & Finalised">
+              Response Received & Finalised
+            </option>
+            <option value="Response Received & Postponed">
+              Response Received & Postponed
+            </option>
+            <option value="Response Received & Need more Meetings">
+              Response Received & Need more Meetings
+            </option>
+            <option value="Response Received & not interested anymore">
+              Response Received & Not Interested Anymore
+            </option>
+            <option value="No Response">No Response</option>
+          </select>
+
+          <input
+            name="nextdate"
+            onChange={handleChange}
+            value={followUp.nextdate}
+            type="date"
+            placeholder="Enter date"
+          />
+          <input
+            name="status"
+            onChange={handleChange}
+            value={followUp.status}
+            type="text"
+            placeholder="Status"
+          />
+          <input
+            name="remarks"
+            onChange={handleChange}
+            value={followUp.remarks}
+            type="text"
+            placeholder="Remarks"
+          />
+          <input
+            name="transferto"
+            onChange={handleChange}
+            value={followUp.transferto}
+            type="text"
+            placeholder="Transfer to"
+          />
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "flex-end",
+              marginTop: "-120px",
+            }}
+          >
+            <button
+              type="submit"
+              onClick={handleSubmit}
+              className={styles.submit}
+            >
+              Submit
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FollowUpPage
+export default FollowUpPage;

@@ -1,56 +1,53 @@
-import React, { useState, useEffect } from 'react';
-import styles from './UserListsPage.module.css';
-import { Link } from 'react-router-dom';
-import db from '../../../firebase'; 
+import React, { useState, useEffect } from "react";
+import styles from "./UserListsPage.module.css";
+import { Link } from "react-router-dom";
+import db from "../../../firebase";
 
 const UserListsPage = () => {
   const [users, setUsers] = useState([]);
-  
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const usersRef = await db.collection('users').get();
-        const fetchedUsers = usersRef.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        const usersRef = await db.collection("users").get();
+        const fetchedUsers = usersRef.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
         setUsers(fetchedUsers);
       } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error("Error fetching users:", error);
       }
     };
 
     fetchData();
   }, []);
 
-  
-
   const handleDeleteUser = async (userId) => {
     try {
-      await db.collection('users').doc(userId).delete();
-      setUsers(users.filter(user => user.id !== userId));
-      console.log('User deleted successfully:', userId);
+      await db.collection("users").doc(userId).delete();
+      setUsers(users.filter((user) => user.id !== userId));
+      console.log("User deleted successfully:", userId);
     } catch (error) {
-      console.error('Error deleting user:', error);
+      console.error("Error deleting user:", error);
     }
   };
 
   return (
     <div className={styles.createUserLists__container}>
       <div className={styles.lead_Listspage_heading}>
-        <Link to='/'>
+        <Link to="/dashboard">
           <div className={styles.lead_Listspagehome_ic}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              width="60"
-              height="60"
+              height="75"
             >
-              <path d="M12 2L1 11h3v9h6v-6h4v6h6v-9h3L12 2zm2 16h-4v-6H8v6H4v-8.811L12 4.415l8 8.774V18h-4v-6h-4v6z" />
+              <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
             </svg>
           </div>
         </Link>
-        <div className={styles.lead_Listspagehomeheading_}>
-          User History
-        </div>
+        <div className={styles.lead_Listspagehomeheading_}>User History</div>
       </div>
       <div className={styles.userLists_tab_heading}>User Lists</div>
       <div className={styles.userLists__tab}>
@@ -80,14 +77,15 @@ const UserListsPage = () => {
                   <button>Edit</button>
                 </td>
                 <td>
-                  <button onClick={() => handleDeleteUser(user.id)}>Delete</button>
+                  <button onClick={() => handleDeleteUser(user.id)}>
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      
     </div>
   );
 };

@@ -31,8 +31,10 @@ const Footer = () => {
                 href="/services"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Our Services
@@ -41,8 +43,10 @@ const Footer = () => {
                 href="/services/edu_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Education Services
@@ -51,8 +55,10 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Student Credit Crad
@@ -61,8 +67,10 @@ const Footer = () => {
                 href="/login"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Quick Support
@@ -71,8 +79,10 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Education Loan
@@ -81,8 +91,10 @@ const Footer = () => {
                 href="#courses"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 <span>Admission Advice</span>
@@ -94,8 +106,10 @@ const Footer = () => {
                 href="/"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Medical Courses
@@ -104,8 +118,10 @@ const Footer = () => {
                 href="/services/edu_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Education Services
@@ -114,8 +130,10 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Student Credit Crad
@@ -124,8 +142,10 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Quick Support
@@ -134,8 +154,10 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Education Loan
@@ -147,8 +169,10 @@ const Footer = () => {
                 href="/"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Our Services
@@ -157,8 +181,10 @@ const Footer = () => {
                 href="/services/edu_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+                  fontSize: "18px",
                 }}
               >
                 Education Services
@@ -167,8 +193,11 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+
+                  fontSize: "18px",
                 }}
               >
                 Student Credit Crad
@@ -177,8 +206,11 @@ const Footer = () => {
                 href="/login"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+
+                  fontSize: "18px",
                 }}
               >
                 Quick Support
@@ -187,8 +219,11 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+
+                  fontSize: "18px",
                 }}
               >
                 Education Loan
@@ -197,11 +232,25 @@ const Footer = () => {
                 href="/services/stdCred_service"
                 style={{
                   textDecoration: "none",
-                  color: "#ffff",
+                  color: "black",
+                  fontWeight: "500",
                   cursor: "pointer",
+
+                  fontSize: "18px",
                 }}
               >
-                <span>Admission Advice</span>
+                <span
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                    fontWeight: "500",
+                    cursor: "pointer",
+
+                    fontSize: "18px",
+                  }}
+                >
+                  Admission Advice
+                </span>
               </a>
             </div>
           </div>

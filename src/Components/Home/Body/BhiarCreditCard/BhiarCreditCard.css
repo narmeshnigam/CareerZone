@@ -1,9 +1,14 @@
+*{
+    font-family: 'Urbanist';
+}
+
 .creditcard__container{
-    font-family: 'Poppins';
+    
     padding: 3rem 6rem 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color:#fbfeff;
 }
 .creditcard__left__container{
     width: 50%;
@@ -30,9 +35,9 @@
     font-family: "Tiro Devanagari Hindi", serif;
     box-shadow: 6px 6px 6px #0000001e;
     padding: 0.5rem 1rem;
-    border-radius: 20px;
-    color: white;
-    background-color: #4586efb0;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    
     font-size: 1.2rem;
     margin-top: 2rem;
     border: none;

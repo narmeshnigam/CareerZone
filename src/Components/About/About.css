@@ -1,9 +1,15 @@
+*{
+  
+}
 .about {
     display: flex;
     align-items: center;
     gap: 3rem;
     padding: 6rem;
+    background-color:#fbfeff;
+    
   }
+  
   .head {  
     display: flex; 
     height: 30vh;
@@ -12,21 +18,39 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(#4586ef, #4586ef00);
+    background-image: linear-gradient(#4586ef68, #4586ef00);
     color: rgba(0, 0, 0, 0.77);
   }
+  .about__top__img {
+    display: flex;
+   
+    color: white;
+    height: 20vh;
+    background-image:  url('https://images.ctfassets.net/hrltx12pl8hq/1fR5Y7KaK9puRmCDaIof7j/09e2b2b9eaf42d450aba695056793607/vector1.jpg');
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-repeat: no-repeat; /* Prevent background repetition */
+    
+}
+
+.about__top__img div{
+    width: 70%;
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 30px;
+    
+}
   .awards {
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
   .image{
-    background-color: rgb(0, 0, 0);
-    border-radius: 20px;
+    
+    border-radius: 10px;
   }
   .image img{
-    height: 55vh;
-    border-radius: 20px;
+    height: 75vh;
+    border-radius: 5px;
     margin-left: 7px;
   }
   .content{
@@ -53,21 +77,23 @@
     display: flex;
     padding: 6rem;
     gap: 3rem;
-    background-image: linear-gradient(#4586ef00, #4586ef90, #4586ef00);
+    background-color:#fbfeff;
+    
   }
   .vision__img img {
-    height: 55vh;
-    border-radius: 20px;
+    height: 50vh;
+    border-radius: 5px;
     margin-left: 7px;
   }
   .vision__img {
-    height: 56vh;
-    background-color: rgb(0, 0, 0);
-    border-radius: 20px;
+    height: 50vh;
+    
+    border-radius: 5px;
   }
   .team {
     padding: 6rem;
-    background-image: linear-gradient(#4586ef00, #4586ef90);
+    background-color:#fbfeff;
+    
   }
   .ourteam {
     text-align: center;
@@ -83,10 +109,39 @@
   .card {
     height: 45vh;
     width: 20vw;
-    background-color: black;
-    border: 1px solid black;
+    
     border-radius: 15px;
   }
+  .card {
+    position: relative; /* Ensure positioning context for absolute positioning */
+    display: inline-block; /* Ensure cards are displayed in a row */
+  }
+  
+  .card__image {
+    width: 245px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+  }
+  
+  .card__details {
+    position: absolute;
+    bottom: 10px; /* Adjust vertical position as needed */
+    left: 25px; /* Adjust horizontal position as needed */
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.433);
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .card__name {
+    font-weight: bold;
+    font-size: 1.2rem; /* Adjust font size as needed */
+    margin-bottom: 5px; /* Add space between name and role */
+  }
+  
+  .card__role {
+    font-size: 1rem; /* Adjust font size as needed */
+  }
+  
 .team img {
   margin: 0.3rem;
   border-radius: 15px;

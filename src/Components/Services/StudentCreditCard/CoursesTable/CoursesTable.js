@@ -1,135 +1,132 @@
-import React from 'react'
-import './CoursesTable.css'
+import React, { useState } from "react";
+import "./CoursesTable.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const CoursesTable = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const courses = [
+    { id: 1, name: "Aalim" },
+    { id: 2, name: "B.A./B. Sc./ B. Com. (All subject)" },
+    { id: 3, name: "BCA" },
+    {
+      id: 4,
+      name: "B. Sc. (Information Technology/Computer Application/Computer Science)",
+    },
+    { id: 5, name: "B. Sc. (Agriculture)" },
+    { id: 6, name: "B. Sc. (Library Science)" },
+    {
+      id: 7,
+      name: "Bachelor of Hotel Management & Catering Technology (B.H.M.C.T.)",
+    },
+    {
+      id: 8,
+      name: "B. Tech/B.E. for laterally admitted candidates having degree of three years diploma courses approved by the State Technical Education Council",
+    },
+    { id: 9, name: "Bachelor in Yoga (Entry Level+2Pass)" },
+    { id: 10, name: "B. Tech/B.E./B. Sc.(Engineering-all branches)" },
+    { id: 11, name: "B. Sc. (Nursing)" },
+    { id: 12, name: "Bachelor of Pharmacy" },
+    { id: 13, name: "Bachelor of Veterinary Medicine and Surgery (B.V.M.S.)" },
+    { id: 14, name: "Bachelor of Ayurveda, Medicine and Surgery (B.A.M.S)" },
+    { id: 15, name: "Bachelor of Unani Medicine & Surgery (B.U.M.S)" },
+    { id: 16, name: "Bachelor of Homeopathic Medicine & Surgery (B.H.M.S.)" },
+    { id: 17, name: "Bachelor of Dental Surgery (B.D.S.)" },
+    { id: 18, name: "Bachelor of Physiotherapy" },
+    { id: 19, name: "Bachelor of Occupational Therapy" },
+    { id: 20, name: "Bachelor of Mass Communication/Mass Media/Journalism" },
+    {
+      id: 21,
+      name: "B. Sc. in Fashion Technology/Designing/Apparel Designing/Footwear Designing",
+    },
+    { id: 22, name: "Bachelor of Architecture" },
+    { id: 23, name: "Bachelor of Physical Education (B. P. Ed.)" },
+    { id: 24, name: "B.A./B. Sc.-B. Ed. (Integrated Courses)" },
+    { id: 25, name: "Bachelor of Business Administration (B.B.A.)" },
+    { id: 26, name: "Bachelor of Fine Arts (B.F.A.)" },
+    { id: 27, name: "BL/LLB (5 Year integrated Course)" },
+    {
+      id: 28,
+      name: "Diploma in Hotel Management (Three Year) (I.H.M. Course)",
+    },
+    { id: 29, name: "Diploma in Food, Nutrition/ Dietetics" },
+    { id: 30, name: "Diploma in Food Processing/ Food Production" },
+    { id: 31, name: "Diploma in Food & Beverage Services" },
+    {
+      id: 32,
+      name: "Degree/Diploma in Aeronautical, Pilot Training, Shipping",
+    },
+    { id: 33, name: "General Nursing Midwifery (G.N.M)" },
+    { id: 34, name: "Hotel Management and Catering Technology" },
+    { id: 35, name: "Hospital and Hotel Management" },
+    { id: 36, name: "M.A./M. Sc./M. Com (All subject)" },
+    { id: 37, name: "M.B.B.S." },
+    { id: 38, name: "M. Sc/M. Tech Integrated course" },
+    { id: 39, name: "M.A./M. Sc./M. Com (All subject)" },
+    { id: 40, name: "Master of Business Administration (M.B.A.)" },
+    { id: 41, name: "Polytechnic" },
+    { id: 42, name: "Shashtri" },
+  ];
+
+  const filteredCourses = courses.filter((course) =>
+    course.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const renderTableRows = () => {
+    const rows = [];
+    for (let i = 0; i < filteredCourses.length; i += 2) {
+      rows.push(
+        <tr key={i}>
+          <td>{filteredCourses[i]?.id}</td>
+          <td>
+            <a className="linkfortalbe" href="/Popup">
+              {filteredCourses[i]?.name}
+            </a>
+          </td>
+          <td>{filteredCourses[i + 1]?.id}</td>
+          <td>
+            <a className="linkfortalbe" href="/Popup">
+              {filteredCourses[i + 1]?.name}
+            </a>
+          </td>
+        </tr>
+      );
+    }
+    return rows;
+  };
+
   return (
-    <table>
-        <tr>
-            <th>S.No</th>
-            <th>Courses</th>
-            <th>S.No</th>
-            <th>Courses</th>
-            <th>S.No</th>
-            <th>Courses</th>
-        </tr>
-        <tr>
-            <td>1.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Aalim</a></td>
-            <td>2.</td>
-            <td><a className='linkfortalbe' href='/Popup'>B.A./B. Sc./ B. Com. (All subject)</a></td>
-            <td>3.</td>
-            <td><a className='linkfortalbe' href='/Popup'>BCA</a></td>
-        </tr>
-        <tr>
-            <td>4.</td>
-            <td><a className='linkfortalbe' href='/Popup'>B. Sc. (Information Technology/Computer Application/Computer Science)</a></td>
-            <td>5.</td>
-            <td><a className='linkfortalbe' href='/Popup'>B. Sc. (Agriculture)</a></td>
-            <td>6.</td>
-            <td><a className='linkfortalbe' href='/Popup'>B. Sc. (Library Science)</a></td>
-        </tr>
-        <tr>
-            <td>7.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Bachelor of Hotel Management & Catering Technology (B.H.M.C.T.)</a></td>
-            <td>8.</td>
-            <td><a className='linkfortalbe' href='/Popup'>B. Tech/B.E. for laterally admitted candidates having degree of threeb years diploma courses approved by the State Technical Education Council</a></td>
-            <td>9.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Bachelor in Yoga (Entry Level+2Pass)</a></td>
-        </tr>
-        <tr>
-            <td>10.</td>
-            <td><a className='linkfortalbe' href='/Popup'>B. Tech/B.E./B. Sc.(Engineering-all branches)</a></td>
-            <td>11.</td>
-            <td><a className='linkfortalbe' href='/Popup'>B. Sc. (Nursing)</a></td>
-            <td>12.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Bachelor of Pharmacy</a></td>
-        </tr>
-        <tr>
-            <td>13.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Bachelor of Veterinary Medicine and Surgery (B.V.M.S.)</a></td>
-            <td>14.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Bachelor of Ayurveda, Medicine and Surgery (B.A.M.S)</a></td>
-            <td>15.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Bachelor of Unani Medicine & Surgery (B.U.M.S)</a></td>
-        </tr>
-        <tr>
-            <td>16.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Bachelor of Homeopathic Medicine & Surgery (B.H.M.S.)</a></td>
-            <td>17.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Bachelor of Dental Surgery (B.D.S.)</a></td>
-            <td>18.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Bachelor of Physiotherapy</a></td>
-        </tr>
-        <tr>
-            <td>19.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Bachelor of Occupational Therapy</a></td>
-            <td>20.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Bachelor of Mass Communication/Mass Media/Journalism</a></td>
-            <td>21.</td>
-            <td><a className='linkfortalbe' href='/Popup'>B. Sc. in Fashion Technology/Designing/Apparel Designing/Footwear Designing</a></td>
-        </tr>
-        <tr>
-            <td>22.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Bachelor of Architecture</a></td>
-            <td>23.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Bachelor of Physical Education (B. P. Ed.)</a></td>
-            <td>24.</td>
-            <td><a className='linkfortalbe' href='/Popup'>B.A./B. Sc.-B. Ed. (Integrated Courses)</a></td>
-        </tr>
-        <tr>
-            <td>25.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Bachelor of Business Administration (B.B.A.)</a></td>
-            <td>26.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Bachelor of Fine Arts (B.F.A.)</a></td>
-            <td>27.</td>
-            <td><a className='linkfortalbe' href='/Popup'>BL/LLB (5 Year integrated Course)</a></td>
-        </tr>
-        <tr>
-            <td>28.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Diploma in Hotel Management (Three Year) (I.H.M. Course)</a></td>
-            <td>29.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Diploma in Food, Nutrition/ Dietetics</a></td>
-            <td>30.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Diploma in Food Processing/ Food Production</a></td>
-        </tr>
-        <tr>
-            <td>31.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Diploma in Food & Beverage Services</a></td>
-            <td>32.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Degree/Diploma in Aeronautical, Pilot Training, Shipping</a></td>
-            <td>33.</td>
-            <td><a className='linkfortalbe' href='/Popup'>General Nursing Midwifery (G.N.M)</a></td>
-        </tr>
-        <tr>
-            <td>34.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Hotel Management and Catering Technology</a></td>
-            <td>35.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Hospital and Hotel Management</a></td>
-            <td>36.</td>
-            <td><a className='linkfortalbe' href='/Popup'>M.A./M. Sc./M. Com (All subject)</a></td>
-        </tr>
-        <tr>
-            <td>37.</td>
-            <td><a className='linkfortalbe' href='/Popup'>M.B.B.S.</a></td>
-            <td>38.</td>
-            <td><a className='linkfortalbe' href='/Popup'>M. Sc/M. Tech Integrated course</a></td>
-            <td>39.</td>
-            <td><a className='linkfortalbe' href='/Popup'>M.A./M. Sc./M. Com (All subject)</a></td>
-        </tr>
-        <tr>
-            <td>40.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Master of Business Administration (M.B.A.)</a></td>
-            <td>41.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Polytechnic</a></td>
-            <td>42.</td>
-            <td><a className='linkfortalbe' href='/Popup'>Shashtri</a></td>
-        </tr>
-        
-        
-        
-    </table>
+    <div>
+      <br />
+      <div className="courses-table-container">
+        <input
+          type="text"
+          className="search-bar"
+          placeholder="Search for courses..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
+      </div>
+      <br />
+      {filteredCourses.length > 0 ? (
+        <table className="courses-table">
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Courses</th>
+              <th>S.No</th>
+              <th>Courses</th>
+            </tr>
+          </thead>
+          <tbody>{renderTableRows()}</tbody>
+        </table>
+      ) : (
+        <p>Can't find any courses</p>
+      )}
+    </div>
+  );
+};
 
-  )
-}
-
-export default CoursesTable
+export default CoursesTable;

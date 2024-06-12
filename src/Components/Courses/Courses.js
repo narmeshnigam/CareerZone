@@ -53,26 +53,42 @@ const Courses = () => {
               <div className="coursespg__medical__courses__table">
                 <div className="coursespg__medical__courses__card__container__withHeading">
                   <div className="coursespg__medical__courses__card__container__heading">
-                  {category} Courses After Class 10:
+                    {category} Courses After Class 10:
                   </div>
                   <div className="courses__card__container__main">
-                    {courses.map((course, index) => (
-                      course.after10th ? <Link style={{textDecoration:'none'}} to={`/courses/${course.name}`}><CoursesCard
-                       key={index}
-                       name={course.name}
-                       img={course.backgroundImage} /></Link> : null
-                    ))}
+                    {courses.map((course, index) =>
+                      course.after10th ? (
+                        <Link
+                          style={{ textDecoration: "none" }}
+                          to={`/courses/${course.name}`}
+                        >
+                          <CoursesCard
+                            key={index}
+                            name={course.name}
+                            img={course.backgroundImage}
+                          />
+                        </Link>
+                      ) : null
+                    )}
                   </div>
                   <div className="coursespg__medical__courses__card__container__heading">
-                  {category} Courses After Class 12:
+                    {category} Courses After Class 12:
                   </div>
                   <div className="courses__card__container__main">
-                    {courses.map((course, index) => (
-                      course.after12th ? <Link style={{textDecoration:'none'}} to={`/courses/${course.name}`}><CoursesCard 
-                      key={index}
-                      name={course.name}
-                      img={course.backgroundImage} /></Link> : null
-                    ))}
+                    {courses.map((course, index) =>
+                      course.after12th ? (
+                        <Link
+                          style={{ textDecoration: "none" }}
+                          to={`/courses/${course.name}`}
+                        >
+                          <CoursesCard
+                            key={index}
+                            name={course.name}
+                            img={course.backgroundImage}
+                          />
+                        </Link>
+                      ) : null
+                    )}
                   </div>
                 </div>
               </div>

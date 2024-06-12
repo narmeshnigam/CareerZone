@@ -10,17 +10,15 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Achievemets = () => {
-
-  const RedirectContact = ()=>{
-    window.location.href = '/contact'
-
-  }
+  const RedirectContact = () => {
+    window.location.href = "/contact";
+  };
   return (
     <div className="achiv__container">
       <div className="achiv__left__container">
         <div className="achiv__left__container__heading">OUR ACHIEVEMENTS</div>
         <div className="achiv__left__container__desc">
-          Since our humble beginning in 2001, THE About The Career Zone has been
+          Since our humble beginning in 2001, The Career Zone has been
           constantly providing quality and professional guidance to students.
           With our dedicated approach, we have been able to win the confidence
           of students who have approached us to fulfil their educational goals.
@@ -54,10 +52,16 @@ const Achievemets = () => {
           />
         </div>
         <div className="achiv__left__container__buttons">
-          <button style={{ backgroundColor: "#107F1E", color: "#ffff" }} onClick={RedirectContact}>
+          <button
+            style={{ backgroundColor: "#107F1E", color: "#ffff" }}
+            onClick={RedirectContact}
+          >
             Call Now
           </button>
-          <button style={{ backgroundColor: "#df200be2", color: "#ffff" }} onClick={RedirectContact}>
+          <button
+            style={{ backgroundColor: "#df200be2", color: "#ffff" }}
+            onClick={RedirectContact}
+          >
             Apply Now
           </button>
         </div>
@@ -77,9 +81,15 @@ const Achievemets = () => {
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
-          <SwiperSlide><img src="https://thecareerzone.co.in/images/gallery/2.jpg"></img></SwiperSlide>
-          <SwiperSlide><img src="https://thecareerzone.co.in/images/gallery/3.jpg"></img></SwiperSlide>
-          <SwiperSlide><img src="https://thecareerzone.co.in/images/gallery/4.jpg"></img></SwiperSlide>
+          <SwiperSlide>
+            <img src="https://thecareerzone.co.in/images/gallery/2.jpg"></img>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://thecareerzone.co.in/images/gallery/3.jpg"></img>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://thecareerzone.co.in/images/gallery/4.jpg"></img>
+          </SwiperSlide>
         </Swiper>
       </div>
     </div>

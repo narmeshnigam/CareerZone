@@ -1,11 +1,13 @@
 .container{
-    background-color: #B8CEF0;
+    background-color: #ffffff37;
     width: 45%;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
+    padding: 1.5rem 1.5rem;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.2rem;
+    border: 1px solid #333;
+    margin-top: -10px;
 }
 .date{
     display: flex;
@@ -14,8 +16,8 @@
 .readmore{
     padding: 0.15rem 0.2rem;
     color: #fff;
-    background-color: rgba(0, 0, 255, 0.627);
-    font-size: 0.7rem;
+    background-color: dodgerblue;
+    font-size: .8rem;
     border: none;
     border-radius: 5px;
 }

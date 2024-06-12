@@ -1,14 +1,17 @@
+*{
+    font-family: 'Urbanist';
+}
 .container{
-    background-color: #000000cd;
+    background-color:#fbfeff;
     margin: -8rem auto;
     width: 100%;
     z-index: 1000;
     position: absolute;
-    font-family: 'Poppins';
+    
 }
 .innerForm{
     padding-top: 4vh;
-    background-color: #EAEDF1;
+    background-color: rgba(255, 255, 255, 0.365);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,12 +19,12 @@
     width: 900px;
     margin: 1rem auto;
     border-radius: 10px;
-    border: 1px solid #000000;
+    
 }
 .heading{
     text-align: center;
-    font-size: 2.5rem;
-    font-weight: 500;
+    font-size: 2rem;
+    font-weight: 400;
     margin-bottom: 1.5rem;
 }
 .formContainer{
@@ -31,21 +34,35 @@
     margin-bottom: 1rem;
 }
 .inputContainer input{
-    border: none;
+    border-radius: 5px;
     box-shadow: 6px 6px 6px #00000014;
+    border : 1px solid black;
     min-width: 400px;
     max-width: 400px;
 }
-.btn{
-    margin: 2rem 0 0 0;
-    padding: 0.3rem 1rem;
-    font-size: 1.3rem;
-    box-shadow: 6px 6px 6px #0000002e;
+.btn {
+    margin-bottom: 10vh;
+    margin-left: 690px;
+    margin-top: 5vh;
+    height: 8vh;
+    width: 30vh;
+    background-color: #11d31e; /* Peach color */
+    font-size: larger;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
     border: none;
-    color: #ffff;
-    border-radius: 15px;
-    background-color: #718ae6;
-}
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+    transition: border 0.3s ease
+    
+  }
+  
+  .btn:hover {
+     /* White color */
+    color: #000000; /* Changing text color to black for better contrast on white background */
+    border: 3px solid #000000; 
+  }
 .svg_cross{
     position: fixed;
     filter: invert(1);

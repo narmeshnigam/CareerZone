@@ -1,17 +1,23 @@
+*{
+    font-family: 'Urbanist';
+}
 .contact__container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    font-family: 'Poppins';
+    margin-top: 3px;
+    
 }
 .iframe__map {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #165ac7a5;
+    background-color:#fbfeff;
     padding: 3rem;
+    color: black;
+    
 }
 .iframe__map > span {
     overflow: hidden;
@@ -20,13 +26,13 @@
 }
 
 .contact__details{
-    color: #ffff;
+    color: black;
     display: flex;
     gap: 4rem;
     font-size: 1rem;
 }
 .contact__details__heading{
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     font-weight: 600;
 }
@@ -55,6 +61,7 @@
     padding: 1rem;
     text-align: center;
     color: white;
+    font-size: 20px;
     background-color: #0f4eb4;
 }
 @media screen and (max-width: 600px) {

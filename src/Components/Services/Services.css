@@ -1,19 +1,21 @@
 .services__container{
     padding-top: 90px;
-    font-family: 'Poppins';
+    background-color: #fbfeff;
 }
 .services__top__img {
     display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
-    height: 60vh;
-    background-image:  linear-gradient(to bottom ,#eaedf100, #eaedf138, #eaedf1),url(https://template63467.motopreview.com/mt-demo/63400/63467/mt-content/uploads/2017/06/mt-1027-content-bg03.jpg);
+    height: 20vh;
+    background-image:  url('https://wallpaperaccess.com/full/7352357.jpg');
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-repeat: no-repeat; /* Prevent background repetition */
 }
 .services__top__img div{
     width: 70%;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 600;
+    margin: 30px;
+    
 }
 .services__holder{
     padding: 6rem;
@@ -33,6 +35,28 @@
 }
 .edu__ser__des{
     margin: 1rem 0rem;
+    font-size: 18px;
+}
+.edu__btn{
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid white;
+    width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    color: white;
+    font-weight: 600;
+    transition: transform 0.4s ease;
+
+}
+.edu__btn:hover{
+    transform: scale(1.1);
+}
+a{
+    text-decoration: none;
+    
+
 }
 .education__ser__content button{
     border: none;

@@ -5,7 +5,9 @@ import MedicalCollegesCard from "../TopMedicalColleges/MedicalCollegesCard/Medic
 const TopEngColleges = () => {
   return (
     <div className="topMed__container">
-      <div className="topMed__heading topEng">---TOP <span style={{color:'#4587EF'}}>ENGINEERING</span> COLLEGES---</div>
+      <div className="topMed__heading topEng">
+        TOP <span style={{ color: "#4587EF" }}>ENGINEERING</span> COLLEGES
+      </div>
       <div className="topMed__card">
         <MedicalCollegesCard
           img={
@@ -13,31 +15,31 @@ const TopEngColleges = () => {
           }
           name={"BHARATI VIDYAPEETH DEEMED UNIVERSITY"}
           location={"PUNE, MAHARASHTRA"}
-          time={'ESTD 1964'}
+          time={"ESTD 1964"}
         />
-        <MedicalCollegesCard 
-        img={
+        <MedicalCollegesCard
+          img={
             "https://thecareerzone.co.in/img/gallery/MIT-WORLD-PEACE-UNIVERSITY.jpg"
           }
           name={"Maharashtra Institute Of Technology(MIT)"}
           location={"PUNE, MAHARASHTRA"}
-          time={'ESTD 1983'}
+          time={"ESTD 1983"}
         />
-        <MedicalCollegesCard 
-        img={
+        <MedicalCollegesCard
+          img={
             "https://thecareerzone.co.in/img/gallery/united-group-of-institiution-6-admission-provider-index.jpg"
           }
           name={"UNITED GROUP OF INSTITUTIONS"}
           location={"GREATER NOIDA"}
-          time={'ESTD 2005'}
+          time={"ESTD 2005"}
         />
-        <MedicalCollegesCard 
-        img={
+        <MedicalCollegesCard
+          img={
             "https://thecareerzone.co.in/img/gallery/GALGOTIAS-COLLEGE-OF-ENGINEERING-AND-TECHNOLOGY-.jpg"
           }
           name={"GALGOTIAS COLLEGE OF ENGINEERING AND TECHNOLOGY"}
           location={"GREATER NOIDA, U.P"}
-          time={'ESTD 1999'}
+          time={"ESTD 1999"}
         />
       </div>
     </div>

@@ -1,16 +1,24 @@
+
+
+
 .container{
     padding-top: 90px;
-    font-family: 'Poppins';
+    background-color:#fbfeff;
+    
 }
-.heading{
-    background-color: #000000c9;
-    text-align: center;
-    margin: 0 auto;
-    font-weight: 600;
-    padding: 0.5rem 0;
-    font-size: 3.5rem;
-    color: #ffff;
+.heading {
+  text-align: left; /* Align text to the left */
+  margin-left: 20px; /* Remove auto centering */
+  font-weight: 600;
+  padding: 0.5rem 0;
+  font-size: 4rem;
+  color: black;
+  margin: 30px;
+  
+
 }
+
+
 .upperContainer{
     height: 43vh;
     padding: 3rem 5rem;
@@ -21,25 +29,76 @@
 }
 .lineChart{
     padding: 1rem;
-    border-radius: 20px;
+    border-radius: 5px;
     box-shadow: 0 0 10px 3px #0000001c;
-    width: 45%;
-    height: 100%;
+    width: 80vw;
+    height: 50vh;
 }
+
+
 .rightContainer{
     height: 100%;
     width: 45%;
     display: flex;
-    flex-direction: column;
+  
     align-items: center;
-    padding: 3rem;
+    
     gap: 10%;
 }
+.upperContainer {
+    display: flex;
+  }
+  
+  .lineChart {
+    flex: 1;
+  }
+  
+  .rightContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .rightContainerUpper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+
+  .leadStats {
+    display: block;
+    margin-bottom: 10px; /* Optional: Adds spacing between lines */
+  }
+  
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; /* Optional: Adds spacing between the stats and buttons */
+  }
+  
+  .leadButtons {
+    cursor: pointer;
+    margin-bottom: 10px; /* Optional: Adds spacing between buttons */
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  
+  .leadButtons:hover {
+    transform: scale(1.01);
+  }
+  
 .rightContainerUpper{
     width: 100%;
     height: 7rem;
     display: flex;
     justify-content: space-between;
+    
 }
 .rightContainerLower{
     height: 50%;
@@ -49,16 +108,12 @@
     gap: 1.5rem;
 }
 .leadStats{
-    width: 40%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
     font-size: 1.3rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: rgba(0, 0, 0, 0.861);
-    color: white;
     border-radius: 10px;
 }
 .leadButtons{
@@ -76,5 +131,5 @@
 }
 .barcahrtLeft{
     height: 50%;
-    width: 50%;
+    width: 25%;
 }

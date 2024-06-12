@@ -1,17 +1,52 @@
-table {
+.courses-table-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    
+  }
+  
+  .search-bar {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #130101;
+    border-radius: 15px;
+    position: absolute; /* Ensure absolute positioning */
+    right: 200px; /* Set right margin */
+    width: 450px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.search-icon{
+    position: absolute; /* Ensure absolute positioning */
+    right: 220px; 
+    margin-bottom: 20px;
+}
+
+  
+  .courses-table {
     border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    text-align: left;
-    border: 1px solid black;
+    border: 1px solid #0b0000;
+    border-radius: 5px;
+    overflow: hidden;
+    padding-top: 30px;
+    
+  }
+  
+  .courses-table th,
+  .courses-table td {
+    border: 1px solid #ddd;
     padding: 8px;
-}
-.linkfortalbe{
-text-decoration: none;
-}
-
-tr:nth-child(even) {
-background-color: #0000000f;
-}
+    text-align: left;
+  }
+  
+  .courses-table th {
+    background-color: #f2f2f2;
+  }
+  
+  a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 18px;
+  }

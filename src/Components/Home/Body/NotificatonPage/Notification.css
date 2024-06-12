@@ -1,7 +1,7 @@
 .noti__container{
     display: flex;
     padding: 6rem;
-    font-family: 'Poppins';
+    background-color:#fbfeff;
 }
 .noti__left__container{
     width: 60%;
@@ -12,13 +12,19 @@
     margin-bottom: 1.2rem;
 }
 .noti__about{
-    color: #df200be2; 
+    color: #000000e2; 
     font-size:1.5rem; 
     font-weight:600;
 }
 .noti__subheading{
     font-weight: 600;
     margin: 0.5rem 0rem 1.2rem;
+    font-size: 1.5rem;
+}
+.noti__subheading1{
+    
+    margin: 0.5rem 0rem 1.2rem;
+    font-size: 1.3rem;
 }
 .noti__options{
     margin-top: 1rem;
@@ -26,7 +32,7 @@
     font-size: 1.2rem;
     font-weight: 500;
     justify-content: space-between;
-    color: #107F1E;
+    color: #000000;
 }
 .noti__options__left div{
     margin-top: 0.5rem;
@@ -47,9 +53,8 @@
 .noti__right__heading{
     font-size: 2rem;
     height: 15%;
-    color: #df200be2;
-    font-weight: 600;
-    text-decoration: underline;
+    color: #df200bc4;
+    font-weight: 600;    
     margin-bottom: 1rem;
 }
 .noti__right__noti__container{
