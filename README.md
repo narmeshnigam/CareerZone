@@ -14,17 +14,10 @@
    cd CareerZone
    ```
 
-#### Branching
-
-1. **Create a new branch called `ui`.**
-
-   ```bash
-   git branch ui
-   ```
 
 
 
-5. **Install the dependencies:**
+ **Install the dependencies:**
 
   ```bash
 npm i
