@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import db from "../../../../firebase";
 import styles from "./PopUpForm.module.css";
+import Swal from "sweetalert2";
 
 const PopUpForm = ({
   onback = () => {},
@@ -11,7 +12,6 @@ const PopUpForm = ({
   assignmentDate,
   assignedBy,
 }) => {
-  console.log(leadNumber);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -36,6 +36,26 @@ const PopUpForm = ({
     remarks: "",
   });
 
+  useEffect(() => {
+    const fetchLeadData = async () => {
+      try {
+        const leadDoc = await db.collection("leads").doc(id).get();
+        if (leadDoc.exists) {
+          setFormData((prevData) => ({
+            ...prevData,
+            ...leadDoc.data(),
+          }));
+        } else {
+          console.log("No such document!");
+        }
+      } catch (error) {
+        console.error("Error fetching lead data: ", error);
+      }
+    };
+
+    fetchLeadData();
+  }, [id]);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -49,14 +69,24 @@ const PopUpForm = ({
       assignmentDate,
       ...updatedData
     } = formData;
+
     db.collection("leads")
       .doc(id)
       .update(updatedData)
       .then(() => {
-        console.log("Lead updated successfully!");
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: "Lead updated successfully!",
+        });
         clearForm();
       })
       .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: `Error updating lead: ${error.message}`,
+        });
         console.error("Error updating lead: ", error);
       });
     onback();
@@ -98,10 +128,10 @@ const PopUpForm = ({
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="icon icon-tabler icons-tabler-outline icon-tabler-xbox-x"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="icon icon-tabler icons-tabler-outline icon-tabler-xbox-x"
       >
         <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
       </svg>
@@ -114,7 +144,7 @@ const PopUpForm = ({
               value={formData.name}
               type="text"
               name="name"
-              placeholder="*Full Name"
+              placeholder={formData.name || "*Full Name"}
             />
           </div>
           <div className={styles.inputContainer}>
@@ -123,7 +153,7 @@ const PopUpForm = ({
               value={formData.email}
               type="email"
               name="email"
-              placeholder="*Email"
+              placeholder={formData.email || "*Email"}
             />
           </div>
         </div>
@@ -134,7 +164,7 @@ const PopUpForm = ({
               value={formData.mobileNumber}
               type="number"
               name="mobileNumber"
-              placeholder="*Mobile Number"
+              placeholder={formData.mobileNumber || "*Mobile Number"}
             />
           </div>
           <div className={styles.inputContainer}>
@@ -143,7 +173,9 @@ const PopUpForm = ({
               value={formData.alternateMobile}
               type="number"
               name="alternateMobile"
-              placeholder="Alternate Mobile Number"
+              placeholder={
+                formData.alternateMobile || "Alternate Mobile Number"
+              }
             />
           </div>
         </div>
@@ -154,7 +186,7 @@ const PopUpForm = ({
               value={formData.locality}
               type="text"
               name="locality"
-              placeholder="*Locality"
+              placeholder={formData.locality || "*Locality"}
             />
           </div>
           <div className={styles.inputContainer}>
@@ -163,7 +195,7 @@ const PopUpForm = ({
               value={formData.state}
               type="text"
               name="state"
-              placeholder="*State"
+              placeholder={formData.state || "*State"}
             />
           </div>
         </div>
@@ -174,7 +206,7 @@ const PopUpForm = ({
               value={formData.city}
               type="text"
               name="city"
-              placeholder="*City"
+              placeholder={formData.city || "*City"}
             />
           </div>
           <div className={styles.inputContainer}>
@@ -183,7 +215,7 @@ const PopUpForm = ({
               value={formData.pin}
               type="number"
               name="pin"
-              placeholder="*Pin"
+              placeholder={formData.pin || "*Pin"}
             />
           </div>
         </div>
@@ -194,7 +226,7 @@ const PopUpForm = ({
               value={formData.college}
               type="text"
               name="college"
-              placeholder="*College Name"
+              placeholder={formData.college || "*College Name"}
             />
           </div>
           <div className={styles.inputContainer}>
@@ -203,7 +235,7 @@ const PopUpForm = ({
               value={formData.courseInterest}
               type="text"
               name="courseInterest"
-              placeholder="*Course Interest"
+              placeholder={formData.courseInterest || "*Course Interest"}
             />
           </div>
         </div>
@@ -214,16 +246,17 @@ const PopUpForm = ({
               value={formData.bscc}
               type="text"
               name="bscc"
-              placeholder="*BSCC"
+              placeholder={formData.bscc || "*BSCC"}
             />
           </div>
+
           <div className={styles.inputContainer}>
             <input
               onChange={handleInputChange}
               value={formData.relation}
               type="text"
               name="relation"
-              placeholder="*Relation to Candidate"
+              placeholder={formData.relation || "*Relation to Candidate"}
             />
           </div>
         </div>
@@ -234,7 +267,7 @@ const PopUpForm = ({
               value={formData.budget}
               type="number"
               name="budget"
-              placeholder="*Budget"
+              placeholder={formData.budget || "*Budget"}
             />
           </div>
           <div className={styles.inputContainer}>
@@ -243,7 +276,7 @@ const PopUpForm = ({
               value={formData.source}
               type="text"
               name="source"
-              placeholder="*Source"
+              placeholder={formData.source || "*Source"}
             />
           </div>
         </div>
@@ -254,7 +287,7 @@ const PopUpForm = ({
               value={formData.remarks}
               type="text"
               name="remarks"
-              placeholder="*Remark"
+              placeholder={formData.remarks || "*Remark"}
             />
           </div>
           <div className={styles.inputContainer}>
@@ -263,7 +296,7 @@ const PopUpForm = ({
               value={formData.assignedTo}
               type="text"
               name="assignedTo"
-              placeholder="*Assigned To"
+              placeholder={formData.assignedTo || "*Assigned To"}
             />
           </div>
         </div>
