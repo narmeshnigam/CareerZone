@@ -115,72 +115,75 @@ const FollowUpPage = () => {
       </div>
       <div className={styles.leadInfoContainer}>
         <div className={styles.leadHead}>
-          <div>
-            <div>Lead No: </div>
-            <div>{leads.leadNumber}</div>
-          </div>
-          <div>
-            <div>Name: </div>
-            <div>{leads.name}</div>
-          </div>
-          <div>
-            <div>Mobile Number: </div>
-            <div>{leads.mobileNumber}</div>
-          </div>
-          <div>
-            <div>Alternate Mobile Number: </div>
-            <div>{leads.alternateMobile}</div>
-          </div>
-          <div>
-            <div>Email Address: </div>
-            <div>{leads.email}</div>
-          </div>
-          <div>
-            <div>Course: </div>
-            <div>{leads.courseInterest}</div>
-          </div>
-          <div>
-            <div>College: </div>
-            <div>{leads.college}</div>
-          </div>
-          <div>
-            <div>Budget: </div>
-            <div>{leads.budget}</div>
-          </div>
-          <div></div>
-          <div>
-            <div>Address: </div>
+          <div className={styles.column}>
             <div>
-              {leads.city}, {leads.state}, {leads.locality}, {leads.pin}
+              <div>Lead No:</div>
+              <div>{leads.leadNumber}</div>
+            </div>
+            <div>
+              <div>Name:</div>
+              <div>{leads.name}</div>
+            </div>
+            <div>
+              <div>Mobile Number:</div>
+              <div>{leads.mobileNumber}</div>
+            </div>
+            <div>
+              <div>Alternate Mobile Number:</div>
+              <div>{leads.alternateMobile}</div>
+            </div>
+            <div>
+              <div>Email Address:</div>
+              <div>{leads.email}</div>
+            </div>
+            <div>
+              <div>Course:</div>
+              <div>{leads.courseInterest}</div>
+            </div>
+            <div>
+              <div>College:</div>
+              <div>{leads.college}</div>
+            </div>
+            <div>
+              <div>Budget:</div>
+              <div>{leads.budget}</div>
             </div>
           </div>
-          <div>
-            <div>Bscc: </div>
-            <div>{leads.bscc}</div>
-          </div>
-          <div>
-            <div>Relation To Condidate: </div>
-            <div>{leads.relation}</div>
-          </div>
-          <div>
-            <div>Created Date: </div>
-            <div>{leads.createdDate}</div>
-          </div>
-          <div>
-            <div>Created By: </div>
-            <div>{leads.createdBy}</div>
-          </div>
-          <div>
-            <div>Assigned To: </div>
-            <div>{leads.assignedTo}</div>
-          </div>
-          <div>
-            <div>Assigned By: </div>
-            <div>{leads.assignedBy}</div>
-          </div>
-          <div>
-            <div>Assigned Date: </div>
-            <div>{leads.assignmentDate}</div>
+          <div className={styles.column}>
+            <div>
+              <div>Address:</div>
+              <div>
+                {leads.city}, {leads.state}, {leads.locality}, {leads.pin}
+              </div>
+            </div>
+            <div>
+              <div>Bscc:</div>
+              <div>{leads.bscc}</div>
+            </div>
+            <div>
+              <div>Relation To Candidate:</div>
+              <div>{leads.relation}</div>
+            </div>
+            <div>
+              <div>Created Date:</div>
+              <div>{leads.createdDate}</div>
+            </div>
+            <div>
+              <div>Created By:</div>
+              <div>{leads.createdBy}</div>
+            </div>
+            <div>
+              <div>Assigned To:</div>
+              <div>{leads.assignedTo}</div>
+            </div>
+            <div>
+              <div>Assigned By:</div>
+              <div>{leads.assignedBy}</div>
+            </div>
+            <div>
+              <div>Assigned Date:</div>
+              <div>{leads.assignmentDate}</div>
+            </div>
           </div>
         </div>
       </div>
@@ -189,6 +192,7 @@ const FollowUpPage = () => {
         <div className={styles.followCardContainer}>
           {followUpArr.map((data, i) => (
             <FollowCard
+              key={i}
               currDate={data.createdDate}
               createdBy={data.followUpBy}
               summary={data.summary}
@@ -222,7 +226,6 @@ const FollowUpPage = () => {
             <option value="" disabled selected>
               Select a Follow-up Statement
             </option>
-
             <option value="Response Received & Finalised">
               Response Received & Finalised
             </option>
@@ -237,7 +240,6 @@ const FollowUpPage = () => {
             </option>
             <option value="No Response">No Response</option>
           </select>
-
           <input
             name="nextdate"
             onChange={handleChange}

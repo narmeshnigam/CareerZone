@@ -4,6 +4,10 @@
     padding-top: 90px;
     background-color: white;
     
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+    
 }
 .headingContainer{
     background-color:#fbfeff;
@@ -18,17 +22,18 @@
 }
 .leadInfoContainer{
     background-color:#fbfeff;
- 
-  
-    padding: 2rem 1rem;
-    border-radius: 20px;
-    margin: 2rem auto;
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 5px;
+    width: auto;
     font-size: 1.2rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border:1px solid #333;
+    margin-left: 7%;
+    border: 1px solid #333;
+    padding: 2rem;
+    margin-right: 7%;
+  
 }
 .leadInfoContainer div div{
     margin-bottom: 0.5rem;
@@ -36,6 +41,22 @@
 .leadHead div{
     display: flex;
 }
+.leadHead{
+    display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .column div {
+    display: flex;
+    justify-content: space-between;
+  }
 .leadHead div div{
     max-width: 280px;
     min-width: 280px;
