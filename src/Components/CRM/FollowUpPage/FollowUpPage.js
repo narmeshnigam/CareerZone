@@ -61,7 +61,6 @@ const FollowUpPage = () => {
     const { name, value } = e.target;
     setFollowUp({ ...followUp, [name]: value });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -87,17 +86,22 @@ const FollowUpPage = () => {
         nextdate: "",
         remarks: "",
       });
-      // Show SweetAlert success message
       Swal.fire({
-        icon: "success",
         title: "Success",
-        text: "Follow-up added successfully.",
+        text: "Follow-up data has been successfully added!",
+        icon: "success",
+        confirmButtonText: "OK",
       });
     } catch (error) {
-      console.error("Error adding course: ", error);
+      console.error("Error adding follow-up data: ", error);
+      Swal.fire({
+        title: "Error",
+        text: "There was an error adding follow-up data. Please try again.",
+        icon: "error",
+        confirmButtonText: "OK",
+      });
     }
   };
-
   const generateFollowUpNo = () => {
     return Math.floor(Math.random() * 1000000)
       .toString()
@@ -149,6 +153,34 @@ const FollowUpPage = () => {
             <div>
               {leads.city}, {leads.state}, {leads.locality}, {leads.pin}
             </div>
+          </div>
+          <div>
+            <div>Bscc: </div>
+            <div>{leads.bscc}</div>
+          </div>
+          <div>
+            <div>Relation To Condidate: </div>
+            <div>{leads.relation}</div>
+          </div>
+          <div>
+            <div>Created Date: </div>
+            <div>{leads.createdDate}</div>
+          </div>
+          <div>
+            <div>Created By: </div>
+            <div>{leads.createdBy}</div>
+          </div>
+          <div>
+            <div>Assigned To: </div>
+            <div>{leads.assignedTo}</div>
+          </div>
+          <div>
+            <div>Assigned By: </div>
+            <div>{leads.assignedBy}</div>
+          </div>
+          <div>
+            <div>Assigned Date: </div>
+            <div>{leads.assignmentDate}</div>
           </div>
         </div>
       </div>

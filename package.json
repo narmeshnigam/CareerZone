@@ -27,6 +27,7 @@
     "react-visibility-sensor": "^5.1.1",
     "recharts": "^2.12.6",
     "styled-components": "^6.1.8",
+    "sweetalert": "^2.1.2",
     "sweetalert2": "^11.11.1",
     "swiper": "^11.0.7",
     "web-vitals": "^2.1.4"
