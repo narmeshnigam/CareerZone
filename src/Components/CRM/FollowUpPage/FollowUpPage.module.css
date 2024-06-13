@@ -35,6 +35,16 @@
     margin-right: 7%;
   
 }
+.column::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px; /* Width of the divider */
+    background-color: #ccc; /* Grey color */
+    right: -1rem; /* Adjust position to control spacing */
+  }
+  
 .leadInfoContainer div div{
     margin-bottom: 0.5rem;
 }
