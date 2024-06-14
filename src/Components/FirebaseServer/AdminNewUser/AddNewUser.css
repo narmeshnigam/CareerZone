@@ -1,0 +1,58 @@
+.add-new-user {
+  width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.add-new-user h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.add-new-user .form-group {
+  margin-bottom: 15px;
+}
+
+.add-new-user .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.add-new-user .form-group input,
+.add-new-user .form-group select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+.add-new-user .form-group input:focus,
+.add-new-user .form-group select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.add-new-user button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-new-user button:hover {
+  background-color: #0056b3;
+}

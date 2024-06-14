@@ -6,7 +6,7 @@
     
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  
     
 }
 .headingContainer{
@@ -24,26 +24,15 @@
     background-color:#fbfeff;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     border-radius: 5px;
-    width: auto;
-    font-size: 1.2rem;
-    display: flex;
+    font-size: 1.2rem;   
     margin-left: 7%;
     border: 1px solid #333;
     padding: 2rem;
     margin-right: 7%;
   
 }
-.column::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 1px; /* Width of the divider */
-    background-color: #ccc; /* Grey color */
-    right: -1rem; /* Adjust position to control spacing */
-  }
+
   
 .leadInfoContainer div div{
     margin-bottom: 0.5rem;
@@ -60,7 +49,8 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    margin-right: -100px;
+   
   }
   
   .column div {
