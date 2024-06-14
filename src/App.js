@@ -27,13 +27,14 @@ import AdminContact from "./Components/FirebaseServer/AdminContact/AdminContact"
 import LeadHistory from "./Components/CRM/Lead History Page/LeadHistory";
 import FollowUpPage from "./Components/CRM/FollowUpPage/FollowUpPage";
 import CreateNewLead from "./Components/CRM/CreateNewLead/CreateNewLead";
-import CreateNewUser from "./Components/CRM/CreateNewUser/CreateNewUser";
+import Userlist from "./Components/CRM/CreateNewUser/CreateNewUser";
 import FollowUpHistory from "./Components/CRM/FollowUpHistory/FollowUpHistory";
 import UserListsPage from "./Components/CRM/UserListPage/UserListsPage";
 import PopUpForm from "./Components/CRM/Lead History Page/PopUpForm/PopUpForm";
 import Dashboard from "./Components/CRM/Dashboard/Dashboard";
 import BlogStore from "./Components/Blogs/BlogStore/BlogStore";
 import AddNewUser from "./Components/FirebaseServer/AdminNewUser/AdminNewUser";
+import UserLogin from "./Components/CRM/UserLogin/UserLogin";
 
 const AppLayout = () => {
   return (
@@ -118,13 +119,14 @@ const App = createBrowserRouter([
         element: <CreateNewLead />,
       },
       {
+        path: "/userlogin",
+        element: <UserLogin />,
+      },
+      {
         path: "/followUp/:id",
         element: <FollowUpPage />,
       },
-      {
-        path: "/newUser",
-        element: <CreateNewUser />,
-      },
+
       {
         path: "/followUpHistory",
         element: <FollowUpHistory />,
@@ -162,6 +164,10 @@ const App = createBrowserRouter([
       {
         path: "/admin/notification",
         element: <AdminNotification />,
+      },
+      {
+        path: "/admin/userlist",
+        element: <Userlist />,
       },
       {
         path: "/admin/courses",

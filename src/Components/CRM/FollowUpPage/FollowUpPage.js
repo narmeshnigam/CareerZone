@@ -38,6 +38,7 @@ const FollowUpPage = () => {
           setFollowUpArr(
             snapshot.docs.map((doc) => ({
               id: doc.id,
+
               followUpNo: doc.data().followUpNo,
               leadNo: doc.data().leadNo,
               followUpBy: doc.data().followUpBy,
