@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, To, useNavigate } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
+import styles from "./adminNav.css";
 const auth = getAuth();
 
 const AdminNav = () => {

@@ -43,6 +43,9 @@ npm i
 ```bash
 npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
 ```
+```bash
+npm install sweetalert2 sweetalert2-react-content
+```
 
 ```bash
 npm install @fortawesome/free-regular-svg-icons

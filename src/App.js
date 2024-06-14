@@ -27,7 +27,7 @@ import AdminContact from "./Components/FirebaseServer/AdminContact/AdminContact"
 import LeadHistory from "./Components/CRM/Lead History Page/LeadHistory";
 import FollowUpPage from "./Components/CRM/FollowUpPage/FollowUpPage";
 import CreateNewLead from "./Components/CRM/CreateNewLead/CreateNewLead";
-import Userlist from "./Components/CRM/CreateNewUser/CreateNewUser";
+
 import FollowUpHistory from "./Components/CRM/FollowUpHistory/FollowUpHistory";
 import UserListsPage from "./Components/CRM/UserListPage/UserListsPage";
 import PopUpForm from "./Components/CRM/Lead History Page/PopUpForm/PopUpForm";
@@ -131,10 +131,7 @@ const App = createBrowserRouter([
         path: "/followUpHistory",
         element: <FollowUpHistory />,
       },
-      {
-        path: "/userlist",
-        element: <UserListsPage />,
-      },
+
       {
         path: "/dashboard",
         element: <Dashboard />,
@@ -165,10 +162,7 @@ const App = createBrowserRouter([
         path: "/admin/notification",
         element: <AdminNotification />,
       },
-      {
-        path: "/admin/userlist",
-        element: <Userlist />,
-      },
+
       {
         path: "/admin/courses",
         element: <AdminCourses />,
@@ -188,6 +182,10 @@ const App = createBrowserRouter([
       {
         path: "/admin/user",
         element: <AddNewUser />,
+      },
+      {
+        path: "/admin/userlist",
+        element: <UserListsPage />,
       },
     ],
   },

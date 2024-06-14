@@ -67,9 +67,6 @@ const AddNewUser = () => {
       setName("");
       setGeneratedPassword("");
       setIsEmailUnique(true);
-
-      // Navigate to User List after successful submission
-      navigate("/admin/userlist");
     } catch (error) {
       console.error("Error adding user: ", error);
       Swal.fire({
