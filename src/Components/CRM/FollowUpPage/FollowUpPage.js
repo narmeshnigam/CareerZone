@@ -3,7 +3,6 @@ import db from "../../../firebase";
 import styles from "./FollowUpPage.module.css";
 import FollowCard from "./Card/FollowCard";
 import { useParams } from "react-router-dom";
-import Swal from "sweetalert2";
 
 const FollowUpPage = () => {
   const { id } = useParams();
@@ -19,47 +18,66 @@ const FollowUpPage = () => {
   });
 
   useEffect(() => {
-    const fetchImages = async () => {
-      db.collection("leads")
-        .get()
-        .then((querySnapshot) => {
-          const arr = querySnapshot.docs;
-          arr.forEach((doc) => {
-            if (doc.id === id) setLeads(doc.data());
-          });
-        })
-        .catch((error) => {
-          console.log("Error getting documents: ", error);
+    const fetchLeadData = async () => {
+      try {
+        const leadDoc = await db.collection("leads").doc(id).get();
+        if (leadDoc.exists) {
+          setLeads(leadDoc.data());
+        } else {
+          console.log("No such document!");
+        }
+      } catch (error) {
+        console.log("Error getting document:", error);
+      }
+    };
+
+    const fetchFollowUpData = async () => {
+      db.collection("followUp")
+        .where("leadNo", "==", id)
+        .onSnapshot((snapshot) => {
+          setFollowUpArr(
+            snapshot.docs.map((doc) => ({
+              id: doc.id,
+
+              followUpNo: doc.data().followUpNo,
+              leadNo: doc.data().leadNo,
+              followUpBy: doc.data().followUpBy,
+              createdDate: doc.data().createdDate,
+              nextdate: doc.data().nextdate,
+              remarks: doc.data().remarks,
+              statement: doc.data().statement,
+              status: doc.data().status,
+              summary: doc.data().summary,
+              transferto: doc.data().transferto,
+            }))
+          );
         });
     };
 
-    const fetchFollowUp = async () => {
-      db.collection("followUp").onSnapshot((snapshot) => {
-        setFollowUpArr(
-          snapshot.docs.map((doc) => ({
-            id: doc.id,
-            followUpNo: doc.data().followUpNo,
-            leadNo: doc.data().leadNo,
-            followUpBy: doc.data().followUpBy,
-            createdDate: doc.data().createdDate,
-            nextdate: doc.data().nextdate,
-            remarks: doc.data().remarks,
-            statement: doc.data().statement,
-            status: doc.data().status,
-            summary: doc.data().summary,
-            transferto: doc.data().transferto,
-          }))
-        );
-      });
-    };
-
-    fetchImages();
-    fetchFollowUp();
+    fetchLeadData();
+    fetchFollowUpData();
   }, [id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFollowUp({ ...followUp, [name]: value });
+
+    let newStatus = followUp.status;
+    if (name === "statement") {
+      if (
+        value === "Response Received & Finalised" ||
+        value === "Response Received & not interested anymore"
+      ) {
+        newStatus = "Status :   Closed 🔴";
+      } else {
+        newStatus = "Status :   Open 🟢";
+      }
+    }
+
+    setFollowUp({
+      ...followUp,
+      [name]: value,
+      status: newStatus,
+    });
   };
 
   const handleSubmit = async (e) => {
@@ -87,14 +105,8 @@ const FollowUpPage = () => {
         nextdate: "",
         remarks: "",
       });
-      // Show SweetAlert success message
-      Swal.fire({
-        icon: "success",
-        title: "Success",
-        text: "Follow-up added successfully.",
-      });
     } catch (error) {
-      console.error("Error adding course: ", error);
+      console.error("Error adding follow-up: ", error);
     }
   };
 
@@ -111,6 +123,7 @@ const FollowUpPage = () => {
       </div>
       <div className={styles.leadInfoContainer}>
         <div className={styles.leadHead}>
+          {/* Displaying lead info */}
           <div>
             <div>Lead No: </div>
             <div>{leads.leadNumber}</div>
@@ -150,13 +163,42 @@ const FollowUpPage = () => {
               {leads.city}, {leads.state}, {leads.locality}, {leads.pin}
             </div>
           </div>
+          <div>
+            <div>Bscc: </div>
+            <div>{leads.bscc}</div>
+          </div>
+          <div>
+            <div>Relation To Candidate: </div>
+            <div>{leads.relation}</div>
+          </div>
+          <div>
+            <div>Created Date: </div>
+            <div>{leads.createdDate}</div>
+          </div>
+          <div>
+            <div>Created By: </div>
+            <div>{leads.createdBy}</div>
+          </div>
+          <div>
+            <div>Assigned To: </div>
+            <div>{leads.assignedTo}</div>
+          </div>
+          <div>
+            <div>Assigned By: </div>
+            <div>{leads.assignedBy}</div>
+          </div>
+          <div>
+            <div>Assigned Date: </div>
+            <div>{leads.assignmentDate}</div>
+          </div>
         </div>
       </div>
       <div className={styles.followHistoryContainer}>
         <div className={styles.followHisHeading}>Follow Up History</div>
         <div className={styles.followCardContainer}>
-          {followUpArr.map((data, i) => (
+          {followUpArr.map((data) => (
             <FollowCard
+              key={data.id}
               currDate={data.createdDate}
               createdBy={data.followUpBy}
               summary={data.summary}
@@ -187,10 +229,9 @@ const FollowUpPage = () => {
             onChange={handleChange}
             value={followUp.statement}
           >
-            <option value="" disabled selected>
+            <option value="" disabled>
               Select a Follow-up Statement
             </option>
-
             <option value="Response Received & Finalised">
               Response Received & Finalised
             </option>
@@ -203,8 +244,19 @@ const FollowUpPage = () => {
             <option value="Response Received & not interested anymore">
               Response Received & Not Interested Anymore
             </option>
+            <option value="Transfer to">Transfer to</option>
             <option value="No Response">No Response</option>
           </select>
+
+          {/* Always render transferto input, but disable when statement is not "Transfer to" */}
+          <input
+            name="transferto"
+            onChange={handleChange}
+            value={followUp.transferto}
+            type="text"
+            placeholder="Transfer to"
+            disabled={followUp.statement !== "Transfer to"}
+          />
 
           <input
             name="nextdate"
@@ -213,13 +265,7 @@ const FollowUpPage = () => {
             type="date"
             placeholder="Enter date"
           />
-          <input
-            name="status"
-            onChange={handleChange}
-            value={followUp.status}
-            type="text"
-            placeholder="Status"
-          />
+
           <input
             name="remarks"
             onChange={handleChange}
@@ -228,11 +274,11 @@ const FollowUpPage = () => {
             placeholder="Remarks"
           />
           <input
-            name="transferto"
+            name="status"
             onChange={handleChange}
-            value={followUp.transferto}
+            value={followUp.status}
             type="text"
-            placeholder="Transfer to"
+            placeholder="Status"
           />
           <div
             style={{

@@ -1,18 +1,9 @@
 .createUserLists__container {
     padding-top: 90px;
-    background-color: rgb(255, 255, 255);
+    background-color: #fefbff;
+  
 }
 
-.lead_Listspage_heading {
-    height: 200px;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(to bottom, dodgerblue, #FFFFFF);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-left: 7vw;
-
-}
   
   .lead_Listspagehomeic_ {
     margin-right: 20px;
@@ -24,7 +15,7 @@
     margin-left: 90px;
   }
   .userLists_tab_heading {
-    margin-top:50px;
+    margin:50px;
     text-align: center;
     justify-content: center;
     font-size: 50px;
@@ -32,9 +23,31 @@
     margin-bottom: 30px;
 
   }
-  table {
-    width: 85%;
-    margin-left: 8%;
-    border-radius: 25%;
-    margin-bottom: 5vh;
-  }
+  
+
+
+.userTable {
+  width: 80%;
+  border-collapse: collapse;
+  margin-left: 10%;
+}
+
+.userTable th,
+.userTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.userTable th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.userTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.userTable tr:hover {
+  background-color: #ddd;
+}
+
