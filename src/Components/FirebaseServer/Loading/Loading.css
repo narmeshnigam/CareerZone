@@ -1,26 +1,53 @@
-/* HTML: <div class="loader"></div> */
-.loader {
-    width: 50px;
-    aspect-ratio: 1;
-    display: grid;
-    border: 4px solid #0000;
-    border-radius: 50%;
-    border-right-color: #25b09b;
-    animation: l15 1s inrgb(15, 22, 158)linear;
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  gap: 0.625em;
+  transform: translate(-50%, -50%);
+
+}
+
+.container span {
+  border-radius: 50%;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.container span::before {
+  content: "";
+  display: block;
+  border-radius: inherit;
+  height: inherit;
+  width: inherit;
+  background-color: inherit;
+  animation: ripple 1.8s ease-out infinite;
+  animation-delay: inherit;
+  z-index: -1;
+}
+
+.container span:nth-of-type(1) {
+  background-color: #84cdfa;
+}
+
+.container span:nth-of-type(2) {
+  background-color: #5ad1cd;
+  animation-delay: 0.2s;
+}
+
+.container span:nth-of-type(3) {
+  background-color: #9b59b6;
+  animation-delay: 0.4s;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
   }
-  .loader::before,
-  .loader::after {    
-    content: "";
-    grid-area: 1/1;
-    margin: 2px;
-    border: inherit;
-    border-radius: 50%;
-    animation: l15 2s infinite;
+
+  to {
+    opacity: 0;
+    transform: scale(3);
   }
-  .loader::after {
-    margin: 8px;
-    animation-duration: 3s;
-  }
-  @keyframes l15{ 
-    100%{transform: rotate(1turn)}
-  }
+}

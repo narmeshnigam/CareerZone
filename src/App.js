@@ -140,6 +140,10 @@ const App = createBrowserRouter([
         path: "/BlogList",
         element: <BlogStore />,
       },
+      {
+        path: "/userlogin",
+        element: <UserLogin />,
+      },
     ],
   },
   {
