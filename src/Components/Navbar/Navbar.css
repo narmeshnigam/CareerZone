@@ -16,8 +16,9 @@
 .nav__logo img{
     flex: 1;
     height: 4rem;
-   margin-left: 20px;
-   margin-top: 10px;
+   margin-left: 10px;
+ 
+   padding-bottom: 20px;
 }
 .nav__links{
     flex: 3;
