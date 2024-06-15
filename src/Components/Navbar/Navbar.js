@@ -48,10 +48,22 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="nav__socials">
-          <img src="./facebook.png" style={{ height: "30px" }} />
-          <img src="./whatsapp.png" style={{ height: "30px" }} />
-          <img src="./twitter.png" style={{ height: "30px" }} />
-          <img src="./instagram.png" style={{ height: "30px" }} />
+          <img
+            src="./facebook.png"
+            style={{ height: "30px" }}
+            title="Facebook"
+          />
+          <img
+            src="./whatsapp.png"
+            style={{ height: "30px" }}
+            title="WhatsApp"
+          />
+          <img src="./twitter.png" style={{ height: "30px" }} title="Twitter" />
+          <img
+            src="./instagram.png"
+            style={{ height: "30px" }}
+            title="Instagram"
+          />
         </div>
 
         <div className="nav__top__menu__bar">
