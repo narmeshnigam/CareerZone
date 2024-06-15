@@ -19,7 +19,7 @@
     padding: 5rem;
     
 }
-@import url('https://fonts.googleapis.com/css?family=Arvo');
+@import url('https://fonts.googleapis.com/css?family=Urbanist');
  .section {
 	 display: none;
 	 padding: 2rem;
@@ -71,7 +71,7 @@
 .gal__photos__heading{
     font-size: 2.3rem;
     font-weight: 600;
-    color: #4587EF;
+    color: #000000;
     
     margin-bottom: 1rem;
 }
@@ -95,14 +95,15 @@
     transition: transform .2s;
 }
 .gal__photos__con__img  video{
-    width: 26rem;
+    width: 20rem;
     object-fit: cover;
     height: 18rem;
-    border-radius: 20px;
+    border-radius: 10px;
+    gap: 1rem;
 }
 .gal__photos__con__img img:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 .gal__video__container{
-    padding: 0rem 6rem 6rem;
+    padding: 3rem 3rem 3rem;
 }
