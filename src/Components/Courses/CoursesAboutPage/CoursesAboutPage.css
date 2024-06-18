@@ -1,24 +1,39 @@
 .courses_about_container{
     padding-top: 90px;
-    font-family: 'Poppins';
+    font-family: 'Urbanist';
+    background-color: #fbfeff;
+    
       
 }
 .courses_about_banner_img{
     display: flex;
-    justify-content: center;
+    
     align-items: center;
-    color: rgba(4, 4, 4, 0.7);
-    text-shadow: 3px 3px  #ffff;
+    color: rgb(255, 255, 255); 
+        
     background-size: cover;
     background-position: center;
-    height: 60vh;
+    height: 20vh;
+    
+    
 }
+
 .courses_about_banner_img div{
-    width: 70%;
+   
     font-size: 3rem;
     filter: none;
-    font-weight: 600;
+    font-weight: 900;
+    background: #00000041;
+    left: 0;
+    margin-left: 50px;
+    
+    
+    border-radius: 10px;
+    padding: 10px;
+    
 }
+
+
 .courses_about_course_container{
     padding: 6rem;
     display: flex;
@@ -33,15 +48,16 @@
 .courses_about_course_container div:nth-child(n) div{
     font-size: 2.3rem;
     margin-bottom: 2rem;
-    color: #A51425;
-    font-weight: 600;
+    color: #D2042D;
+    font-weight: 800;
     text-align: center;
     width: 100%;
 }
 .courses_about_course_container div img{
-    border-radius: 30px;
-    width: 30vw;
-    box-shadow: 6px 6px 0px #000000;
+    border-radius: 10px;
+    width: 45vw;
+    margin-left: 20px;
+   
 }
 .courses_about_eli_points ul li{
     font-size: 1.3rem;
@@ -62,13 +78,14 @@
     cursor: pointer;
     padding: 0.5rem 1.5rem;
     font-size: 1.5rem;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     outline: none;
-    color: rgb(191, 36, 36);
-    background-color: #bdd196;
+    color: white;
+    background-color: rgba(30, 143, 255, 0.815);
     box-shadow: 0px 0px 10px 3px #0000001e;
     transition: background-color 500ms ease;
+    font-weight: 700;
 }
 
 .courses__about__suggested__btn button:hover{
