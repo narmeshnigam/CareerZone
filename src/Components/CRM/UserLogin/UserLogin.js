@@ -29,8 +29,9 @@ const UserLoginPage = () => {
           text: "Redirecting to Dashboard",
           timer: 2000,
           showConfirmButton: false,
-        }).then(() => {
-          navigate("/dashboard");
+          willClose: () => {
+            navigate("/dashboard");
+          },
         });
       } else {
         MySwal.fire({
@@ -52,8 +53,8 @@ const UserLoginPage = () => {
   const showLoginForm = () => {
     MySwal.fire({
       title: "Login",
-      html: `<input type="email" id="swal-input1" class="swal2-input" placeholder="Email">
-             <input type="password" id="swal-input2" class="swal2-input" placeholder="Password">`,
+      html: `<div style="display:flex"><p>📧:</p><input type="email" id="swal-input1" class="swal2-input" placeholder="Email"></div>
+             <div style="display:flex"><p>🔑:</p><input type="password" id="swal-input2" class="swal2-input" placeholder="Password"></div>`,
       focusConfirm: false,
       preConfirm: () => {
         const email = Swal.getPopup().querySelector("#swal-input1").value;
@@ -62,6 +63,9 @@ const UserLoginPage = () => {
           Swal.showValidationMessage(`Please enter both email and password`);
         }
         return { email: email, password: password };
+      },
+      customClass: {
+        container: "my-swal-container",
       },
     }).then((result) => {
       if (result.isConfirmed) {
@@ -87,3 +91,8 @@ const UserLoginPage = () => {
 };
 
 export default UserLoginPage;
+
+// Add this CSS to your stylesheet or CSS file
+// Adjust as needed to fit your application's styling
+// You may need to use more specific selectors if necessary
+// to avoid unintended global effects

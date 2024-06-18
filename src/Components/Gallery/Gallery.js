@@ -41,10 +41,7 @@ const Gallery = () => {
         <h1>Gallery</h1>
       </div>
       <div className="gal__photo__container">
-        <div className="gal__photos__heading">
-          Photos
-          <img src="./dropdownarrow.png"></img>
-        </div>
+        <div className="gal__photos__heading">Photos</div>
         <div style={{ marginTop: "2rem" }} className="gal__photos__con__img">
           {imgUrls.map((img) => (
             <img src={img.url} alt="slide_image" />
@@ -52,10 +49,7 @@ const Gallery = () => {
         </div>
       </div>
       <div className="gal__video__container">
-        <div className="gal__photos__heading">
-          Videos
-          <img src="./dropdownarrow.png"></img>
-        </div>
+        <div className="gal__photos__heading">Videos</div>
         <div style={{ marginTop: "2rem" }} className="gal__photos__con__img">
           {videoUrls.map((data) => (
             <video controls>

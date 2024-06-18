@@ -34,7 +34,7 @@ const BhiarCreditCard = () => {
         </div>
       </div>
       <div className="creditcard__right__container">
-        <img src="https://thecareerzone.co.in/images/crid.jpg"></img>
+        <img src="./credit.png"></img>
       </div>
     </div>
   );

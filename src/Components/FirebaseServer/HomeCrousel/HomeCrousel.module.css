@@ -5,6 +5,7 @@
     /* align-items: center; */
     justify-content: center;
     gap: 2rem;
+    
 }
 .upload_input, .upload_input form{
     display: flex;
