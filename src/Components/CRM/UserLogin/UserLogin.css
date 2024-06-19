@@ -1,7 +1,5 @@
 /* Ensure the container occupies full viewport height and centers its content */
-body{
-  background-color: #212121;
-}
+
 .userLoginContainer {
   display: flex;
   justify-content: center;
