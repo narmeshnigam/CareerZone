@@ -6,6 +6,8 @@ import Barchart from "./Chart/BarChart//Barchart";
 import NoFollowUpRecords from "./Tables/NoFollowUpRecords/NoFollowUpRecords";
 import TodayFollowUp from "./Tables/TodayFollowUp/TodayFollowUp";
 import db from "../../../firebase";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons"; // Import the specific icon you want to use
 
 const Dashboard = () => {
   const [leads, setLeads] = useState({
@@ -84,7 +86,21 @@ const Dashboard = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.heading}>Dashboard</div>
+      <div className={styles.heading}>
+        Dashboard
+        <span
+          title="LogOut"
+          style={{
+            fontSize: "35px",
+            position: "absolute",
+            right: 0,
+            marginRight: "30px",
+            cursor: "pointer",
+          }}
+        >
+          <FontAwesomeIcon icon={faRightFromBracket} />
+        </span>
+      </div>
       <div className={styles.upperContainer}>
         <div className={styles.lineChart}>
           <Linechart />
