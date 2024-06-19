@@ -1,16 +1,9 @@
 .AdminHome__heading{
-    font-size: 4rem;
+    font-size: 6rem;
     font-weight: 500;
-    color: #df200be2;
+    color: #212121;
     position: relative;
     animation: move-words 12s linear infinite;
-    margin: 0;
+    margin: 20px;
+    font-weight: 700;
 }
-@keyframes move-words {
-    0% {
-      left: 100%;
-    }
-    100% {
-      left: -100%;
-    }
-  }
