@@ -1,6 +1,6 @@
 .container{
     padding: 6rem 4rem;
-    background-color: #ced6e2;
+    background-color: #fbfeff;
 }
 .innerContainer{
     display: flex;
@@ -13,7 +13,7 @@
     text-shadow: 3px 3px #ffff;
     font-size: 2.5rem;
     font-weight: 600;
-    color: #4587EF;
+    color: #212121;
 }
 .input{
     width: 70%;
@@ -27,12 +27,26 @@
     font-size: 1rem;
 }
 .innerContainer button{
-    font-size: 1rem;
-    border: none;
-    outline: none;
-    padding: 0.5rem 1rem;
-    box-shadow: 6px 6px 6px #0000001d ;
-    border-radius: 20px;
-    color: #eeecec;
-    background-color: #4587EF;
+    margin-top: 10px;
+  width: 20%;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  gap: 10px;
+  border: 1px solid #ededef;
+  background-color: #212121;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
+.redIcon {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: red;
+    cursor: pointer;
+  }

@@ -1,23 +1,24 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 import db from "../../../firebase";
-import styles from './AdminNotification.module.css'
-import Loading from '../Loading/Loading';
-import { colors } from '@mui/material';
+import styles from "./AdminNotification.module.css";
+import Loading from "../Loading/Loading";
+import { colors } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const AdminNotification = () => {
-
-  const [noti, setNoti] = useState('');
-  const [loading, setLoading] = useState(false)
+  const [noti, setNoti] = useState("");
+  const [loading, setLoading] = useState(false);
   const [displayNoti, setDisplayNoti] = useState([]);
 
   useEffect(() => {
     const fetchImages = async () => {
-      db.collection('notification').onSnapshot(snapshot => {
-        let arr = (snapshot.docs.map((doc) => ({
+      db.collection("notification").onSnapshot((snapshot) => {
+        let arr = snapshot.docs.map((doc) => ({
           id: doc.id,
           date: doc.data().curdate,
-          notification: doc.data().notification
-        })));
+          notification: doc.data().notification,
+        }));
         function compare(a, b) {
           if (a.date > b.date) {
             return -1;
@@ -29,16 +30,15 @@ const AdminNotification = () => {
         }
 
         arr.sort(compare);
-        setDisplayNoti([...arr])
+        setDisplayNoti([...arr]);
       });
     };
-
 
     fetchImages();
   }, []);
 
   const handleSubmit = async () => {
-    setLoading(true)
+    setLoading(true);
     const currdate = new Date();
     const year = currdate.getFullYear().toString();
     const month = (currdate.getMonth() + 1).toString();
@@ -46,16 +46,27 @@ const AdminNotification = () => {
     const hr = currdate.getHours().toString();
     const min = currdate.getMinutes().toString();
     const sec = currdate.getSeconds().toString();
-    const date = ((year.length > 1 ? year : '0' + year) + '' + (month.length > 1 ? month : '0' + month) + '' + (cdate.length > 1 ? cdate : '0' + cdate) + '' + (hr.length > 1 ? hr : '0' + hr) + '' + (min.length > 1 ? min : '0' + min) + '' + (sec.length > 1 ? sec : '0' + sec));
+    const date =
+      (year.length > 1 ? year : "0" + year) +
+      "" +
+      (month.length > 1 ? month : "0" + month) +
+      "" +
+      (cdate.length > 1 ? cdate : "0" + cdate) +
+      "" +
+      (hr.length > 1 ? hr : "0" + hr) +
+      "" +
+      (min.length > 1 ? min : "0" + min) +
+      "" +
+      (sec.length > 1 ? sec : "0" + sec);
 
     const id = randomString();
     await db.collection("notification").doc(id).set({
       notification: noti,
-      curdate: date
+      curdate: date,
     });
     setNoti("");
-    setLoading(false)
-  }
+    setLoading(false);
+  };
 
   function randomString() {
     var result = "";
@@ -68,21 +79,39 @@ const AdminNotification = () => {
   }
 
   const handleDelete = async (id) => {
-    setLoading(true)
+    setLoading(true);
     await db.collection("notification").doc(id).delete();
-    setLoading(false)
+    setLoading(false);
   };
 
   return (
     <>
-      <div style={{ position: 'absolute', backgroundColor: '#00000021' , height: '100vh'}}>{loading === true ? <Loading /> : ''}</div>
+      <div
+        style={{
+          position: "absolute",
+          backgroundColor: "#00000021",
+          height: "100vh",
+        }}
+      >
+        {loading === true ? <Loading /> : ""}
+      </div>
       <div className={styles.container}>
         <div className={styles.innerContainer}>
-          <div className={styles.heading}>Enter the Notification to be displayed</div>
-          <div className={styles.input}><textarea rows="10" cols="20" placeholder='Enter the notification..' onChange={(e) => setNoti(e.target.value)} value={noti}></textarea></div>
+          <div className={styles.heading}>
+            Enter the Notification to be displayed
+          </div>
+          <div className={styles.input}>
+            <textarea
+              rows="10"
+              cols="20"
+              placeholder="Enter the notification.."
+              onChange={(e) => setNoti(e.target.value)}
+              value={noti}
+            ></textarea>
+          </div>
           <button onClick={() => handleSubmit()}>Submit</button>
         </div>
-        <table style={{ marginTop: '1rem' }}>
+        <table style={{ marginTop: "1rem" }}>
           <thead>
             <tr>
               <th>S.No</th>
@@ -96,7 +125,12 @@ const AdminNotification = () => {
                 <td>{i + 1}</td>
                 <td>{data.notification}</td>
                 <td>
-                  <button  onClick={() => handleDelete(data.id)}>Delete</button>
+                  <div onClick={() => handleDelete(data.id)}>
+                    <FontAwesomeIcon
+                      icon={faTrash}
+                      className={styles.redIcon}
+                    />
+                  </div>
                 </td>
               </tr>
             ))}
@@ -104,7 +138,7 @@ const AdminNotification = () => {
         </table>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default AdminNotification
+export default AdminNotification;
