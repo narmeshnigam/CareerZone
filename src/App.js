@@ -118,10 +118,7 @@ const App = createBrowserRouter([
         path: "/createLead",
         element: <CreateNewLead />,
       },
-      {
-        path: "/userlogin",
-        element: <UserLogin />,
-      },
+
       {
         path: "/followUp/:id",
         element: <FollowUpPage />,
@@ -140,15 +137,15 @@ const App = createBrowserRouter([
         path: "/BlogList",
         element: <BlogStore />,
       },
-      {
-        path: "/userlogin",
-        element: <UserLogin />,
-      },
     ],
   },
   {
     path: "/login",
     element: <AdminLogin />,
+  },
+  {
+    path: "/userlogin",
+    element: <UserLogin />,
   },
   {
     path: "/admin",
