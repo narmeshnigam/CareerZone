@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./TodayFollowUp.module.css";
@@ -39,7 +41,12 @@ const TodayFollowUp = () => {
     (follow) => follow.nextdate === today
   );
 
-  const followUpWithTodayDateWithSerialNo = followUpWithTodayDate.map(
+  // Sort follow-ups by leadNo and followUpNo in ascending order
+  const sortedFollowUpWithTodayDate = followUpWithTodayDate.sort(
+    (a, b) => a.leadNo - b.leadNo || a.followUpNo - b.followUpNo
+  );
+
+  const followUpWithTodayDateWithSerialNo = sortedFollowUpWithTodayDate.map(
     (followUp, index) => ({
       ...followUp,
       serialNumber: index + 1, // Serial number starting from 1
@@ -61,7 +68,7 @@ const TodayFollowUp = () => {
     { field: "statement", headerName: "Statement", flex: 1 },
     { field: "status", headerName: "Status", flex: 1 },
     { field: "summary", headerName: "Summary", flex: 1 },
-    { field: "transferto", headerName: "Transer To", flex: 1 },
+    { field: "transferto", headerName: "Transfer To", flex: 1 },
     { field: "remarks", headerName: "Remark", flex: 1 },
   ];
 
@@ -87,3 +94,4 @@ const TodayFollowUp = () => {
 };
 
 export default TodayFollowUp;
+
