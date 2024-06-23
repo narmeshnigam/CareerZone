@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+
+
+import React, { useState } from "react";
 import db from "../../../firebase";
 import styles from "./FollowUpPage.module.css";
 import FollowCard from "./Card/FollowCard";
 import { useParams } from "react-router-dom";
 
 const FollowUpPage = () => {
-  const { id } = useParams();
+  
   const [leads, setLeads] = useState({});
   const [followUpArr, setFollowUpArr] = useState([]);
   const [followUp, setFollowUp] = useState({
@@ -17,28 +19,14 @@ const FollowUpPage = () => {
     remarks: "",
   });
 
-  useEffect(() => {
-    const fetchLeadData = async () => {
-      try {
-        const leadDoc = await db.collection("leads").doc(id).get();
-        if (leadDoc.exists) {
-          setLeads(leadDoc.data());
-        } else {
-          console.log("No such document!");
-        }
-      } catch (error) {
-        console.log("Error getting document:", error);
-      }
-    };
+
 
     const fetchFollowUpData = async () => {
       db.collection("followUp")
-        .where("leadNo", "==", id)
         .onSnapshot((snapshot) => {
           setFollowUpArr(
             snapshot.docs.map((doc) => ({
               id: doc.id,
-
               followUpNo: doc.data().followUpNo,
               leadNo: doc.data().leadNo,
               followUpBy: doc.data().followUpBy,
@@ -54,22 +42,21 @@ const FollowUpPage = () => {
         });
     };
 
-    fetchLeadData();
+    
     fetchFollowUpData();
-  }, [id]);
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     let newStatus = followUp.status;
     if (name === "statement") {
       if (
         value === "Response Received & Finalised" ||
         value === "Response Received & not interested anymore"
       ) {
-        newStatus = "Status :   Closed 🔴";
+        newStatus = "Closed 🔴";
       } else {
-        newStatus = "Status :   Open 🟢";
+        newStatus = "Open 🟢";
       }
     }
 
@@ -82,14 +69,14 @@ const FollowUpPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const currentDate = new Date().toLocaleDateString();
     const currentUser = "nishu";
     const followUpNumber = generateFollowUpNo();
+    const leadNumber = generateLeadNo();
 
     const followUpData = {
       ...followUp,
-      leadNo: leads.leadNumber,
+      leadNo: leadNumber,
       followUpNo: followUpNumber,
       createdDate: currentDate,
       followUpBy: currentUser,
@@ -111,6 +98,11 @@ const FollowUpPage = () => {
   };
 
   const generateFollowUpNo = () => {
+    return Math.floor(Math.random() * 1000000)
+      .toString()
+      .padStart(6, "0");
+  };
+  const generateLeadNo = () => {
     return Math.floor(Math.random() * 1000000)
       .toString()
       .padStart(6, "0");
@@ -247,7 +239,6 @@ const FollowUpPage = () => {
             <option value="Transfer to">Transfer to</option>
             <option value="No Response">No Response</option>
           </select>
-
           {/* Always render transferto input, but disable when statement is not "Transfer to" */}
           <input
             name="transferto"
@@ -279,6 +270,7 @@ const FollowUpPage = () => {
             value={followUp.status}
             type="text"
             placeholder="Status"
+            readOnly
           />
           <div
             style={{
@@ -303,3 +295,4 @@ const FollowUpPage = () => {
 };
 
 export default FollowUpPage;
+
