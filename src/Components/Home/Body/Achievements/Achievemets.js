@@ -53,11 +53,18 @@ const Achievemets = () => {
         </div>
         <div className="achiv__left__container__buttons">
           <button
-            style={{ backgroundColor: "#107F1E", color: "#ffff" }}
-            onClick={RedirectContact}
+            style={{
+              backgroundColor: "#107F1E",
+              color: "#ffffff",
+              padding: "10px 20px",
+              borderRadius: "4px",
+              cursor: "pointer",
+            }}
+            onClick={() => (window.location.href = "tel:+1234567890")}
           >
             Call Now
           </button>
+
           <button
             style={{ backgroundColor: "#df200be2", color: "#ffff" }}
             onClick={RedirectContact}

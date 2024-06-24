@@ -31,13 +31,15 @@
     display: flex;
     font-size: 1.2rem;
     font-weight: 500;
-    justify-content: space-between;
+    gap: 5rem;
     color: #000000;
 }
 .noti__options__left div{
     margin-top: 0.5rem;
     padding: 0.2rem;
+  
 }
+
 .noti__right__container{
     position: relative;
     width: 30%;
