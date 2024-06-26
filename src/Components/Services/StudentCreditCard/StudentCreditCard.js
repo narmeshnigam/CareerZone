@@ -143,10 +143,28 @@ const StudentCreditCard = () => {
           target="blank"
           href="https://www.7nishchay-yuvaupmission.bihar.gov.in/listofcollegedetail"
         >
-          <p style={{ fontSize: "22px" }}>View list of college details </p>
+          <p
+            style={{
+              fontSize: "22px",
+              backgroundColor: "#333",
+              color: "#fbfeff",
+              padding: "10px",
+              borderRadius: "10px",
+              cursor: "pointer",
+            }}
+          >
+            View list of college details{" "}
+          </p>
         </a>
       </div>
-      <div className="applicationStatus__1">
+      <div
+        className="applicationStatus__1"
+        style={{
+          border: "1px solid black",
+          borderRadius: "10px",
+          margin: "20px",
+        }}
+      >
         <div className="status_heading">
           Bihar Student Credit Card Application Status
         </div>
@@ -174,86 +192,100 @@ const StudentCreditCard = () => {
       </div>
 
       <div className="credit_card_scheme">
-        <div className="credit_cardscheme_heading">
-          Documents Required for the Bihar Student Credit Card Scheme :
-        </div>
-        <div className="credit_3_">
-          The following documents are required for the Bihar Student Credit Card
-          Yojana 2021 :–
-        </div>
-        <div className="credit_cardscheme_pa">
-          <ul>
-            <li>Mark Sheet of 10th and 12th Class</li>
-            <li>Residential Certificate of the candidate</li>
-            <li>
-              Detailed Document of Fee for Higher Education, issued by the
-              Institute.
-            </li>
-            <li>
-              Selection Certificate from the recognized Institute for Higher
-              Education
-            </li>
-            <li>PAN Card</li>
-            <li>
-              Self-Attested Copies of the application form with passport-size
-              photographs
-            </li>
-            <li>Last 6 months bank statement of your parent’s</li>
-            <li>Income Tax Return of the last two years</li>
-            <li>
-              {" "}
-              Other Identification Documents such as Aadhaar Card/Voter ID
-              Card/Passport/ Driving License etc.
-            </li>
-          </ul>
+        <div
+          style={{
+            border: "1px solid black",
+            borderRadius: "10px",
+            margin: "20px",
+            padding: "20px",
+          }}
+        >
+          <div className="credit_cardscheme_heading">
+            Documents Required for the Bihar Student Credit Card Scheme :
+          </div>
+          <div className="credit_3_">
+            The following documents are required for the Bihar Student Credit
+            Card Yojana 2021 :–
+          </div>
+          <div className="credit_cardscheme_pa">
+            <ul>
+              <li>Mark Sheet of 10th and 12th Class</li>
+              <li>Residential Certificate of the candidate</li>
+              <li>
+                Detailed Document of Fee for Higher Education, issued by the
+                Institute.
+              </li>
+              <li>
+                Selection Certificate from the recognized Institute for Higher
+                Education
+              </li>
+              <li>PAN Card</li>
+              <li>
+                Self-Attested Copies of the application form with passport-size
+                photographs
+              </li>
+              <li>Last 6 months bank statement of your parent’s</li>
+              <li>Income Tax Return of the last two years</li>
+              <li>
+                {" "}
+                Other Identification Documents such as Aadhaar Card/Voter ID
+                Card/Passport/ Driving License etc.
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="loan__">
           <div className="loan__heading">
-            Loan Approval Process for Bihar Student Credit Card Card :-
-          </div>
-          <div className="loan_content_1">
-            <ul>
-              <li>
-                After submitting all the documents successfully, the Government
-                then verifies all the documents. The BSCC Credit Card
-                verification process takes around 10 to 15 days after receiving
-                the documents from the student. Thereafter, the successful
-                verification of the documents, the details are then transferred
-                to the banks which then approve or disapprove the loan.
-              </li>
-              <li>
-                However, the approval and disapproval of the loan are shared by
-                the banks through SMS on registered mobile number shared at the
-                process of form filling. So, once, the loan is approved, the
-                applicant has to visit the bank branch to complete the rest of
-                the formalities.
-              </li>
-            </ul>
-          </div>
-          <div className="loan__heading">
-            Interest Rates of MNSSBY Bihar Student Credit Card :-
-          </div>
-          <div className="loan_content_1">
-            <ul>
-              <li>
-                The Interest Rates for the Bihar Student Credit Card Yojana vary
-                with the banks. Earlier, the Interest Rate of Canara Bank was
-                12% and Madhya Bihar Gramin Bank was 12.5% per year. But
-                according to the latest information, the Bihar Government is
-                providing loan at 4% simple interest. However, 1% is for the
-                women, PWD, and transgender, through “Bihar Student Education
-                Finance Corporation”.
-              </li>
-              <li>
-                Moreover, no interest is applicable for the course duration of 4
-                years (B. Tech) plus an additional year. Therefore, you need to
-                pay your loan after 5 years of admission to the course in
-                installments. However, you can also extend the deadline, by
-                informing the DRCC. All you have to do is write an application
-                form twice a year (July and December).
-              </li>
-            </ul>
+            <div
+              
+            >
+              Loan Approval Process for Bihar Student Credit Card Card :-
+            </div>
+            <div className="loan_content_1">
+              <ul>
+                <li>
+                  After submitting all the documents successfully, the
+                  Government then verifies all the documents. The BSCC Credit
+                  Card verification process takes around 10 to 15 days after
+                  receiving the documents from the student. Thereafter, the
+                  successful verification of the documents, the details are then
+                  transferred to the banks which then approve or disapprove the
+                  loan.
+                </li>
+                <li>
+                  However, the approval and disapproval of the loan are shared
+                  by the banks through SMS on registered mobile number shared at
+                  the process of form filling. So, once, the loan is approved,
+                  the applicant has to visit the bank branch to complete the
+                  rest of the formalities.
+                </li>
+              </ul>
+            </div>
+            <div className="loan__heading">
+              Interest Rates of MNSSBY Bihar Student Credit Card :-
+            </div>
+            <div className="loan_content_1">
+              <ul>
+                <li>
+                  The Interest Rates for the Bihar Student Credit Card Yojana
+                  vary with the banks. Earlier, the Interest Rate of Canara Bank
+                  was 12% and Madhya Bihar Gramin Bank was 12.5% per year. But
+                  according to the latest information, the Bihar Government is
+                  providing loan at 4% simple interest. However, 1% is for the
+                  women, PWD, and transgender, through “Bihar Student Education
+                  Finance Corporation”.
+                </li>
+                <li>
+                  Moreover, no interest is applicable for the course duration of
+                  4 years (B. Tech) plus an additional year. Therefore, you need
+                  to pay your loan after 5 years of admission to the course in
+                  installments. However, you can also extend the deadline, by
+                  informing the DRCC. All you have to do is write an application
+                  form twice a year (July and December).
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="interest_rate_">
