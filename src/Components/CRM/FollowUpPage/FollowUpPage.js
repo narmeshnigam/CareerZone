@@ -317,8 +317,8 @@ const FollowUpPage = () => {
     remarks: "",
   });
 
-  const [lastFollowUpNo, setLastFollowUpNo] = useState(12999); // Initial follow-up number is 12999, so the next will be 13000
-  const [lastLeadNo, setLastLeadNo] = useState(21299); // Initial lead number is 21299, so the next will be 21300
+  const [lastFollowUpNo, setLastFollowUpNo] = useState(12999); 
+  const [lastLeadNo, setLastLeadNo] = useState(21299); 
 
   useEffect(() => {
     fetchFollowUpData();

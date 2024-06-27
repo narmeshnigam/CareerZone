@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./LeadHistory.module.css";
@@ -10,6 +12,7 @@ import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { faPenSquare } from "@fortawesome/free-solid-svg-icons";
 import Swal from "sweetalert2";
+
 const LeadHistory = () => {
   const [leads, setLeads] = useState([]);
   const navigate = useNavigate();
@@ -105,33 +108,40 @@ const LeadHistory = () => {
   useEffect(() => {
     const fetchLeads = async () => {
       db.collection("leads").onSnapshot((snapshot) => {
-        setLeads(
-          snapshot.docs.map((doc, index) => ({
-            id: doc.id,
-            serialNumber: index + 1,
-            leadNumber: doc.data().leadNumber,
-            createdDate: doc.data().createdDate,
-            createdBy: doc.data().createdBy,
-            assignedBy: doc.data().assignedBy,
-            assignedTo: doc.data().assignedTo,
-            assignmentDate: doc.data().assignmentDate,
-            bscc: doc.data().bscc,
-            name: doc.data().name,
-            email: doc.data().email,
-            courseInterest: doc.data().courseInterest,
-            college: doc.data().college,
-            mobileNumber: doc.data().mobileNumber,
-            alternateMobile: doc.data().alternateMobile,
-            city: doc.data().city,
-            district: doc.data().district,
-            locality: doc.data().locality,
-            pin: doc.data().pin,
-            budget: doc.data().budget,
-            source: doc.data().source,
-            remarks: doc.data().remarks,
-            relation: doc.data().relation,
-          }))
-        );
+        const leadsData = snapshot.docs.map((doc, index) => ({
+          id: doc.id,
+          leadNumber: doc.data().leadNumber,
+          createdDate: doc.data().createdDate,
+          createdBy: doc.data().createdBy,
+          assignedBy: doc.data().assignedBy,
+          assignedTo: doc.data().assignedTo,
+          assignmentDate: doc.data().assignmentDate,
+          bscc: doc.data().bscc,
+          name: doc.data().name,
+          email: doc.data().email,
+          courseInterest: doc.data().courseInterest,
+          college: doc.data().college,
+          mobileNumber: doc.data().mobileNumber,
+          alternateMobile: doc.data().alternateMobile,
+          city: doc.data().city,
+          district: doc.data().district,
+          locality: doc.data().locality,
+          pin: doc.data().pin,
+          budget: doc.data().budget,
+          source: doc.data().source,
+          remarks: doc.data().remarks,
+          relation: doc.data().relation,
+        }));
+
+        // Sort leads by leadNumber in ascending order
+        leadsData.sort((a, b) => a.leadNumber - b.leadNumber);
+
+        // Reassign serial numbers
+        leadsData.forEach((lead, index) => {
+          lead.serialNumber = index + 1;
+        });
+
+        setLeads(leadsData);
       });
     };
 
@@ -166,6 +176,7 @@ const LeadHistory = () => {
       Swal.fire("Cancelled", "", "info");
     }
   };
+
   const handleUpdate = (id) => {
     setUpdate(true);
     leads.forEach((data) => {
@@ -204,7 +215,7 @@ const LeadHistory = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 height="60"
                 fill="black"
-                class="bi bi-house"
+                className="bi bi-house"
                 viewBox="0 0 16 16"
               >
                 <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
@@ -221,6 +232,9 @@ const LeadHistory = () => {
           pagination: {
             paginationModel: { page: 0, pageSize: 10 },
           },
+          sorting: {
+            sortModel: [{ field: "leadNumber", sort: "asc" }],
+          },
         }}
         pageSizeOptions={[5, 10]}
         sx={{
@@ -234,3 +248,5 @@ const LeadHistory = () => {
 };
 
 export default LeadHistory;
+
+
