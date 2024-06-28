@@ -1,9 +1,7 @@
-<<<<<<< HEAD
+
 
 import { React, useEffect, useState } from "react";
-=======
-import React, { useEffect, useState } from "react";
->>>>>>> d6d57da4f9b47c4e0a8c8e24c45d5e5a42c38210
+
 import styles from "./CreateNewLead.module.css";
 import { Link } from "react-router-dom";
 import db from "../../../firebase";
