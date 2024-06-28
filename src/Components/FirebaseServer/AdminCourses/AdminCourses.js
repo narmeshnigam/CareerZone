@@ -120,8 +120,8 @@ const AdminCourses = () => {
           <input type="text" name="name" value={courseData.name} onChange={(e) => handleChange(e)} />
         </label>
         <label>
-          Background Image URL:
-          <input type="text" name="backgroundImage" value={courseData.backgroundImage} onChange={(e) => handleChange(e)} />
+          Background Image:
+          <input type="file" name="backgroundImage" value={courseData.backgroundImage} onChange={(e) => handleChange(e)} />
         </label>
         <label>
           About Text:
@@ -150,7 +150,7 @@ const AdminCourses = () => {
           </button>
         </label>
         <label >Enter College details:
-              <input type='text' placeholder='Name of college' name={'name'} value={college.name} onChange={(e) => handleInputChange(e)} />
+              <input type='text' placeholder='Name of college' name={'college'} value={college.name} onChange={(e) => handleInputChange(e)} />
               <input type='text' placeholder='District' name={'district'} value={college.district} onChange={(e) => handleInputChange(e)} />
               <input type='text' placeholder='State' name={'state'} value={college.state} onChange={(e) => handleInputChange(e)} />
               <label style={{display: 'flex', alignItems:'center', justifyContent:'space-between'}}>NAC Accredited
