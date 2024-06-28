@@ -43,7 +43,6 @@ const CreateNewLead = () => {
         setAssignedToOptions(users);
       } catch (error) {
         console.error("Error fetching users: ", error);
-        // Handle error, show error message, etc.
       }
     };
 
