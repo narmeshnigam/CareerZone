@@ -235,11 +235,17 @@ const StudentCreditCard = () => {
           </div>
         </div>
 
-        <div className="loan__">
+        <div
+          className="loan__"
+          style={{
+            border: "1px solid black",
+            borderRadius: "10px",
+            margin: "20px",
+            padding: "20px",
+          }}
+        >
           <div className="loan__heading">
-            <div
-              
-            >
+            <div>
               Loan Approval Process for Bihar Student Credit Card Card :-
             </div>
             <div className="loan_content_1">
@@ -262,10 +268,10 @@ const StudentCreditCard = () => {
                 </li>
               </ul>
             </div>
-            <div className="loan__heading">
+            <div className="loan__heading text-red">
               Interest Rates of MNSSBY Bihar Student Credit Card :-
             </div>
-            <div className="loan_content_1">
+            <div className="loan_content_1 text-black-600">
               <ul>
                 <li>
                   The Interest Rates for the Bihar Student Credit Card Yojana
@@ -288,7 +294,15 @@ const StudentCreditCard = () => {
             </div>
           </div>
         </div>
-        <div className="interest_rate_">
+        <div
+          className="interest_rate_"
+          style={{
+            border: "1px solid black",
+            borderRadius: "10px",
+            margin: "20px",
+            padding: "20px",
+          }}
+        >
           <div className="interest_rate_heading">
             <div className="interest_rate_image">
               <img
