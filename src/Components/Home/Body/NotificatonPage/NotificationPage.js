@@ -40,7 +40,7 @@ const NotificationPage = () => {
             YOU WILL GET ADMISSION IN{" "}
             <span style={{ color: "#4587EF" }}>TOP COLLEGES.</span>
           </div>
-          <div className="noti__about">About us</div>
+
           <div className="noti__subheading">
             The Career Zone is a Leading Education consulatncy that can provide
             Top Course in India / Abraod Colleges for your career path.
@@ -69,7 +69,10 @@ const NotificationPage = () => {
             </div>
             <div className="noti__options__left">
               <div
-                style={{ backgroundColor: "#9aa0a722", borderRadius: "0.7rem" }}
+                style={{
+                  backgroundColor: "#9aa0a722",
+                  borderRadius: "0.7rem",
+                }}
               >
                 - LAW
               </div>

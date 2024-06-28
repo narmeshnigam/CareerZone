@@ -1,18 +1,15 @@
+<<<<<<< HEAD
 
 import { React, useEffect, useState } from "react";
+=======
+import React, { useEffect, useState } from "react";
+>>>>>>> d6d57da4f9b47c4e0a8c8e24c45d5e5a42c38210
 import styles from "./CreateNewLead.module.css";
 import { Link } from "react-router-dom";
 import db from "../../../firebase";
 import Swal from "sweetalert2";
 
 const CreateNewLead = () => {
-  useEffect(() => {
-    const scrollTop = () => {
-      window.scrollTo(0, 0);
-    };
-    scrollTop();
-  }, []);
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -37,14 +34,34 @@ const CreateNewLead = () => {
     remarks: "",
   });
 
-  // Function to handle input changes
+  const [assignedToOptions, setAssignedToOptions] = useState([]);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const usersSnapshot = await db.collection("users").get();
+        const users = usersSnapshot.docs.map((doc) => ({
+          value: doc.data().name,
+          label: doc.data().name,
+        }));
+
+        setAssignedToOptions(users);
+      } catch (error) {
+        console.error("Error fetching users: ", error);
+        // Handle error, show error message, etc.
+      }
+    };
+
+    fetchUsers();
+  }, []);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault();
 
     const currentDate = new Date().toLocaleDateString();
     const currentUser = "nishu";
@@ -69,7 +86,7 @@ const CreateNewLead = () => {
           title: "Success!",
           text: "New lead has been created.",
           showConfirmButton: true,
-          timer: 5000, // Disappear after 5 seconds
+          timer: 5000,
         });
       })
       .catch((error) => {
@@ -112,8 +129,6 @@ const CreateNewLead = () => {
     }
   };
 
-  const assignedToOptions = [{ value: "nishi", label: "nishi" }];
-
   return (
     <div className={styles.lead_page_container}>
       <div className={styles.lead_page_heading}>
@@ -136,7 +151,7 @@ const CreateNewLead = () => {
       </div>
       <form onSubmit={handleSubmit}>
         <div className={styles.input__container}>
-          <div className={styles.address__info}>Personal Information :</div>
+          <div className={styles.address__info}>Personal Information:</div>
           <div className={styles.address__line}>
             <input
               type="text"
@@ -179,7 +194,7 @@ const CreateNewLead = () => {
           </div>
         </div>
         <div className={styles.input__container}>
-          <div className={styles.address__info}>Address Information :</div>
+          <div className={styles.address__info}>Address Information:</div>
           <div className={styles.address__line}>
             <input
               type="text"
@@ -222,7 +237,7 @@ const CreateNewLead = () => {
           </div>
         </div>
         <div className={styles.input__container}>
-          <div className={styles.address__info}>Additional Information :</div>
+          <div className={styles.address__info}>Additional Information:</div>
           <div className={styles.address__line}>
             <input
               type="text"
@@ -257,7 +272,7 @@ const CreateNewLead = () => {
               type="text"
               id="relation"
               name="relation"
-              placeholder="Relation To Condidate"
+              placeholder="Relation To Candidate"
               value={formData.relation}
               onChange={handleInputChange}
               className={styles.input__field}

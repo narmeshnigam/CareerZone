@@ -16,12 +16,12 @@
 }
 .creditcard__left__container__heading{
     color: #4587EF;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 .creditcard__left__container__subheading{
-    font-size:1.5rem; 
+    font-size:2rem; 
     color:#df200be2; 
     font-weight:500;
 }
@@ -38,7 +38,7 @@
     border-radius: 5px;
     background-color: rgba(30, 143, 255, 0.591);
     
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     margin-top: 2rem;
     border: none;
     cursor: pointer;

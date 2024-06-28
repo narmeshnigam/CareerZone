@@ -1,153 +1,148 @@
-
-.career__contact__container{
-    padding-top: 90px;
-    background-color: #fbfeff;
-    margin-bottom: -83px;
-    
-    
+.career__contact__container {
+  padding-top: 90px;
+  background-color: #fbfeff;
+  margin-bottom: -50px;
 }
 
-.carrer_contact__top__img div{
-    width: 70%;
-    font-size: 4rem;
-    font-weight: 600;
-    margin: 30px;
-    
+.carrer_contact__top__img div {
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 30px;
 }
-.carrer_contact__top__img{
-    display: flex;
-    color: white;
-    height: 20vh;
-    background-image:  linear-gradient(to bottom ,#eaedf100, #eaedf138, #eaedf18e),url('https://cdn5.vectorstock.com/i/1000x1000/62/99/contact-us-banner-vector-21116299.jpg');
-    background-size: cover; /* Ensure the image covers the entire area */
-    background-repeat: no-repeat; /* Prevent background repetition */
+.carrer_contact__top__img {
+  display: flex;
+  color: white;
+  height: 20vh;
+  background-image: linear-gradient(to bottom, #eaedf100, #eaedf138, #eaedf18e),
+    url("https://cdn5.vectorstock.com/i/1000x1000/62/99/contact-us-banner-vector-21116299.jpg");
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-repeat: no-repeat; /* Prevent background repetition */
 }
 .carrer__container__form {
-    max-width: 80%;
-    margin: 0 auto;
-    border-radius: 20px;
-    box-shadow: 10px 10px 10px rgba(14, 13, 13, 0.131);
-    display: flex;
-    margin: 5% auto;
-    border: 1px solid black;
-
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(14, 13, 13, 0.131);
+  display: flex;
+  margin: 5% auto;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 .carrer__container__form__column {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    
-    border-radius: 20px 0 0 20px;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+
+  border-radius: 20px 0 0 20px;
 }
 
 .carrer__container__form__column:nth-child(2) {
-    position: relative;
-    background: none;
-    background-color: #000000a3;
-    border-radius: 0px 20px 20px 0px;
+  position: relative;
+  background: none;
+  background-color: #000000a3;
+  border-radius: 0px 20px 20px 0px;
 }
 
-
 .carrer__container__form__column h2 {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-top: 0;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .custom-label {
-    font-weight: 600;
-    font-size: 1.2rem;
-    width: 15%;
-    text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  width: 15%;
+  text-align: center;
 }
-.carrer__container__form__column form{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
+.carrer__container__form__column form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
 }
-.carrer__container__form__column form div{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-select, input, textarea {
-    width: 85%;
-    border: none;
-    padding: 0.7rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    outline: none;
-}
-select, input, textarea::placeholder {
-   font-size: 1rem;
+.carrer__container__form__column form div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
+select,
+input,
+textarea {
+  width: 85%;
+  border: none;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+}
+select,
+input,
+textarea::placeholder {
+  font-size: 1rem;
+}
 
 .carrer__container__form__column form button {
-    margin-bottom: 10vh;
-    margin-left: 80%;
-    margin-top: 5vh;
-    height: 8vh;
-    width: 30vh;
-    background-color: dodgerblue;
-    font-weight: 600;
-    font-size: 30px;
-    color: white;    
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
-    transition: border 0.3s ease
-    
+  margin-bottom: 10vh;
+  margin-left: 20%;
+  margin-top: 5vh;
+  height: 8vh;
+  width: 50vh;
+  background-color: dodgerblue;
+  font-weight: 600;
+  font-size: 30px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+  transition: border 0.3s ease;
 }
-.carrer__container__form__column:nth-child(2){
-    background-image: url("https://images.unsplash.com/photo-1618022325802-7e5e732d97a1?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+.carrer__container__form__column:nth-child(2) {
+  background-image: url("https://images.unsplash.com/photo-1618022325802-7e5e732d97a1?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 .carrer__container__form__column form button:hover {
-      /* White color */
+  /* White color */
   color: #000000; /* Changing text color to black for better contrast on white background */
-  border: 3px solid #000000; 
+  border: 3px solid #000000;
 }
 
 .icon {
-    font-size: 24px;
-    margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .contact-info {
-    color: #fff;
-    font-size: 1.2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
+  color: #fff;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  width: 20vw;
 }
-.contact-info h2{
-    color: red;
-    font-size: 40px;
-    font-weight: 600;
-
+.contact-info h2 {
+  color: red;
+  font-size: 40px;
+  font-weight: 600;
 }
-.contact-info div{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.contact-info div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
+  .container {
+    flex-direction: column;
+  }
 
-    .column {
-        width: 100%;
-        border-left: none;
-        padding: 10px;
-    }
+  .column {
+    width: 100%;
+    border-left: none;
+    padding: 10px;
+  }
 }
