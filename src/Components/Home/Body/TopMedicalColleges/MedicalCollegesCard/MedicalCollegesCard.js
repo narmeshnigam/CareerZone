@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const MedicalCollegesCard = ({ img, name, location, time }) => {
   return (
-    <Link to={"/college"} style={{ textDecoration: "none", color: "black" }}>
+    <Link to={"/college/:name"} style={{ textDecoration: "none", color: "black" }}>
       <div className="medicalCollegeCard__container">
         <div>
           <img

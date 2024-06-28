@@ -1,10 +1,14 @@
 import React from "react";
 import "./BhiarCreditCard.css";
+import { Link, useNavigate } from 'react-router-dom';
 
-const BhiarCreditCard = () => {
+ const BhiarCreditCard = () => {
   const handleApplyNow = () => {
-    window.location.href = "/services/stdCred_service";
+    window.location.href = "/Popup";
   };
+  const handleClick = () => {
+    window.location.href = "/services/stdCred_service";
+  }
 
   return (
     <div className="creditcard__container">
@@ -21,7 +25,7 @@ const BhiarCreditCard = () => {
           के संबंध में |
         </div>
         <div style={{ display: "inline-block", marginRight: "5rem" }}>
-          <button>बिहार स्टूडेंट क्रेडिट कार्ड योजना</button>
+          <button onClick={handleClick}>बिहार स्टूडेंट क्रेडिट कार्ड योजना</button>
         </div>
         <div style={{ display: "inline-block" }}>
           <button
