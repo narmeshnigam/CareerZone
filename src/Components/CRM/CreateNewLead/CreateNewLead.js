@@ -125,10 +125,10 @@ const CreateNewLead = () => {
   const generateLeadNumber = async () => {
     const leadsSnapshot = await db.collection("leads").orderBy("leadNumber", "desc").limit(1).get();
     if (leadsSnapshot.empty) {
-      return "000001";
+      return "1000";
     } else {
       const highestLeadNumber = leadsSnapshot.docs[0].data().leadNumber;
-      const nextLeadNumber = (parseInt(highestLeadNumber, 10) + 1).toString().padStart(6, "0");
+      const nextLeadNumber = (parseInt(highestLeadNumber, 10) + 1).toString().padStart(4, "0");
       return nextLeadNumber;
     }
   };
