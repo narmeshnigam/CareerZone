@@ -2,15 +2,17 @@ import React from "react";
 import "./AbroadColleges.css";
 
 const AbroadColleges = () => {
-
   const handleContact = () => {
     window.location.href = "/Popup";
-  }
+  };
 
   return (
     <div className="abroad__container">
       <div className="abroad__left__container">
-        <img src="https://38.media.tumblr.com/1766cb2b2468185bfe41ddd2f1819b2d/tumblr_n9fvbcXVVf1qcung4o1_1280.gif"></img>
+        <img
+          src="https://38.media.tumblr.com/1766cb2b2468185bfe41ddd2f1819b2d/tumblr_n9fvbcXVVf1qcung4o1_1280.gif"
+          loading="lazy"
+        ></img>
       </div>
       <div className="abroad__right__container">
         <div className="abroad__right__container__heading">
@@ -30,11 +32,26 @@ const AbroadColleges = () => {
         </div>
         <div className="abroad__right__container__countries">
           <div>
-            <img src="https://thecareerzone.co.in/img/abroad/bangladesh.png"></img>
-            <img src="https://thecareerzone.co.in/img/abroad/nepal.png"></img>
-            <img src="https://thecareerzone.co.in/img/abroad/kyrgyzstan.png"></img>
-            <img src="https://thecareerzone.co.in/img/abroad/philippines.png"></img>
-            <img src="https://thecareerzone.co.in/img/abroad/russia.png"></img>
+            <img
+              src="https://thecareerzone.co.in/img/abroad/bangladesh.png"
+              loading="lazy"
+            ></img>
+            <img
+              src="https://thecareerzone.co.in/img/abroad/nepal.png"
+              loading="lazy"
+            ></img>
+            <img
+              src="https://thecareerzone.co.in/img/abroad/kyrgyzstan.png"
+              loading="lazy"
+            ></img>
+            <img
+              src="https://thecareerzone.co.in/img/abroad/philippines.png"
+              loading="lazy"
+            ></img>
+            <img
+              src="https://thecareerzone.co.in/img/abroad/russia.png"
+              loading="lazy"
+            ></img>
           </div>
         </div>
         <button onClick={handleContact}>Contact Now</button>

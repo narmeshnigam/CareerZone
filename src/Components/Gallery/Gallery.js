@@ -44,7 +44,7 @@ const Gallery = () => {
         <div className="gal__photos__heading">Photos</div>
         <div style={{ marginTop: "2rem" }} className="gal__photos__con__img">
           {imgUrls.map((img) => (
-            <img src={img.url} alt="slide_image" />
+            <img src={img.url} alt="slide_image" loading="lazy" />
           ))}
         </div>
       </div>

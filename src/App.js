@@ -1,58 +1,93 @@
+import React, { Suspense, lazy, memo } from "react";
+import { createBrowserRouter, Outlet } from "react-router-dom";
 import "./App.css";
-import "./App.css";
-import Home from "./Components/Home/Home";
 import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
-import About from "./Components/About/About";
-import Contact from "./Components/Contact/Contact";
-import { createBrowserRouter, Outlet } from "react-router-dom";
-import Services from "./Components/Services/Services";
-import EducationalService from "./Components/Services/EducationalService/EducationalService";
-import StudentCreditCard from "./Components/Services/StudentCreditCard/StudentCreditCard";
-import Gallery from "./Components/Gallery/Gallery";
-import Courses from "./Components/Courses/Courses";
-import CoursesAboutPage from "./Components/Courses/CoursesAboutPage/CoursesAboutPage";
-import Blogs from "./Components/Blogs/Blogs";
-import Admin from "./Components/FirebaseServer/Admin";
-import AdminLogin from "./Components/FirebaseServer/AdminLogin/AdminLogin";
-import AdminNav from "./Components/FirebaseServer/AdminNav/AdminNav";
 import HomeCrousel from "./Components/FirebaseServer/HomeCrousel/HomeCrousel";
-import AdminNotification from "./Components/FirebaseServer/AdminNotification/AdminNotification";
-import AdminCourses from "./Components/FirebaseServer/AdminCourses/AdminCourses";
-import CollegeDetails from "./Components/College/CollegeDetails/CollegeDetails";
-import AdminCollegeDetails from "./Components/FirebaseServer/AdminCollegeDetails/AdminCollegeDetails";
-import College from "./Components/College/College";
-import AdminGallery from "./Components/FirebaseServer/AdminGallery/AdminGallery";
-import AdminContact from "./Components/FirebaseServer/AdminContact/AdminContact";
-import LeadHistory from "./Components/CRM/Lead History Page/LeadHistory";
-import FollowUpPage from "./Components/CRM/FollowUpPage/FollowUpPage";
-import CreateNewLead from "./Components/CRM/CreateNewLead/CreateNewLead";
+import Loading from "./Components/FirebaseServer/Loading/Loading";
 
-import FollowUpHistory from "./Components/CRM/FollowUpHistory/FollowUpHistory";
-import UserListsPage from "./Components/CRM/UserListPage/UserListsPage";
-import PopUpForm from "./Components/CRM/Lead History Page/PopUpForm/PopUpForm";
-import Dashboard from "./Components/CRM/Dashboard/Dashboard";
-import BlogStore from "./Components/Blogs/BlogStore/BlogStore";
-import AddNewUser from "./Components/FirebaseServer/AdminNewUser/AdminNewUser";
-import UserLogin from "./Components/CRM/UserLogin/UserLogin";
+const Home = lazy(() => import("./Components/Home/Home"));
+const About = lazy(() => import("./Components/About/About"));
+const Contact = lazy(() => import("./Components/Contact/Contact"));
+const Services = lazy(() => import("./Components/Services/Services"));
+const EducationalService = lazy(() =>
+  import("./Components/Services/EducationalService/EducationalService")
+);
+const StudentCreditCard = lazy(() =>
+  import("./Components/Services/StudentCreditCard/StudentCreditCard")
+);
+const Gallery = lazy(() => import("./Components/Gallery/Gallery"));
+const Courses = lazy(() => import("./Components/Courses/Courses"));
+const CoursesAboutPage = lazy(() =>
+  import("./Components/Courses/CoursesAboutPage/CoursesAboutPage")
+);
+const Blogs = lazy(() => import("./Components/Blogs/Blogs"));
+const Admin = lazy(() => import("./Components/FirebaseServer/Admin"));
+const AdminLogin = lazy(() =>
+  import("./Components/FirebaseServer/AdminLogin/AdminLogin")
+);
+const AdminNav = lazy(() =>
+  import("./Components/FirebaseServer/AdminNav/AdminNav")
+);
+const AdminNotification = lazy(() =>
+  import("./Components/FirebaseServer/AdminNotification/AdminNotification")
+);
+const AdminCourses = lazy(() =>
+  import("./Components/FirebaseServer/AdminCourses/AdminCourses")
+);
+const CollegeDetails = lazy(() =>
+  import("./Components/College/CollegeDetails/CollegeDetails")
+);
+const AdminCollegeDetails = lazy(() =>
+  import("./Components/FirebaseServer/AdminCollegeDetails/AdminCollegeDetails")
+);
+const College = lazy(() => import("./Components/College/College"));
+const AdminGallery = lazy(() =>
+  import("./Components/FirebaseServer/AdminGallery/AdminGallery")
+);
+const AdminContact = lazy(() =>
+  import("./Components/FirebaseServer/AdminContact/AdminContact")
+);
+const LeadHistory = lazy(() =>
+  import("./Components/CRM/Lead History Page/LeadHistory")
+);
+const FollowUpPage = lazy(() =>
+  import("./Components/CRM/FollowUpPage/FollowUpPage")
+);
+const CreateNewLead = lazy(() =>
+  import("./Components/CRM/CreateNewLead/CreateNewLead")
+);
+const FollowUpHistory = lazy(() =>
+  import("./Components/CRM/FollowUpHistory/FollowUpHistory")
+);
+const UserListsPage = lazy(() =>
+  import("./Components/CRM/UserListPage/UserListsPage")
+);
+const PopUpForm = lazy(() =>
+  import("./Components/CRM/Lead History Page/PopUpForm/PopUpForm")
+);
+const Dashboard = lazy(() => import("./Components/CRM/Dashboard/Dashboard"));
+const BlogStore = lazy(() => import("./Components/Blogs/BlogStore/BlogStore"));
+const AddNewUser = lazy(() =>
+  import("./Components/FirebaseServer/AdminNewUser/AdminNewUser")
+);
+const UserLogin = lazy(() => import("./Components/CRM/UserLogin/UserLogin"));
 
-const AppLayout = () => {
-  return (
-    <>
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </>
-  );
-};
-const AdminPannelRoutes = () => {
-  return (
-    <>
-      <AdminNav />
-      <Outlet />
-    </>
-  );
-};
+const AppLayout = memo(() => (
+  <>
+    <Navbar />
+    <Outlet />
+    <Footer />
+  </>
+));
+
+const AdminPannelRoutes = memo(() => (
+  <>
+    <AdminNav />
+    <Outlet />
+  </>
+));
+
 const App = createBrowserRouter([
   {
     path: "/",
@@ -60,92 +95,299 @@ const App = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <Home />
+          </Suspense>
+        ),
       },
       {
         path: "aboutUs",
-        element: <About />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "/Popup",
-        element: <PopUpForm />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <PopUpForm />
+          </Suspense>
+        ),
       },
       {
         path: "/services",
-        element: <Services />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <Services />
+          </Suspense>
+        ),
       },
       {
         path: "/services/edu_service",
-        element: <EducationalService />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <EducationalService />
+          </Suspense>
+        ),
       },
       {
         path: "/services/stdCred_service",
-        element: <StudentCreditCard />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <StudentCreditCard />
+          </Suspense>
+        ),
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <Contact />
+          </Suspense>
+        ),
       },
       {
         path: "/gallery",
-        element: <Gallery />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <Gallery />
+          </Suspense>
+        ),
       },
       {
         path: "/courses",
-        element: <Courses />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <Courses />
+          </Suspense>
+        ),
       },
       {
         path: "/courses/:name",
-        element: <CoursesAboutPage />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <CoursesAboutPage />
+          </Suspense>
+        ),
       },
       {
         path: "/blogs",
-        element: <Blogs />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <Blogs />
+          </Suspense>
+        ),
       },
       {
         path: "/college",
-        element: <College />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <College />
+          </Suspense>
+        ),
       },
       {
         path: "/college/:name",
-        element: <CollegeDetails />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <CollegeDetails />
+          </Suspense>
+        ),
       },
       {
         path: "/leadHistory",
-        element: <LeadHistory />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <LeadHistory />
+          </Suspense>
+        ),
       },
       {
         path: "/createLead",
-        element: <CreateNewLead />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <CreateNewLead />
+          </Suspense>
+        ),
       },
-
       {
         path: "/followUp/:id",
-        element: <FollowUpPage />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <FollowUpPage />
+          </Suspense>
+        ),
       },
-
       {
         path: "/followUpHistory",
-        element: <FollowUpHistory />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <FollowUpHistory />
+          </Suspense>
+        ),
       },
-
       {
         path: "/dashboard",
-        element: <Dashboard />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <Dashboard />
+          </Suspense>
+        ),
       },
       {
         path: "/BlogList",
-        element: <BlogStore />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <BlogStore />
+          </Suspense>
+        ),
       },
     ],
   },
   {
     path: "/login",
-    element: <AdminLogin />,
+    element: (
+      <Suspense
+        fallback={
+          <div>
+            <Loading />
+          </div>
+        }
+      >
+        <AdminLogin />
+      </Suspense>
+    ),
   },
   {
     path: "/userlogin",
-    element: <UserLogin />,
+    element: (
+      <Suspense
+        fallback={
+          <div>
+            <Loading />
+          </div>
+        }
+      >
+        <UserLogin />
+      </Suspense>
+    ),
   },
   {
     path: "/admin",
@@ -153,40 +395,129 @@ const App = createBrowserRouter([
     children: [
       {
         path: "/admin",
-        element: <Admin />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <Admin />
+          </Suspense>
+        ),
       },
       {
         path: "/admin/homecrousel",
-        element: <HomeCrousel />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <HomeCrousel />
+          </Suspense>
+        ),
       },
       {
         path: "/admin/notification",
-        element: <AdminNotification />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <AdminNotification />
+          </Suspense>
+        ),
       },
-
       {
         path: "/admin/courses",
-        element: <AdminCourses />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <AdminCourses />
+          </Suspense>
+        ),
       },
       {
         path: "/admin/collegedetails",
-        element: <AdminCollegeDetails />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <AdminCollegeDetails />
+          </Suspense>
+        ),
       },
       {
         path: "/admin/gallery",
-        element: <AdminGallery />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <AdminGallery />
+          </Suspense>
+        ),
       },
       {
         path: "/admin/contact",
-        element: <AdminContact />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <AdminContact />
+          </Suspense>
+        ),
       },
       {
         path: "/admin/user",
-        element: <AddNewUser />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <AddNewUser />
+          </Suspense>
+        ),
       },
       {
         path: "/admin/userlist",
-        element: <UserListsPage />,
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <UserListsPage />
+          </Suspense>
+        ),
       },
     ],
   },

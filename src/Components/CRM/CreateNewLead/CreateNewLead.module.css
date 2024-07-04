@@ -1,11 +1,6 @@
-
-
 .lead_page_container {
   padding-top: 90px;
-  background-color:#fbfeff;
- 
-  
-  
+  background-color: #fbfeff;
 }
 
 .lead_page_heading {
@@ -13,13 +8,11 @@
   display: flex;
   align-items: center;
   /*background-image: url("https://static.vecteezy.com/system/resources/thumbnails/023/669/545/small/abstract-gradient-pink-blue-liquid-wave-background-free-vector.jpg");*/
-  
+
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 7vw;
   justify-content: space-between;
-  
-
 }
 
 .lead_pagehomeic_ {
@@ -30,10 +23,6 @@
   font-size: 50px;
   font-weight: 400;
   padding-right: 550px;
-  
- 
-  
-  
 }
 
 .lead_pagepersonal_Info {
@@ -43,14 +32,11 @@
   font-size: 40px;
   font-weight: 500;
   padding-right: 900px;
- 
-
 }
 
 .input__container {
   margin-bottom: 10px; /* Example margin between input containers */
-  
-
+  padding: 5px;
 }
 
 .input__container label {
@@ -67,14 +53,11 @@
   box-sizing: border-box; /* Ensure padding and border are included in width */
   border-radius: 5px;
   margin-top: 5px;
-  
+
   background-color: #ffffff;
-  transition: transform 0.3s ease; 
-  
-  
-  
+  transition: transform 0.3s ease;
 }
-.input__field:hover{
+.input__field:hover {
   transform: scale(1.01);
 }
 
@@ -85,18 +68,17 @@
   font-size: 30px;
   font-weight: 500;
   padding-right: 900px;
-  margin-bottom: 15px;  
+  margin-bottom: 15px;
   color: #333;
-
 }
 .input__field {
- 
 }
 .address__line {
   display: flex;
   padding-right: 90px;
   margin-bottom: 10px;
-  
+  height: 50px;
+  text-align: center;
 }
 .address_line_1 {
   border: 2px solid rgb(190, 146, 146);
@@ -107,15 +89,14 @@
   background-color: rgb(179, 208, 208);
 }
 .additional_info_heading {
-text-align: center;
-justify-content: center;
-padding-top: 30px;
-font-size: 30px;
-font-weight: 500;
-padding-right: 850px;
-padding-bottom: 30px;
-color: #333;
-
+  text-align: center;
+  justify-content: center;
+  padding-top: 30px;
+  font-size: 30px;
+  font-weight: 500;
+  padding-right: 850px;
+  padding-bottom: 30px;
+  color: #333;
 }
 
 .btn {
@@ -127,19 +108,18 @@ color: #333;
   background-color: #11d31e; /* Peach color */
   font-size: larger;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   border-radius: 5px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
-  transition: border 0.3s ease
-  
+  transition: border 0.3s ease;
 }
 
 .btn:hover {
-   /* White color */
+  /* White color */
   color: #000000; /* Changing text color to black for better contrast on white background */
-  border: 3px solid #000000; 
+  border: 3px solid #000000;
 }
 .address_line_12 {
   display: flex;
