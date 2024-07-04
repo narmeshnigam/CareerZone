@@ -143,7 +143,7 @@ const StudentCreditCard = () => {
           target="blank"
           href="https://www.7nishchay-yuvaupmission.bihar.gov.in/listofcollegedetail"
         >
-          <p
+          <p  onClick={() => (window.location.href = "/college/:name")}
             style={{
               fontSize: "22px",
               backgroundColor: "#333",

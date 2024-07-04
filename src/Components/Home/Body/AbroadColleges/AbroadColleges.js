@@ -2,6 +2,11 @@ import React from "react";
 import "./AbroadColleges.css";
 
 const AbroadColleges = () => {
+
+  const handleContact = () => {
+    window.location.href = "/Popup";
+  }
+
   return (
     <div className="abroad__container">
       <div className="abroad__left__container">
@@ -32,7 +37,7 @@ const AbroadColleges = () => {
             <img src="https://thecareerzone.co.in/img/abroad/russia.png"></img>
           </div>
         </div>
-        <button>Contact Now</button>
+        <button onClick={handleContact}>Contact Now</button>
       </div>
     </div>
   );

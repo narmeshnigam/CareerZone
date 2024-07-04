@@ -1,4 +1,7 @@
-import React, { useEffect, useState } from "react";
+
+
+import { React, useEffect, useState } from "react";
+
 import styles from "./CreateNewLead.module.css";
 import { useNavigate } from "react-router-dom";
 import db from "../../../firebase";
@@ -120,26 +123,13 @@ const CreateNewLead = () => {
   };
 
   const generateLeadNumber = async () => {
-    const counterDoc = db.collection("counters").doc("leadCounter");
-
-    try {
-      const leadNumber = await db.runTransaction(async (transaction) => {
-        const counterSnapshot = await transaction.get(counterDoc);
-        if (!counterSnapshot.exists) {
-          transaction.set(counterDoc, { currentLeadNumber: 1 });
-          return "000001";
-        } else {
-          const currentLeadNumber = counterSnapshot.data().currentLeadNumber;
-          const newLeadNumber = currentLeadNumber + 1;
-          transaction.update(counterDoc, { currentLeadNumber: newLeadNumber });
-          return newLeadNumber.toString().padStart(6, "0");
-        }
-      });
-
-      return leadNumber;
-    } catch (error) {
-      console.error("Transaction failed: ", error);
-      throw new Error("Could not generate lead number");
+    const leadsSnapshot = await db.collection("leads").orderBy("leadNumber", "desc").limit(1).get();
+    if (leadsSnapshot.empty) {
+      return "000001";
+    } else {
+      const highestLeadNumber = leadsSnapshot.docs[0].data().leadNumber;
+      const nextLeadNumber = (parseInt(highestLeadNumber, 10) + 1).toString().padStart(6, "0");
+      return nextLeadNumber;
     }
   };
 
@@ -346,3 +336,5 @@ const CreateNewLead = () => {
 };
 
 export default CreateNewLead;
+
+

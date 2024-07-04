@@ -11,7 +11,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Achievemets = () => {
   const RedirectContact = () => {
-    window.location.href = "/contact";
+    window.location.href = "/Popup";
   };
   return (
     <div className="achiv__container">

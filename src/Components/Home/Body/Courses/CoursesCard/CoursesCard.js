@@ -7,7 +7,7 @@ const CoursesCard = ({img, desc}) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/courses')
+    navigate('/courses/:name')
   }
 
 
