@@ -48,22 +48,35 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="nav__socials">
-          <img
-            src="./facebook.png"
-            style={{ height: "30px" }}
-            title="Facebook"
-          />
-          <img
-            src="./whatsapp.png"
-            style={{ height: "30px" }}
-            title="WhatsApp"
-          />
-          <img src="./twitter.png" style={{ height: "30px" }} title="Twitter" />
-          <img
-            src="./instagram.png"
-            style={{ height: "30px" }}
-            title="Instagram"
-          />
+          <Link to="https://www.facebook.com/thecareerzone.co.in">
+            {" "}
+            <img
+              src="./facebook.png"
+              style={{ height: "30px" }}
+              title="Facebook"
+            />
+          </Link>
+          <Link to="https://api.whatsapp.com/send?phone=919304365563">
+            <img
+              src="./whatsapp.png"
+              style={{ height: "30px" }}
+              title="WhatsApp"
+            />
+          </Link>
+          <Link to="https://twitter.com/THECAREERZONE3?t=1qAsCc-z4B8FE3fYlxOaIA&s=09">
+            <img
+              src="./twitter.png"
+              style={{ height: "30px" }}
+              title="Twitter"
+            />
+          </Link>
+          <Link to="https://www.instagram.com/the_careerzone/">
+            <img
+              src="./instagram.png"
+              style={{ height: "30px" }}
+              title="Instagram"
+            />
+          </Link>
         </div>
 
         <div className="nav__top__menu__bar">
