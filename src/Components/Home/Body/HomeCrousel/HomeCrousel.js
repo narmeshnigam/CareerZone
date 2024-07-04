@@ -47,7 +47,7 @@ const HomeCrousel = () => {
       >
         {imgUrls.map((urls, i) => (
           <SwiperSlide key={i}>
-            <img src={urls.url} alt="slide_image" />
+            <img src={urls.url} alt="slide_image" loading="lazy" />
           </SwiperSlide>
         ))}
       </Swiper>

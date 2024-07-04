@@ -1,26 +1,45 @@
-import React from 'react'
-import AbroadColleges from './Body/AbroadColleges/AbroadColleges';
-import Achievemets from './Body/Achievements/Achievemets';
-import BhiarCreditCard from './Body/BhiarCreditCard/BhiarCreditCard';
-import Courses from './Body/Courses/Courses';
-import HomeCrousel from './Body/HomeCrousel/HomeCrousel';
-import NotificationPage from './Body/NotificatonPage/NotificationPage';
-import TopEngColleges from './Body/TopColleges/TopEngColleges';
-import TopMedicalColleges from './Body/TopMedicalColleges/TopMedicalColleges';
+import React, { Suspense, lazy } from "react";
+import HomeCrousel from "./Body/HomeCrousel/HomeCrousel";
+import Loading from "../FirebaseServer/Loading/Loading";
+
+const NotificationPage = lazy(() =>
+  import("./Body/NotificatonPage/NotificationPage")
+);
+const Courses = lazy(() => import("./Body/Courses/Courses"));
+const BhiarCreditCard = lazy(() =>
+  import("./Body/BhiarCreditCard/BhiarCreditCard")
+);
+const TopMedicalColleges = lazy(() =>
+  import("./Body/TopMedicalColleges/TopMedicalColleges")
+);
+const TopEngColleges = lazy(() => import("./Body/TopColleges/TopEngColleges"));
+const AbroadColleges = lazy(() =>
+  import("./Body/AbroadColleges/AbroadColleges")
+);
+
+const Achievemets = lazy(() => import("./Body/Achievements/Achievemets"));
 
 const Home = () => {
   return (
     <>
-        <HomeCrousel/>
-        <NotificationPage/>
-        <Courses/>
-        <BhiarCreditCard/>
-        <TopMedicalColleges/>
-        <TopEngColleges/>
-        <AbroadColleges/>
-        <Achievemets/>
+      <HomeCrousel />
+      <Suspense
+        fallback={
+          <div>
+            <Loading />
+          </div>
+        }
+      >
+        <NotificationPage />
+        <Courses />
+        <BhiarCreditCard />
+        <TopMedicalColleges />
+        <TopEngColleges />
+        <AbroadColleges />
+        <Achievemets />
+      </Suspense>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
