@@ -1,14 +1,14 @@
 import React from "react";
 import "./BhiarCreditCard.css";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 
- const BhiarCreditCard = () => {
+const BhiarCreditCard = () => {
   const handleApplyNow = () => {
     window.location.href = "/Popup";
   };
   const handleClick = () => {
     window.location.href = "/services/stdCred_service";
-  }
+  };
 
   return (
     <div className="creditcard__container">
@@ -25,7 +25,9 @@ import { Link, useNavigate } from 'react-router-dom';
           के संबंध में |
         </div>
         <div style={{ display: "inline-block", marginRight: "5rem" }}>
-          <button onClick={handleClick}>बिहार स्टूडेंट क्रेडिट कार्ड योजना</button>
+          <button onClick={handleClick}>
+            बिहार स्टूडेंट क्रेडिट कार्ड योजना
+          </button>
         </div>
         <div style={{ display: "inline-block" }}>
           <button
@@ -38,7 +40,7 @@ import { Link, useNavigate } from 'react-router-dom';
         </div>
       </div>
       <div className="creditcard__right__container">
-        <img src="./credit.png"></img>
+        <img src="./credit.png" loading="lazy"></img>
       </div>
     </div>
   );

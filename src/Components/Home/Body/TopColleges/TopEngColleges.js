@@ -16,6 +16,7 @@ const TopEngColleges = () => {
           name={"BHARATI VIDYAPEETH DEEMED UNIVERSITY"}
           location={"PUNE, MAHARASHTRA"}
           time={"ESTD 1964"}
+          loading="lazy"
         />
         <MedicalCollegesCard
           img={
@@ -24,6 +25,7 @@ const TopEngColleges = () => {
           name={"Maharashtra Institute Of Technology(MIT)"}
           location={"PUNE, MAHARASHTRA"}
           time={"ESTD 1983"}
+          loading="lazy"
         />
         <MedicalCollegesCard
           img={
@@ -32,6 +34,7 @@ const TopEngColleges = () => {
           name={"UNITED GROUP OF INSTITUTIONS"}
           location={"GREATER NOIDA"}
           time={"ESTD 2005"}
+          loading="lazy"
         />
         <MedicalCollegesCard
           img={
@@ -40,6 +43,7 @@ const TopEngColleges = () => {
           name={"GALGOTIAS COLLEGE OF ENGINEERING AND TECHNOLOGY"}
           location={"GREATER NOIDA, U.P"}
           time={"ESTD 1999"}
+          loading="lazy"
         />
       </div>
     </div>

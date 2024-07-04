@@ -89,13 +89,22 @@ const Achievemets = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <img src="https://thecareerzone.co.in/images/gallery/2.jpg"></img>
+            <img
+              src="https://thecareerzone.co.in/images/gallery/2.jpg"
+              loading="lazy"
+            ></img>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://thecareerzone.co.in/images/gallery/3.jpg"></img>
+            <img
+              src="https://thecareerzone.co.in/images/gallery/3.jpg"
+              loading="lazy"
+            ></img>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://thecareerzone.co.in/images/gallery/4.jpg"></img>
+            <img
+              src="https://thecareerzone.co.in/images/gallery/4.jpg"
+              loading="lazy"
+            ></img>
           </SwiperSlide>
         </Swiper>
       </div>
