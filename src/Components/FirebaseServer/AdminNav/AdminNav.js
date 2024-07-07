@@ -48,6 +48,9 @@ const AdminNav = () => {
           <Link style={{ textDecoration: "none" }} to="/admin/user">
             <span onClick={() => scrollTop()}>User</span>
           </Link>
+          <Link style={{ textDecoration: "none" }} to="/admin/followUpHistory">
+            <span onClick={() => scrollTop()}>FollowUp</span>
+          </Link>
           <Link style={{ textDecoration: "none" }} to="/admin/notification">
             <span onClick={() => scrollTop()}>Notification</span>
           </Link>

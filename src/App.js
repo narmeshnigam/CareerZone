@@ -29,6 +29,9 @@ const AdminLogin = lazy(() =>
 const AdminNav = lazy(() =>
   import("./Components/FirebaseServer/AdminNav/AdminNav")
 );
+const AdminFollowUpInfo = lazy(() =>
+  import("./Components/FirebaseServer/AdminFollowUpInfo/AdminFollowUpInfo")
+);
 const AdminNotification = lazy(() =>
   import("./Components/FirebaseServer/AdminNotification/AdminNotification")
 );
@@ -446,6 +449,20 @@ const App = createBrowserRouter([
             }
           >
             <AdminCourses />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/admin/followUpHistory",
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            <AdminFollowUpInfo />
           </Suspense>
         ),
       },
