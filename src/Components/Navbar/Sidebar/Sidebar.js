@@ -13,52 +13,8 @@ const Sidebar = ({ value, onback = () => {} }) => {
           <img src="./back.png" alt="" />
           <span>Back</span>
         </div>
-        <hr className="line_break" />
-        <div className="options" onClick={() => onback()}>
-          Home
-        </div>
-        <hr className="line_break" />
-        <a
-          href="/#courses"
-          style={{ textDecoration: "none" }}
-          onClick={() => onback()}
-        >
-          <div className="options">About</div>
-          <hr className="line_break" />
-        </a>
-        <a
-          href="/admission"
-          style={{ textDecoration: "none" }}
-          onClick={() => onback()}
-        >
-          <div className="options">Service</div>
-          <hr className="line_break" />
-        </a>
-        <a
-          href="/notifications"
-          style={{ textDecoration: "none" }}
-          onClick={() => onback()}
-        >
-          <div className="options">Courses</div>
-          <hr className="line_break" />
-        </a>
-        <a
-          href="/about"
-          style={{ textDecoration: "none" }}
-          onClick={() => onback()}
-        >
-          <div className="options">Gallery</div>
-          <hr className="line_break" />
-        </a>
-        <a
-          href="/#contact"
-          style={{ textDecoration: "none" }}
-          onClick={() => onback()}
-        >
-          <div className="options">Contact</div>
-          <hr className="line_break" />
-        </a>
       </div>
+
       <div className="sid_margin"></div>
       <div className="sid_bottom">
         <div className="sid_bottom_heading">Follow us On</div>
