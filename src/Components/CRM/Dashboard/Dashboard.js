@@ -6,8 +6,10 @@ import Barchart from "./Chart/BarChart//Barchart";
 import NoFollowUpRecords from "./Tables/NoFollowUpRecords/NoFollowUpRecords";
 import TodayFollowUp from "./Tables/TodayFollowUp/TodayFollowUp";
 import db from "../../../firebase";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons"; // Import the specific icon you want to use
+import signOutUser from "./Signout";
 
 const Dashboard = () => {
   const [leads, setLeads] = useState({
@@ -19,6 +21,9 @@ const Dashboard = () => {
     thisMonthFollowUp: "",
   });
   const navigate = useNavigate();
+  const handleSignOut = () => {
+    signOutUser(navigate);
+  };
 
   useEffect(() => {
     const fetchTodaysLeads = async () => {
@@ -97,6 +102,7 @@ const Dashboard = () => {
             marginRight: "30px",
             cursor: "pointer",
           }}
+          onClick={handleSignOut}
         >
           <FontAwesomeIcon icon={faRightFromBracket} />
         </span>

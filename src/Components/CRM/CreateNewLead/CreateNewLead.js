@@ -1,7 +1,4 @@
-
-
 import { React, useEffect, useState } from "react";
-
 import styles from "./CreateNewLead.module.css";
 import { useNavigate } from "react-router-dom";
 import db from "../../../firebase";
@@ -46,7 +43,6 @@ const CreateNewLead = () => {
         setAssignedToOptions(users);
       } catch (error) {
         console.error("Error fetching users: ", error);
-      
       }
     };
 
@@ -66,6 +62,30 @@ const CreateNewLead = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Check if any required fields are empty
+    const requiredFields = [
+      "name",
+      "email",
+      "mobileNumber",
+      "state",
+      "city",
+      "pin",
+      "locality",
+    ];
+
+    for (let field of requiredFields) {
+      if (!formData[field]) {
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: `Please fill in the ${field} field.`,
+          showConfirmButton: true,
+          timer: 5000,
+        });
+        return;
+      }
+    }
 
     const currentDate = new Date().toLocaleDateString();
     const currentUser = "narmesh";
@@ -123,12 +143,18 @@ const CreateNewLead = () => {
   };
 
   const generateLeadNumber = async () => {
-    const leadsSnapshot = await db.collection("leads").orderBy("leadNumber", "desc").limit(1).get();
+    const leadsSnapshot = await db
+      .collection("leads")
+      .orderBy("leadNumber", "desc")
+      .limit(1)
+      .get();
     if (leadsSnapshot.empty) {
-      return "1000";
+      return "000001";
     } else {
       const highestLeadNumber = leadsSnapshot.docs[0].data().leadNumber;
-      const nextLeadNumber = (parseInt(highestLeadNumber, 10) + 1).toString().padStart(4, "0");
+      const nextLeadNumber = (parseInt(highestLeadNumber, 10) + 1)
+        .toString()
+        .padStart(6, "0");
       return nextLeadNumber;
     }
   };
@@ -336,5 +362,3 @@ const CreateNewLead = () => {
 };
 
 export default CreateNewLead;
-
-

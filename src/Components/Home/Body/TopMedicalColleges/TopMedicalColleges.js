@@ -16,6 +16,7 @@ const TopMedicalColleges = () => {
           name={"CHRISTIAN MEDICAL COLLEGE"}
           location={"VELLORE, TAMIL NADU"}
           time={"ESTD 1918"}
+          loading="lazy"
         />
         <MedicalCollegesCard
           img={
@@ -24,18 +25,21 @@ const TopMedicalColleges = () => {
           name={"ARMED FORCES MEDICAL COLLEGE"}
           location={"PUNE, MAHARASHTRA"}
           time={"ESTD 1984"}
+          loading="lazy"
         />
         <MedicalCollegesCard
           img={"https://thecareerzone.co.in/img/gallery/kmc-campus.jpg"}
           name={"KASTURBA MEDICAL COLLEGE"}
           location={"MANGALORE, KARNATAKA"}
           time={"ESTD 1955"}
+          loading="lazy"
         />
         <MedicalCollegesCard
           img={"https://thecareerzone.co.in/img/gallery/maulana-index.jpg"}
           name={"KATIHAR MEDICAL COLLEGE"}
           location={"NEW DELHI, DELHI NCR"}
           time={"ESTD 1959"}
+          loading="lazy"
         />
       </div>
     </div>

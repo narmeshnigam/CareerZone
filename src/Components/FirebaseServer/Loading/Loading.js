@@ -12,10 +12,14 @@ const Loading = () => {
         width: "100vw",
       }}
     >
-      <div class="container">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div className="loader">
+        <p className="heading">Loading</p>
+        <div className="loading">
+          <div className="load"></div>
+          <div className="load"></div>
+          <div className="load"></div>
+          <div className="load"></div>
+        </div>
       </div>
     </div>
   );
