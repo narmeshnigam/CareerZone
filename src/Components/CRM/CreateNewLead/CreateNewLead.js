@@ -46,7 +46,7 @@ const CreateNewLead = () => {
         setAssignedToOptions(users);
       } catch (error) {
         console.error("Error fetching users: ", error);
-        // Handle error, show error message, etc.
+      
       }
     };
 
@@ -68,7 +68,7 @@ const CreateNewLead = () => {
     e.preventDefault();
 
     const currentDate = new Date().toLocaleDateString();
-    const currentUser = "nishu";
+    const currentUser = "narmesh";
     const leadNumber = await generateLeadNumber();
 
     const leadData = {
@@ -80,7 +80,7 @@ const CreateNewLead = () => {
       assignedBy: currentUser,
     };
 
-    // Save data to Firebase
+  
     db.collection("leads")
       .add(leadData)
       .then(() => {
