@@ -108,33 +108,42 @@ const LeadHistory = () => {
   useEffect(() => {
     const fetchLeads = async () => {
       db.collection("leads").onSnapshot((snapshot) => {
-        setLeads(
-          snapshot.docs.map((doc, index) => ({
-            id: doc.id,
-            serialNumber: index + 1,
-            leadNumber: doc.data().leadNumber,
-            createdDate: doc.data().createdDate,
-            createdBy: doc.data().createdBy,
-            assignedBy: doc.data().assignedBy,
-            assignedTo: doc.data().assignedTo,
-            assignmentDate: doc.data().assignmentDate,
-            bscc: doc.data().bscc,
-            name: doc.data().name,
-            email: doc.data().email,
-            courseInterest: doc.data().courseInterest,
-            college: doc.data().college,
-            mobileNumber: doc.data().mobileNumber,
-            alternateMobile: doc.data().alternateMobile,
-            city: doc.data().city,
-            district: doc.data().district,
-            locality: doc.data().locality,
-            pin: doc.data().pin,
-            budget: doc.data().budget,
-            source: doc.data().source,
-            remarks: doc.data().remarks,
-            relation: doc.data().relation,
-          }))
-        );
+        const fetchedLeads = snapshot.docs.map((doc, index) => ({
+          id: doc.id,
+          serialNumber: index + 1,
+          leadNumber: doc.data().leadNumber,
+          createdDate: doc.data().createdDate,
+          createdBy: doc.data().createdBy,
+          assignedBy: doc.data().assignedBy,
+          assignedTo: doc.data().assignedTo,
+          assignmentDate: doc.data().assignmentDate,
+          bscc: doc.data().bscc,
+          name: doc.data().name,
+          email: doc.data().email,
+          courseInterest: doc.data().courseInterest,
+          college: doc.data().college,
+          mobileNumber: doc.data().mobileNumber,
+          alternateMobile: doc.data().alternateMobile,
+          city: doc.data().city,
+          district: doc.data().district,
+          locality: doc.data().locality,
+          pin: doc.data().pin,
+          budget: doc.data().budget,
+          source: doc.data().source,
+          remarks: doc.data().remarks,
+          relation: doc.data().relation,
+        }));
+
+        // Sort leads by leadNumber
+        fetchedLeads.sort((a, b) => a.leadNumber - b.leadNumber);
+
+        // Assign serialNumber after sorting
+        const sortedLeads = fetchedLeads.map((lead, index) => ({
+          ...lead,
+          serialNumber: index + 1,
+        }));
+
+        setLeads(sortedLeads);
       });
     };
 
