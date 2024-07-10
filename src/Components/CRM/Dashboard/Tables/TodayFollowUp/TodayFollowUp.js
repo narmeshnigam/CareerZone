@@ -84,7 +84,7 @@ const TodayFollowUp = () => {
         autoHeight
         disableColumnMenu
         disableSelectionOnClick
-        onRowClick={(row) => navigate(`/leadDetails/${row.id}`)}
+        onRowClick={(row) => navigate(``)}
         sx={{
           backgroundColor: "#fbfeff",
         }}

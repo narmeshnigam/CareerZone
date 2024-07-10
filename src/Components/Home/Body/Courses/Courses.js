@@ -10,66 +10,66 @@ const Courses = () => {
         <div className="courses__card">
           <CoursesCard
             img={"https://thecareerzone.co.in/img/icon/B.tech.png"}
-            desc={"B.tech /B.E"}
+            name={"B.tech /B.E"}
             loading="lazy"
           />
           <CoursesCard
             img={"https://thecareerzone.co.in/img/icon/student.png"}
-            desc={"Diploma"}
+            name={"Diploma"}
             loading="lazy"
           />
           <CoursesCard
             img={"	https://thecareerzone.co.in/img/icon/technician.png"}
-            desc={"M.tech"}
+            name={"M.tech"}
             loading="lazy"
           />
           <CoursesCard
             img={"https://thecareerzone.co.in/img/icon/automation.png"}
-            desc={"Polytechnic"}
+            name={"Polytechnic"}
             loading="lazy"
           />
         </div>
         <div className="courses__card">
           <CoursesCard
             img={"https://thecareerzone.co.in/img/icon/doctorss.png"}
-            desc={"MBBS"}
+            name={"MBBS"}
             loading="lazy"
           />
           <CoursesCard
             img={"https://thecareerzone.co.in/img/icon/dentist.png"}
-            desc={"BDS"}
+            name={"BDS"}
             loading="lazy"
           />
           <CoursesCard
             img={"https://thecareerzone.co.in/img/icon/nurse.png"}
-            desc={"Bsc Nursing"}
+            name={"Bsc Nursing"}
             loading="lazy"
           />
           <CoursesCard
             img={"https://thecareerzone.co.in/img/icon/dentistts.png"}
-            desc={"BAMS"}
+            name={"BAMS"}
             loading="lazy"
           />
         </div>
         <div className="courses__card">
           <CoursesCard
             img={"https://thecareerzone.co.in/img/icon/medicine.png"}
-            desc={"B.Pharma"}
+            name={"B.Pharma"}
             loading="lazy"
           />
           <CoursesCard
             img={"https://thecareerzone.co.in/img/icon/ayurvedic.png"}
-            desc={"BPT"}
+            name={"BPT"}
             loading="lazy"
           />
           <CoursesCard
             img={"https://thecareerzone.co.in/img/icon/law.png"}
-            desc={"BALLB"}
+            name={"BALLB"}
             loading="lazy"
           />
           <CoursesCard
             img={"https://thecareerzone.co.in/img/icon/graduation.png"}
-            desc={"MBA"}
+            name={"MBA"}
             loading="lazy"
           />
         </div>

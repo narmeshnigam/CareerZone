@@ -25,6 +25,7 @@ const FollowUpPage = () => {
 
   const [lastFollowUpNo, setLastFollowUpNo] = useState(12999);
   const [lastLeadNo, setLastLeadNo] = useState(999);
+  const [isDisabled, setIsDisabled] = useState(false);
 
   useEffect(() => {
     fetchLeadData();
@@ -98,11 +99,14 @@ const FollowUpPage = () => {
     if (name === "statement") {
       if (
         value === "Response Received & Finalised" ||
-        value === "Response Received & not interested anymore"
+        value === "Response Received & not interested anymore"||
+        value === "Contacted & Invalid Number"
       ) {
         newStatus = "Closed 🔴";
+        setIsDisabled(true); 
       } else {
         newStatus = "Open 🟢";
+        setIsDisabled(false); 
       }
     }
 
@@ -138,6 +142,7 @@ const FollowUpPage = () => {
         nextdate: "",
         remarks: "",
       });
+      setIsDisabled(false);
     } catch (error) {
       console.error("Error adding follow-up: ", error);
     }
@@ -305,6 +310,7 @@ const FollowUpPage = () => {
             onChange={handleChange}
             value={followUp.nextdate}
             placeholder="Next Follow-up Date"
+            disabled={isDisabled}
           />
           <textarea
             name="remarks"
@@ -312,11 +318,13 @@ const FollowUpPage = () => {
             value={followUp.remarks}
             rows={4}
             placeholder="Write Remarks"
+            disabled={isDisabled}
           />
           <select
             name="transferto"
             onChange={handleChange}
             value={followUp.transferto}
+            disabled={isDisabled}
           >
             <option value="" disabled>
               Transfer Follow-up To
