@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import db, { storage } from "../../../firebase";
 import styles from "./AdminGallery.module.css";
 import Loading from "../Loading/Loading";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const AdminGallery = () => {
   const [loading, setLoading] = useState(false);
@@ -187,10 +185,7 @@ const AdminGallery = () => {
                   <p
                     onClick={() => handleDelete(img.id, img.fileName, "image")}
                   >
-                    <FontAwesomeIcon
-                      icon={faTrash}
-                      className={styles.redIcon}
-                    />
+                    Delete
                   </p>
                 </td>
               </tr>

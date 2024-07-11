@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./AddNewUser.css";
 import Swal from "sweetalert2";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopy } from "@fortawesome/free-regular-svg-icons";
+
 import db from "../../../firebase"; // Assuming you have configured Firebase
 import { useNavigate } from "react-router-dom";
 
@@ -176,7 +175,7 @@ const AddNewUser = () => {
                   className="copybtn"
                   onClick={copyPassword}
                 >
-                  <FontAwesomeIcon icon={faCopy} />
+                  Copy
                 </button>
               </div>
             </div>
