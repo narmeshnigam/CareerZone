@@ -2,8 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import styles from "./HomeCrousel.module.css";
 import db, { storage } from "../../../firebase";
 import Loading from "../Loading/Loading";
-import { FontAwesomeIcon } from "@fontawesome/react-fontawesome";
-import { faTrash } from "@fontawesome/free-solid-svg-icons";
+
 import Swal from "sweetalert2";
 
 const HomeCarousel = () => {
@@ -181,10 +180,7 @@ const HomeCarousel = () => {
                     onClick={() => handleDelete(img.id, img.fileName)}
                     style={{ cursor: "pointer" }}
                   >
-                    <FontAwesomeIcon
-                      icon={faTrash}
-                      className={styles.redIcon}
-                    />
+                    Delete
                   </div>
                 </td>
               </tr>
