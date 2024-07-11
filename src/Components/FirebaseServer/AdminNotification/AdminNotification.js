@@ -3,8 +3,6 @@ import db from "../../../firebase";
 import styles from "./AdminNotification.module.css";
 import Loading from "../Loading/Loading";
 import { colors } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const AdminNotification = () => {
   const [noti, setNoti] = useState("");
@@ -125,12 +123,7 @@ const AdminNotification = () => {
                 <td>{i + 1}</td>
                 <td>{data.notification}</td>
                 <td>
-                  <div onClick={() => handleDelete(data.id)}>
-                    <FontAwesomeIcon
-                      icon={faTrash}
-                      className={styles.redIcon}
-                    />
-                  </div>
+                  <div onClick={() => handleDelete(data.id)}>Delete</div>
                 </td>
               </tr>
             ))}
