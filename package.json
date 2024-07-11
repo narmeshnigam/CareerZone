@@ -4,6 +4,8 @@
   "description": "**Download the project.**",
   "main": "index.js",
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@mui/x-data-grid": "^7.9.0",
     "@testing-library/user-event": "^14.5.2",
