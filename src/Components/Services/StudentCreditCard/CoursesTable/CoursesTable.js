@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./CoursesTable.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const CoursesTable = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -107,7 +105,7 @@ const CoursesTable = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
+        Search
       </div>
       <br />
       {filteredCourses.length > 0 ? (
