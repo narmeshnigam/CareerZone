@@ -2,8 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import styles from "./HomeCrousel.module.css";
 import db, { storage } from "../../../firebase";
 import Loading from "../Loading/Loading";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fontawesome/react-fontawesome";
+import { faTrash } from "@fontawesome/free-solid-svg-icons";
 import Swal from "sweetalert2";
 
 const HomeCarousel = () => {
