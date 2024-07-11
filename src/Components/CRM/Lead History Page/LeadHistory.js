@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./LeadHistory.module.css";
@@ -7,8 +5,8 @@ import db from "../../../firebase";
 import { DataGrid } from "@mui/x-data-grid";
 import { Button } from "@mui/material";
 import PopUpForm from "./PopUpForm/PopUpForm";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faTrash, faPenSquare } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fontawesome/react-fontawesome";
+import { faEye, faTrash, faPenSquare } from "@fontawesome/free-solid-svg-icons";
 import Swal from "sweetalert2";
 
 const LeadHistory = () => {
@@ -250,4 +248,3 @@ const LeadHistory = () => {
 };
 
 export default LeadHistory;
-

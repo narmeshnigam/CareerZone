@@ -7,8 +7,8 @@ import NoFollowUpRecords from "./Tables/NoFollowUpRecords/NoFollowUpRecords";
 import TodayFollowUp from "./Tables/TodayFollowUp/TodayFollowUp";
 import db from "../../../firebase";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons"; // Import the specific icon you want to use
+import { FontAwesomeIcon } from "@fontawesome/react-fontawesome";
+import { faRightFromBracket } from "@fontawesome/free-solid-svg-icons"; // Import the specific icon you want to use
 import signOutUser from "./Signout";
 
 const Dashboard = () => {

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "./UserListsPage.module.css";
 import db from "../../../firebase";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPenToSquare, faTrashAlt } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fontawesome/react-fontawesome";
+import { faPenToSquare, faTrashAlt } from "@fontawesome/free-regular-svg-icons";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
