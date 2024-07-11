@@ -7,8 +7,7 @@ import NoFollowUpRecords from "./Tables/NoFollowUpRecords/NoFollowUpRecords";
 import TodayFollowUp from "./Tables/TodayFollowUp/TodayFollowUp";
 import db from "../../../firebase";
 
-import { FontAwesomeIcon } from "@fontawesome/react-fontawesome";
-import { faRightFromBracket } from "@fontawesome/free-solid-svg-icons"; // Import the specific icon you want to use
+// Import the specific icon you want to use
 import signOutUser from "./Signout";
 
 const Dashboard = () => {
@@ -104,7 +103,7 @@ const Dashboard = () => {
           }}
           onClick={handleSignOut}
         >
-          <FontAwesomeIcon icon={faRightFromBracket} />
+          SignOut
         </span>
       </div>
       <div className={styles.upperContainer}>

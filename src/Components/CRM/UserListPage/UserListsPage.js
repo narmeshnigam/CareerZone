@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./UserListsPage.module.css";
 import db from "../../../firebase";
-import { FontAwesomeIcon } from "@fontawesome/react-fontawesome";
-import { faPenToSquare, faTrashAlt } from "@fontawesome/free-regular-svg-icons";
+
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
@@ -173,7 +172,7 @@ const UserListsPage = () => {
                 <td>{user.password}</td>
                 <td>
                   <div className="editBtn" onClick={() => handleEditUser(user)}>
-                    <FontAwesomeIcon icon={faPenToSquare} />
+                    Edit
                   </div>
                 </td>
                 <td>
@@ -181,7 +180,7 @@ const UserListsPage = () => {
                     className="deleteBtn"
                     onClick={() => handleDeleteUser(user.id)}
                   >
-                    <FontAwesomeIcon icon={faTrashAlt} />
+                    Delete
                   </div>
                 </td>
               </tr>

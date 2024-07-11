@@ -5,8 +5,7 @@ import db from "../../../firebase";
 import { DataGrid } from "@mui/x-data-grid";
 import { Button } from "@mui/material";
 import PopUpForm from "./PopUpForm/PopUpForm";
-import { FontAwesomeIcon } from "@fontawesome/react-fontawesome";
-import { faEye, faTrash, faPenSquare } from "@fontawesome/free-solid-svg-icons";
+
 import Swal from "sweetalert2";
 
 const LeadHistory = () => {
@@ -59,7 +58,7 @@ const LeadHistory = () => {
             "&:hover": { backgroundColor: "green" },
           }}
         >
-          <FontAwesomeIcon icon={faEye} style={{ fontSize: "18px" }} />
+          View
         </Button>
       ),
     },
@@ -79,7 +78,7 @@ const LeadHistory = () => {
             "&:hover": { backgroundColor: "red" },
           }}
         >
-          <FontAwesomeIcon icon={faTrash} style={{ fontSize: "18px" }} />
+          Delete
         </Button>
       ),
     },
@@ -99,7 +98,7 @@ const LeadHistory = () => {
             "&:hover": { backgroundColor: "dodgerblue" },
           }}
         >
-          <FontAwesomeIcon icon={faPenSquare} style={{ fontSize: "18px" }} />
+          Update
         </Button>
       ),
     },
