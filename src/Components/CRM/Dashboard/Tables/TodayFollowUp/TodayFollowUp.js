@@ -6,7 +6,6 @@ import styles from "./TodayFollowUp.module.css";
 import { DataGrid } from "@mui/x-data-grid";
 import { Button } from "@mui/material";
 import db from "../../../../../firebase";
-import { type } from "@testing-library/user-event/dist/type";
 
 const TodayFollowUp = () => {
   const [followUp, setFollowUp] = useState([]);
