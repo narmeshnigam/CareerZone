@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const BhiarCreditCard = () => {
   const handleApplyNow = () => {
-    window.location.href = "/Popup";
+    window.location.href = "/PopupHome";
   };
   const handleClick = () => {
     window.location.href = "/services/stdCred_service";

@@ -3,7 +3,7 @@ import "./AbroadColleges.css";
 
 const AbroadColleges = () => {
   const handleContact = () => {
-    window.location.href = "/Popup";
+    window.location.href = "/PopupHome";
   };
 
   return (

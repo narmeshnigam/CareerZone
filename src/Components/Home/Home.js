@@ -5,7 +5,7 @@ import Loading from "../FirebaseServer/Loading/Loading";
 const NotificationPage = lazy(() =>
   import("./Body/NotificatonPage/NotificationPage")
 );
-const PopupForm = lazy(() => import("./popUp-home/PopupForm-home"));
+const PopupForm = lazy(() => import("./popUpHome/PopupFormHome"));
 const Courses = lazy(() => import("./Body/Courses/Courses"));
 const BhiarCreditCard = lazy(() =>
   import("./Body/BhiarCreditCard/BhiarCreditCard")

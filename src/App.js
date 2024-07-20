@@ -75,6 +75,7 @@ const AddNewUser = lazy(() =>
   import("./Components/FirebaseServer/AdminNewUser/AdminNewUser")
 );
 const UserLogin = lazy(() => import("./Components/CRM/UserLogin/UserLogin"));
+const PopupFormHome = lazy(() => import("./Components/Home/popUpHome/PopupFormHome"));
 
 const AppLayout = memo(() => (
   <>
@@ -135,6 +136,20 @@ const App = createBrowserRouter([
             }
           >
             <PopUpForm />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/PopupHome",
+        element: (
+          <Suspense
+            fallback={
+              <div>
+                <Loading />
+              </div>
+            }
+          >
+            < PopupFormHome/>
           </Suspense>
         ),
       },

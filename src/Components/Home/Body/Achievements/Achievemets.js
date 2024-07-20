@@ -11,7 +11,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Achievemets = () => {
   const RedirectContact = () => {
-    window.location.href = "/Popup";
+    window.location.href = "/PopupHome";
   };
   return (
     <div className="achiv__container">
@@ -113,3 +113,4 @@ const Achievemets = () => {
 };
 
 export default Achievemets;
+
