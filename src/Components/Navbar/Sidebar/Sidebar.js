@@ -64,7 +64,7 @@ const Sidebar = ({ value, onback = () => {} }) => {
       <div className="sid_options">
         <div className="sid__back__option" onClick={() => onback()}>
           
-          <span>Back</span>
+          <span><strong>-</strong>Back<strong>-</strong></span>
         </div>
         <Link to="/" className="sid_link" onClick={() => onback()}>
           Home
@@ -86,7 +86,7 @@ const Sidebar = ({ value, onback = () => {} }) => {
         </Link>
       </div>
 
-      <div className="sid_margin"></div>
+      {/* <div className="sid_margin"></div>
       <div className="sid_bottom">
         <div className="sid_bottom_heading">Follow us On</div>
         <hr className="line_break" />
@@ -125,7 +125,7 @@ const Sidebar = ({ value, onback = () => {} }) => {
             />
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
