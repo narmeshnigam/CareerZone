@@ -1,4 +1,11 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
 .Swipper{
+    width: 100vw;
     padding: 90px 0px 0px 0px;
 }
 .Swipper img{

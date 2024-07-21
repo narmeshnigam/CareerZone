@@ -14,21 +14,21 @@
 }
 .nav__logo img {
   flex: 1;
-  height: 4rem;
-  margin-left: 10px;
-  margin-top: 10px;
+  height: 11vh;
+  margin-left: 1vw;
+  margin-top: 2vh;
 
-  padding-bottom: 20px;
+  
 }
 .nav__links {
   flex: 3;
   display: flex;
-  gap: 4rem;
+  gap: 2.5vw;
   align-items: center;
   justify-content: center;
 }
 .nav__links span {
-  font-size: 22px;
+  font-size: 3.5vh;
   color: #000000;
   font-weight: 600;
   cursor: pointer;
@@ -58,7 +58,7 @@
 @media screen and (max-width: 600px) {
   .nav__conatiner {
     box-shadow: 6px 6px 6px #3d3b3b25;
-    width: 100svw;
+    width: 100vw;
   }
   .nav__logo img {
     height: 3rem;
