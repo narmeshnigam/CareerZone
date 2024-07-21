@@ -15,20 +15,20 @@
 .popup {
   position: relative;
   background: white;
-  padding: 20px;
-  border-radius: 5px;
-  max-width: 500px;
+  padding: 1.5vw;
+  border-radius: 1vw;
+  max-width: 40vw;
   width: 100%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1vw 1.5vw rgba(0, 0, 0, 0.3);
 }
 
 .close-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0.521vw;
+  right: 0.521vw;
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 1.25vw;
   cursor: pointer;
 }
 
@@ -38,37 +38,37 @@
 }
 
 .title {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 2vw;
+  margin-bottom: 0.521vw;
 }
 
 .flex {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 0.521vw;
+  margin-bottom: 1.042vw;
 }
 
 .input {
   width: 90%;
   margin-left: 5%;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 0.521vw;
+  margin-bottom: 0.521vw;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 1vw;
 }
 
 .message-box {
-  height: 100px;
+  height: 5.208vw;
 }
 
 .submit {
   width: 90%;
   margin-left: 5%;
-  padding: 10px;
+  padding: 0.521vw;
   background: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 1vw;
   cursor: pointer;
 }
 
@@ -77,6 +77,6 @@
 }
 
 .signin {
-  margin-top: 10px;
+  margin-top: 0.521vw;
   text-align: center;
 }

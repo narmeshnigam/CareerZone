@@ -20,6 +20,10 @@
   right: 0%;
   z-index: 100;
 }
+.sid_link {
+  padding-right: 2vw;
+  display: block;
+}
 .sid_options {
   height: 50%;
   width: 90%;
@@ -32,6 +36,7 @@
     cursor: pointer;
   }
 }
+
 .sid__back__option > img {
   width: 10.31;
   height: 16px;
