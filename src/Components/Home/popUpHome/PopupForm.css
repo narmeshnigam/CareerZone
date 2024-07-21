@@ -32,6 +32,7 @@
   cursor: pointer;
 }
 
+
 .form {
   display: flex;
   flex-direction: column;
@@ -79,4 +80,34 @@
 .signin {
   margin-top: 0.521vw;
   text-align: center;
+}
+
+@media screen and (max-width: 540px) {
+  .popup {
+    position: relative;
+    background: white;
+    padding: 1.5vw;
+    border-radius: 1vw;
+    max-width: 60vw;
+    width: 100%;
+    box-shadow: 0 1vw 1.5vw rgba(0, 0, 0, 0.3);
+  }
+  .title {
+    font-size: 5vw;
+    margin-bottom: 0.521vw;
+  }
+  .inputTitle {
+    font-size: 3.5vw;
+  }
+  .submit {
+    font-size: 3.6vw;
+    width: 90%;
+  }
+  .input {
+    font-size: 3.5vw;
+  }
+  .close-button {
+    font-size: 3.5vw;
+  }
+  
 }

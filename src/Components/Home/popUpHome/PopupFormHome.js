@@ -70,7 +70,7 @@ const PopupForm = () => {
               <p className="title">Career Zone</p>
 
               <label>
-                <span>Name</span>
+                <span className="inputTitle">Name</span>
                 <input
                   className="input"
                   type="text"
@@ -83,7 +83,7 @@ const PopupForm = () => {
               </label>
 
               <label>
-                <span>Email</span>
+                <span className="inputTitle">Email</span>
                 <input
                   className="input"
                   type="email"
@@ -95,7 +95,7 @@ const PopupForm = () => {
                 />
               </label>
               <label>
-                <span>Phone No.</span>
+                <span className="inputTitle">Phone No.</span>
                 <input
                   className="input"
                   type="tel"
@@ -107,7 +107,7 @@ const PopupForm = () => {
                 />
               </label>
               <label>
-                <span>Enquire</span>
+                <span className="inputTitle">Enquire</span>
                 <select
                   className="input"
                   name="enquire"
@@ -128,7 +128,7 @@ const PopupForm = () => {
                 </select>
               </label>
               <label>
-                <span>Message</span>
+                <span className="inputTitle">Message</span>
                 <textarea
                   className="input message-box"
                   name="message"

@@ -1,4 +1,4 @@
-* {
+/* * {
   font-family: "Urbanist";
 }
 
@@ -86,4 +86,111 @@
 }
 .sid_bottom_socials > img:hover {
   cursor: pointer;
+} */
+ /* General container styling */
+.sid__container {
+  position: fixed;
+  top: 0;
+  right: 0; /* Align the sidebar to the right */
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+  align-items: center;
+  z-index: 1000;
 }
+
+.sid_options {
+  background: rgb(238, 234, 234);
+  padding: 2vw;
+  border-radius: 5px;
+  width: 80vw;
+  max-width: 20.8333vw;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.3);
+  margin-left: 75vw;
+}
+
+.sid__back__option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 1vw;
+  font-size: 1.5vw;
+  color: #333;
+}
+
+.sid__back__option span {
+  margin-left: 0.5vw;
+}
+
+.sid_link {
+  color: #007bff;
+  text-decoration: none;
+  margin: 1vw 0;
+  font-size: 1.5vw;
+}
+
+.sid_link:hover {
+  text-decoration: underline;
+}
+
+.sid_margin {
+  flex-grow: 1;
+}
+
+.sid_bottom {
+  padding: 1vw;
+  background: #f9f9f9;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.sid_bottom_heading {
+  margin-bottom: 1vw;
+  font-size: 1.5vw;
+  color: #333;
+  
+}
+
+.line_break {
+  margin-bottom: 1vw;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.sid_bottom_socials {
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+}
+
+.sid_bottom_socials img {
+  height: 2vw;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .sid_options {
+    width: 90vw;
+  }
+
+  .sid__back__option {
+    font-size: 4vw;
+  }
+
+  .sid_link {
+    font-size: 4vw;
+  }
+
+  .sid_bottom_heading {
+    font-size: 4vw;
+  }
+
+  .sid_bottom_socials img {
+    height: 5vw;
+  }
+}
+
