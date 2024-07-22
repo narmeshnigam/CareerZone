@@ -27,7 +27,7 @@
 
 @media screen and (max-width: 600px) {
     .courses__container {
-        padding: 5vw;
+        padding: 4vw;
     }
     .courses__heading {
         font-size: 4vw;
