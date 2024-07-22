@@ -1,30 +1,44 @@
-.courses__container{
-    padding: 6rem;
-    background-color:#fbfeff;
-    
+
+
+.courses__container {
+    padding: 6.2vw;
+    background-color: #fbfeff;
+    width: 100vw;
 }
-.courses__heading{
-    font-size: 2.25rem;
-    margin-bottom: 5rem;
+
+.courses__heading {
+    font-size: 3vw;
+    margin-bottom: 4vw;
+    margin-right: 4vw;
     font-weight: 600;
     text-align: center;
+    justify-content: center;
     color: #4587EF;
 }
-.courses__card{
-    display:flex;
-    gap:5rem; 
-    margin-bottom:5rem;
+
+.courses__card {
+    display: flex;
+    flex-wrap: wrap; /* This will allow the cards to wrap to the next line */
+    align-items: center;
+    gap: 4vw; 
+    margin-bottom: 5vw;
+    margin-right: 5vw;
 }
-@media screen and (max-width: 600px){
-    .courses__container{
-        padding: 2rem;
+
+@media screen and (max-width: 600px) {
+    .courses__container {
+        padding: 8vw;
     }
-    .courses__heading{
-        font-size: 1.4rem;
-        margin-bottom: 3rem;
+    .courses__heading {
+        font-size: 4vw;
+        padding-bottom: 2vh;
+        padding-top: 1vh;
     }
-    .courses__card{
-        gap:1rem; 
-        margin-bottom:1rem;
+    .courses__card {
+        display: flex;
+        flex-wrap: wrap; /* Ensure cards wrap on smaller screens as well */
+        gap: 3vw; 
+        margin-bottom: 0.833vw;
     }
 }
+

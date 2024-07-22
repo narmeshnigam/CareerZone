@@ -24,7 +24,7 @@ const BhiarCreditCard = () => {
           बिहार स्‍टूडेंट क्रेडिट कार्ड योजना की संशोधित मार्गदर्शिका लागू करने
           के संबंध में |
         </div>
-        <div style={{ display: "inline-block", marginRight: "5rem" }}>
+        <div className="bihar__student__12" style={{ display: "inline-block", marginRight: "5rem" }}>
           <button onClick={handleClick}>
             बिहार स्टूडेंट क्रेडिट कार्ड योजना
           </button>

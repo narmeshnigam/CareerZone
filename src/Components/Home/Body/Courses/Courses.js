@@ -23,13 +23,8 @@ const Courses = () => {
             name={"M.tech"}
             loading="lazy"
           />
-          <CoursesCard
-            img={"https://thecareerzone.co.in/img/icon/automation.png"}
-            name={"Polytechnic"}
-            loading="lazy"
-          />
-        </div>
-        <div className="courses__card">
+         
+        
           <CoursesCard
             img={"https://thecareerzone.co.in/img/icon/doctorss.png"}
             name={"MBBS"}
@@ -45,13 +40,9 @@ const Courses = () => {
             name={"Bsc Nursing"}
             loading="lazy"
           />
-          <CoursesCard
-            img={"https://thecareerzone.co.in/img/icon/dentistts.png"}
-            name={"BAMS"}
-            loading="lazy"
-          />
-        </div>
-        <div className="courses__card">
+          
+        
+      
           <CoursesCard
             img={"https://thecareerzone.co.in/img/icon/medicine.png"}
             name={"B.Pharma"}
@@ -67,12 +58,9 @@ const Courses = () => {
             name={"BALLB"}
             loading="lazy"
           />
-          <CoursesCard
-            img={"https://thecareerzone.co.in/img/icon/graduation.png"}
-            name={"MBA"}
-            loading="lazy"
-          />
         </div>
+          
+        
       </div>
     </div>
   );

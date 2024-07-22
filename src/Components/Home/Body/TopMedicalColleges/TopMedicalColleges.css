@@ -1,18 +1,24 @@
 .topMed__container{
-    padding: 0rem 6rem 6rem;
+    padding: 0vw;
     background-color:#fbfeff;
+    width: 100vw;
 }
 .topMed__heading{
-    margin-bottom: 5rem;
+    margin-bottom: 3.8rem;
     font-size: 2.2rem;
     font-weight: 600;
     color: #df200be2;
     text-align: center;
 }
 .topMed__card{
+    margin-left: 8vw;
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    padding-bottom: 10vh;
+    
 }
+
 @media screen and (max-width: 600px){
     .topMed__container{
         padding: 0rem 2rem 2rem;
@@ -22,9 +28,11 @@
         font-size: 1.25rem;
     }
     .topMed__card{
-        display: block;
+        
+    
     }
     .topEng{
         font-size: 1.1rem;
     }
+    
 }

@@ -145,3 +145,24 @@
     padding: 1rem;
   }
 }
+
+
+@media screen and (max-width: 540px) {
+
+  .noti__heading {
+    font-size: 5vw;
+    margin-bottom: 0.5rem;
+  }
+  .noti__subheading {
+    font-weight: 400;
+    font-size: 4.8vw;
+  }
+  .noti__subheading1 {
+    font-size: 4.8vw;
+  }
+
+  
+ 
+  
+}
+
