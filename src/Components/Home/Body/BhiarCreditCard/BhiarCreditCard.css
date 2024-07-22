@@ -10,6 +10,9 @@
     align-items: center;
     background-color:#fbfeff;
 }
+.bihar__student__12 {
+    margin-left: 4.5vw;
+}
 .creditcard__left__container{
     width: 50%;
     text-align: center;
@@ -76,7 +79,7 @@
     .bihar__student__12 {
         align-items: center;
         justify-content: center;
-        margin-left: 11vw;
+        margin-left: 16vw;
     }
 
 

@@ -7,7 +7,7 @@
 }
 
 .courses__heading {
-    font-size: 3vw;
+    font-size: 3.8vw;
     margin-bottom: 4vw;
     margin-right: 4vw;
     font-weight: 600;
@@ -27,7 +27,7 @@
 
 @media screen and (max-width: 600px) {
     .courses__container {
-        padding: 8vw;
+        padding: 5vw;
     }
     .courses__heading {
         font-size: 4vw;
@@ -39,6 +39,7 @@
         flex-wrap: wrap; /* Ensure cards wrap on smaller screens as well */
         gap: 3vw; 
         margin-bottom: 0.833vw;
+        margin-right: 4vw;
     }
 }
 
