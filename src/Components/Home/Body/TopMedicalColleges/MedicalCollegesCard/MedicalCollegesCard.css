@@ -12,6 +12,7 @@
     width: 20rem;
     box-shadow: 6px 6px 6px #00000016;
     transition: 200ms ease;
+    overflow: hidden;
 }
 .medicalCollegeCard__container:hover{
     scale: 1.1;

@@ -11,7 +11,7 @@ const TopMedicalColleges = () => {
       <div className="topMed__card">
         <MedicalCollegesCard
           img={
-            "https://thecareerzone.co.in/img/gallery/Christian-Medical-College-Vellore.jpg" 
+            "https://thecareerzone.co.in/img/gallery/Christian-Medical-College-Vellore.jpg"
           }
           name={"CHRISTIAN MEDICAL COLLEGE"}
           location={"VELLORE, TAMIL NADU"}
