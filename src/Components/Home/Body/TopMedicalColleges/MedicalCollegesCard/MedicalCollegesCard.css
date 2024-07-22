@@ -13,6 +13,7 @@
     box-shadow: 6px 6px 6px #00000016;
     transition: 200ms ease;
     overflow: hidden;
+
 }
 .medicalCollegeCard__container:hover{
     scale: 1.1;
@@ -21,7 +22,7 @@
 .medicalCollegeCard__heading{
     text-align: center;
     overflow: hidden;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: black;
 }
@@ -49,5 +50,6 @@
     .medicalCollegeCard__container{
         margin: 2rem auto;
         width: 17rem;
+        margin-left: 13vw;
     }
 }

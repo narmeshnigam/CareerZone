@@ -56,7 +56,7 @@ const Achievemets = () => {
             style={{
               backgroundColor: "#107F1E",
               color: "#ffffff",
-              padding: "10px 20px",
+              padding: "5px 10px",
               borderRadius: "4px",
               cursor: "pointer",
             }}
