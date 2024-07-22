@@ -5,10 +5,11 @@
 }
 .topMed__heading{
     margin-bottom: 3.8rem;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 600;
     color: #df200be2;
     text-align: center;
+    
 }
 .topMed__card{
     margin-left: 8vw;
@@ -26,6 +27,8 @@
     .topMed__heading{
         margin-bottom: 1rem;
         font-size: 1.25rem;
+        margin-right: 6vw;
+    
     }
     .topMed__card{
         margin-left: 3vw;
