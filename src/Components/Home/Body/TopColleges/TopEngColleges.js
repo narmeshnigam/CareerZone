@@ -6,7 +6,7 @@ const TopEngColleges = () => {
   return (
     <div className="topMed__container">
       <div className="topMed__heading topEng">
-        TOP <span style={{ color: "#4587EF" }}>ENGINEERING</span> COLLEGES
+        TOP <span style={{ color: "#666666" }}>ENGINEERING</span> COLLEGES
       </div>
       <div className="topMed__card">
         <MedicalCollegesCard
