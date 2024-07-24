@@ -4,11 +4,21 @@
 .about {
     display: flex;
     align-items: center;
-    gap: 3rem;
-    padding: 6rem;
+    gap: 2.5vw;
+    padding: 6vw;
     background-color:#fbfeff;
     
-  }
+}
+.about1 {
+  display: flex;
+  align-items: center;
+  gap: 2.5vw;
+  padding: 6vw;
+  background-color:#fbfeff;
+  padding: 0rem 6rem;
+  
+}
+
   
   .head {  
     display: flex; 
@@ -52,11 +62,13 @@
     height: 75vh;
     border-radius: 5px;
     margin-left: 7px;
+    margin-top: 8vh;
   }
   .content{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   .content__heading{
     font-weight: 500;
@@ -66,6 +78,11 @@
   .content__subheading{
     font-size: 2.5rem;
     font-weight: 700;
+  }
+  .content__subheading1{
+    font-size: 2.5rem;
+    font-weight: 700;
+
   }
   h2{
     color: #df200be2;
@@ -90,6 +107,24 @@
     
     border-radius: 5px;
   }
+ 
+  .vision__img2 {
+    height: 50vh;
+    
+    border-radius: 5px;
+  }
+  .vision__img2 img {
+    height: 50vh;
+    border-radius: 5px;
+    margin-left: 7px;
+
+  }
+  
+  .vision__img img {
+    height: 50vh;
+    border-radius: 5px;
+    margin-left: 7px;
+  }
   .team {
     padding: 6rem;
     background-color:#fbfeff;
@@ -103,6 +138,8 @@
   }
   .cards {
     display: flex;
+    flex-wrap: wrap;
+
     justify-content: space-around;
     width: 100%;
   }
@@ -113,13 +150,14 @@
     border-radius: 15px;
   }
   .card {
-    position: relative; /* Ensure positioning context for absolute positioning */
+    position: relative; 
     display: inline-block; /* Ensure cards are displayed in a row */
   }
   
   .card__image {
-    width: 245px; /* Adjust width as needed */
-    height: 300px; /* Adjust height as needed */
+    width: 12.56vw; /* Adjust width as needed */
+    height: 27.78vh; /* Adjust height as needed */
+    
   }
   
   .card__details {
@@ -163,5 +201,169 @@
 .cardbottom__name{
   font-size: 1.5rem;
 }
+.about__12{
+  padding-top: 80px;
+  font-family: "Poppins";
+
+}
+
+@media screen and (max-width: 600px){
+  .about__top__img div{
+    width: 70%;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 32px;
+  }
+  .about__12{
+    padding-top: 65px;
+    width: 100%;
+  }
+  .image img{
+    height: 40vh;
+    border-radius: 5px;
+    width: 80vw;
+    margin-right: 5vw;
+  }
+  .image{
+    padding-top: 4vh;
+    margin-right: 10vw;
+    
+    
+
+  }
+ 
+  .about {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  
+    background-color:#fbfeff;
+    
+  }
+  .content__subheading{
+    font-size: large;
+    margin-left: 4vw;
+  
+  }
+  .content__subheading1{
+    margin-top: 4vh;
+    font-size: large;
+
+  }
+  .content__subheading12{
+    margin-top: 6vh;
+    font-size: large;
+    font-weight: 800;
+
+  }
+  .content {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sec2 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    
+  }
+  .sec2, p {
+    padding-left: 4vw;
+    padding-right: 4vw;
+    font-size: 15px;
+
+  }
+  .vision__img img {
+    height: 50vh;
+    width: 85vw;
+    border-radius: 5px;
+    margin-left: 7px;
+  
+  }
+  .vision__img2 img {
+    height: 50vh;
+    width: 85vw;
+    border-radius: 5px;
+    margin-left: 7px;
+    margin-top: 9vh;
+    margin-bottom: 2vh;
+  
+  }
+  .about1 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+  }
+  .about1, p {
+    padding-left: 4vw;
+    padding-right: 4vw;
+    font-size: 15px;
+  }
+  .ourteam {
+    font-size: x-large;
+    padding-top: 4vh;
+  }
+  .team {
+    margin: 0;
+    padding: 0;
+    
+  }
+  .team {
+    padding-bottom: 4vh;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 150px; /* Specify the width of the card */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 16px;
+  }
+  
+  .card__image {
+    /* width: 100%; /* Make the image take the full width of the card */
+    /*height: 200px; /* Specify the height of the image */
+    /*object-fit: cover; Ensure the image covers the specified dimensions */
+  }
+  
+  .card__details {
+    padding: 16px;
+  }
+  
+  .card__name {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  .card__role {
+    color: #eee6e6;
+  }
+  
+
+  
+
+
+
+
+
+
+  
+
+  
+
+}
+
   
   

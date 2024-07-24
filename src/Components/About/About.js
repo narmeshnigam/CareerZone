@@ -5,7 +5,7 @@ import CountAni from "./CountAni/CountAni";
 
 const About = () => {
   return (
-    <div style={{ fontFamily: "Poppins", paddingTop: "80px" }}>
+    <div className="about__12">
       <div className="about__top__img">
         <div>About Us</div>
       </div>
@@ -22,7 +22,7 @@ const About = () => {
           style={{ display: "flex", alignItems: "center" }}
         >
           {/* <div className="content__heading">ABOUT US</div>*/}
-          <div className="content__subheading">OUR ACHIEVEMENTS </div>
+          <div className="content__subheading1">OUR ACHIEVEMENTS </div>
           <p style={{ textAlign: "justify", fontSize: "18px" }}>
             Since our humble beginning in 2001,The Career Zone, one of India’s
             largest Career Counselling Consultants, is here to mentor the
@@ -81,9 +81,9 @@ const About = () => {
       <div className="sec2">
         <div
           className="content"
-          style={{ display: "flex", alignItems: "center" }}
+        
         >
-          <div className="content__subheading">Our Vision</div>
+          <div className="content__subheading1">OUR VISION</div>
           <p style={{ textAlign: "justify", fontSize: "18px" }}>
             <AboutSvg />
             With a committed and competent team, our vision is to be recognized
@@ -109,7 +109,7 @@ const About = () => {
         </div>
       </div>
       <div className="sec2" style={{ display: "flex", alignItems: "center" }}>
-        <div className="vision__img">
+        <div className="vision__img2">
           <img
             src="https://www.brandhonchos.co.in/images/mission-1.jpg"
             alt=""
@@ -120,6 +120,7 @@ const About = () => {
           style={{ display: "flex", alignItems: "center" }}
         >
           <div className="content__subheading">Our Mission</div>
+         
           <div>
             <p style={{ textAlign: "justify", display: "flex", gap: "5px" }}>
               <AboutSvg />
@@ -230,10 +231,10 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div class="about" style={{ padding: "0rem 6rem", display: "flex" }}>
+      <div class="about1">
         <div style={{ flex: 1 }}>
           <div className="content__subheading">
-            Our Speciality in the Career Counselling world
+            Our Speciality in the Career Counselling world :
           </div>
           <p style={{ textAlign: "justify", fontSize: "18px" }}>
             Being in the educational field, we realized the importance of
